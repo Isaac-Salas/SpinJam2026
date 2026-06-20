@@ -1,30 +1,71 @@
 [gd_scene format=3 uid="uid://npbhcxjy5rny"]
 
 [ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="1_wen4y"]
-[ext_resource type="Script" uid="uid://14g3aif7gimg" path="res://scenes/texture_rect.gd" id="2_w8un3"]
+[ext_resource type="Script" uid="uid://txmnn77tnbtr" path="res://scripts/RotatorTest.gd" id="2_w8un3"]
+[ext_resource type="Script" uid="uid://d2mutw6sqcgsu" path="res://scripts/rotation_counter_ui.gd" id="3_0d6la"]
 
-[node name="Node2D" type="Control" unique_id=582774981]
+[sub_resource type="ViewportTexture" id="ViewportTexture_syogv"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_w8un3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
+radius = 93.78
+
+[node name="Overlay" type="Control" unique_id=582774981]
 layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="Gameview" type="TextureRect" parent="." unique_id=728404747]
+custom_minimum_size = Vector2(960, 0)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+texture = SubResource("ViewportTexture_syogv")
+
+[node name="WheelView" type="TextureRect" parent="." unique_id=869822115]
+custom_minimum_size = Vector2(320, 0)
+clip_contents = true
+layout_mode = 1
 anchors_preset = 11
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -306.0
+offset_left = -320.0
 grow_horizontal = 0
 grow_vertical = 2
+texture = SubResource("ViewportTexture_w8un3")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=869822115]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("1_wen4y")
+[node name="Rotador" type="Node2D" parent="WheelView" unique_id=1895950000]
+position = Vector2(168, 358)
 script = ExtResource("2_w8un3")
+rotation_speed = 8
+
+[node name="Wheel" type="Sprite2D" parent="WheelView/Rotador" unique_id=1485825636]
+texture = ExtResource("1_wen4y")
+
+[node name="Area2D" type="Area2D" parent="WheelView/Rotador" unique_id=1045614560]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WheelView/Rotador/Area2D" unique_id=1735144764]
+shape = SubResource("CircleShape2D_g4v7s")
+
+[node name="Indicator" type="Sprite2D" parent="WheelView/Rotador/Area2D" unique_id=459865918]
+visible = false
+position = Vector2(113.000015, 1.0000001)
+scale = Vector2(0.43, 0.43)
+texture = ExtResource("1_wen4y")
+
+[node name="RotationCounter" type="Label" parent="WheelView" unique_id=1800171792 node_paths=PackedStringArray("wheel")]
+layout_mode = 0
+offset_left = 134.0
+offset_top = 64.0
+offset_right = 203.0
+offset_bottom = 87.0
+text = "NUMBER"
+script = ExtResource("3_0d6la")
+wheel = NodePath("../Rotador")
