@@ -1,7 +1,7 @@
 extends Control
 class_name WheelControl
 @onready var rotator: SpinningWheel = $Rotador
-@onready var screen_text: Label = $"Buttons&Indicators/Pantalla/ScreenText"
+@onready var screen_text: RichTextLabel = $"Buttons&Indicators/Pantalla/ScreenText"
 @onready var move: TextureButton = $"Buttons&Indicators/ButtonsRow1/Move"
 @onready var jump: TextureButton = $"Buttons&Indicators/ButtonsRow1/Jump"
 @onready var shoot: TextureButton = $"Buttons&Indicators/ButtonsRow1/Shoot"
@@ -33,4 +33,5 @@ func _on_state_button_press(state : String):
 	update_screen(state)
 	
 func update_screen(text : String):
-	screen_text.text = text
+	screen_text.text = "[wave amp=50.0 freq=2.0 connected=0]"
+	screen_text.text += text

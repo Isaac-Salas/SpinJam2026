@@ -13,8 +13,10 @@ func _process(_delta: float) -> void:
 
 
 func _set_viewport_gameview():
-	UI.game_view.texture = target_game_view.get_texture()
+	pass
+	#UI.game_view.texture = target_game_view.get_texture()
 
 
 func _set_viewport_handview():
-	UI.hand_view.texture = target_hand_view.get_texture()
+	pass
+	#UI.hand_view.texture = target_hand_view.get_texture()
