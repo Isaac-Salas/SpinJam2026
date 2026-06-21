@@ -1,15 +1,17 @@
 [gd_scene format=3 uid="uid://npbhcxjy5rny"]
 
+[ext_resource type="Script" uid="uid://byrkyaaw75jrc" path="res://scripts/Overlay_UI.gd" id="1_di7wo"]
 [ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="1_wen4y"]
+[ext_resource type="Script" uid="uid://6pcknq62tnaw" path="res://scripts/wheel_view.gd" id="2_amo3t"]
 [ext_resource type="Script" uid="uid://txmnn77tnbtr" path="res://scripts/RotatorTest.gd" id="2_w8un3"]
 [ext_resource type="Script" uid="uid://d2mutw6sqcgsu" path="res://scripts/rotation_counter_ui.gd" id="3_0d6la"]
+[ext_resource type="Texture2D" uid="uid://dumhsk6d6ekcr" path="res://assets/control_panel/Wheel.png" id="4_qca6q"]
+[ext_resource type="FontFile" uid="uid://gvyweina3ogi" path="res://assets/fonts/Robot-Regular.ttf" id="5_iscks"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_syogv"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_w8un3"]
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
-radius = 93.78
+radius = 120.0
 
 [node name="Overlay" type="Control" unique_id=582774981]
 layout_mode = 3
@@ -19,6 +21,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
+script = ExtResource("1_di7wo")
 
 [node name="Gameview" type="TextureRect" parent="." unique_id=728404747]
 custom_minimum_size = Vector2(960, 0)
@@ -28,7 +31,7 @@ anchor_bottom = 1.0
 grow_vertical = 2
 texture = SubResource("ViewportTexture_syogv")
 
-[node name="WheelView" type="TextureRect" parent="." unique_id=869822115]
+[node name="WheelView" type="Control" parent="." unique_id=2127594160]
 custom_minimum_size = Vector2(320, 0)
 clip_contents = true
 layout_mode = 1
@@ -39,15 +42,17 @@ anchor_bottom = 1.0
 offset_left = -320.0
 grow_horizontal = 0
 grow_vertical = 2
-texture = SubResource("ViewportTexture_w8un3")
+mouse_filter = 1
+script = ExtResource("2_amo3t")
 
 [node name="Rotador" type="Node2D" parent="WheelView" unique_id=1895950000]
-position = Vector2(168, 358)
+position = Vector2(159, 584)
 script = ExtResource("2_w8un3")
 rotation_speed = 8
 
 [node name="Wheel" type="Sprite2D" parent="WheelView/Rotador" unique_id=1485825636]
-texture = ExtResource("1_wen4y")
+scale = Vector2(2.2, 2.2)
+texture = ExtResource("4_qca6q")
 
 [node name="Area2D" type="Area2D" parent="WheelView/Rotador" unique_id=1045614560]
 
@@ -60,12 +65,136 @@ position = Vector2(113.000015, 1.0000001)
 scale = Vector2(0.43, 0.43)
 texture = ExtResource("1_wen4y")
 
-[node name="RotationCounter" type="Label" parent="WheelView" unique_id=1800171792 node_paths=PackedStringArray("wheel")]
-layout_mode = 0
-offset_left = 134.0
-offset_top = 64.0
-offset_right = 203.0
-offset_bottom = 87.0
+[node name="RotationCounter" type="Label" parent="WheelView/Rotador" unique_id=1800171792 node_paths=PackedStringArray("wheel")]
+z_index = 100
+offset_left = -31.0
+offset_top = -10.0
+offset_right = 38.0
+offset_bottom = 13.0
 text = "NUMBER"
+horizontal_alignment = 1
+vertical_alignment = 1
 script = ExtResource("3_0d6la")
-wheel = NodePath("../Rotador")
+wheel = NodePath("..")
+
+[node name="Buttons&Indicators" type="VBoxContainer" parent="WheelView" unique_id=524796025]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 25
+
+[node name="Pantalla" type="TextureRect" parent="WheelView/Buttons&Indicators" unique_id=758371912]
+layout_mode = 2
+texture = ExtResource("1_wen4y")
+
+[node name="ScreenText" type="Label" parent="WheelView/Buttons&Indicators/Pantalla" unique_id=548843232]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 13
+theme_override_fonts/font = ExtResource("5_iscks")
+theme_override_font_sizes/font_size = 74
+text = "MODO GAY"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonsRow1" type="HBoxContainer" parent="WheelView/Buttons&Indicators" unique_id=462408355]
+layout_mode = 2
+
+[node name="Move" type="TextureButton" parent="WheelView/Buttons&Indicators/ButtonsRow1" unique_id=1380243729]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("1_wen4y")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Jump" type="TextureButton" parent="WheelView/Buttons&Indicators/ButtonsRow1" unique_id=2055413526]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("1_wen4y")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Shoot" type="TextureButton" parent="WheelView/Buttons&Indicators/ButtonsRow1" unique_id=589036761]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("1_wen4y")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="ButtonsRow2" type="HBoxContainer" parent="WheelView/Buttons&Indicators" unique_id=732747444]
+layout_mode = 2
+
+[node name="Aim" type="TextureButton" parent="WheelView/Buttons&Indicators/ButtonsRow2" unique_id=115753006]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("1_wen4y")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Fly" type="TextureButton" parent="WheelView/Buttons&Indicators/ButtonsRow2" unique_id=1410521740]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("1_wen4y")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Grapple" type="TextureButton" parent="WheelView/Buttons&Indicators/ButtonsRow2" unique_id=1903094933]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("1_wen4y")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Bar&Button" type="HBoxContainer" parent="WheelView/Buttons&Indicators" unique_id=1009943088]
+layout_mode = 2
+size_flags_vertical = 4
+alignment = 1
+
+[node name="Energy" type="ProgressBar" parent="WheelView/Buttons&Indicators/Bar&Button" unique_id=1403667345]
+custom_minimum_size = Vector2(180, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+offset_transform_enabled = true
+offset_transform_position = Vector2(27, 0)
+
+[node name="Activate" type="TextureButton" parent="WheelView/Buttons&Indicators/Bar&Button" unique_id=1258541264]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("1_wen4y")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Indicators" type="HBoxContainer" parent="WheelView/Buttons&Indicators" unique_id=875829654]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 150
+alignment = 1
+
+[node name="Left_Up" type="TextureRect" parent="WheelView/Buttons&Indicators/Indicators" unique_id=1419738853]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = ExtResource("1_wen4y")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="RightDown" type="TextureRect" parent="WheelView/Buttons&Indicators/Indicators" unique_id=201018139]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = ExtResource("1_wen4y")
+expand_mode = 5
+stretch_mode = 5

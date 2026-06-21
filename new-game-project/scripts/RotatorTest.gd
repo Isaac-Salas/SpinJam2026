@@ -62,12 +62,13 @@ func _process(delta: float) -> void:
 
 func _rotate_wheel(delta : float):
 	var target_pos = get_global_mouse_position()
-	area_2d.global_rotation = lerp_angle(area_2d.global_rotation, area_2d.get_angle_to(target_pos), delta * rotation_speed)
+	area_2d.rotation = lerp_angle(area_2d.rotation, area_2d.get_angle_to(target_pos), delta * rotation_speed)
 
 func _reset_all():
 	rotation_count = 0
 	area_2d.global_rotation = 0.0
 	var tween : Tween = create_tween()
+	wheel.global_rotation_degrees = wheel.global_rotation_degrees + 360
 	tween.tween_property(wheel,"global_rotation_degrees",0,0.1)
 	await tween.finished
 	tween.kill()
@@ -102,7 +103,6 @@ func _check_rotations():
 				add_rotations = false
 
 func _add_rotations():
-	print("ADD")
 	match rotating_side:
 		"right":
 			rotation_count += 1
