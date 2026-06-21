@@ -492,14 +492,14 @@ _data = {
 &"run": SubResource("Animation_d2wvv")
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
-size = Vector2(130, 130)
+[sub_resource type="CircleShape2D" id="CircleShape2D_60mlk"]
+radius = 120.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
-size = Vector2(130, 130)
+[sub_resource type="CircleShape2D" id="CircleShape2D_i4ail"]
+radius = 120.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_60mlk"]
-size = Vector2(130, 130)
+[sub_resource type="CircleShape2D" id="CircleShape2D_a38lo"]
+radius = 120.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1282337476]
 top_level = true
@@ -625,7 +625,7 @@ texture = ExtResource("14_fulsm")
 [node name="Area1" type="Area2D" parent="Crosshair/1" unique_id=1187593951]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Crosshair/1/Area1" unique_id=1142781463]
-shape = SubResource("RectangleShape2D_g4v7s")
+shape = SubResource("CircleShape2D_60mlk")
 
 [node name="2" type="Sprite2D" parent="Crosshair" unique_id=637467127]
 modulate = Color(1, 1, 1, 0.19607843)
@@ -636,7 +636,7 @@ texture = ExtResource("14_fulsm")
 [node name="Area2" type="Area2D" parent="Crosshair/2" unique_id=792700064]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Crosshair/2/Area2" unique_id=1683764948]
-shape = SubResource("RectangleShape2D_yf5fn")
+shape = SubResource("CircleShape2D_i4ail")
 
 [node name="3" type="Sprite2D" parent="Crosshair" unique_id=73800218]
 modulate = Color(1, 1, 1, 0.19607843)
@@ -647,7 +647,7 @@ texture = ExtResource("14_fulsm")
 [node name="Area3" type="Area2D" parent="Crosshair/3" unique_id=1102355718]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Crosshair/3/Area3" unique_id=1012794759]
-shape = SubResource("RectangleShape2D_60mlk")
+shape = SubResource("CircleShape2D_a38lo")
 
 [node name="PlayerStateMachine" type="Node" parent="." unique_id=1218018386 node_paths=PackedStringArray("initial_state")]
 script = ExtResource("1_3vyb7")
