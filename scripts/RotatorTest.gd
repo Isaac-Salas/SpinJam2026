@@ -31,8 +31,8 @@ var add_rotations : bool:
 			if add_rotations:
 				_add_rotations()
 
-signal rotation_side_change(side)
-signal rotation_count_changed(count)
+signal rotation_side_change(side : String)
+signal rotation_count_changed(count : int)
 
 func _ready() -> void:
 	
@@ -41,6 +41,7 @@ func _ready() -> void:
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("left_click"):
 		is_dragging = true
+		
 	elif event.is_action_released("left_click"):
 		rotating_side = ""
 		is_dragging = false
@@ -48,11 +49,12 @@ func _input(event: InputEvent) -> void:
 		start_rotating = false
 		wheel.reparent(rotador)
 		_reset_all()
-	if is_dragging and mouse_click:
-		#area_2d.look_at(get_global_mouse_position())
-		start_rotating = true
-		wheel.reparent(area_2d)
-		_check_turn_side()
+	if event is InputEventMouseMotion:
+		if is_dragging and mouse_click:
+			#area_2d.look_at(get_global_mouse_position())
+			start_rotating = true
+			wheel.reparent(area_2d)
+			_check_turn_side()
 
 
 func _process(delta: float) -> void:
@@ -77,15 +79,17 @@ func _reset_all():
 func _on_area_input(_viewport : Node, event : InputEvent, _shape_idx : int):
 	if event.is_action_pressed("left_click"):
 		mouse_click = true
+		
 
 func _check_turn_side():
+	previous_rotation_mouse = rad_to_deg(wheel.get_angle_to(get_global_mouse_position()))
 	var current_rotation = wheel.global_rotation_degrees
 	# Calculate difference, handling wrap-around at 360/0
 	var diff = fmod(current_rotation - previous_rotation_mouse + 540.0, 360.0) - 180.0
 	if diff > 0:
-		rotating_side = "right"
-	elif diff < 0:
 		rotating_side = "left"
+	elif diff < 0:
+		rotating_side = "right"
 	previous_rotation_mouse = current_rotation
 
 func _check_rotations():

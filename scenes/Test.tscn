@@ -198,6 +198,7 @@ expand_mode = 5
 stretch_mode = 5
 
 [node name="Light" type="TextureRect" parent="WheelView/Buttons&Indicators/Indicators/Left_Up" unique_id=1430900198]
+visible = false
 material = SubResource("CanvasItemMaterial_qca6q")
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 1
@@ -224,6 +225,7 @@ expand_mode = 5
 stretch_mode = 5
 
 [node name="Light" type="TextureRect" parent="WheelView/Buttons&Indicators/Indicators/RightDown" unique_id=112796042]
+visible = false
 material = SubResource("CanvasItemMaterial_qca6q")
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 1
