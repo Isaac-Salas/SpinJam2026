@@ -81,10 +81,14 @@ texture = ExtResource("5_4jsmg")
 
 [node name="RotationCounter" type="Label" parent="WheelView/Rotador" unique_id=1800171792 node_paths=PackedStringArray("wheel")]
 z_index = 100
-offset_left = -31.0
-offset_top = -10.0
-offset_right = 38.0
-offset_bottom = 13.0
+offset_left = -32.0
+offset_top = -27.0
+offset_right = 37.0
+offset_bottom = 23.0
+size_flags_horizontal = 4
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("7_upws3")
+theme_override_font_sizes/font_size = 45
 text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
