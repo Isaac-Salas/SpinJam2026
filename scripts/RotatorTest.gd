@@ -93,18 +93,20 @@ func _check_turn_side():
 	previous_rotation_mouse = current_rotation
 
 func _check_rotations():
-	var rotation_check := wrapf(wheel.global_rotation_degrees, 0.0, 360.0)
+	var rotation_check := wrapf(wheel.global_rotation_degrees, 0, 360.0)
+	var quadrant = floor(fposmod(rotation_check, 360.0) / 90.0)
 	match rotating_side:
 		"right":
-			if rotation_check >= 355.0:
+			if quadrant >= 2:
 				add_rotations = true
 			else:
 				add_rotations = false
 		"left":
-			if rotation_check <= 5.0:
+			if quadrant <= 2:
 				add_rotations = true
 			else:
 				add_rotations = false
+	print(quadrant)
 
 func _add_rotations():
 	match rotating_side:

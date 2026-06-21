@@ -9,6 +9,9 @@
 [ext_resource type="Script" uid="uid://d2mutw6sqcgsu" path="res://scripts/rotation_counter_ui.gd" id="6_oix8b"]
 [ext_resource type="FontFile" uid="uid://gvyweina3ogi" path="res://assets/fonts/Robot-Regular.ttf" id="7_upws3"]
 [ext_resource type="Texture2D" uid="uid://wmheui8thwhn" path="res://assets/light/light.png" id="8_gjyue"]
+[ext_resource type="Texture2D" uid="uid://h578wdf1r6py" path="res://assets/control_panel/ButtonNormal.png" id="9_d4826"]
+[ext_resource type="Texture2D" uid="uid://ys2y7p0uaatw" path="res://assets/control_panel/ButtonPressed.png" id="10_4jsmg"]
+[ext_resource type="Texture2D" uid="uid://5r244vufmgo4" path="res://assets/control_panel/ButtonDisabled.png" id="11_4jsmg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
 radius = 120.0
@@ -53,10 +56,13 @@ grow_horizontal = 0
 grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("2_mm828")
+initial_screen_text = "move"
+player_jump = true
 
 [node name="Rotador" type="Node2D" parent="WheelView" unique_id=1895950000]
 position = Vector2(159, 584)
 script = ExtResource("3_t0vks")
+rotation_speed = 10
 
 [node name="Wheel" type="Sprite2D" parent="WheelView/Rotador" unique_id=1485825636]
 scale = Vector2(2.2, 2.2)
@@ -105,6 +111,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+offset_transform_enabled = true
 theme_override_constants/outline_size = 13
 theme_override_fonts/normal_font = ExtResource("7_upws3")
 theme_override_font_sizes/normal_font_size = 100
@@ -120,7 +127,9 @@ layout_mode = 2
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 size_flags_horizontal = 3
-texture_normal = ExtResource("5_4jsmg")
+texture_normal = ExtResource("9_d4826")
+texture_pressed = ExtResource("10_4jsmg")
+texture_disabled = ExtResource("11_4jsmg")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -128,7 +137,9 @@ stretch_mode = 5
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 size_flags_horizontal = 3
-texture_normal = ExtResource("5_4jsmg")
+texture_normal = ExtResource("9_d4826")
+texture_pressed = ExtResource("10_4jsmg")
+texture_disabled = ExtResource("11_4jsmg")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -136,7 +147,9 @@ stretch_mode = 5
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 size_flags_horizontal = 3
-texture_normal = ExtResource("5_4jsmg")
+texture_normal = ExtResource("9_d4826")
+texture_pressed = ExtResource("10_4jsmg")
+texture_disabled = ExtResource("11_4jsmg")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -147,7 +160,9 @@ layout_mode = 2
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 size_flags_horizontal = 3
-texture_normal = ExtResource("5_4jsmg")
+texture_normal = ExtResource("9_d4826")
+texture_pressed = ExtResource("10_4jsmg")
+texture_disabled = ExtResource("11_4jsmg")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -155,7 +170,9 @@ stretch_mode = 5
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 size_flags_horizontal = 3
-texture_normal = ExtResource("5_4jsmg")
+texture_normal = ExtResource("9_d4826")
+texture_pressed = ExtResource("10_4jsmg")
+texture_disabled = ExtResource("11_4jsmg")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -163,7 +180,9 @@ stretch_mode = 5
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 size_flags_horizontal = 3
-texture_normal = ExtResource("5_4jsmg")
+texture_normal = ExtResource("9_d4826")
+texture_pressed = ExtResource("10_4jsmg")
+texture_disabled = ExtResource("11_4jsmg")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -179,12 +198,18 @@ size_flags_horizontal = 3
 size_flags_vertical = 4
 offset_transform_enabled = true
 offset_transform_position = Vector2(27, 0)
+max_value = 3.0
+step = 0.1
+show_percentage = false
 
 [node name="Activate" type="TextureButton" parent="WheelView/Buttons&Indicators/Bar&Button" unique_id=1258541264]
 custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
 size_flags_horizontal = 3
-texture_normal = ExtResource("5_4jsmg")
+disabled = true
+texture_normal = ExtResource("9_d4826")
+texture_pressed = ExtResource("10_4jsmg")
+texture_disabled = ExtResource("11_4jsmg")
 ignore_texture_size = true
 stretch_mode = 5
 

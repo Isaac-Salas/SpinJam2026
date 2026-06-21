@@ -11,8 +11,9 @@
 [ext_resource type="Texture2D" uid="uid://xeeiso5njftr" path="res://assets/ROBOT/Brazo L.png" id="6_jej6c"]
 [ext_resource type="Script" uid="uid://c405gfw206awq" path="res://scripts/states/jump.gd" id="10_y4r1p"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0j5ti"]
-size = Vector2(500, 770)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y4r1p"]
+radius = 160.0
+height = 720.0
 
 [sub_resource type="Animation" id="Animation_ur7pv"]
 resource_name = "Idle"
@@ -111,7 +112,7 @@ tracks/7/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(-9, -153), Vector2(-9, -143)]
+"values": [Vector2(-11, -160), Vector2(-9, -143)]
 }
 
 [sub_resource type="Animation" id="Animation_y4r1p"]
@@ -210,7 +211,7 @@ tracks/7/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-9, -153)]
+"values": [Vector2(-8, -150)]
 }
 tracks/8/type = "value"
 tracks/8/imported = false
@@ -247,6 +248,154 @@ tracks/10/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(0, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("LegR:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(84, 123)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("LegL:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-87, 145)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Head:offset")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-57, -124)]
+}
+
+[sub_resource type="Animation" id="Animation_3v2ag"]
+resource_name = "jump"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ArmR:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(7.9173584, -105)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LegR:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(84, 123)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("LegL:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-87, 145)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Torso:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 60), Vector2(0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ArmL:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-79.53951, -105)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Head:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-9, -2), Vector2(-9, -93)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("ArmR:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.87266463, -0.5235988]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("ArmL:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0471976, 0.5235988]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Head:offset")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-51, -190)]
 }
 
 [sub_resource type="Animation" id="Animation_d2wvv"]
@@ -329,15 +478,18 @@ tracks/5/keys = {
 _data = {
 &"Idle": SubResource("Animation_ur7pv"),
 &"RESET": SubResource("Animation_y4r1p"),
+&"jump": SubResource("Animation_3v2ag"),
 &"run": SubResource("Animation_d2wvv")
 }
 
 [node name="Player" type="CharacterBody2D" unique_id=1282337476]
+top_level = true
+z_as_relative = false
 script = ExtResource("1_dqkch")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1464719770]
-position = Vector2(0, -12)
-shape = SubResource("RectangleShape2D_0j5ti")
+position = Vector2(0, -38.25)
+shape = SubResource("CapsuleShape2D_y4r1p")
 
 [node name="BodyParts" type="Node2D" parent="." unique_id=1219986125]
 
@@ -372,9 +524,9 @@ offset = Vector2(-34.678772, 134.94649)
 
 [node name="Head" type="Sprite2D" parent="BodyParts" unique_id=936954017]
 z_index = 1
-position = Vector2(-9, -153)
+position = Vector2(-8, -150)
 texture = ExtResource("1_qhqgy")
-offset = Vector2(-51, -122)
+offset = Vector2(-57, -124)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="BodyParts" unique_id=681618403]
 deterministic = true
@@ -391,6 +543,7 @@ script = ExtResource("2_g2els")
 player = NodePath("../..")
 metadata/_custom_type_script = "uid://o4ba60xfjdve"
 
-[node name="Jump" type="Node" parent="PlayerStateMachine" unique_id=1120718689]
+[node name="Jump" type="Node" parent="PlayerStateMachine" unique_id=1120718689 node_paths=PackedStringArray("player")]
 script = ExtResource("10_y4r1p")
+player = NodePath("../..")
 metadata/_custom_type_script = "uid://c405gfw206awq"
