@@ -545,5 +545,6 @@ metadata/_custom_type_script = "uid://o4ba60xfjdve"
 
 [node name="Jump" type="Node" parent="PlayerStateMachine" unique_id=1120718689 node_paths=PackedStringArray("player")]
 script = ExtResource("10_y4r1p")
+fixed_jump_speed = 180.0
 player = NodePath("../..")
 metadata/_custom_type_script = "uid://c405gfw206awq"

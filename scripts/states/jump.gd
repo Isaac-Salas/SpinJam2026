@@ -3,7 +3,8 @@ class_name Jump
 @export var energy_count : int
 @export var max_limit : int = 3
 @export var min_limit : int = 0
-@export var fixed_jump_speed : float = 180
+@export var fixed_jump_speed : float = 200
+
 
 
 func Enter():
@@ -30,6 +31,16 @@ func jump():
 	if player.is_on_floor():
 		player.velocity.y = - fixed_jump_speed * energy_count
 		reset_energy_count()
+		player_scale_tween()
 		player.animation_player.play("jump",-1,1.0)
 		await player.animation_player.animation_finished
 		player.animation_player.play("Idle",0.2,1.0)
+
+func player_scale_tween():
+	var tween : Tween = create_tween()
+	var original_scale : Vector2 = player.scale
+	var new_scale := Vector2(player.scale.x,player.scale.y + .1)
+	tween.tween_property(player,"scale",new_scale,0.1).set_trans(Tween.TRANS_BOUNCE)
+	tween.tween_property(player,"scale",original_scale,0.1).set_trans(Tween.TRANS_BOUNCE)
+	await tween.finished
+	tween.kill()
