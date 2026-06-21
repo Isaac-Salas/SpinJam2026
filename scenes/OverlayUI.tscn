@@ -58,6 +58,7 @@ mouse_filter = 1
 script = ExtResource("2_mm828")
 initial_screen_text = "move"
 player_jump = true
+player_shoot = true
 player_aim = true
 
 [node name="Rotador" type="Node2D" parent="WheelView" unique_id=1895950000]
