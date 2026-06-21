@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://npbhcxjy5rny"]
 
-[ext_resource type="Script" uid="uid://byrkyaaw75jrc" path="res://scripts/Overlay_UI.gd" id="1_di7wo"]
-[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="1_wen4y"]
-[ext_resource type="Script" uid="uid://6pcknq62tnaw" path="res://scripts/wheel_view.gd" id="2_amo3t"]
-[ext_resource type="Script" uid="uid://txmnn77tnbtr" path="res://scripts/RotatorTest.gd" id="2_w8un3"]
-[ext_resource type="Script" uid="uid://d2mutw6sqcgsu" path="res://scripts/rotation_counter_ui.gd" id="3_0d6la"]
-[ext_resource type="Texture2D" uid="uid://dumhsk6d6ekcr" path="res://assets/control_panel/Wheel.png" id="4_qca6q"]
-[ext_resource type="FontFile" uid="uid://gvyweina3ogi" path="res://assets/fonts/Robot-Regular.ttf" id="5_iscks"]
-[ext_resource type="Texture2D" uid="uid://wmheui8thwhn" path="res://assets/light/light.png" id="8_2loec"]
+[ext_resource type="Script" uid="uid://byrkyaaw75jrc" path="res://scripts/Overlay_UI.gd" id="1_avh0g"]
+[ext_resource type="Script" uid="uid://6pcknq62tnaw" path="res://scripts/wheel_view.gd" id="2_mm828"]
+[ext_resource type="Script" uid="uid://txmnn77tnbtr" path="res://scripts/RotatorTest.gd" id="3_t0vks"]
+[ext_resource type="Texture2D" uid="uid://dumhsk6d6ekcr" path="res://assets/control_panel/Wheel.png" id="4_d4826"]
+[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="5_4jsmg"]
+[ext_resource type="Script" uid="uid://d2mutw6sqcgsu" path="res://scripts/rotation_counter_ui.gd" id="6_oix8b"]
+[ext_resource type="FontFile" uid="uid://gvyweina3ogi" path="res://assets/fonts/Robot-Regular.ttf" id="7_upws3"]
+[ext_resource type="Texture2D" uid="uid://wmheui8thwhn" path="res://assets/light/light.png" id="8_gjyue"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_syogv"]
 
@@ -25,7 +25,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
-script = ExtResource("1_di7wo")
+script = ExtResource("1_avh0g")
 
 [node name="Gameview" type="TextureRect" parent="." unique_id=728404747]
 custom_minimum_size = Vector2(960, 0)
@@ -47,16 +47,16 @@ offset_left = -320.0
 grow_horizontal = 0
 grow_vertical = 2
 mouse_filter = 1
-script = ExtResource("2_amo3t")
+script = ExtResource("2_mm828")
 
 [node name="Rotador" type="Node2D" parent="WheelView" unique_id=1895950000]
 position = Vector2(159, 584)
-script = ExtResource("2_w8un3")
+script = ExtResource("3_t0vks")
 rotation_speed = 8
 
 [node name="Wheel" type="Sprite2D" parent="WheelView/Rotador" unique_id=1485825636]
 scale = Vector2(2.2, 2.2)
-texture = ExtResource("4_qca6q")
+texture = ExtResource("4_d4826")
 
 [node name="Area2D" type="Area2D" parent="WheelView/Rotador" unique_id=1045614560]
 
@@ -67,7 +67,7 @@ shape = SubResource("CircleShape2D_g4v7s")
 visible = false
 position = Vector2(113.000015, 1.0000001)
 scale = Vector2(0.43, 0.43)
-texture = ExtResource("1_wen4y")
+texture = ExtResource("5_4jsmg")
 
 [node name="RotationCounter" type="Label" parent="WheelView/Rotador" unique_id=1800171792 node_paths=PackedStringArray("wheel")]
 z_index = 100
@@ -78,7 +78,7 @@ offset_bottom = 13.0
 text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
-script = ExtResource("3_0d6la")
+script = ExtResource("6_oix8b")
 wheel = NodePath("..")
 
 [node name="Buttons&Indicators" type="VBoxContainer" parent="WheelView" unique_id=524796025]
@@ -92,7 +92,7 @@ theme_override_constants/separation = 25
 
 [node name="Pantalla" type="TextureRect" parent="WheelView/Buttons&Indicators" unique_id=758371912]
 layout_mode = 2
-texture = ExtResource("1_wen4y")
+texture = ExtResource("5_4jsmg")
 
 [node name="ScreenText" type="RichTextLabel" parent="WheelView/Buttons&Indicators/Pantalla" unique_id=325327669]
 layout_mode = 1
@@ -102,7 +102,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/outline_size = 13
-theme_override_fonts/normal_font = ExtResource("5_iscks")
+theme_override_fonts/normal_font = ExtResource("7_upws3")
 theme_override_font_sizes/normal_font_size = 100
 bbcode_enabled = true
 text = "[wave amp=50.0 freq=2.0 connected=0]STATE"
@@ -116,7 +116,7 @@ layout_mode = 2
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 size_flags_horizontal = 3
-texture_normal = ExtResource("1_wen4y")
+texture_normal = ExtResource("5_4jsmg")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -124,7 +124,7 @@ stretch_mode = 5
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 size_flags_horizontal = 3
-texture_normal = ExtResource("1_wen4y")
+texture_normal = ExtResource("5_4jsmg")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -132,7 +132,7 @@ stretch_mode = 5
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 size_flags_horizontal = 3
-texture_normal = ExtResource("1_wen4y")
+texture_normal = ExtResource("5_4jsmg")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -143,7 +143,7 @@ layout_mode = 2
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 size_flags_horizontal = 3
-texture_normal = ExtResource("1_wen4y")
+texture_normal = ExtResource("5_4jsmg")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -151,7 +151,7 @@ stretch_mode = 5
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 size_flags_horizontal = 3
-texture_normal = ExtResource("1_wen4y")
+texture_normal = ExtResource("5_4jsmg")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -159,7 +159,7 @@ stretch_mode = 5
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 size_flags_horizontal = 3
-texture_normal = ExtResource("1_wen4y")
+texture_normal = ExtResource("5_4jsmg")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -180,7 +180,7 @@ offset_transform_position = Vector2(27, 0)
 custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
 size_flags_horizontal = 3
-texture_normal = ExtResource("1_wen4y")
+texture_normal = ExtResource("5_4jsmg")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -193,7 +193,7 @@ alignment = 1
 [node name="Left_Up" type="TextureRect" parent="WheelView/Buttons&Indicators/Indicators" unique_id=1419738853]
 custom_minimum_size = Vector2(70, 70)
 layout_mode = 2
-texture = ExtResource("1_wen4y")
+texture = ExtResource("5_4jsmg")
 expand_mode = 5
 stretch_mode = 5
 
@@ -213,14 +213,14 @@ offset_right = 15.0
 offset_bottom = 15.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("8_2loec")
+texture = ExtResource("8_gjyue")
 expand_mode = 1
 stretch_mode = 5
 
 [node name="RightDown" type="TextureRect" parent="WheelView/Buttons&Indicators/Indicators" unique_id=201018139]
 custom_minimum_size = Vector2(70, 70)
 layout_mode = 2
-texture = ExtResource("1_wen4y")
+texture = ExtResource("5_4jsmg")
 expand_mode = 5
 stretch_mode = 5
 
@@ -240,6 +240,6 @@ offset_right = 15.0
 offset_bottom = 15.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("8_2loec")
+texture = ExtResource("8_gjyue")
 expand_mode = 1
 stretch_mode = 5

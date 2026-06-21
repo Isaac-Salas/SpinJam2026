@@ -34,6 +34,7 @@ func _ready() -> void:
 
 func _on_state_button_press(state : String):
 	update_screen(state)
+	state_change.emit(state)
 	
 func update_screen(text : String):
 	screen_text.text = "[wave amp=50.0 freq=2.0 connected=0]"

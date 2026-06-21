@@ -15,6 +15,10 @@ run/main_scene="uid://npbhcxjy5rny"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+OverlayUI="*uid://npbhcxjy5rny"
+
 [dialogic]
 
 directories/dch_directory={}

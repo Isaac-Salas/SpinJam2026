@@ -1,4 +1,3 @@
 extends Control
-
-@onready var gameview: TextureRect = $Gameview
+@onready var game_view: TextureRect = $Gameview
 @onready var wheel_view: WheelControl = $WheelView
