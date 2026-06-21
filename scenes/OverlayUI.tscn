@@ -62,7 +62,7 @@ player_jump = true
 [node name="Rotador" type="Node2D" parent="WheelView" unique_id=1895950000]
 position = Vector2(159, 584)
 script = ExtResource("3_t0vks")
-rotation_speed = 10
+rotation_speed = 8
 
 [node name="Wheel" type="Sprite2D" parent="WheelView/Rotador" unique_id=1485825636]
 scale = Vector2(2.2, 2.2)
