@@ -1,12 +1,24 @@
 extends State
 class_name Move
+@export var fixed_speed : float = 100.0
+var running_speed_multiplier : int
 
 func Enter():
 	OverlayUI.wheel_view.rotator.rotation_side_change.connect(_flip_sides)
+	OverlayUI.wheel_view.rotator.rotation_count_changed.connect(_on_count_changed)
 
 func Exit():
 	OverlayUI.wheel_view.rotator.rotation_side_change.disconnect(_flip_sides)
 
+func Update(_delta: float):
+	player.velocity.x = fixed_speed * running_speed_multiplier
+
+func _on_count_changed(value : int):
+	running_speed_multiplier = value
+	if running_speed_multiplier != 0:
+		player.animation_player.play("run",0.1,running_speed_multiplier)
+	else:
+		player.animation_player.play("Idle")
 
 func _flip_sides(side : String):
 	if side != "":

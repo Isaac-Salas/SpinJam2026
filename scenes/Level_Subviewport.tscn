@@ -14,10 +14,8 @@ handle_input_locally = false
 size = Vector2i(960, 720)
 render_target_update_mode = 4
 
-[node name="Camera2D" type="Camera2D" parent="SubViewport" unique_id=1432289839 node_paths=PackedStringArray("target_follow")]
-position = Vector2(48.825, 5.525)
+[node name="Camera2D" type="Camera2D" parent="SubViewport" unique_id=1432289839]
 script = ExtResource("1_gxjgu")
-target_follow = NodePath("../Player")
 
 [node name="Player" parent="SubViewport" unique_id=1683412837 instance=ExtResource("3_olp5t")]
 position = Vector2(163.99998, 118.99999)
