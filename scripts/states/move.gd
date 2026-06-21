@@ -1,5 +1,5 @@
 extends State
-class_name MoveState
+class_name Move
 
 func Enter():
 	OverlayUI.wheel_view.rotator.rotation_side_change.connect(_flip_sides)
