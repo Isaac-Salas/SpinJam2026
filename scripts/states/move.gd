@@ -9,6 +9,7 @@ func Enter():
 
 func Exit():
 	OverlayUI.wheel_view.rotator.rotation_side_change.disconnect(_flip_sides)
+	OverlayUI.wheel_view.rotator.rotation_count_changed.disconnect(_on_count_changed)
 
 func Update(_delta: float):
 	player.velocity.x = fixed_speed * running_speed_multiplier
