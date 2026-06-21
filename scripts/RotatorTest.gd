@@ -31,8 +31,15 @@ var add_rotations : bool:
 			if add_rotations:
 				_add_rotations()
 
+var wheel_spinning : bool:
+	set(value):
+		if value != wheel_spinning:
+			wheel_spinning = value
+			is_wheel_spinning.emit(wheel_spinning)
+
 signal rotation_side_change(side : String)
 signal rotation_count_changed(count : int)
+signal is_wheel_spinning(value : bool)
 
 func _ready() -> void:
 	
@@ -48,11 +55,13 @@ func _input(event: InputEvent) -> void:
 		mouse_click = false
 		start_rotating = false
 		wheel.reparent(rotador)
+		wheel_spinning = false
 		_reset_all()
 	if event is InputEventMouseMotion:
 		if is_dragging and mouse_click:
 			#area_2d.look_at(get_global_mouse_position())
 			start_rotating = true
+			wheel_spinning = true
 			wheel.reparent(area_2d)
 			_check_turn_side()
 
