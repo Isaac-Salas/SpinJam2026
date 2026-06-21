@@ -11,6 +11,9 @@
 [ext_resource type="Texture2D" uid="uid://xeeiso5njftr" path="res://assets/ROBOT/Brazo L.png" id="6_jej6c"]
 [ext_resource type="Script" uid="uid://c405gfw206awq" path="res://scripts/states/jump.gd" id="10_y4r1p"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0j5ti"]
+size = Vector2(500, 770)
+
 [sub_resource type="Animation" id="Animation_ur7pv"]
 resource_name = "Idle"
 loop_mode = 1
@@ -329,65 +332,65 @@ _data = {
 &"run": SubResource("Animation_d2wvv")
 }
 
-[node name="Player" type="Node2D" unique_id=1683412837]
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1282337476]
+[node name="Player" type="CharacterBody2D" unique_id=1282337476]
 script = ExtResource("1_dqkch")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1464719770]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1464719770]
+position = Vector2(0, -12)
+shape = SubResource("RectangleShape2D_0j5ti")
 
-[node name="BodyParts" type="Node2D" parent="CharacterBody2D" unique_id=1219986125]
+[node name="BodyParts" type="Node2D" parent="." unique_id=1219986125]
 
-[node name="ArmR" type="Sprite2D" parent="CharacterBody2D/BodyParts" unique_id=1351509722]
+[node name="ArmR" type="Sprite2D" parent="BodyParts" unique_id=1351509722]
 modulate = Color(0.5, 0.5, 0.5, 1)
 position = Vector2(7.9173584, -131.13223)
 rotation = -0.5235988
 texture = ExtResource("2_ur7pv")
 offset = Vector2(73.938034, 118.480515)
 
-[node name="LegR" type="Sprite2D" parent="CharacterBody2D/BodyParts" unique_id=1201750484]
+[node name="LegR" type="Sprite2D" parent="BodyParts" unique_id=1201750484]
 modulate = Color(0.5, 0.5, 0.5, 1)
 position = Vector2(84, 123)
 texture = ExtResource("3_y4r1p")
 offset = Vector2(66, 97)
 
-[node name="LegL" type="Sprite2D" parent="CharacterBody2D/BodyParts" unique_id=1821556602]
+[node name="LegL" type="Sprite2D" parent="BodyParts" unique_id=1821556602]
 position = Vector2(-87, 145)
 texture = ExtResource("5_3v2ag")
 offset = Vector2(-33, 105)
 
-[node name="Torso" type="Sprite2D" parent="CharacterBody2D/BodyParts" unique_id=1700938557]
+[node name="Torso" type="Sprite2D" parent="BodyParts" unique_id=1700938557]
 z_as_relative = false
 texture = ExtResource("4_d2wvv")
 
-[node name="ArmL" type="Sprite2D" parent="CharacterBody2D/BodyParts" unique_id=1678252862]
+[node name="ArmL" type="Sprite2D" parent="BodyParts" unique_id=1678252862]
 position = Vector2(-79.53951, -147.64716)
 rotation = 0.43633235
 scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("6_jej6c")
 offset = Vector2(-34.678772, 134.94649)
 
-[node name="Head" type="Sprite2D" parent="CharacterBody2D/BodyParts" unique_id=936954017]
+[node name="Head" type="Sprite2D" parent="BodyParts" unique_id=936954017]
 z_index = 1
 position = Vector2(-9, -153)
 texture = ExtResource("1_qhqgy")
 offset = Vector2(-51, -122)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D/BodyParts" unique_id=681618403]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="BodyParts" unique_id=681618403]
 deterministic = true
 libraries/ = SubResource("AnimationLibrary_d2wvv")
 autoplay = &"Idle"
 
-[node name="PlayerStateMachine" type="Node" parent="CharacterBody2D" unique_id=1218018386 node_paths=PackedStringArray("initial_state")]
+[node name="PlayerStateMachine" type="Node" parent="." unique_id=1218018386 node_paths=PackedStringArray("initial_state")]
 script = ExtResource("1_3vyb7")
 initial_state = NodePath("Move")
 metadata/_custom_type_script = "uid://dcgu8ld0xam6t"
 
-[node name="Move" type="Node" parent="CharacterBody2D/PlayerStateMachine" unique_id=178614761 node_paths=PackedStringArray("player")]
+[node name="Move" type="Node" parent="PlayerStateMachine" unique_id=178614761 node_paths=PackedStringArray("player")]
 script = ExtResource("2_g2els")
 player = NodePath("../..")
 metadata/_custom_type_script = "uid://o4ba60xfjdve"
 
-[node name="Jump" type="Node" parent="CharacterBody2D/PlayerStateMachine" unique_id=1120718689]
+[node name="Jump" type="Node" parent="PlayerStateMachine" unique_id=1120718689]
 script = ExtResource("10_y4r1p")
 metadata/_custom_type_script = "uid://c405gfw206awq"
