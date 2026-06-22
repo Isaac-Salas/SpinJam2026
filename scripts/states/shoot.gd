@@ -40,6 +40,7 @@ func start_shooting(looking_at : int):
 		elif looking_at > 3:
 			current_target_number = 3
 		shooting = true
+		_tween_shoot()
 		player.body_parts.arm_lshoot.particles.emitting = true
 		var new_target : Node2D = crosshair.get("_"+str(current_target_number))
 		player.body_parts.arm_lshoot.shoot(new_target.global_position)
@@ -56,3 +57,11 @@ func _tween_reset_arm_rotation():
 	tween.tween_property(arm,"rotation_degrees",125,0.1)
 	await tween.finished
 	tween.kill()
+
+func _tween_shoot():
+	var hose = arm.ext_manguera
+	var new_scale := Vector2(1.3,1.0)
+	var tween : Tween = create_tween()
+	tween.tween_property(hose,"scale",new_scale,0.1).set_trans(Tween.TRANS_BOUNCE)
+	tween.tween_property(hose,"scale",Vector2.ONE,0.1).set_trans(Tween.TRANS_BOUNCE)
+	await tween.finished

@@ -608,7 +608,7 @@ scale = Vector2(0.99999994, 0.99999994)
 
 [node name="Particles" type="GPUParticles2D" parent="BodyParts/ArmLshoot/ShootFromHere" unique_id=581632561]
 emitting = false
-amount = 15
+amount = 10
 texture = ExtResource("13_4ni07")
 process_material = SubResource("ParticleProcessMaterial_g4v7s")
 
