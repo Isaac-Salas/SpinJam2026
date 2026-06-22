@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="5_4jsmg"]
 [ext_resource type="Script" uid="uid://d2mutw6sqcgsu" path="res://scripts/rotation_counter_ui.gd" id="6_oix8b"]
 [ext_resource type="Texture2D" uid="uid://ba8j06gnpyq0t" path="res://assets/CONTROL/Valvula fondo.png" id="6_upws3"]
-[ext_resource type="Texture2D" uid="uid://wmheui8thwhn" path="res://assets/light/light.png" id="8_gjyue"]
+[ext_resource type="Texture2D" uid="uid://c0s6b0sg1kqye" path="res://assets/light/light.png" id="8_gjyue"]
 [ext_resource type="Texture2D" uid="uid://ca2fhr7h6i2qu" path="res://assets/CONTROL/Pantalla.png" id="10_s76nm"]
 [ext_resource type="Texture2D" uid="uid://c6tljp7g7h02j" path="res://assets/CONTROL/Avanzar.png" id="11_hni88"]
 [ext_resource type="FontFile" uid="uid://cirgieqkqdak6" path="res://assets/fonts/Funky Catch.otf" id="11_r7xw2"]
@@ -280,6 +280,7 @@ texture_under = ExtResource("20_r7xw2")
 texture_progress = ExtResource("20_5hu6y")
 
 [node name="Light" type="TextureRect" parent="WheelView/Buttons&Indicators/Bar&Button/Energy" unique_id=2109140595]
+visible = false
 modulate = Color(0, 0.8, 0.54666674, 0.78431374)
 material = SubResource("CanvasItemMaterial_qca6q")
 custom_minimum_size = Vector2(200, 70)
