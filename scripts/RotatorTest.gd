@@ -115,7 +115,7 @@ func _check_rotations():
 				add_rotations = true
 			else:
 				add_rotations = false
-	print(quadrant)
+	#print(quadrant)
 
 func _add_rotations():
 	match rotating_side:

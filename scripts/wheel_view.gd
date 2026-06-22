@@ -21,6 +21,17 @@ class_name WheelControl
 @onready var activate: TextureButton = $"Buttons&Indicators/Bar&Button/Activate"
 @onready var light_left_up: TextureRect = $"Buttons&Indicators/Indicators/Left_Up/Light"
 @onready var light_right_down: TextureRect = $"Buttons&Indicators/Indicators/RightDown/Light"
+@onready var screen_light: TextureRect = $"Buttons&Indicators/Pantalla/Light"
+@onready var bar_light: TextureRect = $"Buttons&Indicators/Bar&Button/Energy/Light"
+@export var color_dictionary : Dictionary[String,Color]={
+	"move" : Color(1.0, 1.0, 1.0, 1.0),
+	"jump" : Color(1.0, 1.0, 1.0, 1.0),
+	"shoot" : Color(1.0, 1.0, 1.0, 1.0),
+	"aim" : Color(1.0, 1.0, 1.0, 1.0),
+	"fly" : Color(1.0, 1.0, 1.0, 1.0),
+	"grapple" : Color(1.0, 1.0, 1.0, 1.0)
+}
+
 
 var current_state : String:
 	set(value):
@@ -47,6 +58,7 @@ func _ready() -> void:
 
 func _on_state_button_press(state : String):
 	update_screen(state)
+	update_modular_color(state)
 	eval_energy_bar(state)
 	state_change.emit(state)
 
@@ -107,9 +119,11 @@ func tween_update_energy_bar(new_value : float):
 func on_update_energy_bar():
 	if energy.value == 0:
 		activate.disabled = true
+		bar_light.visible = false
 	else:
 		energy_bar_tween()
 		activate.disabled = false
+		bar_light.visible = true
 
 func energy_bar_tween():
 	var tween : Tween = create_tween()
@@ -118,3 +132,11 @@ func energy_bar_tween():
 	tween.tween_property(energy,"offset_transform_rotation",0,0.05).set_trans(Tween.TRANS_BOUNCE)
 	await tween.finished
 	tween.kill()
+
+func update_modular_color(new_color_name : String):
+	var new_color: Color = color_dictionary[new_color_name]
+	var new_color_transparent := Color(new_color,0.588)
+	energy.tint_progress = new_color
+	screen_text.add_theme_color_override("default_color",new_color)
+	bar_light.modulate = new_color_transparent
+	screen_light.modulate = new_color_transparent

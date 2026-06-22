@@ -19,14 +19,20 @@
 [ext_resource type="Texture2D" uid="uid://bcw725gc161ok" path="res://assets/CONTROL/Apuntar.png" id="16_5hu6y"]
 [ext_resource type="Texture2D" uid="uid://d04763dc0fkx" path="res://assets/CONTROL/Volar.png" id="17_r7xw2"]
 [ext_resource type="Texture2D" uid="uid://dv58disuhid3x" path="res://assets/CONTROL/Garra.png" id="18_w0q7d"]
+[ext_resource type="Texture2D" uid="uid://d7ymjs7sae22" path="res://assets/CONTROL/Bar/ProgressNeutral.png" id="20_5hu6y"]
 [ext_resource type="Texture2D" uid="uid://de3g81jcucn0b" path="res://assets/CONTROL/Bar/Back.png" id="20_r7xw2"]
-[ext_resource type="Texture2D" uid="uid://bby31ft2pt87m" path="res://assets/CONTROL/Bar/Progress.png" id="21_4ocll"]
 [ext_resource type="Texture2D" uid="uid://c5onssuibnbvn" path="res://assets/CONTROL/Encender.png" id="21_w0q7d"]
 [ext_resource type="Texture2D" uid="uid://dyuhicke3f522" path="res://assets/CONTROL/Menos.png" id="22_4ocll"]
 [ext_resource type="Texture2D" uid="uid://db8vmrrusmy8j" path="res://assets/CONTROL/Mas.png" id="24_6wbka"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
 radius = 120.0
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_r7xw2"]
+blend_mode = 1
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_w0q7d"]
+load_path = "res://.godot/imported/light.png-40d4be10c8eb939cfe945997a999dea5.ctex"
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_qca6q"]
 blend_mode = 1
@@ -71,7 +77,14 @@ script = ExtResource("2_mm828")
 initial_screen_text = "move"
 player_jump = true
 player_shoot = true
-player_aim = true
+color_dictionary = Dictionary[String, Color]({
+"aim": Color(1, 1, 1, 1),
+"fly": Color(0.9372549, 0.3764706, 0.2901961, 1),
+"grapple": Color(0.09803922, 0.7294118, 1, 1),
+"jump": Color(0, 0.8, 0.54509807, 1),
+"move": Color(1, 0.84705883, 0.46666667, 1),
+"shoot": Color(0.8980392, 0.1764706, 0.2509804, 1)
+})
 
 [node name="Background" type="TextureRect" parent="WheelView" unique_id=86974915]
 layout_mode = 1
@@ -143,11 +156,24 @@ grow_vertical = 2
 offset_transform_enabled = true
 theme_override_constants/outline_size = 13
 theme_override_fonts/normal_font = ExtResource("11_r7xw2")
-theme_override_font_sizes/normal_font_size = 70
+theme_override_font_sizes/normal_font_size = 55
 bbcode_enabled = true
 text = "[wave amp=50.0 freq=2.0 connected=0]STATE"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Light" type="TextureRect" parent="WheelView/Buttons&Indicators/Pantalla" unique_id=1293691374]
+modulate = Color(0, 0.8, 0.54509807, 0.5882353)
+material = SubResource("CanvasItemMaterial_r7xw2")
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CompressedTexture2D_w0q7d")
+expand_mode = 2
 
 [node name="ButtonsRow1" type="HBoxContainer" parent="WheelView/Buttons&Indicators" unique_id=462408355]
 layout_mode = 2
@@ -233,7 +259,21 @@ max_value = 3.0
 step = 0.1
 nine_patch_stretch = true
 texture_under = ExtResource("20_r7xw2")
-texture_progress = ExtResource("21_4ocll")
+texture_progress = ExtResource("20_5hu6y")
+
+[node name="Light" type="TextureRect" parent="WheelView/Buttons&Indicators/Bar&Button/Energy" unique_id=2109140595]
+visible = false
+modulate = Color(0, 0.8, 0.54666674, 0.78431374)
+material = SubResource("CanvasItemMaterial_qca6q")
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_gjyue")
+expand_mode = 1
 
 [node name="Activate" type="TextureButton" parent="WheelView/Buttons&Indicators/Bar&Button" unique_id=1258541264]
 custom_minimum_size = Vector2(0, 70)

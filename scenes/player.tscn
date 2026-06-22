@@ -543,7 +543,6 @@ z_as_relative = false
 texture = ExtResource("4_d2wvv")
 
 [node name="ArmL" type="Sprite2D" parent="BodyParts" unique_id=1678252862]
-visible = false
 position = Vector2(-79.53951, -147.64716)
 rotation = 0.43633235
 scale = Vector2(0.99999994, 0.99999994)
@@ -565,6 +564,7 @@ scale = Vector2(1.0000001, 1.0000001)
 texture = ExtResource("8_f1ej7")
 
 [node name="ArmLshoot" type="Node2D" parent="BodyParts" unique_id=1315357324]
+visible = false
 position = Vector2(-73.00001, -150)
 scale = Vector2(0.99999994, 0.99999994)
 
@@ -625,7 +625,7 @@ position = Vector2(1180, 0)
 scale = Vector2(1.3, 1.3)
 texture = ExtResource("14_fulsm")
 
-[node name="RayCast2D" type="RayCast2D" parent="Crosshair" unique_id=1029914845]
+[node name="Cast" type="RayCast2D" parent="Crosshair" unique_id=1029914845]
 target_position = Vector2(640, 0)
 
 [node name="PlayerStateMachine" type="Node" parent="." unique_id=1218018386 node_paths=PackedStringArray("initial_state")]
