@@ -1,5 +1,6 @@
 extends CharacterBody2D
 class_name Player
+@export var use_gavity : bool = true
 @export var gravity_multiplier : float = 0.1
 @onready var body_parts: PlayerBodyParts = $BodyParts
 @onready var hook: Sprite2D = $BodyParts/ArmR/Hook
@@ -20,8 +21,9 @@ func _ready() -> void:
 	update_unlocks()
 
 func _physics_process(delta: float) -> void:
-	if not is_on_floor():
-		velocity += (get_gravity()*gravity_multiplier )* delta
+	if use_gavity:
+		if not is_on_floor():
+			velocity += (get_gravity()*gravity_multiplier )* delta
 	move_and_slide()
 
 func update_unlocks():
