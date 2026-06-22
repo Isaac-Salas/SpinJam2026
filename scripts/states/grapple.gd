@@ -30,7 +30,7 @@ func Update(_delta: float):
 	current_target = crosshair.get("_"+str(current_target_number))
 	var target_angle = atan2(current_target.global_position.y - arm.global_position.y, 
 	current_target.global_position.x - arm.global_position.x)
-	arm.rotation = lerp_angle(arm.rotation,target_angle,_delta*5)
+	arm.global_rotation = lerp_angle(arm.global_rotation,target_angle,_delta*5)
 
 func shoot_grapple():
 	reset_energy_count()

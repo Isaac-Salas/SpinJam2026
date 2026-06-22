@@ -27,11 +27,11 @@ offset = Vector2(73.938034, 118.480515)
 
 [node name="Proyectile" parent="ArmR" unique_id=909918044 instance=ExtResource("3_dic7l")]
 visibility_layer = 3
-position = Vector2(130.95901, 279.87634)
+position = Vector2(147, 314)
 rotation = 1.1331426
 
 [node name="ShootFromHere" type="Marker2D" parent="." unique_id=923876137]
-position = Vector2(282.00003, 1.9073486e-06)
+position = Vector2(248.00003, 1.1368684e-13)
 scale = Vector2(0.99999994, 0.99999994)
 
 [node name="Particles" type="GPUParticles2D" parent="ShootFromHere" unique_id=1749914971]
@@ -39,3 +39,9 @@ emitting = false
 amount = 10
 texture = ExtResource("5_k2lns")
 process_material = SubResource("ParticleProcessMaterial_g4v7s")
+
+[node name="Line2D" type="Line2D" parent="." unique_id=682809567]
+z_index = -2
+points = PackedVector2Array(0, 0, 52.93, 0)
+width = 15.0
+default_color = Color(0, 0, 0, 1)

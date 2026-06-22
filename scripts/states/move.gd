@@ -31,3 +31,6 @@ func _flip_sides(side : String):
 		var new_scale := Vector2(new_scale_x,1.0)
 		var tween : Tween = create_tween()
 		tween.tween_property(player.body_parts,"scale",new_scale,0.2)
+		#tween.tween_property(player.crosshair,"scale",new_scale,0.2)
+		await tween.finished
+		tween.kill()
