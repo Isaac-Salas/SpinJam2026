@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://cwfx6kq8w0orh"]
+
+[ext_resource type="Script" uid="uid://b3l1hlbq6u8t4" path="res://scripts/arm_lshoot.gd" id="1_aljht"]
+[ext_resource type="Texture2D" uid="uid://xeeiso5njftr" path="res://assets/ROBOT/Brazo L.png" id="2_q2psm"]
+[ext_resource type="Texture2D" uid="uid://c876vn6i1vqdj" path="res://assets/ROBOT/Manguera.png" id="3_b2sw1"]
+[ext_resource type="Texture2D" uid="uid://dvjfq0emu7gmh" path="res://assets/ROBOT/Extintor.png" id="4_dlyna"]
+[ext_resource type="Texture2D" uid="uid://dq1hxulh35umk" path="res://assets/particles/Extinguisher.png" id="5_tcvxq"]
+[ext_resource type="PackedScene" uid="uid://8bk60fq60126" path="res://scenes/proyectile_extinguisher.tscn" id="6_1xu6s"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_g4v7s"]
+particle_flag_disable_z = true
+initial_velocity_min = 150.0
+initial_velocity_max = 150.0
+gravity = Vector3(0, 98, 0)
+scale_min = 0.099999994
+color = Color(0.7, 0.7, 0.7, 1)
+
+[node name="ArmLshoot" type="Node2D" unique_id=1815557899 node_paths=PackedStringArray("proyectile")]
+visible = false
+scale = Vector2(0.99999994, 0.99999994)
+script = ExtResource("1_aljht")
+proyectile = NodePath("Proyectile")
+
+[node name="ArmL" type="Sprite2D" parent="." unique_id=15886344]
+z_index = 2
+position = Vector2(0, 0.9999695)
+rotation = -1.6580628
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("2_q2psm")
+offset = Vector2(-34.678772, 134.94649)
+
+[node name="ExtManguera" type="Sprite2D" parent="ArmL" unique_id=1246621473]
+z_index = 1
+position = Vector2(-57.158096, 155.35916)
+rotation = 0.116652854
+scale = Vector2(1.0000001, 1.0000001)
+texture = ExtResource("3_b2sw1")
+
+[node name="ExtTanque" type="Sprite2D" parent="ArmL/ExtManguera" unique_id=710558494]
+z_index = -1
+position = Vector2(-36.509247, -140.67783)
+rotation = 0.31700408
+texture = ExtResource("4_dlyna")
+
+[node name="ShootFromHere" type="Marker2D" parent="." unique_id=923876137]
+position = Vector2(347, 23)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Particles" type="GPUParticles2D" parent="ShootFromHere" unique_id=1749914971]
+emitting = false
+amount = 10
+texture = ExtResource("5_tcvxq")
+process_material = SubResource("ParticleProcessMaterial_g4v7s")
+
+[node name="Proyectile" parent="." unique_id=909918044 instance=ExtResource("6_1xu6s")]
+visible = false
+position = Vector2(306, -192)

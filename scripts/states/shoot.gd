@@ -3,13 +3,6 @@ class_name Shoot
 @export var crosshair : Crosshair
 @export var aim_interpolation_mult : float = 10
 var current_target_number : int = 1
-var shooting : bool:
-	set(value):
-		if value != shooting:
-			shooting = value
-			shooting_changed.emit(value)
-
-signal shooting_changed(value : bool)
 
 var arm : ArmExtinguisher
 
@@ -17,7 +10,7 @@ func Enter():
 	arm = player.body_parts.arm_lshoot
 	_reset_arm_rotation()
 	OverlayUI.wheel_view.rotator.rotation_count_changed.connect(start_shooting)
-	player.body_parts.arm_lshoot.visible = true
+	arm.visible = true
 	player.body_parts.arm_l.visible = false
 
 func Update(_delta: float):
@@ -30,7 +23,7 @@ func Update(_delta: float):
 func Exit():
 	OverlayUI.wheel_view.rotator.rotation_count_changed.disconnect(start_shooting)
 	await _tween_reset_arm_rotation()
-	player.body_parts.arm_lshoot.visible = false
+	arm.visible = false
 	player.body_parts.arm_l.visible = true
 
 func start_shooting(looking_at : int):
@@ -39,15 +32,13 @@ func start_shooting(looking_at : int):
 			current_target_number = looking_at
 		elif looking_at > 3:
 			current_target_number = 3
-		shooting = true
 		_tween_shoot()
-		player.body_parts.arm_lshoot.particles.emitting = true
+		arm.particles.emitting = true
 		var new_target : Node2D = crosshair.get("_"+str(current_target_number))
-		player.body_parts.arm_lshoot.shoot(new_target.global_position)
+		arm.shoot(new_target.global_position)
 	else:
-		shooting = false
 		current_target_number = 1
-		player.body_parts.arm_lshoot.particles.emitting = false
+		arm.particles.emitting = false
 
 func _reset_arm_rotation():
 	arm.rotation_degrees = 125

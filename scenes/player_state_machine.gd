@@ -3,6 +3,7 @@ class_name PlayerStateMachine
 @export var initial_state : State
 var current_state : State
 var states : Dictionary = {}
+signal state_changed(state)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -30,3 +31,4 @@ func transition_to_new_state(new_state_name : String):
 		current_state.Exit()
 	new_state.Enter()
 	current_state = new_state
+	state_changed.emit(current_state)

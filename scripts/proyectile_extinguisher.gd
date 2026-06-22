@@ -9,7 +9,7 @@ class_name Proyectile
 func _ready() -> void:
 	toggle_detection(start_detecting)
 
-func _on_area_2d_body_entered(body: Node2D) -> void:
+func _on_area_2d_body_entered(_body: Node2D) -> void:
 	kill()
 
 func kill():

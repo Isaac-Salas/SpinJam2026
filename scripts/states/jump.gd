@@ -22,7 +22,7 @@ func update_energy_count(value : int):
 		energy_count += sign(value)
 		energy_count = clamp(energy_count,min_limit,max_limit)
 		OverlayUI.wheel_view.tween_update_energy_bar(energy_count)
-	print(energy_count)
+	#print(energy_count)
 
 func reset_energy_count():
 	energy_count = 0

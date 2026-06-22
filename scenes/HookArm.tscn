@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://dhe6wdbvnxyky"]
+
+[ext_resource type="Script" uid="uid://e7l1o8stgruu" path="res://scripts/hook_arm.gd" id="1_b78f6"]
+[ext_resource type="Texture2D" uid="uid://df82n1piqxoyt" path="res://assets/ROBOT/Brazo R.png" id="2_b78f6"]
+[ext_resource type="Texture2D" uid="uid://bkn4jnm6vquva" path="res://assets/ROBOT/Garra.png" id="3_2ey5u"]
+[ext_resource type="Texture2D" uid="uid://dq1hxulh35umk" path="res://assets/particles/Extinguisher.png" id="5_k2lns"]
+[ext_resource type="PackedScene" uid="uid://8bk60fq60126" path="res://scenes/proyectile_extinguisher.tscn" id="6_sbh2x"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_g4v7s"]
+particle_flag_disable_z = true
+initial_velocity_min = 150.0
+initial_velocity_max = 150.0
+gravity = Vector3(0, 98, 0)
+scale_min = 0.099999994
+color = Color(0.7, 0.7, 0.7, 1)
+
+[node name="ArmRGrapple" type="Node2D" unique_id=1815557899]
+scale = Vector2(0.99999994, 0.99999994)
+script = ExtResource("1_b78f6")
+
+[node name="ArmR" type="Sprite2D" parent="." unique_id=1807008948]
+modulate = Color(0.5, 0.5, 0.5, 1)
+rotation = -1.1331426
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("2_b78f6")
+offset = Vector2(73.938034, 118.480515)
+
+[node name="Hook" type="Sprite2D" parent="ArmR" unique_id=1377160283]
+z_index = -1
+position = Vector2(157.81676, 313.67963)
+texture = ExtResource("3_2ey5u")
+
+[node name="ShootFromHere" type="Marker2D" parent="." unique_id=923876137]
+position = Vector2(282.00003, 1.9073486e-06)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Particles" type="GPUParticles2D" parent="ShootFromHere" unique_id=1749914971]
+emitting = false
+amount = 10
+texture = ExtResource("5_k2lns")
+process_material = SubResource("ParticleProcessMaterial_g4v7s")
+
+[node name="Proyectile" parent="." unique_id=909918044 instance=ExtResource("6_sbh2x")]
+visible = false
+position = Vector2(306, -192)

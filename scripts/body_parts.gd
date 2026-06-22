@@ -7,3 +7,4 @@ class_name PlayerBodyParts
 @onready var arm_l: Sprite2D = $ArmL
 @onready var head: Sprite2D = $Head
 @onready var arm_lshoot: ArmExtinguisher = $ArmLshoot
+@onready var arm_r_grapple: ArmGrapple = $ArmRGrapple

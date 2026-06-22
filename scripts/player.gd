@@ -29,7 +29,7 @@ func _physics_process(delta: float) -> void:
 func update_unlocks():
 	ext_tanque.visible = OverlayUI.wheel_view.player_shoot
 	ext_manguera.visible = OverlayUI.wheel_view.player_shoot
-	crosshair.visible = OverlayUI.wheel_view.player_aim
+	#crosshair.visible = OverlayUI.wheel_view.player_aim
 	mira.visible = OverlayUI.wheel_view.player_aim
 	propulsorL.visible = OverlayUI.wheel_view.player_fly
 	propulsorR.visible = OverlayUI.wheel_view.player_fly
