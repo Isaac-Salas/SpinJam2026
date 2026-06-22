@@ -2,9 +2,8 @@
 
 [ext_resource type="Script" uid="uid://e7l1o8stgruu" path="res://scripts/hook_arm.gd" id="1_b78f6"]
 [ext_resource type="Texture2D" uid="uid://df82n1piqxoyt" path="res://assets/ROBOT/Brazo R.png" id="2_b78f6"]
-[ext_resource type="Texture2D" uid="uid://bkn4jnm6vquva" path="res://assets/ROBOT/Garra.png" id="3_2ey5u"]
+[ext_resource type="PackedScene" uid="uid://jqb0k5c0icb0" path="res://scenes/proyectile_grapple.tscn" id="3_dic7l"]
 [ext_resource type="Texture2D" uid="uid://dq1hxulh35umk" path="res://assets/particles/Extinguisher.png" id="5_k2lns"]
-[ext_resource type="PackedScene" uid="uid://8bk60fq60126" path="res://scenes/proyectile_extinguisher.tscn" id="6_sbh2x"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_g4v7s"]
 particle_flag_disable_z = true
@@ -14,9 +13,10 @@ gravity = Vector3(0, 98, 0)
 scale_min = 0.099999994
 color = Color(0.7, 0.7, 0.7, 1)
 
-[node name="ArmRGrapple" type="Node2D" unique_id=1815557899]
+[node name="ArmRGrapple" type="Node2D" unique_id=1815557899 node_paths=PackedStringArray("proyectile")]
 scale = Vector2(0.99999994, 0.99999994)
 script = ExtResource("1_b78f6")
+proyectile = NodePath("ArmR/Proyectile")
 
 [node name="ArmR" type="Sprite2D" parent="." unique_id=1807008948]
 modulate = Color(0.5, 0.5, 0.5, 1)
@@ -25,10 +25,10 @@ scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("2_b78f6")
 offset = Vector2(73.938034, 118.480515)
 
-[node name="Hook" type="Sprite2D" parent="ArmR" unique_id=1377160283]
-z_index = -1
-position = Vector2(157.81676, 313.67963)
-texture = ExtResource("3_2ey5u")
+[node name="Proyectile" parent="ArmR" unique_id=909918044 instance=ExtResource("3_dic7l")]
+visibility_layer = 3
+position = Vector2(130.95901, 279.87634)
+rotation = 1.1331426
 
 [node name="ShootFromHere" type="Marker2D" parent="." unique_id=923876137]
 position = Vector2(282.00003, 1.9073486e-06)
@@ -39,7 +39,3 @@ emitting = false
 amount = 10
 texture = ExtResource("5_k2lns")
 process_material = SubResource("ParticleProcessMaterial_g4v7s")
-
-[node name="Proyectile" parent="." unique_id=909918044 instance=ExtResource("6_sbh2x")]
-visible = false
-position = Vector2(306, -192)

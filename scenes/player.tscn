@@ -498,7 +498,6 @@ _data = {
 
 [node name="Player" type="CharacterBody2D" unique_id=1282337476]
 top_level = true
-z_as_relative = false
 script = ExtResource("1_dqkch")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1464719770]

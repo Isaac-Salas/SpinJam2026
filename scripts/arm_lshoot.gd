@@ -6,10 +6,10 @@ class_name ArmExtinguisher
 @onready var shoot_from_here: Marker2D = $ShootFromHere
 @onready var particles: GPUParticles2D = $ShootFromHere/Particles
 
-@export var proyectile : Proyectile
+@export var proyectile : ProyectileShoot
 
 func shoot(target_position : Vector2):
-	var new_proyectile : Proyectile = proyectile.duplicate()
+	var new_proyectile : ProyectileShoot = proyectile.duplicate()
 	shoot_from_here.add_child(new_proyectile)
 	new_proyectile.visible = true
 	new_proyectile.toggle_detection(true)

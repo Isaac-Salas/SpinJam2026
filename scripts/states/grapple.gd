@@ -5,6 +5,7 @@ class_name Grapple
 @export var max_limit : int = 3
 @export var min_limit : int = 0
 var arm : ArmGrapple
+var current_target : Node2D 
 
 func Enter():
 	arm = player.body_parts.arm_r_grapple
@@ -26,7 +27,7 @@ func Update(_delta: float):
 		current_target_number = energy_count
 	else:
 		current_target_number = 1
-	var current_target : Node2D = crosshair.get("_"+str(current_target_number))
+	current_target = crosshair.get("_"+str(current_target_number))
 	var target_angle = atan2(current_target.global_position.y - arm.global_position.y, 
 	current_target.global_position.x - arm.global_position.x)
 	arm.rotation = lerp_angle(arm.rotation,target_angle,_delta*5)
@@ -34,6 +35,7 @@ func Update(_delta: float):
 func shoot_grapple():
 	reset_energy_count()
 	_tween_shoot()
+	arm.shoot(current_target.global_position)
 	print("grapple here!")
 
 func toggle_arm_and_hide_og(value : bool):
