@@ -610,7 +610,6 @@ scale = Vector2(0.99999994, 0.99999994)
 emitting = false
 amount = 15
 texture = ExtResource("13_4ni07")
-lifetime = 2.0
 process_material = SubResource("ParticleProcessMaterial_g4v7s")
 
 [node name="Proyectile" parent="BodyParts/ArmLshoot" unique_id=909918044 instance=ExtResource("14_4ni07")]
