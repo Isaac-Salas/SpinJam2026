@@ -5,7 +5,7 @@ class_name SpinningWheel
 @onready var area_2d: Area2D = $Area2D
 @onready var indicator: Sprite2D = $Area2D/Indicator
 @export var rotation_speed : int = 6
-
+@onready var rotation_counter: Label = $RotationCounter
 
 var is_dragging : bool = false
 var mouse_click : bool = false

@@ -137,6 +137,8 @@ func update_modular_color(new_color_name : String):
 	var new_color: Color = color_dictionary[new_color_name]
 	var new_color_transparent := Color(new_color,0.588)
 	energy.tint_progress = new_color
+	rotator.rotation_counter.add_theme_color_override("font_color",new_color)
 	screen_text.add_theme_color_override("default_color",new_color)
 	bar_light.modulate = new_color_transparent
 	screen_light.modulate = new_color_transparent
+	
