@@ -4,14 +4,26 @@
 [ext_resource type="Script" uid="uid://6pcknq62tnaw" path="res://scripts/wheel_view.gd" id="2_mm828"]
 [ext_resource type="PackedScene" uid="uid://iu0vp01ew7aa" path="res://scenes/Level_Subviewport.tscn" id="2_t0vks"]
 [ext_resource type="Script" uid="uid://txmnn77tnbtr" path="res://scripts/RotatorTest.gd" id="3_t0vks"]
-[ext_resource type="Texture2D" uid="uid://dumhsk6d6ekcr" path="res://assets/control_panel/Wheel.png" id="4_d4826"]
+[ext_resource type="Texture2D" uid="uid://b0f4lqfw2vcki" path="res://assets/CONTROL/Fondo.png" id="4_oix8b"]
 [ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="5_4jsmg"]
 [ext_resource type="Script" uid="uid://d2mutw6sqcgsu" path="res://scripts/rotation_counter_ui.gd" id="6_oix8b"]
-[ext_resource type="FontFile" uid="uid://gvyweina3ogi" path="res://assets/fonts/Robot-Regular.ttf" id="7_upws3"]
+[ext_resource type="Texture2D" uid="uid://ba8j06gnpyq0t" path="res://assets/CONTROL/Valvula fondo.png" id="6_upws3"]
 [ext_resource type="Texture2D" uid="uid://wmheui8thwhn" path="res://assets/light/light.png" id="8_gjyue"]
-[ext_resource type="Texture2D" uid="uid://h578wdf1r6py" path="res://assets/control_panel/ButtonNormal.png" id="9_d4826"]
 [ext_resource type="Texture2D" uid="uid://ys2y7p0uaatw" path="res://assets/control_panel/ButtonPressed.png" id="10_4jsmg"]
+[ext_resource type="Texture2D" uid="uid://ca2fhr7h6i2qu" path="res://assets/CONTROL/Pantalla.png" id="10_s76nm"]
 [ext_resource type="Texture2D" uid="uid://5r244vufmgo4" path="res://assets/control_panel/ButtonDisabled.png" id="11_4jsmg"]
+[ext_resource type="Texture2D" uid="uid://c6tljp7g7h02j" path="res://assets/CONTROL/Avanzar.png" id="11_hni88"]
+[ext_resource type="FontFile" uid="uid://cirgieqkqdak6" path="res://assets/fonts/Funky Catch.otf" id="11_r7xw2"]
+[ext_resource type="Texture2D" uid="uid://bhsd3xc47x7av" path="res://assets/CONTROL/Saltar.png" id="14_o5xw7"]
+[ext_resource type="Texture2D" uid="uid://e8y6hh3g5mnm" path="res://assets/CONTROL/Disparar.png" id="15_4jvme"]
+[ext_resource type="Texture2D" uid="uid://bcw725gc161ok" path="res://assets/CONTROL/Apuntar.png" id="16_5hu6y"]
+[ext_resource type="Texture2D" uid="uid://d04763dc0fkx" path="res://assets/CONTROL/Volar.png" id="17_r7xw2"]
+[ext_resource type="Texture2D" uid="uid://dv58disuhid3x" path="res://assets/CONTROL/Garra.png" id="18_w0q7d"]
+[ext_resource type="Texture2D" uid="uid://de3g81jcucn0b" path="res://assets/CONTROL/Bar/Back.png" id="20_r7xw2"]
+[ext_resource type="Texture2D" uid="uid://bby31ft2pt87m" path="res://assets/CONTROL/Bar/Progress.png" id="21_4ocll"]
+[ext_resource type="Texture2D" uid="uid://c5onssuibnbvn" path="res://assets/CONTROL/Encender.png" id="21_w0q7d"]
+[ext_resource type="Texture2D" uid="uid://dyuhicke3f522" path="res://assets/CONTROL/Menos.png" id="22_4ocll"]
+[ext_resource type="Texture2D" uid="uid://db8vmrrusmy8j" path="res://assets/CONTROL/Mas.png" id="24_6wbka"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
 radius = 120.0
@@ -61,14 +73,23 @@ player_jump = true
 player_shoot = true
 player_aim = true
 
+[node name="Background" type="TextureRect" parent="WheelView" unique_id=86974915]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_oix8b")
+
 [node name="Rotador" type="Node2D" parent="WheelView" unique_id=1895950000]
-position = Vector2(159, 584)
+position = Vector2(159, 587)
 script = ExtResource("3_t0vks")
 rotation_speed = 8
 
 [node name="Wheel" type="Sprite2D" parent="WheelView/Rotador" unique_id=1485825636]
-scale = Vector2(2.2, 2.2)
-texture = ExtResource("4_d4826")
+scale = Vector2(1.32, 1.32)
+texture = ExtResource("6_upws3")
 
 [node name="Area2D" type="Area2D" parent="WheelView/Rotador" unique_id=1045614560]
 
@@ -89,8 +110,8 @@ offset_right = 37.0
 offset_bottom = 23.0
 size_flags_horizontal = 4
 theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("7_upws3")
-theme_override_font_sizes/font_size = 45
+theme_override_fonts/font = ExtResource("11_r7xw2")
+theme_override_font_sizes/font_size = 40
 text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -102,13 +123,15 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 38.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 25
+theme_override_constants/separation = 31
 
 [node name="Pantalla" type="TextureRect" parent="WheelView/Buttons&Indicators" unique_id=758371912]
 layout_mode = 2
-texture = ExtResource("5_4jsmg")
+texture = ExtResource("10_s76nm")
+stretch_mode = 5
 
 [node name="ScreenText" type="RichTextLabel" parent="WheelView/Buttons&Indicators/Pantalla" unique_id=325327669]
 layout_mode = 1
@@ -119,8 +142,8 @@ grow_horizontal = 2
 grow_vertical = 2
 offset_transform_enabled = true
 theme_override_constants/outline_size = 13
-theme_override_fonts/normal_font = ExtResource("7_upws3")
-theme_override_font_sizes/normal_font_size = 100
+theme_override_fonts/normal_font = ExtResource("11_r7xw2")
+theme_override_font_sizes/normal_font_size = 70
 bbcode_enabled = true
 text = "[wave amp=50.0 freq=2.0 connected=0]STATE"
 horizontal_alignment = 1
@@ -128,32 +151,33 @@ vertical_alignment = 1
 
 [node name="ButtonsRow1" type="HBoxContainer" parent="WheelView/Buttons&Indicators" unique_id=462408355]
 layout_mode = 2
+theme_override_constants/separation = -33
 
 [node name="Move" type="TextureButton" parent="WheelView/Buttons&Indicators/ButtonsRow1" unique_id=1380243729]
-custom_minimum_size = Vector2(0, 50)
+custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
 size_flags_horizontal = 3
-texture_normal = ExtResource("9_d4826")
+texture_normal = ExtResource("11_hni88")
 texture_pressed = ExtResource("10_4jsmg")
 texture_disabled = ExtResource("11_4jsmg")
 ignore_texture_size = true
 stretch_mode = 5
 
 [node name="Jump" type="TextureButton" parent="WheelView/Buttons&Indicators/ButtonsRow1" unique_id=2055413526]
-custom_minimum_size = Vector2(0, 50)
+custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
 size_flags_horizontal = 3
-texture_normal = ExtResource("9_d4826")
+texture_normal = ExtResource("14_o5xw7")
 texture_pressed = ExtResource("10_4jsmg")
 texture_disabled = ExtResource("11_4jsmg")
 ignore_texture_size = true
 stretch_mode = 5
 
 [node name="Shoot" type="TextureButton" parent="WheelView/Buttons&Indicators/ButtonsRow1" unique_id=589036761]
-custom_minimum_size = Vector2(0, 50)
+custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
 size_flags_horizontal = 3
-texture_normal = ExtResource("9_d4826")
+texture_normal = ExtResource("15_4jvme")
 texture_pressed = ExtResource("10_4jsmg")
 texture_disabled = ExtResource("11_4jsmg")
 ignore_texture_size = true
@@ -161,32 +185,33 @@ stretch_mode = 5
 
 [node name="ButtonsRow2" type="HBoxContainer" parent="WheelView/Buttons&Indicators" unique_id=732747444]
 layout_mode = 2
+theme_override_constants/separation = -33
 
 [node name="Aim" type="TextureButton" parent="WheelView/Buttons&Indicators/ButtonsRow2" unique_id=115753006]
-custom_minimum_size = Vector2(0, 50)
+custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
 size_flags_horizontal = 3
-texture_normal = ExtResource("9_d4826")
+texture_normal = ExtResource("16_5hu6y")
 texture_pressed = ExtResource("10_4jsmg")
 texture_disabled = ExtResource("11_4jsmg")
 ignore_texture_size = true
 stretch_mode = 5
 
 [node name="Fly" type="TextureButton" parent="WheelView/Buttons&Indicators/ButtonsRow2" unique_id=1410521740]
-custom_minimum_size = Vector2(0, 50)
+custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
 size_flags_horizontal = 3
-texture_normal = ExtResource("9_d4826")
+texture_normal = ExtResource("17_r7xw2")
 texture_pressed = ExtResource("10_4jsmg")
 texture_disabled = ExtResource("11_4jsmg")
 ignore_texture_size = true
 stretch_mode = 5
 
 [node name="Grapple" type="TextureButton" parent="WheelView/Buttons&Indicators/ButtonsRow2" unique_id=1903094933]
-custom_minimum_size = Vector2(0, 50)
+custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
 size_flags_horizontal = 3
-texture_normal = ExtResource("9_d4826")
+texture_normal = ExtResource("18_w0q7d")
 texture_pressed = ExtResource("10_4jsmg")
 texture_disabled = ExtResource("11_4jsmg")
 ignore_texture_size = true
@@ -197,7 +222,7 @@ layout_mode = 2
 size_flags_vertical = 4
 alignment = 1
 
-[node name="Energy" type="ProgressBar" parent="WheelView/Buttons&Indicators/Bar&Button" unique_id=1403667345]
+[node name="Energy" type="TextureProgressBar" parent="WheelView/Buttons&Indicators/Bar&Button" unique_id=1751219620]
 custom_minimum_size = Vector2(180, 50)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -206,14 +231,16 @@ offset_transform_enabled = true
 offset_transform_position = Vector2(27, 0)
 max_value = 3.0
 step = 0.1
-show_percentage = false
+nine_patch_stretch = true
+texture_under = ExtResource("20_r7xw2")
+texture_progress = ExtResource("21_4ocll")
 
 [node name="Activate" type="TextureButton" parent="WheelView/Buttons&Indicators/Bar&Button" unique_id=1258541264]
 custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
 size_flags_horizontal = 3
 disabled = true
-texture_normal = ExtResource("9_d4826")
+texture_normal = ExtResource("21_w0q7d")
 texture_pressed = ExtResource("10_4jsmg")
 texture_disabled = ExtResource("11_4jsmg")
 ignore_texture_size = true
@@ -222,18 +249,19 @@ stretch_mode = 5
 [node name="Indicators" type="HBoxContainer" parent="WheelView/Buttons&Indicators" unique_id=875829654]
 layout_mode = 2
 size_flags_vertical = 4
-theme_override_constants/separation = 150
+theme_override_constants/separation = 187
 alignment = 1
 
 [node name="Left_Up" type="TextureRect" parent="WheelView/Buttons&Indicators/Indicators" unique_id=1419738853]
-custom_minimum_size = Vector2(70, 70)
+custom_minimum_size = Vector2(51.14, 70)
 layout_mode = 2
-texture = ExtResource("5_4jsmg")
+texture = ExtResource("22_4ocll")
 expand_mode = 5
 stretch_mode = 5
 
 [node name="Light" type="TextureRect" parent="WheelView/Buttons&Indicators/Indicators/Left_Up" unique_id=1430900198]
 visible = false
+modulate = Color(0.94, 0.37788, 0.29140002, 0.78431374)
 material = SubResource("CanvasItemMaterial_qca6q")
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 1
@@ -253,14 +281,15 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="RightDown" type="TextureRect" parent="WheelView/Buttons&Indicators/Indicators" unique_id=201018139]
-custom_minimum_size = Vector2(70, 70)
+custom_minimum_size = Vector2(51.14, 70)
 layout_mode = 2
-texture = ExtResource("5_4jsmg")
+texture = ExtResource("24_6wbka")
 expand_mode = 5
 stretch_mode = 5
 
 [node name="Light" type="TextureRect" parent="WheelView/Buttons&Indicators/Indicators/RightDown" unique_id=112796042]
 visible = false
+modulate = Color(0, 0.8, 0.54666674, 0.78431374)
 material = SubResource("CanvasItemMaterial_qca6q")
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 1

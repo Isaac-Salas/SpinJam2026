@@ -492,15 +492,6 @@ _data = {
 &"run": SubResource("Animation_d2wvv")
 }
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_60mlk"]
-radius = 120.0
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_i4ail"]
-radius = 120.0
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_a38lo"]
-radius = 120.0
-
 [node name="Player" type="CharacterBody2D" unique_id=1282337476]
 top_level = true
 z_as_relative = false
@@ -552,6 +543,7 @@ z_as_relative = false
 texture = ExtResource("4_d2wvv")
 
 [node name="ArmL" type="Sprite2D" parent="BodyParts" unique_id=1678252862]
+visible = false
 position = Vector2(-79.53951, -147.64716)
 rotation = 0.43633235
 scale = Vector2(0.99999994, 0.99999994)
@@ -573,14 +565,13 @@ scale = Vector2(1.0000001, 1.0000001)
 texture = ExtResource("8_f1ej7")
 
 [node name="ArmLshoot" type="Node2D" parent="BodyParts" unique_id=1315357324]
-visible = false
 position = Vector2(-73.00001, -150)
 scale = Vector2(0.99999994, 0.99999994)
 
 [node name="ArmL" type="Sprite2D" parent="BodyParts/ArmLshoot" unique_id=1103732876]
 z_index = 2
 position = Vector2(0, 0.9999695)
-rotation = -1.6364044
+rotation = -1.6580628
 scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("6_jej6c")
 offset = Vector2(-34.678772, 134.94649)
@@ -622,21 +613,11 @@ position = Vector2(500, 0)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("14_fulsm")
 
-[node name="Area1" type="Area2D" parent="Crosshair/1" unique_id=1187593951]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Crosshair/1/Area1" unique_id=1142781463]
-shape = SubResource("CircleShape2D_60mlk")
-
 [node name="2" type="Sprite2D" parent="Crosshair" unique_id=637467127]
 modulate = Color(1, 1, 1, 0.19607843)
 position = Vector2(840, 0)
 scale = Vector2(1.1, 1.1)
 texture = ExtResource("14_fulsm")
-
-[node name="Area2" type="Area2D" parent="Crosshair/2" unique_id=792700064]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Crosshair/2/Area2" unique_id=1683764948]
-shape = SubResource("CircleShape2D_i4ail")
 
 [node name="3" type="Sprite2D" parent="Crosshair" unique_id=73800218]
 modulate = Color(1, 1, 1, 0.19607843)
@@ -644,10 +625,8 @@ position = Vector2(1180, 0)
 scale = Vector2(1.3, 1.3)
 texture = ExtResource("14_fulsm")
 
-[node name="Area3" type="Area2D" parent="Crosshair/3" unique_id=1102355718]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Crosshair/3/Area3" unique_id=1012794759]
-shape = SubResource("CircleShape2D_a38lo")
+[node name="RayCast2D" type="RayCast2D" parent="Crosshair" unique_id=1029914845]
+target_position = Vector2(640, 0)
 
 [node name="PlayerStateMachine" type="Node" parent="." unique_id=1218018386 node_paths=PackedStringArray("initial_state")]
 script = ExtResource("1_3vyb7")
