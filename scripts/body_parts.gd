@@ -6,4 +6,4 @@ class_name PlayerBodyParts
 @onready var torso: Sprite2D = $Torso
 @onready var arm_l: Sprite2D = $ArmL
 @onready var head: Sprite2D = $Head
-@onready var arm_lshoot: Node2D = $ArmLshoot
+@onready var arm_lshoot: ArmExtinguisher = $ArmLshoot

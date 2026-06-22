@@ -9,13 +9,15 @@ class_name WheelControl
 @export var player_fly : bool
 @export var player_grapple : bool
 @onready var rotator: SpinningWheel = $Rotador
-@onready var screen_text: RichTextLabel = $"Buttons&Indicators/Pantalla/ScreenText"
+
 @onready var move: TextureButton = $"Buttons&Indicators/ButtonsRow1/Move"
 @onready var jump: TextureButton = $"Buttons&Indicators/ButtonsRow1/Jump"
-@onready var shoot: TextureButton = $"Buttons&Indicators/ButtonsRow1/Shoot"
+@onready var fly: TextureButton = $"Buttons&Indicators/ButtonsRow1/Fly"
+@onready var shoot: TextureButton = $"Buttons&Indicators/ButtonsRow2/Shoot"
 @onready var aim: TextureButton = $"Buttons&Indicators/ButtonsRow2/Aim"
-@onready var fly: TextureButton = $"Buttons&Indicators/ButtonsRow2/Fly"
 @onready var grapple: TextureButton = $"Buttons&Indicators/ButtonsRow2/Grapple"
+
+@onready var screen_text: RichTextLabel = $"Buttons&Indicators/Pantalla/ScreenText"
 @onready var bar_button: HBoxContainer = $"Buttons&Indicators/Bar&Button"
 @onready var energy: TextureProgressBar = $"Buttons&Indicators/Bar&Button/Energy"
 @onready var activate: TextureButton = $"Buttons&Indicators/Bar&Button/Activate"

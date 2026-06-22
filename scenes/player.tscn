@@ -10,20 +10,31 @@
 [ext_resource type="Texture2D" uid="uid://crfky53xwc5ti" path="res://assets/ROBOT/Pierna R.png" id="3_y4r1p"]
 [ext_resource type="Texture2D" uid="uid://c5vi4gjwgspki" path="res://assets/ROBOT/Torso.png" id="4_d2wvv"]
 [ext_resource type="Texture2D" uid="uid://btoavmmhk5rhd" path="res://assets/ROBOT/Pierna L.png" id="5_3v2ag"]
-[ext_resource type="Texture2D" uid="uid://cfx877lcgmqf0" path="res://assets/ROBOT/Propulsor.png" id="5_oprun"]
+[ext_resource type="Texture2D" uid="uid://d0i5ad5tvxona" path="res://assets/ROBOT/Propulsor.png" id="5_oprun"]
 [ext_resource type="Texture2D" uid="uid://xeeiso5njftr" path="res://assets/ROBOT/Brazo L.png" id="6_jej6c"]
-[ext_resource type="Texture2D" uid="uid://bm64rwhqtuvoe" path="res://assets/ROBOT/Extintor.png" id="7_jej6c"]
+[ext_resource type="Texture2D" uid="uid://dvjfq0emu7gmh" path="res://assets/ROBOT/Extintor.png" id="7_jej6c"]
 [ext_resource type="Texture2D" uid="uid://c876vn6i1vqdj" path="res://assets/ROBOT/Manguera.png" id="8_f1ej7"]
 [ext_resource type="Texture2D" uid="uid://yjjk7kbyhg8n" path="res://assets/ROBOT/Mira.png" id="10_oprun"]
 [ext_resource type="Script" uid="uid://c405gfw206awq" path="res://scripts/states/jump.gd" id="10_y4r1p"]
+[ext_resource type="Script" uid="uid://b3l1hlbq6u8t4" path="res://scripts/arm_lshoot.gd" id="12_a38lo"]
+[ext_resource type="Texture2D" uid="uid://dq1hxulh35umk" path="res://assets/particles/Extinguisher.png" id="13_4ni07"]
 [ext_resource type="Script" uid="uid://dlc8a0h81yufh" path="res://scripts/crosshair_test.gd" id="13_qfm1y"]
-[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="14_fulsm"]
+[ext_resource type="PackedScene" uid="uid://8bk60fq60126" path="res://scenes/proyectile_extinguisher.tscn" id="14_4ni07"]
+[ext_resource type="Texture2D" uid="uid://cwhs1jmuqm4dh" path="res://icon.svg" id="14_fulsm"]
 [ext_resource type="Script" uid="uid://nek6uidon6nj" path="res://scripts/states/aim.gd" id="17_qfm1y"]
 [ext_resource type="Script" uid="uid://c0sy12kn17urv" path="res://scripts/states/shoot.gd" id="19_4r5pv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y4r1p"]
 radius = 160.0
 height = 720.0
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_g4v7s"]
+particle_flag_disable_z = true
+initial_velocity_min = 150.0
+initial_velocity_max = 150.0
+gravity = Vector3(0, 98, 0)
+scale_min = 0.099999994
+color = Color(0.7, 0.7, 0.7, 1)
 
 [sub_resource type="Animation" id="Animation_ur7pv"]
 resource_name = "Idle"
@@ -563,10 +574,12 @@ rotation = 0.2593886
 scale = Vector2(1.0000001, 1.0000001)
 texture = ExtResource("8_f1ej7")
 
-[node name="ArmLshoot" type="Node2D" parent="BodyParts" unique_id=1315357324]
+[node name="ArmLshoot" type="Node2D" parent="BodyParts" unique_id=1315357324 node_paths=PackedStringArray("proyectile")]
 visible = false
 position = Vector2(-73.00001, -150)
 scale = Vector2(0.99999994, 0.99999994)
+script = ExtResource("12_a38lo")
+proyectile = NodePath("Proyectile")
 
 [node name="ArmL" type="Sprite2D" parent="BodyParts/ArmLshoot" unique_id=1103732876]
 z_index = 2
@@ -588,6 +601,21 @@ z_index = -1
 position = Vector2(-36.509247, -140.67783)
 rotation = 0.31700408
 texture = ExtResource("7_jej6c")
+
+[node name="ShootFromHere" type="Marker2D" parent="BodyParts/ArmLshoot" unique_id=772023496]
+position = Vector2(347, 23)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Particles" type="GPUParticles2D" parent="BodyParts/ArmLshoot/ShootFromHere" unique_id=581632561]
+emitting = false
+amount = 15
+texture = ExtResource("13_4ni07")
+lifetime = 2.0
+process_material = SubResource("ParticleProcessMaterial_g4v7s")
+
+[node name="Proyectile" parent="BodyParts/ArmLshoot" unique_id=909918044 instance=ExtResource("14_4ni07")]
+visible = false
+position = Vector2(306, -192)
 
 [node name="Head" type="Sprite2D" parent="BodyParts" unique_id=936954017]
 z_index = 1

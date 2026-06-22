@@ -17,7 +17,13 @@ func Exit():
 
 func start_shooting(looking_at : int):
 	if looking_at != 0:
-		if looking_at < 3 and looking_at > 0:
+		if looking_at <= 3 and looking_at > 0:
 			current_target_number = looking_at
+		elif looking_at > 3:
+			current_target_number = 3
+		player.body_parts.arm_lshoot.particles.emitting = true
+		var new_target : Node2D = crosshair.get("_"+str(current_target_number))
+		player.body_parts.arm_lshoot.shoot(new_target.global_position)
 	else:
 		current_target_number = 1
+		player.body_parts.arm_lshoot.particles.emitting = false

@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://8bk60fq60126"]
+
+[ext_resource type="Script" uid="uid://c175lcavcxb2a" path="res://scripts/proyectile_extinguisher.gd" id="1_ggkag"]
+[ext_resource type="Texture2D" uid="uid://dq1hxulh35umk" path="res://assets/particles/Extinguisher.png" id="1_h34qt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
+radius = 62.0
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_g4v7s"]
+particle_flag_disable_z = true
+initial_velocity_min = -200.0
+initial_velocity_max = 200.0
+gravity = Vector3(0, 98, 0)
+scale_min = 0.099999994
+
+[node name="Proyectile" type="Node2D" unique_id=909918044]
+script = ExtResource("1_ggkag")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=789349271]
+scale = Vector2(5.395, 5.395)
+texture = ExtResource("1_h34qt")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=407789152]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=15728678]
+shape = SubResource("CircleShape2D_g4v7s")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1012822757]
+emitting = false
+amount = 20
+texture = ExtResource("1_h34qt")
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_g4v7s")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

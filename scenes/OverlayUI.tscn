@@ -5,35 +5,35 @@
 [ext_resource type="PackedScene" uid="uid://iu0vp01ew7aa" path="res://scenes/Level_Subviewport.tscn" id="2_t0vks"]
 [ext_resource type="Script" uid="uid://txmnn77tnbtr" path="res://scripts/RotatorTest.gd" id="3_t0vks"]
 [ext_resource type="Texture2D" uid="uid://b0f4lqfw2vcki" path="res://assets/CONTROL/Fondo.png" id="4_oix8b"]
-[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="5_4jsmg"]
+[ext_resource type="Texture2D" uid="uid://cwhs1jmuqm4dh" path="res://icon.svg" id="5_4jsmg"]
 [ext_resource type="Script" uid="uid://d2mutw6sqcgsu" path="res://scripts/rotation_counter_ui.gd" id="6_oix8b"]
 [ext_resource type="Texture2D" uid="uid://ba8j06gnpyq0t" path="res://assets/CONTROL/Valvula fondo.png" id="6_upws3"]
 [ext_resource type="Texture2D" uid="uid://c0s6b0sg1kqye" path="res://assets/light/light.png" id="8_gjyue"]
 [ext_resource type="Texture2D" uid="uid://ca2fhr7h6i2qu" path="res://assets/CONTROL/Pantalla.png" id="10_s76nm"]
-[ext_resource type="Texture2D" uid="uid://c6tljp7g7h02j" path="res://assets/CONTROL/Avanzar.png" id="11_hni88"]
+[ext_resource type="Texture2D" uid="uid://xmyd70wolmmy" path="res://assets/CONTROL/Avanzar.png" id="11_hni88"]
 [ext_resource type="FontFile" uid="uid://cirgieqkqdak6" path="res://assets/fonts/Funky Catch.otf" id="11_r7xw2"]
 [ext_resource type="Texture2D" uid="uid://diulau5fs7xs5" path="res://assets/CONTROL/AvanzarPressed.png" id="12_6wbka"]
-[ext_resource type="Texture2D" uid="uid://dl0u45uxpyrqw" path="res://assets/CONTROL/AvanzarDis.png" id="13_ix3sf"]
-[ext_resource type="Texture2D" uid="uid://bhsd3xc47x7av" path="res://assets/CONTROL/Saltar.png" id="14_o5xw7"]
-[ext_resource type="Texture2D" uid="uid://e8y6hh3g5mnm" path="res://assets/CONTROL/Disparar.png" id="15_4jvme"]
+[ext_resource type="Texture2D" uid="uid://dbwcj80w6xh7j" path="res://assets/CONTROL/AvanzarDis.png" id="13_ix3sf"]
+[ext_resource type="Texture2D" uid="uid://dn3wc3s7c56l7" path="res://assets/CONTROL/Saltar.png" id="14_o5xw7"]
+[ext_resource type="Texture2D" uid="uid://jnj74y4j0le3" path="res://assets/CONTROL/Disparar.png" id="15_4jvme"]
 [ext_resource type="Texture2D" uid="uid://dxfcarwuo2jng" path="res://assets/CONTROL/SaltarDis.png" id="15_ing1s"]
-[ext_resource type="Texture2D" uid="uid://bcw725gc161ok" path="res://assets/CONTROL/Apuntar.png" id="16_5hu6y"]
+[ext_resource type="Texture2D" uid="uid://coh0g0nmupbdq" path="res://assets/CONTROL/Apuntar.png" id="16_5hu6y"]
 [ext_resource type="Texture2D" uid="uid://1pdqrl2dv3k1" path="res://assets/CONTROL/SaltarPress.png" id="16_qr5mr"]
-[ext_resource type="Texture2D" uid="uid://d04763dc0fkx" path="res://assets/CONTROL/Volar.png" id="17_r7xw2"]
+[ext_resource type="Texture2D" uid="uid://dxb3eilvi46hr" path="res://assets/CONTROL/Volar.png" id="17_r7xw2"]
 [ext_resource type="Texture2D" uid="uid://kn2phfrkkonk" path="res://assets/CONTROL/DispararPressed.png" id="18_edwka"]
 [ext_resource type="Texture2D" uid="uid://dv58disuhid3x" path="res://assets/CONTROL/Garra.png" id="18_w0q7d"]
 [ext_resource type="Texture2D" uid="uid://cav0bwin1ee2d" path="res://assets/CONTROL/DispararDis.png" id="19_fclwr"]
 [ext_resource type="Texture2D" uid="uid://d7ymjs7sae22" path="res://assets/CONTROL/Bar/ProgressNeutral.png" id="20_5hu6y"]
-[ext_resource type="Texture2D" uid="uid://de3g81jcucn0b" path="res://assets/CONTROL/Bar/Back.png" id="20_r7xw2"]
+[ext_resource type="Texture2D" uid="uid://b3afhcmw2mkyf" path="res://assets/CONTROL/Bar/Back.png" id="20_r7xw2"]
 [ext_resource type="Texture2D" uid="uid://c0h716d0a43uj" path="res://assets/CONTROL/ApuntarDis.png" id="21_ing1s"]
-[ext_resource type="Texture2D" uid="uid://c5onssuibnbvn" path="res://assets/CONTROL/Encender.png" id="21_w0q7d"]
-[ext_resource type="Texture2D" uid="uid://dyuhicke3f522" path="res://assets/CONTROL/Menos.png" id="22_4ocll"]
+[ext_resource type="Texture2D" uid="uid://be57cipqo1rgw" path="res://assets/CONTROL/Encender.png" id="21_w0q7d"]
+[ext_resource type="Texture2D" uid="uid://gfm57j15875w" path="res://assets/CONTROL/Menos.png" id="22_4ocll"]
 [ext_resource type="Texture2D" uid="uid://cjb42c0hlt5q4" path="res://assets/CONTROL/VolarDis.png" id="22_43i1j"]
 [ext_resource type="Texture2D" uid="uid://xbu7mmtni48y" path="res://assets/CONTROL/ApuntarPress.png" id="22_qr5mr"]
 [ext_resource type="Texture2D" uid="uid://l3rkpxpngqgr" path="res://assets/CONTROL/GarraDis.png" id="23_fr1e1"]
 [ext_resource type="Texture2D" uid="uid://o16pca2i3rx5" path="res://assets/CONTROL/VolarPress.png" id="23_rxetn"]
 [ext_resource type="Texture2D" uid="uid://dcxsvobe5w3f4" path="res://assets/CONTROL/GarraPress.png" id="24_0ybrt"]
-[ext_resource type="Texture2D" uid="uid://db8vmrrusmy8j" path="res://assets/CONTROL/Mas.png" id="24_6wbka"]
+[ext_resource type="Texture2D" uid="uid://cu1vd8cdxmlp8" path="res://assets/CONTROL/Mas.png" id="24_6wbka"]
 [ext_resource type="Texture2D" uid="uid://bs6j5m7yxahnh" path="res://assets/CONTROL/EncenderDis.png" id="27_edwka"]
 [ext_resource type="Texture2D" uid="uid://c8n7vj1ektx5x" path="res://assets/CONTROL/EncenderPress.png" id="28_fclwr"]
 
@@ -89,6 +89,7 @@ script = ExtResource("2_mm828")
 initial_screen_text = "move"
 player_jump = true
 player_shoot = true
+player_aim = true
 color_dictionary = Dictionary[String, Color]({
 "aim": Color(1, 1, 1, 1),
 "fly": Color(0.9372549, 0.3764706, 0.2901961, 1),
@@ -213,7 +214,22 @@ texture_disabled = ExtResource("15_ing1s")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="Shoot" type="TextureButton" parent="WheelView/Buttons&Indicators/ButtonsRow1" unique_id=589036761]
+[node name="Fly" type="TextureButton" parent="WheelView/Buttons&Indicators/ButtonsRow1" unique_id=1410521740]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("17_r7xw2")
+texture_pressed = ExtResource("22_43i1j")
+texture_hover = ExtResource("23_rxetn")
+texture_disabled = ExtResource("22_43i1j")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="ButtonsRow2" type="HBoxContainer" parent="WheelView/Buttons&Indicators" unique_id=732747444]
+layout_mode = 2
+theme_override_constants/separation = -33
+
+[node name="Shoot" type="TextureButton" parent="WheelView/Buttons&Indicators/ButtonsRow2" unique_id=589036761]
 custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -224,10 +240,6 @@ texture_disabled = ExtResource("19_fclwr")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="ButtonsRow2" type="HBoxContainer" parent="WheelView/Buttons&Indicators" unique_id=732747444]
-layout_mode = 2
-theme_override_constants/separation = -33
-
 [node name="Aim" type="TextureButton" parent="WheelView/Buttons&Indicators/ButtonsRow2" unique_id=115753006]
 custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
@@ -236,17 +248,6 @@ texture_normal = ExtResource("16_5hu6y")
 texture_pressed = ExtResource("21_ing1s")
 texture_hover = ExtResource("22_qr5mr")
 texture_disabled = ExtResource("21_ing1s")
-ignore_texture_size = true
-stretch_mode = 5
-
-[node name="Fly" type="TextureButton" parent="WheelView/Buttons&Indicators/ButtonsRow2" unique_id=1410521740]
-custom_minimum_size = Vector2(0, 70)
-layout_mode = 2
-size_flags_horizontal = 3
-texture_normal = ExtResource("17_r7xw2")
-texture_pressed = ExtResource("22_43i1j")
-texture_hover = ExtResource("23_rxetn")
-texture_disabled = ExtResource("22_43i1j")
 ignore_texture_size = true
 stretch_mode = 5
 
