@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dhe6wdbvnxyky"]
 
 [ext_resource type="Script" uid="uid://e7l1o8stgruu" path="res://scripts/hook_arm.gd" id="1_b78f6"]
-[ext_resource type="Texture2D" uid="uid://df82n1piqxoyt" path="res://assets/ROBOT/Brazo R.png" id="2_b78f6"]
+[ext_resource type="Texture2D" uid="uid://df82n1piqxoyt" path="res://assets/ROBOT SPINAMO/Brazo R.png" id="2_b78f6"]
 [ext_resource type="PackedScene" uid="uid://jqb0k5c0icb0" path="res://scenes/proyectile_grapple.tscn" id="3_dic7l"]
 [ext_resource type="Texture2D" uid="uid://dq1hxulh35umk" path="res://assets/particles/Extinguisher.png" id="5_k2lns"]
 
@@ -19,7 +19,7 @@ script = ExtResource("1_b78f6")
 proyectile = NodePath("ArmR/Proyectile")
 
 [node name="ArmR" type="Sprite2D" parent="." unique_id=1807008948]
-modulate = Color(0.5, 0.5, 0.5, 1)
+self_modulate = Color(0.5019608, 0.5019608, 0.5019608, 1)
 rotation = -1.1331426
 scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("2_b78f6")
