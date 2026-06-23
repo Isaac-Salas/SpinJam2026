@@ -1,4 +1,6 @@
 extends Node2D
+@export_group("Overrides")
+@export var ui_screen_text : String
 @export_group("Music")
 @export var level_music_name : String
 @export_group("Unlocks")
@@ -16,7 +18,7 @@ func _ready() -> void:
 	await SoundManager.ready
 	SoundManager.cross_fade_to_song(SoundManager.get(level_music_name.to_upper()))
 	unlocks()
-
+	override_ui_screen_text()
 
 func win():
 	OverlayUI.transitions.start_transition(ending_dialog,"start")
@@ -34,3 +36,7 @@ func unlocks():
 	OverlayUI.wheel_view.player_fly = player_fly
 	OverlayUI.wheel_view.player_grapple = player_grapple
 	OverlayUI.wheel_view.update_unlocks()
+
+func override_ui_screen_text():
+	if ui_screen_text != "":
+		OverlayUI.wheel_view.update_screen(ui_screen_text)

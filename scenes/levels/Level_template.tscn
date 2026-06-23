@@ -5,3 +5,4 @@
 [node name="Level_template" type="Node2D" unique_id=244848219]
 script = ExtResource("1_operc")
 level_music_name = "MAIN_FULL"
+player_move = false

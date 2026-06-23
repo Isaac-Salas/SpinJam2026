@@ -2,8 +2,6 @@ extends Node
 
 @onready var music_game: AudioStreamPlayer = $MusicGame
 @onready var music_game_buffer: AudioStreamPlayer = $MusicGameBuffer
-@onready var music_news: AudioStreamPlayer = $MusicNews
-
 @onready var sfx: AudioStreamPlayer = $SFX
 
 const MAIN_FULL = preload("uid://bhlcx3361hdle")

@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://npbhcxjy5rny"]
 
 [ext_resource type="Script" uid="uid://byrkyaaw75jrc" path="res://scripts/Overlay_UI.gd" id="1_avh0g"]
-[ext_resource type="PackedScene" uid="uid://b7gui86a3ksvj" path="res://scenes/levels/Level_template.tscn" id="2_jsc1g"]
+[ext_resource type="PackedScene" uid="uid://fnddrui64dmy" path="res://scenes/levels/MainMenu.tscn" id="2_3c6ce"]
 [ext_resource type="Script" uid="uid://6pcknq62tnaw" path="res://scripts/wheel_view.gd" id="2_mm828"]
 [ext_resource type="Script" uid="uid://txmnn77tnbtr" path="res://scripts/RotatorTest.gd" id="3_t0vks"]
+[ext_resource type="PackedScene" uid="uid://x2n5v35j1lpv" path="res://scenes/levels/Level1.tscn" id="3_th6i0"]
 [ext_resource type="Texture2D" uid="uid://b0f4lqfw2vcki" path="res://assets/CONTROL/Fondo.png" id="4_oix8b"]
 [ext_resource type="Texture2D" uid="uid://cwhs1jmuqm4dh" path="res://icon.svg" id="5_4jsmg"]
 [ext_resource type="Script" uid="uid://d2mutw6sqcgsu" path="res://scripts/rotation_counter_ui.gd" id="6_oix8b"]
@@ -293,7 +294,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("1_avh0g")
-scene_array = Array[PackedScene]([ExtResource("2_jsc1g")])
+scene_array = Array[PackedScene]([ExtResource("2_3c6ce"), ExtResource("3_th6i0")])
 
 [node name="Gameview" type="SubViewportContainer" parent="." unique_id=1858111535]
 custom_minimum_size = Vector2(960, 0)
@@ -306,6 +307,7 @@ grow_vertical = 2
 [node name="SubViewport" type="SubViewport" parent="Gameview" unique_id=901732200]
 handle_input_locally = false
 size = Vector2i(960, 720)
+size_2d_override_stretch = true
 render_target_update_mode = 4
 
 [node name="WheelView" type="Control" parent="." unique_id=2127594160]

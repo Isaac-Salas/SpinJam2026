@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://fnddrui64dmy"]
+
+[ext_resource type="PackedScene" uid="uid://b7gui86a3ksvj" path="res://scenes/levels/Level_template.tscn" id="1_4xtjk"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_g4v7s"]
+
+[node name="Level_template" unique_id=244848219 instance=ExtResource("1_4xtjk")]
+ui_screen_text = "???"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="0" unique_id=692211403]
+
+[node name="Control" type="Control" parent="CanvasLayer" index="0" unique_id=2035584556]
+custom_minimum_size = Vector2(960, 0)
+layout_mode = 3
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control" index="0" unique_id=1221551467]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_g4v7s")
+
+[node name="Camera2D" type="Camera2D" parent="." index="1" unique_id=1282164490]
+anchor_mode = 0
