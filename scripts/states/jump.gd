@@ -5,8 +5,6 @@ class_name Jump
 @export var min_limit : int = 0
 @export var fixed_jump_speed : float = 200
 
-
-
 func Enter():
 	player.use_gavity = true
 	player.body_parts.toggle_rocket_particles(false)
