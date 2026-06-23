@@ -6,15 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dvjfq0emu7gmh" path="res://assets/ROBOT SPINAMO/Extintor.png" id="4_dlyna"]
 [ext_resource type="Texture2D" uid="uid://dq1hxulh35umk" path="res://assets/particles/Extinguisher.png" id="5_tcvxq"]
 [ext_resource type="PackedScene" uid="uid://8bk60fq60126" path="res://scenes/proyectile_extinguisher.tscn" id="6_1xu6s"]
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_g4v7s"]
-particle_flag_disable_z = true
-initial_velocity_min = 150.0
-initial_velocity_max = 150.0
-gravity = Vector3(0, 98, 0)
-scale_min = 0.049999997
-scale_max = 0.19999999
-color = Color(0.7, 0.7, 0.7, 1)
+[ext_resource type="Material" uid="uid://txr1fuekr33y" path="res://particles/ExtinguisherDetail.tres" id="6_q2psm"]
 
 [node name="ArmLshoot" type="Node2D" unique_id=1815557899 node_paths=PackedStringArray("proyectile")]
 scale = Vector2(0.99999994, 0.99999994)
@@ -50,7 +42,7 @@ scale = Vector2(0.99999994, 0.99999994)
 emitting = false
 amount = 10
 texture = ExtResource("5_tcvxq")
-process_material = SubResource("ParticleProcessMaterial_g4v7s")
+process_material = ExtResource("6_q2psm")
 
 [node name="Proyectile" parent="." unique_id=909918044 instance=ExtResource("6_1xu6s")]
 visible = false

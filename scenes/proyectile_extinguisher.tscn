@@ -2,17 +2,10 @@
 
 [ext_resource type="Script" uid="uid://c175lcavcxb2a" path="res://scripts/proyectile_extinguisher.gd" id="1_ggkag"]
 [ext_resource type="Texture2D" uid="uid://dq1hxulh35umk" path="res://assets/particles/Extinguisher.png" id="1_h34qt"]
+[ext_resource type="Material" uid="uid://d0n0l7tewxfrh" path="res://particles/ExtinguisherProyectile.tres" id="3_5vf1r"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
 radius = 62.0
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_g4v7s"]
-particle_flag_disable_z = true
-initial_velocity_min = -200.0
-initial_velocity_max = 200.0
-gravity = Vector3(0, 98, 0)
-scale_min = 0.049999997
-scale_max = 0.14999999
 
 [node name="Proyectile" type="Node2D" unique_id=909918044]
 script = ExtResource("1_ggkag")
@@ -33,6 +26,6 @@ amount = 20
 texture = ExtResource("1_h34qt")
 one_shot = true
 explosiveness = 1.0
-process_material = SubResource("ParticleProcessMaterial_g4v7s")
+process_material = ExtResource("3_5vf1r")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
