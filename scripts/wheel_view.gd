@@ -45,6 +45,8 @@ var current_state : String:
 
 signal state_change(state)
 signal energy_bar_updated
+signal state_button_pressed
+signal bar_button_pressed
 
 func _ready() -> void:
 	_on_state_button_press(initial_screen_text)
@@ -57,10 +59,14 @@ func _ready() -> void:
 	grapple.pressed.connect(_on_state_button_press.bind("grapple"))
 	rotator.rotation_side_change.connect(update_side_indicator)
 	energy_bar_updated.connect(on_update_energy_bar)
+	activate.pressed.connect(_on_bar_button_press)
 	
 
+func _on_bar_button_press():
+	bar_button_pressed.emit()
 
 func _on_state_button_press(state : String):
+	state_button_pressed.emit()
 	update_screen(state)
 	update_modular_color(state)
 	eval_energy_bar(state)
