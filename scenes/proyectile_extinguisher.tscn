@@ -11,13 +11,13 @@ particle_flag_disable_z = true
 initial_velocity_min = -200.0
 initial_velocity_max = 200.0
 gravity = Vector3(0, 98, 0)
-scale_min = 0.099999994
+scale_min = 0.049999997
+scale_max = 0.14999999
 
 [node name="Proyectile" type="Node2D" unique_id=909918044]
 script = ExtResource("1_ggkag")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=789349271]
-scale = Vector2(5.395, 5.395)
 texture = ExtResource("1_h34qt")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=407789152]

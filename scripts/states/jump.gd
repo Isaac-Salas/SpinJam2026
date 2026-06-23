@@ -9,6 +9,7 @@ class_name Jump
 
 func Enter():
 	player.use_gavity = true
+	player.body_parts.toggle_rocket_particles(false)
 	OverlayUI.wheel_view.tween_update_energy_bar(energy_count)
 	OverlayUI.wheel_view.rotator.rotation_count_changed.connect(update_energy_count)
 	OverlayUI.wheel_view.activate.pressed.connect(jump)

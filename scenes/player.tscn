@@ -15,6 +15,8 @@
 [ext_resource type="Texture2D" uid="uid://xeeiso5njftr" path="res://assets/ROBOT SPINAMO/Brazo L.png" id="6_jej6c"]
 [ext_resource type="Texture2D" uid="uid://dvjfq0emu7gmh" path="res://assets/ROBOT SPINAMO/Extintor.png" id="7_jej6c"]
 [ext_resource type="Texture2D" uid="uid://c876vn6i1vqdj" path="res://assets/ROBOT SPINAMO/Manguera.png" id="8_f1ej7"]
+[ext_resource type="Texture2D" uid="uid://dq1hxulh35umk" path="res://assets/particles/Extinguisher.png" id="8_ke2ow"]
+[ext_resource type="Material" uid="uid://bkeubxb3p4y3c" path="res://particles/Rockets.tres" id="9_ujl30"]
 [ext_resource type="Texture2D" uid="uid://yjjk7kbyhg8n" path="res://assets/ROBOT SPINAMO/Mira.png" id="10_oprun"]
 [ext_resource type="Script" uid="uid://c405gfw206awq" path="res://scripts/states/jump.gd" id="10_y4r1p"]
 [ext_resource type="PackedScene" uid="uid://cwfx6kq8w0orh" path="res://scenes/ExtinguisherArm.tscn" id="12_a38lo"]
@@ -300,6 +302,83 @@ tracks/13/keys = {
 "values": [Vector2(-57, -124)]
 }
 
+[sub_resource type="Animation" id="Animation_l71n6"]
+resource_name = "fly"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LegL:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-87, 119), Vector2(-87, 145)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LegR:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.16666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(84, 95), Vector2(84, 121)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Torso:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.5, -17.5), Vector2(0.5, 10)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Head:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-7.5, -144), Vector2(-7.5, -120)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ArmL:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.43633235, 0.61086524]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("ArmR:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.5235988, -0.61086524]
+}
+
 [sub_resource type="Animation" id="Animation_3v2ag"]
 resource_name = "jump"
 length = 0.3
@@ -492,6 +571,7 @@ tracks/5/keys = {
 _data = {
 &"Idle": SubResource("Animation_ur7pv"),
 &"RESET": SubResource("Animation_y4r1p"),
+&"fly": SubResource("Animation_l71n6"),
 &"jump": SubResource("Animation_3v2ag"),
 &"run": SubResource("Animation_d2wvv")
 }
@@ -532,9 +612,21 @@ texture = ExtResource("3_y4r1p")
 offset = Vector2(66, 97)
 
 [node name="Propulsor" type="Sprite2D" parent="BodyParts/LegR" unique_id=1484439667]
-position = Vector2(5, 205)
+z_index = -1
+position = Vector2(-8.78446, 164.26283)
 rotation = -0.2552068
 texture = ExtResource("5_oprun")
+offset = Vector2(3.0540848, 42.897552)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="BodyParts/LegR/Propulsor" unique_id=1788749080]
+z_index = -1
+position = Vector2(-6.342102, 90.796425)
+emitting = false
+amount = 60
+texture = ExtResource("8_ke2ow")
+lifetime = 0.6
+speed_scale = 2.0
+process_material = ExtResource("9_ujl30")
 
 [node name="LegL" type="Sprite2D" parent="BodyParts" unique_id=1821556602]
 position = Vector2(-87, 145)
@@ -542,9 +634,21 @@ texture = ExtResource("5_3v2ag")
 offset = Vector2(-33, 105)
 
 [node name="Propulsor" type="Sprite2D" parent="BodyParts/LegL" unique_id=178841037]
-position = Vector2(-135, 161)
+z_index = -1
+position = Vector2(-119.99999, 122.53253)
 rotation = 0.39079165
 texture = ExtResource("5_oprun")
+offset = Vector2(0.7839203, 41.281128)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="BodyParts/LegL/Propulsor" unique_id=14547247]
+z_index = -1
+position = Vector2(-6.342102, 90.796425)
+emitting = false
+amount = 60
+texture = ExtResource("8_ke2ow")
+lifetime = 0.6
+speed_scale = 2.0
+process_material = ExtResource("9_ujl30")
 
 [node name="Torso" type="Sprite2D" parent="BodyParts" unique_id=1700938557]
 z_as_relative = false
@@ -572,6 +676,7 @@ scale = Vector2(1.0000001, 1.0000001)
 texture = ExtResource("8_f1ej7")
 
 [node name="ArmLshoot" parent="BodyParts" unique_id=814303914 instance=ExtResource("12_a38lo")]
+visible = false
 position = Vector2(-73.00001, -150)
 
 [node name="Head" type="Sprite2D" parent="BodyParts" unique_id=936954017]
@@ -592,6 +697,8 @@ autoplay = &"Idle"
 [node name="Crosshair" type="Node2D" parent="." unique_id=1333286657 node_paths=PackedStringArray("state_machine")]
 script = ExtResource("13_qfm1y")
 state_machine = NodePath("../PlayerStateMachine")
+segment_color_full = Color(1, 1, 1, 1)
+segment_color_transparent = Color(1, 1, 1, 0.19607843)
 
 [node name="1" type="Sprite2D" parent="Crosshair" unique_id=1280771232]
 modulate = Color(1, 1, 1, 0.19607843)
@@ -610,9 +717,6 @@ modulate = Color(1, 1, 1, 0.19607843)
 position = Vector2(1180, 0)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("17_l71n6")
-
-[node name="Cast" type="RayCast2D" parent="Crosshair" unique_id=1029914845]
-target_position = Vector2(640, 0)
 
 [node name="PlayerStateMachine" type="Node" parent="." unique_id=1218018386 node_paths=PackedStringArray("initial_state")]
 script = ExtResource("1_3vyb7")

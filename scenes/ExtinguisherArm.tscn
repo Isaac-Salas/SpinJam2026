@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://cwfx6kq8w0orh"]
 
 [ext_resource type="Script" uid="uid://b3l1hlbq6u8t4" path="res://scripts/arm_lshoot.gd" id="1_aljht"]
-[ext_resource type="Texture2D" uid="uid://xeeiso5njftr" path="res://assets/ROBOT/Brazo L.png" id="2_q2psm"]
-[ext_resource type="Texture2D" uid="uid://c876vn6i1vqdj" path="res://assets/ROBOT/Manguera.png" id="3_b2sw1"]
-[ext_resource type="Texture2D" uid="uid://dvjfq0emu7gmh" path="res://assets/ROBOT/Extintor.png" id="4_dlyna"]
+[ext_resource type="Texture2D" uid="uid://xeeiso5njftr" path="res://assets/ROBOT SPINAMO/Brazo L.png" id="2_q2psm"]
+[ext_resource type="Texture2D" uid="uid://c876vn6i1vqdj" path="res://assets/ROBOT SPINAMO/Manguera.png" id="3_b2sw1"]
+[ext_resource type="Texture2D" uid="uid://dvjfq0emu7gmh" path="res://assets/ROBOT SPINAMO/Extintor.png" id="4_dlyna"]
 [ext_resource type="Texture2D" uid="uid://dq1hxulh35umk" path="res://assets/particles/Extinguisher.png" id="5_tcvxq"]
 [ext_resource type="PackedScene" uid="uid://8bk60fq60126" path="res://scenes/proyectile_extinguisher.tscn" id="6_1xu6s"]
 
@@ -12,11 +12,11 @@ particle_flag_disable_z = true
 initial_velocity_min = 150.0
 initial_velocity_max = 150.0
 gravity = Vector3(0, 98, 0)
-scale_min = 0.099999994
+scale_min = 0.049999997
+scale_max = 0.19999999
 color = Color(0.7, 0.7, 0.7, 1)
 
 [node name="ArmLshoot" type="Node2D" unique_id=1815557899 node_paths=PackedStringArray("proyectile")]
-visible = false
 scale = Vector2(0.99999994, 0.99999994)
 script = ExtResource("1_aljht")
 proyectile = NodePath("Proyectile")
