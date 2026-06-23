@@ -19,6 +19,7 @@ script = ExtResource("1_b78f6")
 proyectile = NodePath("ArmR/Proyectile")
 
 [node name="ArmR" type="Sprite2D" parent="." unique_id=1807008948]
+modulate = Color(0.5019608, 0.5019608, 0.5019608, 1)
 rotation = -1.1331426
 scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("2_b78f6")

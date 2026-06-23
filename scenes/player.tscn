@@ -588,6 +588,7 @@ shape = SubResource("CapsuleShape2D_y4r1p")
 script = ExtResource("2_60mlk")
 
 [node name="ArmR" type="Sprite2D" parent="BodyParts" unique_id=1351509722]
+modulate = Color(0.5019608, 0.5019608, 0.5019608, 1)
 position = Vector2(7.9173584, -131.13223)
 rotation = -0.5235988
 texture = ExtResource("2_ur7pv")
@@ -605,6 +606,7 @@ position = Vector2(-11.999997, -119.00001)
 scale = Vector2(0.9999999, 0.9999999)
 
 [node name="LegR" type="Sprite2D" parent="BodyParts" unique_id=1201750484]
+modulate = Color(0.5019608, 0.5019608, 0.5019608, 1)
 position = Vector2(84, 123)
 texture = ExtResource("3_y4r1p")
 offset = Vector2(66, 97)
