@@ -18,14 +18,14 @@ const ENERGY_BUTTON_PRESS = preload("uid://dbifmuc3oscr1")
 
 func _ready() -> void:
 	#play_news_song()
-	play_song(MAIN_FULL)
-	await get_tree().create_timer(5.0).timeout
-	await cross_fade_to_song(NEWS,4.0)
-	cross_fade_to_song(MAIN_FULL,1.0)
-	
+
+	#await get_tree().create_timer(5.0).timeout
+	#await cross_fade_to_song(NEWS,4.0)
+	#cross_fade_to_song(MAIN_FULL,1.0)
 	OverlayUI.wheel_view.rotator.rotation_count_changed.connect(play_wheel_turn.unbind(1))
 	OverlayUI.wheel_view.state_button_pressed.connect(play_sfx.bind(BUTTON_PRESS, 2.0,3.0))
 	OverlayUI.wheel_view.bar_button_pressed.connect(play_sfx.bind(ENERGY_BUTTON_PRESS,1.5,2.0))
+	cross_fade_to_song(MAIN_FULL)
 
 func play_wheel_turn():
 	play_sfx(WHEEL_TURN)
@@ -65,5 +65,4 @@ func cross_fade_to_song(new_song : AudioStream, new_custom_volume = 1.0) -> bool
 
 func _stop_all_players():
 	music_game.stop()
-	music_news.stop()
 	music_game_buffer.stop()
