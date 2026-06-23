@@ -25,6 +25,8 @@ class_name WheelControl
 @onready var light_right_down: TextureRect = $"Buttons&Indicators/Indicators/RightDown/Light"
 @onready var screen_light: TextureRect = $"Buttons&Indicators/Pantalla/Light"
 @onready var bar_light: TextureRect = $"Buttons&Indicators/Bar&Button/Energy/Light"
+@onready var wheel_count_light: TextureRect = $Rotador/RotationCounter/Light
+
 @export var color_dictionary : Dictionary[String,Color]={
 	"move" : Color(1.0, 1.0, 1.0, 1.0),
 	"jump" : Color(1.0, 1.0, 1.0, 1.0),
@@ -143,4 +145,5 @@ func update_modular_color(new_color_name : String):
 	screen_text.add_theme_color_override("default_color",new_color)
 	bar_light.modulate = new_color_transparent
 	screen_light.modulate = new_color_transparent
+	wheel_count_light.modulate = new_color_transparent
 	

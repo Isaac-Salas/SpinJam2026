@@ -44,14 +44,14 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
 radius = 120.0
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_qca6q"]
+blend_mode = 1
+
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_r7xw2"]
 blend_mode = 1
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_w0q7d"]
 load_path = "res://.godot/imported/light.png-40d4be10c8eb939cfe945997a999dea5.ctex"
-
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_qca6q"]
-blend_mode = 1
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_g4v7s"]
 
@@ -371,11 +371,14 @@ scale = Vector2(0.43, 0.43)
 texture = ExtResource("5_4jsmg")
 
 [node name="RotationCounter" type="Label" parent="WheelView/Rotador" unique_id=1800171792 node_paths=PackedStringArray("wheel")]
+z_index = 2
+z_as_relative = false
 offset_left = -32.0
 offset_top = -27.0
 offset_right = 37.0
 offset_bottom = 23.0
 size_flags_horizontal = 4
+offset_transform_enabled = true
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("11_r7xw2")
 theme_override_font_sizes/font_size = 40
@@ -384,6 +387,25 @@ horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("6_oix8b")
 wheel = NodePath("..")
+
+[node name="Light" type="TextureRect" parent="WheelView/Rotador/RotationCounter" unique_id=569760236]
+modulate = Color(0, 0.8, 0.54666674, 0.78431374)
+material = SubResource("CanvasItemMaterial_qca6q")
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -15.0
+offset_top = -15.0
+offset_right = 15.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_gjyue")
+expand_mode = 1
 
 [node name="Buttons&Indicators" type="VBoxContainer" parent="WheelView" unique_id=524796025]
 layout_mode = 1
