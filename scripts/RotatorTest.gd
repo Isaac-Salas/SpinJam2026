@@ -5,7 +5,9 @@ class_name SpinningWheel
 @onready var area_2d: Area2D = $Area2D
 @onready var indicator: Sprite2D = $Area2D/Indicator
 @export var rotation_speed : int = 6
+@export var disable : bool = false
 @onready var rotation_counter: Label = $RotationCounter
+
 
 var is_dragging : bool = false
 var mouse_click : bool = false
@@ -46,24 +48,25 @@ func _ready() -> void:
 	area_2d.input_event.connect(_on_area_input)
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("left_click"):
-		is_dragging = true
-		
-	elif event.is_action_released("left_click"):
-		rotating_side = ""
-		is_dragging = false
-		mouse_click = false
-		start_rotating = false
-		wheel.reparent(rotador)
-		wheel_spinning = false
-		_reset_all()
-	if event is InputEventMouseMotion:
-		if is_dragging and mouse_click:
-			#area_2d.look_at(get_global_mouse_position())
-			start_rotating = true
-			wheel_spinning = true
-			wheel.reparent(area_2d)
-			_check_turn_side()
+	if not disable:
+		if event.is_action_pressed("left_click"):
+			is_dragging = true
+			
+		elif event.is_action_released("left_click"):
+			rotating_side = ""
+			is_dragging = false
+			mouse_click = false
+			start_rotating = false
+			wheel.reparent(rotador)
+			wheel_spinning = false
+			_reset_all()
+		if event is InputEventMouseMotion:
+			if is_dragging and mouse_click:
+				#area_2d.look_at(get_global_mouse_position())
+				start_rotating = true
+				wheel_spinning = true
+				wheel.reparent(area_2d)
+				_check_turn_side()
 
 
 func _process(delta: float) -> void:
@@ -76,6 +79,9 @@ func _rotate_wheel(delta : float):
 	area_2d.rotation = lerp_angle(area_2d.rotation, area_2d.get_angle_to(target_pos), delta * rotation_speed)
 
 func _reset_all():
+	start_rotating = false
+	is_dragging = false
+	mouse_click = false
 	rotation_count = 0
 	area_2d.global_rotation = 0.0
 	var tween : Tween = create_tween()
@@ -123,3 +129,7 @@ func _add_rotations():
 			rotation_count += 1
 		"left":
 			rotation_count -= 1
+
+func toggle_disable(value):
+	disable = value
+	_reset_all()

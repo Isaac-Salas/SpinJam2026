@@ -26,6 +26,7 @@ func _ready() -> void:
 		start_music()
 
 func start_level():
+	OverlayUI.wheel_view.rotator.toggle_disable(false)
 	unlocks()
 	override_ui_screen_text()
 	if player:
@@ -35,8 +36,10 @@ func start_music():
 	SoundManager.cross_fade_to_song(SoundManager.get(level_music_name.to_upper()),volume)
 
 func win():
+	OverlayUI.wheel_view.rotator.toggle_disable(true)
 	OverlayUI.transitions.start_transition(ending_dialog,"start")
 	SoundManager.cross_fade_to_song(SoundManager.NEWS,4.0)
+	
 
 func lose():
 	OverlayUI.transitions.start_transition(ending_dialog,"start")
