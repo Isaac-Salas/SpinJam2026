@@ -9,11 +9,20 @@ script = ExtResource("1_s6peo")
 [node name="MusicGame" type="AudioStreamPlayer" parent="." unique_id=264933045]
 stream = ExtResource("2_shlr6")
 bus = &"Music"
+playback_type = 1
+
+[node name="MusicGameBuffer" type="AudioStreamPlayer" parent="." unique_id=1591417206]
+stream = ExtResource("2_shlr6")
+volume_db = -80.0
+bus = &"Music"
+playback_type = 1
 
 [node name="MusicNews" type="AudioStreamPlayer" parent="." unique_id=831840427]
 volume_db = 4.0
 bus = &"Music"
+playback_type = 1
 
 [node name="SFX" type="AudioStreamPlayer" parent="." unique_id=561019963]
 max_polyphony = 3
 bus = &"SFX"
+playback_type = 1

@@ -323,11 +323,6 @@ grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("2_mm828")
 initial_screen_text = "move"
-player_jump = true
-player_shoot = true
-player_aim = true
-player_fly = true
-player_grapple = true
 color_dictionary = Dictionary[String, Color]({
 "aim": Color(1, 1, 1, 1),
 "fly": Color(0.9372549, 0.3764706, 0.2901961, 1),
