@@ -30,13 +30,13 @@ func play_sfx(SFX : AudioStream, min_pitch : float = 1.0, max_pitch : float = 3.
 	
 
 func play_song(song : AudioStream):
-	var new_stream : AudioStream = song.duplicate()
+	var new_stream : AudioStreamMP3 = song.duplicate()
 	new_stream.loop = true
 	music_game.stream = new_stream
 	music_game.play()
 
 
-func cross_fade_to_song(new_song : AudioStream, new_custom_volume = 1.0) -> bool:
+func cross_fade_to_song(song : AudioStream, new_custom_volume = 1.0) -> bool:
 	var last_song_stream : AudioStream = music_game.stream
 	var last_song_position : float = music_game.get_playback_position()
 	var original_volume : float = music_game.volume_db
@@ -45,8 +45,7 @@ func cross_fade_to_song(new_song : AudioStream, new_custom_volume = 1.0) -> bool
 	music_game_buffer.volume_db = original_volume
 	music_game_buffer.play(last_song_position)
 	music_game.volume_db = -80
-	music_game.stream = new_song
-	music_game.play()
+	play_song(song)
 	var tween_music : Tween = create_tween()
 	tween_music.parallel().tween_property(music_game,"volume_db",new_custom_volume,0.1)
 	tween_music.parallel().tween_property(music_game_buffer,"volume_db",-80,1.0)
