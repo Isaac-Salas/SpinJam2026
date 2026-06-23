@@ -5,7 +5,16 @@
 [ext_resource type="PackedScene" uid="uid://stjljdb8fl46" path="res://scenes/player.tscn" id="3_76cw8"]
 [ext_resource type="PackedScene" uid="uid://bmi0e7mhfik12" path="res://scenes/floor1.tscn" id="4_m00rq"]
 
-[node name="Level_template" unique_id=244848219 instance=ExtResource("1_fh0io")]
+[node name="Level_template" unique_id=244848219 node_paths=PackedStringArray("player") instance=ExtResource("1_fh0io")]
+ui_screen_text = "Move?"
+level_music_name = "MAIN_DRUMS"
+player_move = true
+player_jump = true
+player_shoot = true
+player_aim = true
+player_fly = true
+player_grapple = true
+player = NodePath("Player")
 
 [node name="Camera2D" type="Camera2D" parent="." index="0" unique_id=933591887 node_paths=PackedStringArray("target_follow")]
 position = Vector2(173, 128)
@@ -63,3 +72,5 @@ position = Vector2(1592, 632)
 
 [node name="Floor6" parent="Floor" index="14" unique_id=1574196494 instance=ExtResource("4_m00rq")]
 position = Vector2(680, 632)
+
+[editable path="Player"]

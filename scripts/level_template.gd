@@ -1,8 +1,11 @@
 extends Node2D
+class_name Level
 @export_group("Overrides")
 @export var ui_screen_text : String
 @export_group("Music")
+@export var play_music_on_ready : bool
 @export var level_music_name : String
+@export_range(1.0,20.0,0.1) var volume : float = 1
 @export_group("Unlocks")
 @export var player_move : bool = true
 @export var player_jump : bool
@@ -13,12 +16,23 @@ extends Node2D
 @export_group("Dialog")
 @export var ending_dialog : DialogueResource
 @export var fail_dialog : DialogueResource
+@export_group("Player")
+@export var player : Player
 
 func _ready() -> void:
-	await SoundManager.ready
-	SoundManager.cross_fade_to_song(SoundManager.get(level_music_name.to_upper()))
+	start_level()
+	if play_music_on_ready:
+		await SoundManager.ready
+		start_music()
+
+func start_level():
 	unlocks()
 	override_ui_screen_text()
+	if player:
+		player.update_unlocks()
+
+func start_music():
+	SoundManager.cross_fade_to_song(SoundManager.get(level_music_name.to_upper()),volume)
 
 func win():
 	OverlayUI.transitions.start_transition(ending_dialog,"start")

@@ -1,11 +1,17 @@
 [gd_scene format=3 uid="uid://fnddrui64dmy"]
 
 [ext_resource type="PackedScene" uid="uid://b7gui86a3ksvj" path="res://scenes/levels/Level_template.tscn" id="1_4xtjk"]
+[ext_resource type="Script" uid="uid://c452bm8tu7ad5" path="res://scripts/spin_detector.gd" id="2_4g3rc"]
+[ext_resource type="Resource" uid="uid://dvsubbyhkwm0y" path="res://dialogs/MenuWin.dialogue" id="2_hyrlu"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_g4v7s"]
 
 [node name="Level_template" unique_id=244848219 instance=ExtResource("1_4xtjk")]
 ui_screen_text = "???"
+play_music_on_ready = true
+level_music_name = "MENU"
+volume = 20.0
+ending_dialog = ExtResource("2_hyrlu")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." index="0" unique_id=692211403]
 
@@ -20,6 +26,7 @@ grow_horizontal = 0
 grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control" index="0" unique_id=1221551467]
+modulate = Color(0, 0, 0, 1)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -30,3 +37,7 @@ texture = SubResource("CanvasTexture_g4v7s")
 
 [node name="Camera2D" type="Camera2D" parent="." index="1" unique_id=1282164490]
 anchor_mode = 0
+
+[node name="SpinDetector" type="Node" parent="." index="2" unique_id=1987925153 node_paths=PackedStringArray("level")]
+script = ExtResource("2_4g3rc")
+level = NodePath("..")
