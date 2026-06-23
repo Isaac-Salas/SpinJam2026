@@ -15,13 +15,16 @@ func _ready() -> void:
 	for child : Sprite2D in get_children():
 		original_scales.append(child.scale)
 	if state_machine:
-		OverlayUI.wheel_view.rotator.rotation_count_changed.connect(_on_count_changed)
 		state_machine.state_changed.connect(_eval_croshair_visibility)
 
 func _eval_croshair_visibility(current_state : State):
 	var state_name : String = current_state.name.to_lower()
 	if state_name == "shoot" or state_name == "aim" or state_name == "grapple":
 		self.visible = true
+		if state_name == "grapple":
+			_swap_connection_mode(true)
+		else:
+			_swap_connection_mode(false)
 	else:
 		self.visible = false
 
@@ -48,3 +51,16 @@ func _reset_all_segments_visible():
 	_1.modulate = segment_color_transparent
 	_2.modulate = segment_color_transparent
 	_3.modulate = segment_color_transparent
+
+func _swap_connection_mode(grapple : bool):
+	_disconnect_all()
+	if grapple:
+		OverlayUI.wheel_view.energy_bar_updated.connect(_on_count_changed)
+	else:
+		OverlayUI.wheel_view.rotator.rotation_count_changed.connect(_on_count_changed)
+
+func _disconnect_all():
+	if OverlayUI.wheel_view.energy_bar_updated.is_connected(_on_count_changed):
+		OverlayUI.wheel_view.energy_bar_updated.disconnect(_on_count_changed)
+	if OverlayUI.wheel_view.rotator.rotation_count_changed.is_connected(_on_count_changed):
+		OverlayUI.wheel_view.rotator.rotation_count_changed.disconnect(_on_count_changed)

@@ -44,7 +44,7 @@ var current_state : String:
 			state_change.emit(current_state)
 
 signal state_change(state)
-signal energy_bar_updated
+signal energy_bar_updated(new_value)
 signal state_button_pressed
 signal bar_button_pressed
 
@@ -123,11 +123,11 @@ func tween_update_energy_bar(new_value : float):
 	var tween : Tween = create_tween()
 	tween.tween_property(energy,"value",new_value,0.1)
 	await tween.finished
-	energy_bar_updated.emit()
+	energy_bar_updated.emit(new_value)
 	tween.kill()
 
-func on_update_energy_bar():
-	if energy.value == 0:
+func on_update_energy_bar(new_value : float):
+	if new_value == 0:
 		activate.disabled = true
 		bar_light.visible = false
 	else:

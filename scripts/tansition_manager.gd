@@ -7,8 +7,9 @@ class_name TransitionManager
 const TEST = preload("uid://dwkdjgw8bob68")
 
 func _ready() -> void:
-	pass
 	#play_transition_in_animation()
+	pass
+
 
 func take_screenshot():
 	await RenderingServer.frame_post_draw

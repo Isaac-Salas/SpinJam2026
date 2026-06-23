@@ -371,7 +371,6 @@ scale = Vector2(0.43, 0.43)
 texture = ExtResource("5_4jsmg")
 
 [node name="RotationCounter" type="Label" parent="WheelView/Rotador" unique_id=1800171792 node_paths=PackedStringArray("wheel")]
-z_index = 2
 z_as_relative = false
 offset_left = -32.0
 offset_top = -27.0
@@ -649,6 +648,7 @@ script = ExtResource("37_gao83")
 
 [node name="Background" type="TextureRect" parent="Transitions" unique_id=908440685]
 modulate = Color(1, 1, 1, 0)
+z_as_relative = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

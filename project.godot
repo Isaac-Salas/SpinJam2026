@@ -20,6 +20,7 @@ config/icon="uid://d4m4oysj8kr8i"
 [audio]
 
 buses/default_bus_layout="uid://bw8hfqdrk4v3j"
+general/default_playback_type.web=0
 
 [autoload]
 
@@ -27,6 +28,7 @@ OverlayUI="*uid://npbhcxjy5rny"
 DialogueManager="*uid://c3rodes2l3gxb"
 SoundManager="*uid://lrdth4vvwlxs"
 MetaGame="*uid://c8hgpkyjy02y4"
+PreloaderScene="*uid://cddlovyqn48lq"
 
 [dialogic]
 
@@ -42,7 +44,7 @@ runtime/balloon_path="res://dialogs/dialog_balloon/balloon.tscn"
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
-window/stretch/mode="viewport"
+window/stretch/mode="canvas_items"
 
 [editor_plugins]
 
