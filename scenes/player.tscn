@@ -695,6 +695,7 @@ libraries/ = SubResource("AnimationLibrary_d2wvv")
 autoplay = &"Idle"
 
 [node name="Crosshair" type="Node2D" parent="." unique_id=1333286657 node_paths=PackedStringArray("state_machine")]
+visible = false
 script = ExtResource("13_qfm1y")
 state_machine = NodePath("../PlayerStateMachine")
 segment_color_full = Color(1, 1, 1, 1)
