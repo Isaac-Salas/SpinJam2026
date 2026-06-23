@@ -41,16 +41,7 @@ corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qkmqt"]
-bg_color = Color(0, 0, 0, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s6peo"]
 
 [sub_resource type="Theme" id="Theme_qq3yp"]
 default_font = ExtResource("2_6p07n")
@@ -63,7 +54,7 @@ MarginContainer/constants/margin_bottom = 15
 MarginContainer/constants/margin_left = 30
 MarginContainer/constants/margin_right = 30
 MarginContainer/constants/margin_top = 15
-PanelContainer/styles/panel = SubResource("StyleBoxFlat_qkmqt")
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_s6peo")
 
 [sub_resource type="Animation" id="Animation_nlsx6"]
 length = 0.001

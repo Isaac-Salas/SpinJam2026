@@ -5,6 +5,9 @@ extends Control
 @onready var wheel_view: WheelControl = $WheelView
 @export var scene_array : Array[PackedScene]
 @export var current_scene : int = 0
+@onready var transitions: TransitionManager = $Transitions
+
+
 
 func _ready() -> void:
 	go_to_scene(current_scene)

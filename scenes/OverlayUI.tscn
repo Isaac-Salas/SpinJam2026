@@ -3,11 +3,13 @@
 [ext_resource type="Script" uid="uid://byrkyaaw75jrc" path="res://scripts/Overlay_UI.gd" id="1_avh0g"]
 [ext_resource type="Script" uid="uid://6pcknq62tnaw" path="res://scripts/wheel_view.gd" id="2_mm828"]
 [ext_resource type="PackedScene" uid="uid://iu0vp01ew7aa" path="res://scenes/Level_Subviewport.tscn" id="2_t0vks"]
+[ext_resource type="PackedScene" uid="uid://1scnf8d7qhfs" path="res://scenes/levels/LEVEL_TEST.tscn" id="3_jsc1g"]
 [ext_resource type="Script" uid="uid://txmnn77tnbtr" path="res://scripts/RotatorTest.gd" id="3_t0vks"]
 [ext_resource type="Texture2D" uid="uid://b0f4lqfw2vcki" path="res://assets/CONTROL/Fondo.png" id="4_oix8b"]
 [ext_resource type="Texture2D" uid="uid://cwhs1jmuqm4dh" path="res://icon.svg" id="5_4jsmg"]
 [ext_resource type="Script" uid="uid://d2mutw6sqcgsu" path="res://scripts/rotation_counter_ui.gd" id="6_oix8b"]
 [ext_resource type="Texture2D" uid="uid://ba8j06gnpyq0t" path="res://assets/CONTROL/Valvula fondo.png" id="6_upws3"]
+[ext_resource type="Texture2D" uid="uid://b0o5rp57c234t" path="res://assets/CONTROL/Valvula centro.png" id="8_3c6ce"]
 [ext_resource type="Texture2D" uid="uid://c0s6b0sg1kqye" path="res://assets/light/light.png" id="8_gjyue"]
 [ext_resource type="Texture2D" uid="uid://ca2fhr7h6i2qu" path="res://assets/CONTROL/Pantalla.png" id="10_s76nm"]
 [ext_resource type="Texture2D" uid="uid://xmyd70wolmmy" path="res://assets/CONTROL/Avanzar.png" id="11_hni88"]
@@ -36,6 +38,8 @@
 [ext_resource type="Texture2D" uid="uid://cu1vd8cdxmlp8" path="res://assets/CONTROL/Mas.png" id="24_6wbka"]
 [ext_resource type="Texture2D" uid="uid://bs6j5m7yxahnh" path="res://assets/CONTROL/EncenderDis.png" id="27_edwka"]
 [ext_resource type="Texture2D" uid="uid://c8n7vj1ektx5x" path="res://assets/CONTROL/EncenderPress.png" id="28_fclwr"]
+[ext_resource type="Script" uid="uid://csxeq17ck6eci" path="res://scripts/tansition_manager.gd" id="37_gao83"]
+[ext_resource type="FontFile" uid="uid://dg2knt0fjyuad" path="res://assets/fonts/NewakeFont-Demo.otf" id="37_qr5mr"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
 radius = 120.0
@@ -49,6 +53,238 @@ load_path = "res://.godot/imported/light.png-40d4be10c8eb939cfe945997a999dea5.ct
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_qca6q"]
 blend_mode = 1
 
+[sub_resource type="CanvasTexture" id="CanvasTexture_g4v7s"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_jsc1g"]
+viewport_path = NodePath("Gameview/SubViewport")
+
+[sub_resource type="Gradient" id="Gradient_gao83"]
+colors = PackedColorArray(0.006985336, 0, 0.26416406, 1, 0.99215686, 0, 0.007843138, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_g4v7s"]
+gradient = SubResource("Gradient_gao83")
+
+[sub_resource type="Animation" id="Animation_gao83"]
+resource_name = "Breaking_News"
+length = 3.0000000000000004
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Stripe:offset_transform_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5, 1, 1.7, 2.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-1300, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, -285)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Stripe/Text:offset_transform_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5, 1, 1.7, 2.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(2600, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 10)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Stripe:custom_minimum_size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.7, 2.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(300, 300), Vector2(300, 150)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GameScreenshot:offset_transform_scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(2, 2)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("GameScreenshot:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Background:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1.7, 2.5333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_3c6ce"]
+resource_name = "OUT"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_jsc1g"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Stripe:offset_transform_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1300, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Stripe/Text:offset_transform_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2600, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Stripe:custom_minimum_size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(300, 300)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GameScreenshot:offset_transform_scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("GameScreenshot:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Background:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath(".:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3c6ce"]
+_data = {
+&"Breaking_News": SubResource("Animation_gao83"),
+&"OUT": SubResource("Animation_3c6ce"),
+&"RESET": SubResource("Animation_jsc1g")
+}
+
 [node name="Overlay" type="Control" unique_id=582774981]
 layout_mode = 3
 anchors_preset = 15
@@ -58,7 +294,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("1_avh0g")
-scene_array = Array[PackedScene]([ExtResource("2_t0vks")])
+scene_array = Array[PackedScene]([ExtResource("2_t0vks"), ExtResource("3_jsc1g")])
 
 [node name="Gameview" type="SubViewportContainer" parent="." unique_id=1858111535]
 custom_minimum_size = Vector2(960, 0)
@@ -119,6 +355,10 @@ rotation_speed = 8
 scale = Vector2(1.32, 1.32)
 texture = ExtResource("6_upws3")
 
+[node name="Sprite2D" type="Sprite2D" parent="WheelView/Rotador/Wheel" unique_id=1132640693]
+position = Vector2(1.5151514, 0)
+texture = ExtResource("8_3c6ce")
+
 [node name="Area2D" type="Area2D" parent="WheelView/Rotador" unique_id=1045614560]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WheelView/Rotador/Area2D" unique_id=1735144764]
@@ -131,7 +371,6 @@ scale = Vector2(0.43, 0.43)
 texture = ExtResource("5_4jsmg")
 
 [node name="RotationCounter" type="Label" parent="WheelView/Rotador" unique_id=1800171792 node_paths=PackedStringArray("wheel")]
-z_index = 100
 offset_left = -32.0
 offset_top = -27.0
 offset_right = 37.0
@@ -375,3 +614,84 @@ grow_vertical = 2
 texture = ExtResource("8_gjyue")
 expand_mode = 1
 stretch_mode = 5
+
+[node name="Transitions" type="Control" parent="." unique_id=14063282]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("37_gao83")
+
+[node name="Background" type="TextureRect" parent="Transitions" unique_id=908440685]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("CanvasTexture_g4v7s")
+
+[node name="LevelPreview" type="TextureRect" parent="Transitions/Background" unique_id=1032222671]
+custom_minimum_size = Vector2(450, 450)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 157.0
+offset_top = -250.0
+offset_right = 607.0
+offset_bottom = 200.0
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("ViewportTexture_jsc1g")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="GameScreenshot" type="TextureRect" parent="Transitions" unique_id=1965253796]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+mouse_filter = 2
+
+[node name="Stripe" type="TextureRect" parent="Transitions" unique_id=1372728107]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -0.5
+offset_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(-1300, 0)
+mouse_filter = 2
+texture = SubResource("GradientTexture1D_g4v7s")
+
+[node name="Text" type="Label" parent="Transitions/Stripe" unique_id=1680207484]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(2600, 0)
+theme_override_fonts/font = ExtResource("37_qr5mr")
+theme_override_font_sizes/font_size = 153
+text = "BREAKING NEWS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Transitions" unique_id=1072254539]
+libraries/ = SubResource("AnimationLibrary_3c6ce")

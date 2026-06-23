@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://lrdth4vvwlxs"]
+
+[ext_resource type="Script" uid="uid://c4pfhonxotsiv" path="res://scripts/sound_manager.gd" id="1_s6peo"]
+[ext_resource type="AudioStream" uid="uid://bhlcx3361hdle" path="res://assets/music/MAIN/ES_Face the Fact (Instrumental Version) - Middle And End.mp3" id="2_shlr6"]
+
+[node name="SoundManager" type="Node" unique_id=567359878]
+script = ExtResource("1_s6peo")
+
+[node name="MusicGame" type="AudioStreamPlayer" parent="." unique_id=264933045]
+stream = ExtResource("2_shlr6")
+bus = &"Music"
+
+[node name="MusicNews" type="AudioStreamPlayer" parent="." unique_id=831840427]
+volume_db = 4.0
+bus = &"Music"
+
+[node name="SFX" type="AudioStreamPlayer" parent="." unique_id=561019963]
+max_polyphony = 3
+bus = &"SFX"

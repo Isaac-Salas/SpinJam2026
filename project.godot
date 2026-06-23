@@ -13,12 +13,19 @@ config_version=5
 config/name="SpinJam2026"
 run/main_scene="uid://cxh8ix1tcdp8w"
 config/features=PackedStringArray("4.7", "GL Compatibility")
-config/icon="res://icon.svg"
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/image="uid://d4m4oysj8kr8i"
+config/icon="uid://d4m4oysj8kr8i"
+
+[audio]
+
+buses/default_bus_layout="uid://bw8hfqdrk4v3j"
 
 [autoload]
 
 OverlayUI="*uid://npbhcxjy5rny"
 DialogueManager="*uid://c3rodes2l3gxb"
+SoundManager="*uid://lrdth4vvwlxs"
 
 [dialogic]
 

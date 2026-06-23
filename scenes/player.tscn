@@ -2,24 +2,24 @@
 
 [ext_resource type="Script" uid="uid://dcgu8ld0xam6t" path="res://scenes/player_state_machine.gd" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://cbb22cet8clmj" path="res://scripts/player.gd" id="1_dqkch"]
-[ext_resource type="Texture2D" uid="uid://x8e7hkex2fuw" path="res://assets/ROBOT/Cabeza.png" id="1_qhqgy"]
+[ext_resource type="Texture2D" uid="uid://x8e7hkex2fuw" path="res://assets/ROBOT SPINAMO/Cabeza.png" id="1_qhqgy"]
 [ext_resource type="Script" uid="uid://gye677igqbik" path="res://scripts/body_parts.gd" id="2_60mlk"]
 [ext_resource type="Script" uid="uid://o4ba60xfjdve" path="res://scripts/states/move.gd" id="2_g2els"]
-[ext_resource type="Texture2D" uid="uid://df82n1piqxoyt" path="res://assets/ROBOT/Brazo R.png" id="2_ur7pv"]
-[ext_resource type="Texture2D" uid="uid://bkn4jnm6vquva" path="res://assets/ROBOT/Garra.png" id="3_f1ej7"]
-[ext_resource type="Texture2D" uid="uid://crfky53xwc5ti" path="res://assets/ROBOT/Pierna R.png" id="3_y4r1p"]
-[ext_resource type="Texture2D" uid="uid://c5vi4gjwgspki" path="res://assets/ROBOT/Torso.png" id="4_d2wvv"]
-[ext_resource type="Texture2D" uid="uid://btoavmmhk5rhd" path="res://assets/ROBOT/Pierna L.png" id="5_3v2ag"]
+[ext_resource type="Texture2D" uid="uid://df82n1piqxoyt" path="res://assets/ROBOT SPINAMO/Brazo R.png" id="2_ur7pv"]
+[ext_resource type="Texture2D" uid="uid://bkn4jnm6vquva" path="res://assets/ROBOT SPINAMO/Garra.png" id="3_f1ej7"]
+[ext_resource type="Texture2D" uid="uid://crfky53xwc5ti" path="res://assets/ROBOT SPINAMO/Pierna R.png" id="3_y4r1p"]
+[ext_resource type="Texture2D" uid="uid://c5vi4gjwgspki" path="res://assets/ROBOT SPINAMO/Torso.png" id="4_d2wvv"]
+[ext_resource type="Texture2D" uid="uid://btoavmmhk5rhd" path="res://assets/ROBOT SPINAMO/Pierna L.png" id="5_3v2ag"]
 [ext_resource type="PackedScene" uid="uid://dhe6wdbvnxyky" path="res://scenes/HookArm.tscn" id="5_l71n6"]
-[ext_resource type="Texture2D" uid="uid://d0i5ad5tvxona" path="res://assets/ROBOT/Propulsor.png" id="5_oprun"]
-[ext_resource type="Texture2D" uid="uid://xeeiso5njftr" path="res://assets/ROBOT/Brazo L.png" id="6_jej6c"]
-[ext_resource type="Texture2D" uid="uid://dvjfq0emu7gmh" path="res://assets/ROBOT/Extintor.png" id="7_jej6c"]
-[ext_resource type="Texture2D" uid="uid://c876vn6i1vqdj" path="res://assets/ROBOT/Manguera.png" id="8_f1ej7"]
-[ext_resource type="Texture2D" uid="uid://yjjk7kbyhg8n" path="res://assets/ROBOT/Mira.png" id="10_oprun"]
+[ext_resource type="Texture2D" uid="uid://d0i5ad5tvxona" path="res://assets/ROBOT SPINAMO/Propulsor.png" id="5_oprun"]
+[ext_resource type="Texture2D" uid="uid://xeeiso5njftr" path="res://assets/ROBOT SPINAMO/Brazo L.png" id="6_jej6c"]
+[ext_resource type="Texture2D" uid="uid://dvjfq0emu7gmh" path="res://assets/ROBOT SPINAMO/Extintor.png" id="7_jej6c"]
+[ext_resource type="Texture2D" uid="uid://c876vn6i1vqdj" path="res://assets/ROBOT SPINAMO/Manguera.png" id="8_f1ej7"]
+[ext_resource type="Texture2D" uid="uid://yjjk7kbyhg8n" path="res://assets/ROBOT SPINAMO/Mira.png" id="10_oprun"]
 [ext_resource type="Script" uid="uid://c405gfw206awq" path="res://scripts/states/jump.gd" id="10_y4r1p"]
 [ext_resource type="PackedScene" uid="uid://cwfx6kq8w0orh" path="res://scenes/ExtinguisherArm.tscn" id="12_a38lo"]
 [ext_resource type="Script" uid="uid://dlc8a0h81yufh" path="res://scripts/crosshair_test.gd" id="13_qfm1y"]
-[ext_resource type="Texture2D" uid="uid://cwhs1jmuqm4dh" path="res://icon.svg" id="14_fulsm"]
+[ext_resource type="Texture2D" uid="uid://0appshg3y2e7" path="res://assets/CONTROL/Mira.png" id="17_l71n6"]
 [ext_resource type="Script" uid="uid://nek6uidon6nj" path="res://scripts/states/aim.gd" id="17_qfm1y"]
 [ext_resource type="Script" uid="uid://c0sy12kn17urv" path="res://scripts/states/shoot.gd" id="19_4r5pv"]
 [ext_resource type="Script" uid="uid://cn4ho1l627xcf" path="res://scripts/states/grapple.gd" id="23_4ni07"]
@@ -590,7 +590,6 @@ libraries/ = SubResource("AnimationLibrary_d2wvv")
 autoplay = &"Idle"
 
 [node name="Crosshair" type="Node2D" parent="." unique_id=1333286657 node_paths=PackedStringArray("state_machine")]
-visible = false
 script = ExtResource("13_qfm1y")
 state_machine = NodePath("../PlayerStateMachine")
 
@@ -598,19 +597,19 @@ state_machine = NodePath("../PlayerStateMachine")
 modulate = Color(1, 1, 1, 0.19607843)
 position = Vector2(500, 0)
 scale = Vector2(0.75, 0.75)
-texture = ExtResource("14_fulsm")
+texture = ExtResource("17_l71n6")
 
 [node name="2" type="Sprite2D" parent="Crosshair" unique_id=637467127]
 modulate = Color(1, 1, 1, 0.19607843)
 position = Vector2(840, 0)
-scale = Vector2(1.1, 1.1)
-texture = ExtResource("14_fulsm")
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("17_l71n6")
 
 [node name="3" type="Sprite2D" parent="Crosshair" unique_id=73800218]
 modulate = Color(1, 1, 1, 0.19607843)
 position = Vector2(1180, 0)
-scale = Vector2(1.3, 1.3)
-texture = ExtResource("14_fulsm")
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("17_l71n6")
 
 [node name="Cast" type="RayCast2D" parent="Crosshair" unique_id=1029914845]
 target_position = Vector2(640, 0)
