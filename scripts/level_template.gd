@@ -10,14 +10,27 @@ extends Node2D
 @export var player_grapple : bool
 @export_group("Dialog")
 @export var ending_dialog : DialogueResource
+@export var fail_dialog : DialogueResource
 
 func _ready() -> void:
-	pass
+	await SoundManager.ready
+	SoundManager.cross_fade_to_song(SoundManager.get(level_music_name.to_upper()))
+	unlocks()
 
 
 func win():
 	OverlayUI.transitions.start_transition(ending_dialog,"start")
-	SoundManager.cross_fade_to_song(SoundManager.get(level_music_name.to_upper()))
+	SoundManager.cross_fade_to_song(SoundManager.NEWS,4.0)
 
 func lose():
-	pass
+	OverlayUI.transitions.start_transition(ending_dialog,"start")
+	SoundManager.cross_fade_to_song(SoundManager.NEWS,4.0)
+
+func unlocks():
+	OverlayUI.wheel_view.player_move = player_move
+	OverlayUI.wheel_view.player_jump = player_jump
+	OverlayUI.wheel_view.player_shoot = player_shoot
+	OverlayUI.wheel_view.player_aim = player_aim
+	OverlayUI.wheel_view.player_fly = player_fly
+	OverlayUI.wheel_view.player_grapple = player_grapple
+	OverlayUI.wheel_view.update_unlocks()
