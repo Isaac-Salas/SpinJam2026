@@ -3,8 +3,12 @@
 [ext_resource type="PackedScene" uid="uid://b7gui86a3ksvj" path="res://scenes/levels/Level_template.tscn" id="1_4xtjk"]
 [ext_resource type="Script" uid="uid://c452bm8tu7ad5" path="res://scripts/spin_detector.gd" id="2_4g3rc"]
 [ext_resource type="Resource" uid="uid://dvsubbyhkwm0y" path="res://dialogs/Menu/MenuWin.dialogue" id="2_hyrlu"]
+[ext_resource type="Texture2D" uid="uid://dx7mrmv5mauik" path="res://assets/ESCRITORIO/Fondo.png" id="3_agb1x"]
+[ext_resource type="Texture2D" uid="uid://dl10p5hurh45m" path="res://assets/ESCRITORIO/Corazon.png" id="4_ue4lf"]
+[ext_resource type="Texture2D" uid="uid://c0s6b0sg1kqye" path="res://assets/light/light.png" id="5_7rblo"]
 
-[sub_resource type="CanvasTexture" id="CanvasTexture_g4v7s"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ue4lf"]
+blend_mode = 1
 
 [node name="Level_template" unique_id=244848219 instance=ExtResource("1_4xtjk")]
 ui_screen_text = "???"
@@ -25,19 +29,64 @@ anchor_bottom = 1.0
 grow_horizontal = 0
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control" index="0" unique_id=1221551467]
-modulate = Color(0, 0, 0, 1)
+[node name="Fondo" type="TextureRect" parent="CanvasLayer/Control" index="0" unique_id=1221551467]
+modulate = Color(0.7, 0.7, 0.7, 1)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("CanvasTexture_g4v7s")
+texture = ExtResource("3_agb1x")
+expand_mode = 1
+
+[node name="Corazon" type="TextureRect" parent="CanvasLayer/Control" index="1" unique_id=1057652844]
+custom_minimum_size = Vector2(700, 700)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -353.0
+offset_top = -340.0
+offset_right = 347.0
+offset_bottom = 360.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+texture = ExtResource("4_ue4lf")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Luz" type="TextureRect" parent="CanvasLayer/Control" index="2" unique_id=895517999]
+modulate = Color(0.81, 0.28350002, 0.51165, 0.3137255)
+material = SubResource("CanvasItemMaterial_ue4lf")
+custom_minimum_size = Vector2(700, 700)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -297.0
+offset_top = -350.0
+offset_right = 403.0
+offset_bottom = 350.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+texture = ExtResource("5_7rblo")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Camera2D" type="Camera2D" parent="." index="1" unique_id=1282164490]
 anchor_mode = 0
 
-[node name="SpinDetector" type="Node" parent="." index="2" unique_id=1987925153 node_paths=PackedStringArray("level")]
+[node name="SpinDetector" type="Node" parent="." index="2" unique_id=1987925153 node_paths=PackedStringArray("level", "luz")]
 script = ExtResource("2_4g3rc")
 level = NodePath("..")
+luz = NodePath("../CanvasLayer/Control/Luz")
+
+[node name="Timer" type="Timer" parent="." index="3" unique_id=446724366]
+wait_time = 0.5

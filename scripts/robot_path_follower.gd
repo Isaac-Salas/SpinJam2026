@@ -40,7 +40,7 @@ func _get_all_points():
 	for point_number in curve.point_count:
 		var point_position = curve.get_point_position(point_number)
 		all_points.append(point_position)
-	print(all_points)
+	#print(all_points)
 
 func _rubber_band_check():
 	var player : Player = get_parent().find_child("Player")
@@ -62,8 +62,6 @@ func _handle_points(delta : float):
 	else:
 		if current_point+1 < all_points.size():
 			current_point += 1
-		else:
-			print("done")
 
 func _on_current_point_changed(value:int):
 	print("now on : ", value)

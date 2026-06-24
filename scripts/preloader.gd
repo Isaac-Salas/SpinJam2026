@@ -10,5 +10,5 @@ func _load_all_materials():
 	for particle : ParticleProcessMaterial in all_particle_materials:
 		gpu_particles_2d.process_material = particle
 		gpu_particles_2d.emitting = true
-		await get_tree().create_timer(0.01).timeout
-	self.visible = true
+		await get_tree().create_timer(0.1).timeout
+	self.visible = false
