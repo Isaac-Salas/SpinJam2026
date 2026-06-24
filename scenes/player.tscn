@@ -30,7 +30,7 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y4r1p"]
 radius = 160.0
-height = 720.0
+height = 680.0
 
 [sub_resource type="Animation" id="Animation_ur7pv"]
 resource_name = "Idle"
@@ -582,7 +582,7 @@ top_level = true
 script = ExtResource("1_dqkch")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1464719770]
-position = Vector2(0, -38.25)
+position = Vector2(0, -12)
 shape = SubResource("CapsuleShape2D_y4r1p")
 
 [node name="BodyParts" type="Node2D" parent="." unique_id=1219986125]
