@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b7gui86a3ksvj" path="res://scenes/levels/Level_template.tscn" id="1_4xtjk"]
 [ext_resource type="Script" uid="uid://c452bm8tu7ad5" path="res://scripts/spin_detector.gd" id="2_4g3rc"]
-[ext_resource type="Resource" uid="uid://dvsubbyhkwm0y" path="res://dialogs/MenuWin.dialogue" id="2_hyrlu"]
+[ext_resource type="Resource" uid="uid://dvsubbyhkwm0y" path="res://dialogs/Menu/MenuWin.dialogue" id="2_hyrlu"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_g4v7s"]
 

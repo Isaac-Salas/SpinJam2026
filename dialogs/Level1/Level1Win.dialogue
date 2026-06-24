@@ -1,0 +1,11 @@
+~ start
+News Anchor : Funny little guy isn't he folks?
+News Anchor : What you just watched was special footage of a man that claims to have invented something amazing.
+News Anchor : A device that can turn a simple "spin" motion into enough energy to power a whole house.
+News Anchor : However, It seems this man has other goals in mind, given that he just granted us exclusive access to never-before-seen footage showing the device being used as a power source for a rather peculiar little machine.
+do OverlayUI.go_to_next_scene()
+News Anchor : Im told this little guy can [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#ffd877] move [/color][/wave][/outline_size] like nobody's business.
+News Anchor: Anyway folks, see for yourselves.
+do OverlayUI.transitions.finish_transition()
+do OverlayUI.current_scene.start_music()
+=> END

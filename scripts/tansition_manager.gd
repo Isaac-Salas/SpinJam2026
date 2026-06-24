@@ -11,7 +11,6 @@ func _ready() -> void:
 
 
 func take_screenshot():
-	await RenderingServer.frame_post_draw
 	var image = get_viewport().get_texture().get_image()
 	var texture_test = ImageTexture.create_from_image(image)
 	game_screenshot.texture = texture_test

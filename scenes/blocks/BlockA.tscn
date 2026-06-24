@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://bmi0e7mhfik12"]
 
-[ext_resource type="Texture2D" uid="uid://cwhs1jmuqm4dh" path="res://icon.svg" id="1_ij88p"]
+[ext_resource type="Texture2D" uid="uid://cwhs1jmuqm4dh" path="res://icon.svg" id="1_1v8j1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(150, 150)
 
-[node name="Floor" type="StaticBody2D" unique_id=890028475]
+[node name="BlockA" type="StaticBody2D" unique_id=890028475]
 z_as_relative = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=966638850]
@@ -15,4 +15,4 @@ shape = SubResource("RectangleShape2D_g4v7s")
 z_index = -10
 z_as_relative = false
 scale = Vector2(1.2, 1.2)
-texture = ExtResource("1_ij88p")
+texture = ExtResource("1_1v8j1")

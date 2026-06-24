@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://b7gui86a3ksvj" path="res://scenes/levels/Level_template.tscn" id="1_1xtnv"]
 [ext_resource type="Script" uid="uid://b1ifuyqh4x2qv" path="res://scenes/camera_2d.gd" id="2_2p574"]
 [ext_resource type="PackedScene" uid="uid://stjljdb8fl46" path="res://scenes/player.tscn" id="3_e5vnl"]
-[ext_resource type="PackedScene" uid="uid://bmi0e7mhfik12" path="res://scenes/floor1.tscn" id="4_twycr"]
+[ext_resource type="PackedScene" uid="uid://bmi0e7mhfik12" path="res://scenes/blocks/BlockA.tscn" id="4_twycr"]
 
 [node name="Level_template" unique_id=244848219 node_paths=PackedStringArray("player") instance=ExtResource("1_1xtnv")]
 ui_screen_text = "Move?"

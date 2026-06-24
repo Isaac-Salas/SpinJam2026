@@ -23,6 +23,7 @@
 [ext_resource type="Script" uid="uid://dlc8a0h81yufh" path="res://scripts/crosshair_test.gd" id="13_qfm1y"]
 [ext_resource type="Texture2D" uid="uid://0appshg3y2e7" path="res://assets/CONTROL/Mira.png" id="17_l71n6"]
 [ext_resource type="Script" uid="uid://nek6uidon6nj" path="res://scripts/states/aim.gd" id="17_qfm1y"]
+[ext_resource type="Texture2D" uid="uid://ysmqycoxjo0d" path="res://assets/ROBOT CORAZÓN/Corazón.png" id="18_31cv2"]
 [ext_resource type="Script" uid="uid://c0sy12kn17urv" path="res://scripts/states/shoot.gd" id="19_4r5pv"]
 [ext_resource type="Script" uid="uid://cn4ho1l627xcf" path="res://scripts/states/grapple.gd" id="23_4ni07"]
 [ext_resource type="Script" uid="uid://cdvc8qrfwdfpy" path="res://scripts/states/fly.gd" id="24_l71n6"]
@@ -651,6 +652,14 @@ speed_scale = 2.0
 process_material = ExtResource("9_ujl30")
 
 [node name="Torso" type="Sprite2D" parent="BodyParts" unique_id=1700938557]
+z_as_relative = false
+
+[node name="SmallTorso" type="Sprite2D" parent="BodyParts/Torso" unique_id=875966448]
+visible = false
+position = Vector2(0, 73)
+texture = ExtResource("18_31cv2")
+
+[node name="NormalTorso" type="Sprite2D" parent="BodyParts/Torso" unique_id=1136336582]
 z_as_relative = false
 texture = ExtResource("4_d2wvv")
 
