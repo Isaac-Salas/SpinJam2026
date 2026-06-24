@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://di3etpmd87llx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_inlfm"]
+size = Vector2(150, 4500)
+
+[node name="Invisible" type="StaticBody2D" unique_id=462407768]
+z_as_relative = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1425998938]
+position = Vector2(0, -1048)
+shape = SubResource("RectangleShape2D_inlfm")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=607817907]
+position = Vector2(1632, -2736)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_inlfm")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=1033001078]
+position = Vector2(3040, -1680)
+rotation = 3.1415927
+shape = SubResource("RectangleShape2D_inlfm")

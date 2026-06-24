@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://b84yo8nn7u8i7"]
+
+[ext_resource type="Texture2D" uid="uid://clgr4w03uxsw7" path="res://assets/PLACEHOLDERS/Double/block_green.png" id="1_c0dsk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(150, 150)
+
+[node name="BlockA" type="StaticBody2D" unique_id=890028475]
+z_as_relative = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=966638850]
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2016050094]
+z_index = -10
+z_as_relative = false
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("1_c0dsk")

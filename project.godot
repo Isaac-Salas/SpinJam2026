@@ -57,6 +57,7 @@ folder_colors={
 "res://assets/": "purple",
 "res://build/": "red",
 "res://dialogs/": "teal",
+"res://particles/": "yellow",
 "res://scenes/": "green",
 "res://scripts/": "blue"
 }
