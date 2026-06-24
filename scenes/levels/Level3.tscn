@@ -13,8 +13,10 @@
 [ext_resource type="Script" uid="uid://d23ls8xjweb25" path="res://scripts/robot_lose_area.gd" id="8_4n27n"]
 [ext_resource type="PackedScene" uid="uid://bkjbnrm7ucs02" path="res://scenes/blocks/Level3/BlockC.tscn" id="8_x3k3d"]
 [ext_resource type="PackedScene" uid="uid://di3etpmd87llx" path="res://scenes/blocks/InvisibleWalls.tscn" id="9_vnuxi"]
+[ext_resource type="Script" uid="uid://bqp43vrtkyybk" path="res://scripts/second_view_toggler.gd" id="10_ljeji"]
 [ext_resource type="PackedScene" uid="uid://dfk6nh7l0d81b" path="res://scenes/blocks/Level3/Platform.tscn" id="12_bs2pm"]
 [ext_resource type="PackedScene" uid="uid://dwswsr5q8tb7k" path="res://scenes/player_detect_win.tscn" id="13_i2tsv"]
+[ext_resource type="PackedScene" uid="uid://d22xiwyrkmjcu" path="res://scenes/second_view_cam.tscn" id="17_bqc3i"]
 
 [sub_resource type="Curve2D" id="Curve2D_bs2pm"]
 _data = {
@@ -34,16 +36,13 @@ play_music_on_ready = true
 level_music_name = "main_full"
 player_move = true
 player_jump = true
-player_shoot = true
-player_aim = true
-player_fly = true
-player_grapple = true
 ending_dialog = ExtResource("2_cw4sw")
 fail_dialog = ExtResource("3_vjdto")
 player = NodePath("Player")
 
 [node name="Camera2D" type="Camera2D" parent="." index="0" unique_id=933591887 node_paths=PackedStringArray("target_follow")]
 zoom = Vector2(0.6, 0.6)
+process_callback = 0
 limit_enabled = false
 script = ExtResource("3_stl8g")
 target_follow = NodePath("../Player/CameraMarker")
@@ -92,6 +91,12 @@ script = ExtResource("8_4n27n")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Robot/RobotLoseArea" index="0" unique_id=172080499]
 shape = SubResource("CircleShape2D_yf5fn")
+
+[node name="SecondViewToggle" type="Node" parent="Robot" index="3" unique_id=909142189 node_paths=PackedStringArray("second_view", "robot")]
+script = ExtResource("10_ljeji")
+toggle_treshold = 1000.0
+second_view = NodePath("")
+robot = NodePath("..")
 
 [node name="PlayerDetectWin" parent="." index="4" unique_id=1281271033 node_paths=PackedStringArray("level") instance=ExtResource("13_i2tsv")]
 position = Vector2(5033, -1010)
@@ -1111,5 +1116,9 @@ position = Vector2(7752, -736)
 
 [node name="Platform16" parent="Terrain" index="334" unique_id=971933136 instance=ExtResource("12_bs2pm")]
 position = Vector2(7904, -736)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="6" unique_id=1923618080]
+
+[node name="SecondView" parent="CanvasLayer" index="0" unique_id=1491427061 instance=ExtResource("17_bqc3i")]
 
 [editable path="Terrain/Invisible"]

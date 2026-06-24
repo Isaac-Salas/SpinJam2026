@@ -27,6 +27,7 @@ player = NodePath("Player")
 
 [node name="Camera2D" type="Camera2D" parent="." index="0" unique_id=933591887 node_paths=PackedStringArray("target_follow")]
 zoom = Vector2(0.6, 0.6)
+process_callback = 0
 limit_enabled = false
 script = ExtResource("4_k5e6m")
 target_follow = NodePath("../Player/CameraMarker")

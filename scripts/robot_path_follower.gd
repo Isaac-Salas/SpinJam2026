@@ -10,6 +10,12 @@ class_name RobotPathFollower
 @export var level : Level
 var all_points : Array[Vector2]
 
+var distance_to_player : float:
+	set(value):
+		if value != distance_to_player:
+			distance_to_player = value
+			distance_to_player_changed.emit(distance_to_player)
+
 var direction : Vector2:
 	set(value):
 		if direction != value:
@@ -31,6 +37,7 @@ var current_speed_multiplier : int:
 signal current_point_changed(value : int)
 signal current_speed_changed(value : int)
 signal direction_changed(value : Vector2)
+signal distance_to_player_changed(value : float)
 
 
 func _ready() -> void:
@@ -58,7 +65,7 @@ func _get_all_points():
 
 func _rubber_band_check():
 	var player : Player = get_parent().find_child("Player")
-	var distance_to_player = self.global_position.distance_to(player.global_position)
+	distance_to_player = self.global_position.distance_to(player.global_position)
 	var direction_to_player = self.global_position.direction_to(player.global_position).sign()
 	#print(distance_to_player, direction_to_player)
 	if direction_to_player.x == 1.0:
