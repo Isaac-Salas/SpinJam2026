@@ -40,6 +40,9 @@
 [ext_resource type="Texture2D" uid="uid://c8n7vj1ektx5x" path="res://assets/CONTROL/EncenderPress.png" id="28_fclwr"]
 [ext_resource type="Script" uid="uid://csxeq17ck6eci" path="res://scripts/tansition_manager.gd" id="37_gao83"]
 [ext_resource type="FontFile" uid="uid://dg2knt0fjyuad" path="res://assets/fonts/NewakeFont-Demo.otf" id="37_qr5mr"]
+[ext_resource type="Texture2D" uid="uid://didmfcik1f616" path="res://assets/NOTICIERO/Fondo.png" id="40_dh6ui"]
+[ext_resource type="Texture2D" uid="uid://d3qafb2yiap22" path="res://assets/NOTICIERO/Conductor.png" id="41_uxxwa"]
+[ext_resource type="Texture2D" uid="uid://dvst3oifslt8k" path="res://assets/NOTICIERO/Barra superior.png" id="42_aqtce"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
 radius = 120.0
@@ -53,16 +56,8 @@ blend_mode = 1
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_w0q7d"]
 load_path = "res://.godot/imported/light.png-40d4be10c8eb939cfe945997a999dea5.ctex"
 
-[sub_resource type="CanvasTexture" id="CanvasTexture_g4v7s"]
-
 [sub_resource type="ViewportTexture" id="ViewportTexture_jsc1g"]
 viewport_path = NodePath("Gameview/SubViewport")
-
-[sub_resource type="Gradient" id="Gradient_gao83"]
-colors = PackedColorArray(0.006985336, 0, 0.26416406, 1, 0.99215686, 0, 0.007843138, 1)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_g4v7s"]
-gradient = SubResource("Gradient_gao83")
 
 [sub_resource type="Animation" id="Animation_gao83"]
 resource_name = "Breaking_News"
@@ -89,7 +84,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0.5, 1, 1.7, 2.7),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(2600, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 10)]
+"values": [Vector2(2600, 0), Vector2(0, 0), Vector2(0, 0), Vector2(314, 2.6)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -150,6 +145,18 @@ tracks/6/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Stripe/Text:offset_transform_scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(1.7, 2.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.5, 0.5)]
 }
 
 [sub_resource type="Animation" id="Animation_3c6ce"]
@@ -276,6 +283,18 @@ tracks/7/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Stripe/Text:offset_transform_scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3c6ce"]
@@ -657,7 +676,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-texture = SubResource("CanvasTexture_g4v7s")
+texture = ExtResource("40_dh6ui")
 
 [node name="LevelPreview" type="TextureRect" parent="Transitions/Background" unique_id=1032222671]
 custom_minimum_size = Vector2(450, 450)
@@ -674,6 +693,21 @@ mouse_filter = 2
 texture = SubResource("ViewportTexture_jsc1g")
 expand_mode = 1
 stretch_mode = 5
+
+[node name="TextureRect" type="TextureRect" parent="Transitions/Background" unique_id=1928071268]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -522.0
+offset_top = -194.0
+offset_right = -250.0
+offset_bottom = 158.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("41_uxxwa")
 
 [node name="GameScreenshot" type="TextureRect" parent="Transitions" unique_id=1965253796]
 layout_mode = 1
@@ -701,7 +735,7 @@ grow_vertical = 2
 offset_transform_enabled = true
 offset_transform_position = Vector2(-1300, 0)
 mouse_filter = 2
-texture = SubResource("GradientTexture1D_g4v7s")
+texture = ExtResource("42_aqtce")
 
 [node name="Text" type="Label" parent="Transitions/Stripe" unique_id=1680207484]
 layout_mode = 1

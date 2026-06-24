@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://nscy5oy152gm"]
 
 [ext_resource type="Script" uid="uid://bxfeidcacckha" path="res://dialogs/dialog_balloon/balloon.gd" id="1_36de5"]
-[ext_resource type="FontFile" uid="uid://cirgieqkqdak6" path="res://assets/fonts/Funky Catch.otf" id="2_6p07n"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
-[ext_resource type="Texture2D" uid="uid://b0f4lqfw2vcki" path="res://assets/CONTROL/Fondo.png" id="2_wk56f"]
+[ext_resource type="Texture2D" uid="uid://unjgl3mtrige" path="res://assets/NOTICIERO/Barra inferior.png" id="2_wk56f"]
+[ext_resource type="FontFile" uid="uid://dg2knt0fjyuad" path="res://assets/fonts/NewakeFont-Demo.otf" id="3_8msoj"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_72ixx"]
+[ext_resource type="Texture2D" uid="uid://1tiuonk4y7nu" path="res://assets/NOTICIERO/Chanel.png" id="5_8msoj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 bg_color = Color(0, 0, 0, 1)
@@ -46,7 +47,7 @@ corner_radius_bottom_left = 5
 texture = ExtResource("2_wk56f")
 
 [sub_resource type="Theme" id="Theme_qq3yp"]
-default_font = ExtResource("2_6p07n")
+default_font = ExtResource("3_8msoj")
 default_font_size = 20
 Button/styles/disabled = SubResource("StyleBoxFlat_spyqn")
 Button/styles/focus = SubResource("StyleBoxFlat_ri4m3")
@@ -125,19 +126,24 @@ mouse_filter = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="Balloon/MarginContainer/PanelContainer" unique_id=694496852]
 layout_mode = 2
+theme_override_constants/margin_right = 170
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Balloon/MarginContainer/PanelContainer/MarginContainer" unique_id=937617913]
 layout_mode = 2
+theme_override_constants/separation = 67
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer" unique_id=1333066582]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_constants/separation = 5
 
 [node name="CharacterLabel" type="RichTextLabel" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1385422112]
 unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.501961)
 layout_mode = 2
 mouse_filter = 1
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 45
 bbcode_enabled = true
 text = "Character"
 fit_content = true
@@ -147,7 +153,12 @@ scroll_active = false
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 25
 text = "Dialogue..."
+fit_content = false
+scroll_following = true
+scroll_following_visible_characters = true
 
 [node name="Control" type="Control" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer" unique_id=226876335]
 custom_minimum_size = Vector2(20, 10)
@@ -161,6 +172,28 @@ polygon = PackedVector2Array(0, 0, 10, 10, 20, 0)
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/Control" unique_id=828932525]
 libraries/ = SubResource("AnimationLibrary_1337t")
 autoplay = &"progress"
+
+[node name="Logo" type="TextureRect" parent="Balloon/MarginContainer" unique_id=435504386]
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+offset_transform_enabled = true
+offset_transform_position = Vector2(-25, -17)
+texture = ExtResource("5_8msoj")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Balloon/MarginContainer/Logo" unique_id=890639528]
+layout_mode = 0
+offset_top = 164.0
+offset_right = 84.0
+offset_bottom = 184.0
+offset_transform_enabled = true
+offset_transform_position = Vector2(-9, -3)
+theme_override_colors/font_color = Color(0.043137256, 0.02745098, 0.12156863, 1)
+theme_override_font_sizes/font_size = 26
+text = "CHANNEL"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="ResponsesMenu" type="VBoxContainer" parent="Balloon" unique_id=1275411236 node_paths=PackedStringArray("response_template")]
 unique_name_in_owner = true
