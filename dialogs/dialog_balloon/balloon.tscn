@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://unjgl3mtrige" path="res://assets/NOTICIERO/Barra inferior.png" id="2_wk56f"]
 [ext_resource type="FontFile" uid="uid://dg2knt0fjyuad" path="res://assets/fonts/NewakeFont-Demo.otf" id="3_8msoj"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_72ixx"]
+[ext_resource type="FontFile" uid="uid://chqw74du7qjap" path="res://assets/fonts/Lexend-ExtraBold.ttf" id="3_hutvi"]
 [ext_resource type="Texture2D" uid="uid://1tiuonk4y7nu" path="res://assets/NOTICIERO/Chanel.png" id="5_8msoj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
@@ -47,7 +48,7 @@ corner_radius_bottom_left = 5
 texture = ExtResource("2_wk56f")
 
 [sub_resource type="Theme" id="Theme_qq3yp"]
-default_font = ExtResource("3_8msoj")
+default_font = ExtResource("3_hutvi")
 default_font_size = 20
 Button/styles/disabled = SubResource("StyleBoxFlat_spyqn")
 Button/styles/focus = SubResource("StyleBoxFlat_ri4m3")
@@ -135,7 +136,6 @@ theme_override_constants/separation = 67
 [node name="VBoxContainer" type="VBoxContainer" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer" unique_id=1333066582]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_constants/separation = 5
 
 [node name="CharacterLabel" type="RichTextLabel" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1385422112]
 unique_name_in_owner = true
@@ -143,7 +143,7 @@ modulate = Color(1, 1, 1, 0.501961)
 layout_mode = 2
 mouse_filter = 1
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 45
+theme_override_font_sizes/normal_font_size = 40
 bbcode_enabled = true
 text = "Character"
 fit_content = true
@@ -154,11 +154,8 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 25
+theme_override_font_sizes/normal_font_size = 23
 text = "Dialogue..."
-fit_content = false
-scroll_following = true
-scroll_following_visible_characters = true
 
 [node name="Control" type="Control" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer" unique_id=226876335]
 custom_minimum_size = Vector2(20, 10)
@@ -190,6 +187,7 @@ offset_bottom = 184.0
 offset_transform_enabled = true
 offset_transform_position = Vector2(-9, -3)
 theme_override_colors/font_color = Color(0.043137256, 0.02745098, 0.12156863, 1)
+theme_override_fonts/font = ExtResource("3_8msoj")
 theme_override_font_sizes/font_size = 26
 text = "CHANNEL"
 horizontal_alignment = 1

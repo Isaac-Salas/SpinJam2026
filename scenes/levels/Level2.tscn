@@ -6,14 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://bmi0e7mhfik12" path="res://scenes/blocks/BlockA.tscn" id="4_twycr"]
 
 [node name="Level_template" unique_id=244848219 node_paths=PackedStringArray("player") instance=ExtResource("1_1xtnv")]
-ui_screen_text = "Move?"
-level_music_name = "MAIN_DRUMS"
+ui_screen_text = "Move"
+level_music_name = "MAIN_INSTRUMENTS"
 player_move = true
 player_jump = true
-player_shoot = true
-player_aim = true
-player_fly = true
-player_grapple = true
 player = NodePath("Player")
 
 [node name="Camera2D" type="Camera2D" parent="." index="0" unique_id=933591887 node_paths=PackedStringArray("target_follow")]
