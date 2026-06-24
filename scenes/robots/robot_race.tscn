@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b421ssvhrko3" path="res://scenes/robots/robot_template.tscn" id="1_3ifhg"]
 [ext_resource type="Texture2D" uid="uid://bjuun00poanhp" path="res://assets/ROBOT CARRERA/Brazo R.png" id="2_c28nh"]
+[ext_resource type="Script" uid="uid://8nhjqwv1puy0" path="res://scripts/robot_template.gd" id="2_ekfpl"]
 [ext_resource type="Texture2D" uid="uid://ddmu0dbltoapb" path="res://assets/ROBOT CARRERA/Retrovisor.png" id="2_qfiwo"]
 [ext_resource type="Texture2D" uid="uid://bgxajm5x6rpq5" path="res://assets/ROBOT CARRERA/Pierna R.png" id="3_nmepb"]
 [ext_resource type="Texture2D" uid="uid://l4ccsiqyjkaf" path="res://assets/ROBOT CARRERA/Pierna L.png" id="4_qunaj"]
@@ -12,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://b4fbuppjc5mm7" path="res://assets/ROBOT CARRERA/Cabeza.png" id="10_yvu0w"]
 
 [node name="RobotTemplate" unique_id=180808173 instance=ExtResource("1_3ifhg")]
+script = ExtResource("2_ekfpl")
 
 [node name="ArmRBone" parent="BodyParts" parent_id_path=PackedInt32Array(1141699891) index="0" unique_id=1523555488]
 texture = null
@@ -72,3 +74,6 @@ texture = null
 [node name="Head" parent="BodyParts/HeadBone" index="0" unique_id=65726633]
 position = Vector2(-9, -96)
 texture = ExtResource("10_yvu0w")
+
+[node name="AnimationPlayer" parent="BodyParts" parent_id_path=PackedInt32Array(1141699891) index="6" unique_id=1194297198]
+autoplay = &"run"

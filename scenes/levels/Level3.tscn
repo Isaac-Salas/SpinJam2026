@@ -6,7 +6,16 @@
 [ext_resource type="PackedScene" uid="uid://stjljdb8fl46" path="res://scenes/player.tscn" id="4_h66bl"]
 [ext_resource type="PackedScene" uid="uid://b7bijipic5ffx" path="res://scenes/blocks/Level3/BlockA.tscn" id="5_3825t"]
 [ext_resource type="PackedScene" uid="uid://dmwvs6rkk453o" path="res://scenes/blocks/Level3/BlockB.tscn" id="6_6qpip"]
-[ext_resource type="PackedScene" uid="uid://di3etpmd87llx" path="res://scenes/blocks/InvisibleWalls.tscn" id="7_f3pvd"]
+[ext_resource type="Script" uid="uid://ckqadl3csl5m" path="res://scripts/robot_path_follower.gd" id="6_h66bl"]
+[ext_resource type="PackedScene" uid="uid://myppub0jsemg" path="res://scenes/robots/robot_race.tscn" id="7_f3pvd"]
+[ext_resource type="PackedScene" uid="uid://bkjbnrm7ucs02" path="res://scenes/blocks/Level3/BlockC.tscn" id="8_x3k3d"]
+[ext_resource type="PackedScene" uid="uid://di3etpmd87llx" path="res://scenes/blocks/InvisibleWalls.tscn" id="9_vnuxi"]
+
+[sub_resource type="Curve2D" id="Curve2D_bs2pm"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 126, 0, 0, 0, 0, 0, 760, 0, 0, 0, 0, 0, 768, -704, 0, 0, 0, 0, 1152, -704, 0, 0, 0, 0, 1280, 0, 0, 0, 0, 0, 2040, 0, 0, 0, 0, 0, 2560, 0)
+}
+point_count = 7
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x3k3d"]
 size = Vector2(150, 8962)
@@ -35,7 +44,20 @@ scale = Vector2(0.3, 0.3)
 [node name="CameraMarker" type="Marker2D" parent="Player" index="4" unique_id=1423218106]
 position = Vector2(0, -800)
 
-[node name="Terrain" type="Node" parent="." index="2" unique_id=1313838287]
+[node name="Path2D" type="Path2D" parent="." index="2" unique_id=586484134]
+curve = SubResource("Curve2D_bs2pm")
+
+[node name="Robot" type="Node2D" parent="." index="3" unique_id=1224284691 node_paths=PackedStringArray("target_robot", "path")]
+position = Vector2(104, 0)
+scale = Vector2(0.3, 0.3)
+script = ExtResource("6_h66bl")
+speed_multiplier = 5
+target_robot = NodePath("RobotTemplate")
+path = NodePath("../Path2D")
+
+[node name="RobotTemplate" parent="Robot" index="0" unique_id=180808173 instance=ExtResource("7_f3pvd")]
+
+[node name="Terrain" type="Node" parent="." index="4" unique_id=1313838287]
 
 [node name="BlockA" parent="Terrain" index="0" unique_id=890028475 instance=ExtResource("5_3825t")]
 position = Vector2(0, 176)
@@ -463,7 +485,7 @@ position = Vector2(8968, 176)
 [node name="BlockA120" parent="Terrain" index="141" unique_id=351139286 instance=ExtResource("6_6qpip")]
 position = Vector2(8968, 328)
 
-[node name="Invisible" parent="Terrain" index="142" unique_id=462407768 instance=ExtResource("7_f3pvd")]
+[node name="Invisible" parent="Terrain" index="142" unique_id=462407768 instance=ExtResource("9_vnuxi")]
 position = Vector2(-152, -1104)
 
 [node name="CollisionShape2D2" parent="Terrain/Invisible" index="1" unique_id=607817907]
@@ -472,5 +494,53 @@ shape = SubResource("RectangleShape2D_x3k3d")
 
 [node name="CollisionShape2D3" parent="Terrain/Invisible" index="2" unique_id=1033001078]
 position = Vector2(9120, -1048)
+
+[node name="BlockC" parent="Terrain" index="143" unique_id=859772313 instance=ExtResource("8_x3k3d")]
+position = Vector2(912, 24)
+
+[node name="BlockC2" parent="Terrain" index="144" unique_id=491643162 instance=ExtResource("8_x3k3d")]
+position = Vector2(912, -128)
+
+[node name="BlockC3" parent="Terrain" index="145" unique_id=1414392778 instance=ExtResource("8_x3k3d")]
+position = Vector2(912, -280)
+
+[node name="BlockC4" parent="Terrain" index="146" unique_id=1314427335 instance=ExtResource("8_x3k3d")]
+position = Vector2(912, -432)
+
+[node name="BlockC7" parent="Terrain" index="147" unique_id=517748247 instance=ExtResource("8_x3k3d")]
+position = Vector2(1368, -888)
+
+[node name="BlockC8" parent="Terrain" index="148" unique_id=1767988520 instance=ExtResource("8_x3k3d")]
+position = Vector2(1368, -1040)
+
+[node name="BlockC9" parent="Terrain" index="149" unique_id=1687303267 instance=ExtResource("8_x3k3d")]
+position = Vector2(1368, -1192)
+
+[node name="BlockC10" parent="Terrain" index="150" unique_id=1543096288 instance=ExtResource("8_x3k3d")]
+position = Vector2(1368, -1344)
+
+[node name="BlockC11" parent="Terrain" index="151" unique_id=7712374 instance=ExtResource("8_x3k3d")]
+position = Vector2(1368, -1496)
+
+[node name="BlockC12" parent="Terrain" index="152" unique_id=159036186 instance=ExtResource("8_x3k3d")]
+position = Vector2(1368, -1648)
+
+[node name="BlockC13" parent="Terrain" index="153" unique_id=534390197 instance=ExtResource("8_x3k3d")]
+position = Vector2(1368, -1800)
+
+[node name="BlockC14" parent="Terrain" index="154" unique_id=275986946 instance=ExtResource("8_x3k3d")]
+position = Vector2(1368, -1952)
+
+[node name="BlockC15" parent="Terrain" index="155" unique_id=1679831102 instance=ExtResource("8_x3k3d")]
+position = Vector2(1368, -2104)
+
+[node name="BlockC16" parent="Terrain" index="156" unique_id=105376327 instance=ExtResource("8_x3k3d")]
+position = Vector2(1368, -2256)
+
+[node name="BlockC17" parent="Terrain" index="157" unique_id=249828579 instance=ExtResource("8_x3k3d")]
+position = Vector2(1368, -2408)
+
+[node name="BlockC18" parent="Terrain" index="158" unique_id=1370502319 instance=ExtResource("8_x3k3d")]
+position = Vector2(1368, -2560)
 
 [editable path="Terrain/Invisible"]

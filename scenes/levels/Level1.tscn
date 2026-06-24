@@ -24,7 +24,7 @@ script = ExtResource("2_68ib6")
 target_follow = NodePath("../Player/CameraMarker")
 
 [node name="Player" parent="." index="1" unique_id=1282337476 instance=ExtResource("3_76cw8")]
-position = Vector2(163.99998, 118.99999)
+position = Vector2(232.00002, 120)
 scale = Vector2(0.3, 0.3)
 
 [node name="BodyParts" parent="Player" index="1" unique_id=1219986125]
@@ -50,44 +50,44 @@ position = Vector2(4184, -312)
 [node name="Invisible10" parent="Terrain" index="4" unique_id=162615988 instance=ExtResource("5_68ib6")]
 position = Vector2(4184, -464)
 
-[node name="BlockA" parent="Terrain" index="5" unique_id=890028475 instance=ExtResource("4_fh0io")]
-position = Vector2(80, 296)
-
-[node name="BlockA13" parent="Terrain" index="6" unique_id=1835747652 instance=ExtResource("4_fh0io")]
+[node name="BlockA13" parent="Terrain" index="5" unique_id=1835747652 instance=ExtResource("4_fh0io")]
 position = Vector2(-72, 296)
 
-[node name="BlockA14" parent="Terrain" index="7" unique_id=2126811866 instance=ExtResource("4_fh0io")]
+[node name="BlockA14" parent="Terrain" index="6" unique_id=2126811866 instance=ExtResource("4_fh0io")]
 position = Vector2(-224, 296)
 
-[node name="BlockA15" parent="Terrain" index="8" unique_id=346684228 instance=ExtResource("4_fh0io")]
+[node name="BlockA15" parent="Terrain" index="7" unique_id=346684228 instance=ExtResource("4_fh0io")]
 position = Vector2(-376, 296)
 
-[node name="BlockA16" parent="Terrain" index="9" unique_id=506514959 instance=ExtResource("4_fh0io")]
+[node name="BlockA16" parent="Terrain" index="8" unique_id=506514959 instance=ExtResource("4_fh0io")]
 position = Vector2(-528, 296)
 
-[node name="BlockA17" parent="Terrain" index="10" unique_id=271174924 instance=ExtResource("4_fh0io")]
+[node name="BlockA17" parent="Terrain" index="9" unique_id=271174924 instance=ExtResource("4_fh0io")]
 position = Vector2(-680, 296)
 
-[node name="BlockA18" parent="Terrain" index="11" unique_id=1049056925 instance=ExtResource("4_fh0io")]
+[node name="BlockA18" parent="Terrain" index="10" unique_id=1049056925 instance=ExtResource("4_fh0io")]
 position = Vector2(-832, 296)
 
-[node name="BlockA19" parent="Terrain" index="12" unique_id=1523530051 instance=ExtResource("4_fh0io")]
+[node name="BlockA19" parent="Terrain" index="11" unique_id=1523530051 instance=ExtResource("4_fh0io")]
 position = Vector2(-832, 296)
 
-[node name="BlockA2" parent="Terrain" index="13" unique_id=468154236 instance=ExtResource("4_fh0io")]
-position = Vector2(232, 296)
-
-[node name="BlockA3" parent="Terrain" index="14" unique_id=1949867010 instance=ExtResource("4_fh0io")]
-position = Vector2(384, 296)
-
-[node name="BlockA4" parent="Terrain" index="15" unique_id=209588520 instance=ExtResource("4_fh0io")]
+[node name="BlockA4" parent="Terrain" index="12" unique_id=209588520 instance=ExtResource("4_fh0io")]
 position = Vector2(536, 296)
 
-[node name="BlockA5" parent="Terrain" index="16" unique_id=1541166738 instance=ExtResource("4_fh0io")]
+[node name="BlockA5" parent="Terrain" index="13" unique_id=1541166738 instance=ExtResource("4_fh0io")]
 position = Vector2(688, 296)
 
-[node name="BlockA6" parent="Terrain" index="17" unique_id=1506757922 instance=ExtResource("4_fh0io")]
+[node name="BlockA6" parent="Terrain" index="14" unique_id=1506757922 instance=ExtResource("4_fh0io")]
 position = Vector2(840, 296)
+
+[node name="BlockA42" parent="Terrain" index="15" unique_id=890028475 instance=ExtResource("4_fh0io")]
+position = Vector2(80, 296)
+
+[node name="BlockA43" parent="Terrain" index="16" unique_id=892514557 instance=ExtResource("4_fh0io")]
+position = Vector2(232, 296)
+
+[node name="BlockA44" parent="Terrain" index="17" unique_id=408225623 instance=ExtResource("4_fh0io")]
+position = Vector2(384, 296)
 
 [node name="BlockA7" parent="Terrain" index="18" unique_id=1362132575 instance=ExtResource("4_fh0io")]
 position = Vector2(992, 296)
