@@ -74,6 +74,3 @@ texture = null
 [node name="Head" parent="BodyParts/HeadBone" index="0" unique_id=65726633]
 position = Vector2(-9, -96)
 texture = ExtResource("10_yvu0w")
-
-[node name="AnimationPlayer" parent="BodyParts" parent_id_path=PackedInt32Array(1141699891) index="6" unique_id=1194297198]
-autoplay = &"run"

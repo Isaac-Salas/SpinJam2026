@@ -8,12 +8,13 @@
 [ext_resource type="PackedScene" uid="uid://dmwvs6rkk453o" path="res://scenes/blocks/Level3/BlockB.tscn" id="6_6qpip"]
 [ext_resource type="Script" uid="uid://ckqadl3csl5m" path="res://scripts/robot_path_follower.gd" id="6_h66bl"]
 [ext_resource type="PackedScene" uid="uid://myppub0jsemg" path="res://scenes/robots/robot_race.tscn" id="7_f3pvd"]
+[ext_resource type="Script" uid="uid://cpskvqhw03qgh" path="res://scenes/levels/robot_animation_handler.gd" id="7_vnuxi"]
 [ext_resource type="PackedScene" uid="uid://bkjbnrm7ucs02" path="res://scenes/blocks/Level3/BlockC.tscn" id="8_x3k3d"]
 [ext_resource type="PackedScene" uid="uid://di3etpmd87llx" path="res://scenes/blocks/InvisibleWalls.tscn" id="9_vnuxi"]
 
 [sub_resource type="Curve2D" id="Curve2D_bs2pm"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 126, 0, 0, 0, 0, 0, 760, 0, 0, 0, 0, 0, 768, -704, 0, 0, 0, 0, 1152, -704, 0, 0, 0, 0, 1280, 0, 0, 0, 0, 0, 2040, 0, 0, 0, 0, 0, 2560, 0)
+"points": PackedVector2Array(0, 0, 0, 0, 126, 0, 0, 0, 0, 0, 512, 0, 0, 0, 0, 0, 768, -704, 0, 0, 0, 0, 1072, -576, 0, 0, 0, 0, 1280, 0, 0, 0, 0, 0, 2040, 0, 0, 0, 0, 0, 2560, 0)
 }
 point_count = 7
 
@@ -47,15 +48,27 @@ position = Vector2(0, -800)
 [node name="Path2D" type="Path2D" parent="." index="2" unique_id=586484134]
 curve = SubResource("Curve2D_bs2pm")
 
-[node name="Robot" type="Node2D" parent="." index="3" unique_id=1224284691 node_paths=PackedStringArray("target_robot", "path")]
+[node name="Robot" type="Node2D" parent="." index="3" unique_id=1224284691 node_paths=PackedStringArray("path")]
 position = Vector2(104, 0)
 scale = Vector2(0.3, 0.3)
 script = ExtResource("6_h66bl")
-speed_multiplier = 5
-target_robot = NodePath("RobotTemplate")
+normal_speed_multiplier = 1
+rubber_band = true
+rubber_band_treshold = 500.0
+rubber_speed_multiplier = 5
 path = NodePath("../Path2D")
 
 [node name="RobotTemplate" parent="Robot" index="0" unique_id=180808173 instance=ExtResource("7_f3pvd")]
+position = Vector2(0, 25)
+
+[node name="AnimationHandler" type="Node" parent="Robot" index="1" unique_id=1223370491 node_paths=PackedStringArray("target_robot", "path_follower")]
+script = ExtResource("7_vnuxi")
+target_robot = NodePath("../RobotTemplate")
+path_follower = NodePath("..")
+point_and_animation = Dictionary[int, String]({
+0: "walk",
+2: "jump_walk"
+})
 
 [node name="Terrain" type="Node" parent="." index="4" unique_id=1313838287]
 
