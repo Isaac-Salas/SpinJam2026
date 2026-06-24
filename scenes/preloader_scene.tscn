@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://cddlovyqn48lq"]
 
 [ext_resource type="Script" uid="uid://cuejljfritqj5" path="res://scripts/preloader.gd" id="1_nxqlb"]
-[ext_resource type="Texture2D" uid="uid://dh5fqu3xajynb" path="res://build/index.icon.png" id="2_7rtrw"]
 [ext_resource type="Material" uid="uid://bkeubxb3p4y3c" path="res://particles/Rockets.tres" id="2_vfsm5"]
 [ext_resource type="Material" uid="uid://txr1fuekr33y" path="res://particles/ExtinguisherDetail.tres" id="3_o5b1y"]
 [ext_resource type="Material" uid="uid://d0n0l7tewxfrh" path="res://particles/ExtinguisherProyectile.tres" id="4_6ar8l"]
+[ext_resource type="Texture2D" uid="uid://dq1hxulh35umk" path="res://assets/particles/Extinguisher.png" id="5_vfsm5"]
 
 [node name="PreloaderScene" type="Node2D" unique_id=1833625529]
 script = ExtResource("1_nxqlb")
@@ -13,8 +13,8 @@ all_particle_materials = Array[ParticleProcessMaterial]([ExtResource("2_vfsm5"),
 [node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=26718888]
 emitting = false
 amount = 18
-texture = ExtResource("2_7rtrw")
-lifetime = 0.09999999999999999
+texture = ExtResource("5_vfsm5")
+lifetime = 0.1
 explosiveness = 1.0
 randomness = 1.0
 process_material = ExtResource("3_o5b1y")

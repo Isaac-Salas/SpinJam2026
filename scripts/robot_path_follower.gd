@@ -7,15 +7,22 @@ class_name RobotPathFollower
 @export var rubber_speed_multiplier : int
 @export var path : Path2D
 var all_points : Array[Vector2]
+
 var current_point : int = -1:
 	set(value):
 		if current_point != value:
 			current_point = value
 			current_point_changed.emit(current_point)
 
+var current_speed_multiplier : int:
+	set(value):
+		if current_speed_multiplier != value:
+			current_speed_multiplier = value
+			current_speed_changed.emit(current_point)
 
 signal current_point_changed(value : int)
-var current_speed_multiplier : int
+signal current_speed_changed(value : int)
+
 
 func _ready() -> void:
 	current_speed_multiplier = normal_speed_multiplier
