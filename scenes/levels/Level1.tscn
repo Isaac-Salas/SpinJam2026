@@ -18,13 +18,18 @@ player = NodePath("Player")
 
 [node name="Camera2D" type="Camera2D" parent="." index="0" unique_id=933591887 node_paths=PackedStringArray("target_follow")]
 position = Vector2(173, 128)
+process_callback = 0
 limit_enabled = false
+position_smoothing_speed = 20.0
 script = ExtResource("2_68ib6")
-target_follow = NodePath("../Player")
+target_follow = NodePath("../Player/CameraMarker")
 
 [node name="Player" parent="." index="1" unique_id=1282337476 instance=ExtResource("3_76cw8")]
 position = Vector2(163.99998, 118.99999)
 scale = Vector2(0.3, 0.3)
+
+[node name="CameraMarker" type="Marker2D" parent="Player" index="4" unique_id=1123239895]
+position = Vector2(0, -344)
 
 [node name="Floor" type="Node" parent="." index="2" unique_id=1521715551]
 
@@ -49,28 +54,56 @@ position = Vector2(832, 632)
 [node name="Floor8" parent="Floor" index="6" unique_id=1606442120 instance=ExtResource("4_m00rq")]
 position = Vector2(984, 632)
 
-[node name="Floor9" parent="Floor" index="7" unique_id=38683584 instance=ExtResource("4_m00rq")]
+[node name="Floor17" parent="Floor" index="7" unique_id=753731101 instance=ExtResource("4_m00rq")]
+position = Vector2(1440, -128)
+
+[node name="Floor18" parent="Floor" index="8" unique_id=835559505 instance=ExtResource("4_m00rq")]
+position = Vector2(1440, -280)
+
+[node name="Floor19" parent="Floor" index="9" unique_id=2047184120 instance=ExtResource("4_m00rq")]
+position = Vector2(1440, -432)
+
+[node name="Floor20" parent="Floor" index="10" unique_id=1572197761 instance=ExtResource("4_m00rq")]
+position = Vector2(1440, -584)
+
+[node name="Floor25" parent="Floor" index="11" unique_id=1655874471 instance=ExtResource("4_m00rq")]
+position = Vector2(1440, -736)
+
+[node name="Floor21" parent="Floor" index="12" unique_id=1945000443 instance=ExtResource("4_m00rq")]
+position = Vector2(1440, 480)
+
+[node name="Floor22" parent="Floor" index="13" unique_id=589083573 instance=ExtResource("4_m00rq")]
+position = Vector2(1440, 328)
+
+[node name="Floor23" parent="Floor" index="14" unique_id=588481244 instance=ExtResource("4_m00rq")]
+position = Vector2(1440, 176)
+
+[node name="Floor24" parent="Floor" index="15" unique_id=695961846 instance=ExtResource("4_m00rq")]
+position = Vector2(1440, 24)
+
+[node name="Floor9" parent="Floor" index="16" unique_id=38683584 instance=ExtResource("4_m00rq")]
 position = Vector2(984, 480)
 
-[node name="Floor10" parent="Floor" index="8" unique_id=246068868 instance=ExtResource("4_m00rq")]
+[node name="Floor10" parent="Floor" index="17" unique_id=246068868 instance=ExtResource("4_m00rq")]
 position = Vector2(984, 328)
 
-[node name="Floor11" parent="Floor" index="9" unique_id=1685492949 instance=ExtResource("4_m00rq")]
+[node name="Floor11" parent="Floor" index="18" unique_id=1685492949 instance=ExtResource("4_m00rq")]
 position = Vector2(984, 176)
 
-[node name="Floor12" parent="Floor" index="10" unique_id=2080066795 instance=ExtResource("4_m00rq")]
+[node name="Floor16" parent="Floor" index="19" unique_id=1666431428 instance=ExtResource("4_m00rq")]
+position = Vector2(984, 24)
+
+[node name="Floor12" parent="Floor" index="20" unique_id=2080066795 instance=ExtResource("4_m00rq")]
 position = Vector2(1136, 632)
 
-[node name="Floor13" parent="Floor" index="11" unique_id=1633527522 instance=ExtResource("4_m00rq")]
+[node name="Floor13" parent="Floor" index="21" unique_id=1633527522 instance=ExtResource("4_m00rq")]
 position = Vector2(1288, 632)
 
-[node name="Floor14" parent="Floor" index="12" unique_id=474163969 instance=ExtResource("4_m00rq")]
+[node name="Floor14" parent="Floor" index="22" unique_id=474163969 instance=ExtResource("4_m00rq")]
 position = Vector2(1440, 632)
 
-[node name="Floor15" parent="Floor" index="13" unique_id=1116593658 instance=ExtResource("4_m00rq")]
+[node name="Floor15" parent="Floor" index="23" unique_id=1116593658 instance=ExtResource("4_m00rq")]
 position = Vector2(1592, 632)
 
-[node name="Floor6" parent="Floor" index="14" unique_id=1574196494 instance=ExtResource("4_m00rq")]
+[node name="Floor6" parent="Floor" index="24" unique_id=1574196494 instance=ExtResource("4_m00rq")]
 position = Vector2(680, 632)
-
-[editable path="Player"]

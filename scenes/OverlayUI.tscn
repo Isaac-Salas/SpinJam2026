@@ -313,6 +313,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("1_avh0g")
+current_scene_number = 1
 scene_array = Array[PackedScene]([ExtResource("2_3c6ce"), ExtResource("3_th6i0")])
 
 [node name="Gameview" type="SubViewportContainer" parent="." unique_id=1858111535]
@@ -707,6 +708,7 @@ offset_right = -250.0
 offset_bottom = 158.0
 grow_horizontal = 0
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("41_uxxwa")
 
 [node name="GameScreenshot" type="TextureRect" parent="Transitions" unique_id=1965253796]
