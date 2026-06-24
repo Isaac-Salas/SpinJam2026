@@ -3,12 +3,12 @@ class_name Player
 @export var use_gavity : bool = true
 @export var gravity_multiplier : float = 0.1
 @onready var body_parts: PlayerBodyParts = $BodyParts
-@onready var hook: Sprite2D = $BodyParts/ArmR/Hook
-@onready var propulsorR: Sprite2D = $BodyParts/LegR/Propulsor
-@onready var propulsorL: Sprite2D = $BodyParts/LegL/Propulsor
-@onready var ext_tanque: Sprite2D = $BodyParts/ArmL/ExtTanque
-@onready var ext_manguera: Sprite2D = $BodyParts/ArmL/ExtManguera
-@onready var mira: Sprite2D = $BodyParts/Head/Mira
+@onready var hook: Sprite2D = $BodyParts/ArmRBone/Hook
+@onready var propulsorR: Sprite2D = $BodyParts/LegRBone/Propulsor
+@onready var propulsorL: Sprite2D = $BodyParts/LegLBone/Propulsor
+@onready var ext_tanque: Sprite2D = $BodyParts/ArmLBone/ExtTanque
+@onready var ext_manguera: Sprite2D = $BodyParts/ArmLBone/ExtManguera
+@onready var mira: Sprite2D = $BodyParts/HeadBone/Mira
 @onready var crosshair: Crosshair = $Crosshair
 
 @export_category("Unlocked_skills")

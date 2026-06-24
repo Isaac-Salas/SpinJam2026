@@ -5,13 +5,21 @@
 [ext_resource type="Script" uid="uid://b1ifuyqh4x2qv" path="res://scenes/camera_2d.gd" id="3_stl8g"]
 [ext_resource type="PackedScene" uid="uid://stjljdb8fl46" path="res://scenes/player.tscn" id="4_h66bl"]
 [ext_resource type="PackedScene" uid="uid://bmi0e7mhfik12" path="res://scenes/blocks/BlockA.tscn" id="6_bs2pm"]
+[ext_resource type="PackedScene" uid="uid://myppub0jsemg" path="res://scenes/robots/robot_race.tscn" id="7_f3pvd"]
 [ext_resource type="PackedScene" uid="uid://cy0aqwxgfbawx" path="res://scenes/blocks/InvisibleBlock.tscn" id="7_i2tsv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
+radius = 110.0
 
 [node name="Level_template" unique_id=244848219 node_paths=PackedStringArray("player") instance=ExtResource("1_f3pvd")]
 ui_screen_text = "Move"
 level_music_name = "MAIN_INSTRUMENTS"
 player_move = true
 player_jump = true
+player_shoot = true
+player_aim = true
+player_fly = true
+player_grapple = true
 ending_dialog = ExtResource("2_x3k3d")
 player = NodePath("Player")
 
@@ -672,3 +680,13 @@ scale = Vector2(0.3, 0.3)
 
 [node name="CameraMarker" type="Marker2D" parent="Player" index="4" unique_id=1423218106]
 position = Vector2(0, -800)
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." index="3" unique_id=1836964200]
+position = Vector2(288, -272)
+collision_layer = 0
+
+[node name="RobotTemplate" parent="RigidBody2D" index="0" unique_id=180808173 instance=ExtResource("7_f3pvd")]
+scale = Vector2(0.3, 0.3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" index="1" unique_id=670903504]
+shape = SubResource("CircleShape2D_g4v7s")

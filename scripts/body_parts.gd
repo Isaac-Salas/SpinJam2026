@@ -1,20 +1,20 @@
 extends Node2D
 class_name PlayerBodyParts
 @export var stumpy_mode : bool
-@onready var arm_r: Sprite2D = $ArmR
-@onready var leg_r: Sprite2D = $LegR
-@onready var leg_l: Sprite2D = $LegL
-@onready var torso: Sprite2D = $Torso
-@onready var small_torso: Sprite2D = $Torso/SmallTorso
-@onready var normal_torso: Sprite2D = $Torso/NormalTorso
-@onready var arm_l: Sprite2D = $ArmL
-@onready var head: Sprite2D = $Head
+@onready var arm_r: Sprite2D = $ArmRBone
+@onready var leg_r: Sprite2D = $LegRBone
+@onready var leg_l: Sprite2D = $LegLBone
+@onready var torso: Sprite2D = $TorsoBone
+@onready var small_torso: Sprite2D = $TorsoBone/SmallTorso
+@onready var normal_torso: Sprite2D = $TorsoBone/NormalTorso
+@onready var arm_l: Sprite2D = $ArmLBone
+@onready var head: Sprite2D = $HeadBone
 @onready var arm_lshoot: ArmExtinguisher = $ArmLshoot
 @onready var arm_r_grapple: ArmGrapple = $ArmRGrapple
-@onready var propulsor_l: Sprite2D = $LegL/Propulsor
-@onready var propulsor_r: Sprite2D = $LegR/Propulsor
-@onready var p_rocket_r: GPUParticles2D = $LegR/Propulsor/GPUParticles2D
-@onready var p_rocket_l: GPUParticles2D = $LegL/Propulsor/GPUParticles2D
+@onready var propulsor_l: Sprite2D = $LegLBone/Propulsor
+@onready var propulsor_r: Sprite2D = $LegRBone/Propulsor
+@onready var p_rocket_r: GPUParticles2D = $LegRBone/Propulsor/GPUParticles2D
+@onready var p_rocket_l: GPUParticles2D = $LegLBone/Propulsor/GPUParticles2D
 
 var original_scale : Vector2
 

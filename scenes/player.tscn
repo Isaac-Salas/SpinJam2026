@@ -38,7 +38,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("ArmR:rotation")
+tracks/0/path = NodePath("ArmRBone:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -50,7 +50,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Torso:rotation")
+tracks/1/path = NodePath("TorsoBone:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -62,7 +62,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("ArmL:rotation")
+tracks/2/path = NodePath("ArmLBone:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -74,7 +74,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Head:rotation")
+tracks/3/path = NodePath("HeadBone:rotation")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -86,7 +86,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("ArmR:position")
+tracks/4/path = NodePath("ArmRBone:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -98,7 +98,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Torso:position")
+tracks/5/path = NodePath("TorsoBone:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -110,7 +110,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("ArmL:position")
+tracks/6/path = NodePath("ArmLBone:position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -122,7 +122,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("Head:position")
+tracks/7/path = NodePath("HeadBone:position")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -137,7 +137,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("ArmR:rotation")
+tracks/0/path = NodePath("ArmRBone:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -149,7 +149,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Torso:rotation")
+tracks/1/path = NodePath("TorsoBone:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -161,7 +161,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("ArmL:rotation")
+tracks/2/path = NodePath("ArmLBone:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -173,7 +173,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Head:rotation")
+tracks/3/path = NodePath("HeadBone:rotation")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -185,7 +185,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("ArmR:position")
+tracks/4/path = NodePath("ArmRBone:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -197,7 +197,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Torso:position")
+tracks/5/path = NodePath("TorsoBone:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -209,7 +209,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("ArmL:position")
+tracks/6/path = NodePath("ArmLBone:position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -221,7 +221,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("Head:position")
+tracks/7/path = NodePath("HeadBone:position")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -233,7 +233,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("LegL:rotation")
+tracks/8/path = NodePath("LegLBone:rotation")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -245,7 +245,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("LegR:rotation")
+tracks/9/path = NodePath("LegRBone:rotation")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -269,7 +269,7 @@ tracks/10/keys = {
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("LegR:position")
+tracks/11/path = NodePath("LegRBone:position")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
@@ -281,7 +281,7 @@ tracks/11/keys = {
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("LegL:position")
+tracks/12/path = NodePath("LegLBone:position")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
@@ -293,7 +293,7 @@ tracks/12/keys = {
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("Head:offset")
+tracks/13/path = NodePath("HeadBone:offset")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
@@ -310,7 +310,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("LegL:position")
+tracks/0/path = NodePath("LegLBone:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -322,7 +322,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("LegR:position")
+tracks/1/path = NodePath("LegRBone:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -334,7 +334,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Torso:position")
+tracks/2/path = NodePath("TorsoBone:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -346,7 +346,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Head:position")
+tracks/3/path = NodePath("HeadBone:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -358,7 +358,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("ArmL:rotation")
+tracks/4/path = NodePath("ArmLBone:rotation")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -370,7 +370,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("ArmR:rotation")
+tracks/5/path = NodePath("ArmRBone:rotation")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -386,7 +386,7 @@ length = 0.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("ArmR:position")
+tracks/0/path = NodePath("ArmRBone:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -398,7 +398,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("LegR:position")
+tracks/1/path = NodePath("LegRBone:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -410,7 +410,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("LegL:position")
+tracks/2/path = NodePath("LegLBone:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -422,7 +422,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Torso:position")
+tracks/3/path = NodePath("TorsoBone:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -434,7 +434,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("ArmL:position")
+tracks/4/path = NodePath("ArmLBone:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -446,7 +446,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Head:position")
+tracks/5/path = NodePath("HeadBone:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -458,7 +458,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("ArmR:rotation")
+tracks/6/path = NodePath("ArmRBone:rotation")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -470,7 +470,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("ArmL:rotation")
+tracks/7/path = NodePath("ArmLBone:rotation")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -482,7 +482,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("Head:offset")
+tracks/8/path = NodePath("HeadBone:offset")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -498,7 +498,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("ArmR:rotation")
+tracks/0/path = NodePath("ArmRBone:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -510,7 +510,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("ArmL:rotation")
+tracks/1/path = NodePath("ArmLBone:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -522,7 +522,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("LegL:rotation")
+tracks/2/path = NodePath("LegLBone:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -534,7 +534,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("LegR:rotation")
+tracks/3/path = NodePath("LegRBone:rotation")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -558,7 +558,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Head:position")
+tracks/5/path = NodePath("HeadBone:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -588,14 +588,14 @@ shape = SubResource("CapsuleShape2D_y4r1p")
 [node name="BodyParts" type="Node2D" parent="." unique_id=1219986125]
 script = ExtResource("2_60mlk")
 
-[node name="ArmR" type="Sprite2D" parent="BodyParts" unique_id=1351509722]
+[node name="ArmRBone" type="Sprite2D" parent="BodyParts" unique_id=1351509722]
 modulate = Color(0.5019608, 0.5019608, 0.5019608, 1)
 position = Vector2(7.9173584, -131.13223)
 rotation = -0.5235988
 texture = ExtResource("2_ur7pv")
 offset = Vector2(73.938034, 118.480515)
 
-[node name="Hook" type="Sprite2D" parent="BodyParts/ArmR" unique_id=235647448]
+[node name="Hook" type="Sprite2D" parent="BodyParts/ArmRBone" unique_id=235647448]
 z_index = -1
 position = Vector2(154.7197, 301.06702)
 rotation = -0.11137678
@@ -606,20 +606,20 @@ visible = false
 position = Vector2(-11.999997, -119.00001)
 scale = Vector2(0.9999999, 0.9999999)
 
-[node name="LegR" type="Sprite2D" parent="BodyParts" unique_id=1201750484]
+[node name="LegRBone" type="Sprite2D" parent="BodyParts" unique_id=1201750484]
 modulate = Color(0.5019608, 0.5019608, 0.5019608, 1)
 position = Vector2(84, 123)
 texture = ExtResource("3_y4r1p")
 offset = Vector2(66, 97)
 
-[node name="Propulsor" type="Sprite2D" parent="BodyParts/LegR" unique_id=1484439667]
+[node name="Propulsor" type="Sprite2D" parent="BodyParts/LegRBone" unique_id=1484439667]
 z_index = -1
 position = Vector2(-8.78446, 164.26283)
 rotation = -0.2552068
 texture = ExtResource("5_oprun")
 offset = Vector2(3.0540848, 42.897552)
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="BodyParts/LegR/Propulsor" unique_id=1788749080]
+[node name="GPUParticles2D" type="GPUParticles2D" parent="BodyParts/LegRBone/Propulsor" unique_id=1788749080]
 z_index = -1
 position = Vector2(-6.342102, 90.796425)
 emitting = false
@@ -629,19 +629,19 @@ lifetime = 0.6
 speed_scale = 2.0
 process_material = ExtResource("9_ujl30")
 
-[node name="LegL" type="Sprite2D" parent="BodyParts" unique_id=1821556602]
+[node name="LegLBone" type="Sprite2D" parent="BodyParts" unique_id=1821556602]
 position = Vector2(-87, 145)
 texture = ExtResource("5_3v2ag")
 offset = Vector2(-33, 105)
 
-[node name="Propulsor" type="Sprite2D" parent="BodyParts/LegL" unique_id=178841037]
+[node name="Propulsor" type="Sprite2D" parent="BodyParts/LegLBone" unique_id=178841037]
 z_index = -1
 position = Vector2(-119.99999, 122.53253)
 rotation = 0.39079165
 texture = ExtResource("5_oprun")
 offset = Vector2(0.7839203, 41.281128)
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="BodyParts/LegL/Propulsor" unique_id=14547247]
+[node name="GPUParticles2D" type="GPUParticles2D" parent="BodyParts/LegLBone/Propulsor" unique_id=14547247]
 z_index = -1
 position = Vector2(-6.342102, 90.796425)
 emitting = false
@@ -651,33 +651,33 @@ lifetime = 0.6
 speed_scale = 2.0
 process_material = ExtResource("9_ujl30")
 
-[node name="Torso" type="Sprite2D" parent="BodyParts" unique_id=1700938557]
+[node name="TorsoBone" type="Sprite2D" parent="BodyParts" unique_id=1700938557]
 z_as_relative = false
 
-[node name="SmallTorso" type="Sprite2D" parent="BodyParts/Torso" unique_id=875966448]
+[node name="SmallTorso" type="Sprite2D" parent="BodyParts/TorsoBone" unique_id=875966448]
 visible = false
 position = Vector2(0, 73)
 texture = ExtResource("18_31cv2")
 
-[node name="NormalTorso" type="Sprite2D" parent="BodyParts/Torso" unique_id=1136336582]
+[node name="NormalTorso" type="Sprite2D" parent="BodyParts/TorsoBone" unique_id=1136336582]
 z_as_relative = false
 texture = ExtResource("4_d2wvv")
 
-[node name="ArmL" type="Sprite2D" parent="BodyParts" unique_id=1678252862]
+[node name="ArmLBone" type="Sprite2D" parent="BodyParts" unique_id=1678252862]
 position = Vector2(-79.53951, -147.64716)
 rotation = 0.43633235
 scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("6_jej6c")
 offset = Vector2(-34.678772, 134.94649)
 
-[node name="ExtTanque" type="Sprite2D" parent="BodyParts/ArmL" unique_id=894654484]
+[node name="ExtTanque" type="Sprite2D" parent="BodyParts/ArmLBone" unique_id=894654484]
 z_index = -1
 position = Vector2(-130.14099, 89.34829)
 rotation = 0.17927918
 scale = Vector2(1.0000001, 1.0000001)
 texture = ExtResource("7_jej6c")
 
-[node name="ExtManguera" type="Sprite2D" parent="BodyParts/ArmL" unique_id=224278223]
+[node name="ExtManguera" type="Sprite2D" parent="BodyParts/ArmLBone" unique_id=224278223]
 z_index = 1
 position = Vector2(-57.158096, 155.35916)
 rotation = 0.2593886
@@ -688,13 +688,13 @@ texture = ExtResource("8_f1ej7")
 visible = false
 position = Vector2(-73.00001, -150)
 
-[node name="Head" type="Sprite2D" parent="BodyParts" unique_id=936954017]
+[node name="HeadBone" type="Sprite2D" parent="BodyParts" unique_id=936954017]
 z_index = 1
 position = Vector2(-8, -150)
 texture = ExtResource("1_qhqgy")
 offset = Vector2(-57, -124)
 
-[node name="Mira" type="Sprite2D" parent="BodyParts/Head" unique_id=2003501484]
+[node name="Mira" type="Sprite2D" parent="BodyParts/HeadBone" unique_id=2003501484]
 position = Vector2(65.427086, -113.86978)
 texture = ExtResource("10_oprun")
 
