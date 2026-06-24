@@ -21,8 +21,14 @@ class_name Level
 @export_group("Player")
 @export var player : Player
 
+signal level_started
+signal music_started
+signal level_won
+signal level_lost
+
 func _ready() -> void:
 	start_level()
+	level_started.emit()
 	if play_music_on_ready:
 		await SoundManager.ready
 		start_music()
@@ -38,16 +44,19 @@ func start_level():
 
 func start_music():
 	SoundManager.cross_fade_to_song(SoundManager.get(level_music_name.to_upper()),volume)
+	music_started.emit()
 
 func win():
 	OverlayUI.wheel_view.rotator.toggle_disable(true)
 	OverlayUI.transitions.start_transition(ending_dialog,"start")
 	SoundManager.cross_fade_to_song(SoundManager.NEWS,4.0)
-	
+	level_won.emit()
 
 func lose():
-	OverlayUI.transitions.start_transition(ending_dialog,"start")
+	OverlayUI.wheel_view.rotator.toggle_disable(true)
+	OverlayUI.transitions.start_transition(fail_dialog,"start")
 	SoundManager.cross_fade_to_song(SoundManager.NEWS,4.0)
+	level_lost.emit()
 
 func unlocks():
 	OverlayUI.wheel_view.player_move = player_move

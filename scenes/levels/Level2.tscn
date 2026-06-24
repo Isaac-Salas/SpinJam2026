@@ -31,11 +31,7 @@ scale = Vector2(0.3, 0.3)
 [node name="CameraMarker" type="Marker2D" parent="Player" index="4" unique_id=1423218106]
 position = Vector2(0, -800)
 
-[node name="PlayerDetectWin" parent="." index="2" unique_id=1281271033 node_paths=PackedStringArray("level") instance=ExtResource("6_e5vnl")]
-position = Vector2(2192, -1080)
-level = NodePath("..")
-
-[node name="Floor" type="Node" parent="." index="3" unique_id=1521715551]
+[node name="Floor" type="Node" parent="." index="2" unique_id=1521715551]
 
 [node name="Floor29" parent="Floor" index="0" unique_id=890028475 instance=ExtResource("4_twycr")]
 position = Vector2(-384, 296)
@@ -417,3 +413,7 @@ position = Vector2(2048, -1528)
 
 [node name="BlockA6" parent="Floor" index="126" unique_id=685942724 instance=ExtResource("8_inlfm")]
 position = Vector2(2048, -1072)
+
+[node name="PlayerDetectWin" parent="." index="3" unique_id=1281271033 node_paths=PackedStringArray("level") instance=ExtResource("6_e5vnl")]
+position = Vector2(2448, -1280)
+level = NodePath("..")

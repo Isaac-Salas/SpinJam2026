@@ -12,7 +12,7 @@ func _ready() -> void:
 	if proyectile:
 		initial_proyectile_position = proyectile.position
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	line_2d.set_point_position(0,to_local(shoot_from_here.global_position))
 	line_2d.set_point_position(1,to_local(proyectile.global_position))
 
