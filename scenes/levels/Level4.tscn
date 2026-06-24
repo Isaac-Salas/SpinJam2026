@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://dwwig452b3npd"]
+
+[ext_resource type="PackedScene" uid="uid://b7gui86a3ksvj" path="res://scenes/levels/Level_template.tscn" id="1_iisik"]
+[ext_resource type="Resource" uid="uid://dr4q16chf3tc" path="res://dialogs/Level3/Level3Win.dialogue" id="2_60s12"]
+[ext_resource type="Resource" uid="uid://b1uyskeytx6w0" path="res://dialogs/Level3/Level3Lose.dialogue" id="3_w8irg"]
+[ext_resource type="Script" uid="uid://b1ifuyqh4x2qv" path="res://scenes/camera_2d.gd" id="4_k5e6m"]
+[ext_resource type="PackedScene" uid="uid://stjljdb8fl46" path="res://scenes/player.tscn" id="5_qdxfc"]
+[ext_resource type="PackedScene" uid="uid://c4slsrjvemqhw" path="res://scenes/blocks/Level4/BlockA.tscn" id="7_nxpvw"]
+[ext_resource type="PackedScene" uid="uid://di3etpmd87llx" path="res://scenes/blocks/InvisibleWalls.tscn" id="14_lcj2q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x3k3d"]
+size = Vector2(150, 8962)
+
+[node name="Level_template" unique_id=244848219 node_paths=PackedStringArray("player") instance=ExtResource("1_iisik")]
+ui_screen_text = "Move"
+play_music_on_ready = true
+level_music_name = "main_full"
+player_move = true
+player_jump = true
+player_shoot = true
+player_aim = true
+player_fly = true
+player_grapple = true
+ending_dialog = ExtResource("2_60s12")
+fail_dialog = ExtResource("3_w8irg")
+player = NodePath("Player")
+
+[node name="Camera2D" type="Camera2D" parent="." index="0" unique_id=933591887 node_paths=PackedStringArray("target_follow")]
+zoom = Vector2(0.6, 0.6)
+limit_enabled = false
+script = ExtResource("4_k5e6m")
+target_follow = NodePath("../Player/CameraMarker")
+
+[node name="Player" parent="." index="1" unique_id=1282337476 instance=ExtResource("5_qdxfc")]
+position = Vector2(105.00001, -120.00001)
+scale = Vector2(0.3, 0.3)
+
+[node name="CameraMarker" type="Marker2D" parent="Player" index="4" unique_id=1423218106]
+position = Vector2(0, -800)
+
+[node name="Terrain" type="Node" parent="." index="2" unique_id=1313838287]
+
+[node name="Invisible" parent="Terrain" index="0" unique_id=462407768 instance=ExtResource("14_lcj2q")]
+position = Vector2(-75, -1200)
+
+[node name="CollisionShape2D2" parent="Terrain/Invisible" index="1" unique_id=607817907]
+position = Vector2(4559, -3224)
+shape = SubResource("RectangleShape2D_x3k3d")
+
+[node name="CollisionShape2D3" parent="Terrain/Invisible" index="2" unique_id=1033001078]
+position = Vector2(9120, -1048)
+
+[node name="BlockA" parent="Terrain" index="1" unique_id=890028475 instance=ExtResource("7_nxpvw")]
+position = Vector2(75, 75)
+
+[node name="BlockA2" parent="Terrain" index="2" unique_id=706963654 instance=ExtResource("7_nxpvw")]
+position = Vector2(225, 75)
+
+[node name="BlockA3" parent="Terrain" index="3" unique_id=1922746320 instance=ExtResource("7_nxpvw")]
+position = Vector2(375, 75)
+
+[node name="BlockA4" parent="Terrain" index="4" unique_id=2000251735 instance=ExtResource("7_nxpvw")]
+position = Vector2(525, 75)
+
+[node name="BlockA5" parent="Terrain" index="5" unique_id=536708532 instance=ExtResource("7_nxpvw")]
+position = Vector2(675, 75)
+
+[node name="BlockA6" parent="Terrain" index="6" unique_id=1181731026 instance=ExtResource("7_nxpvw")]
+position = Vector2(825, 75)
+
+[editable path="Terrain/Invisible"]

@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://buro72efkbgc3" path="res://scenes/levels/Level2.tscn" id="4_uxxwa"]
 [ext_resource type="Texture2D" uid="uid://cwhs1jmuqm4dh" path="res://icon.svg" id="5_4jsmg"]
 [ext_resource type="PackedScene" uid="uid://iotwvtrh5ya" path="res://scenes/levels/Level3.tscn" id="5_aqtce"]
+[ext_resource type="PackedScene" uid="uid://dwwig452b3npd" path="res://scenes/levels/Level4.tscn" id="6_isvv0"]
 [ext_resource type="Script" uid="uid://d2mutw6sqcgsu" path="res://scripts/rotation_counter_ui.gd" id="6_oix8b"]
 [ext_resource type="Texture2D" uid="uid://ba8j06gnpyq0t" path="res://assets/CONTROL/Valvula fondo.png" id="6_upws3"]
 [ext_resource type="Texture2D" uid="uid://b0o5rp57c234t" path="res://assets/CONTROL/Valvula centro.png" id="8_3c6ce"]
@@ -327,7 +328,8 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("1_avh0g")
-scene_array = Array[PackedScene]([ExtResource("2_3c6ce"), ExtResource("3_th6i0"), ExtResource("4_uxxwa"), ExtResource("5_aqtce")])
+current_scene_number = 3
+scene_array = Array[PackedScene]([ExtResource("2_3c6ce"), ExtResource("3_th6i0"), ExtResource("4_uxxwa"), ExtResource("5_aqtce"), ExtResource("6_isvv0")])
 
 [node name="Gameview" type="SubViewportContainer" parent="." unique_id=1858111535]
 custom_minimum_size = Vector2(960, 0)
