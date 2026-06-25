@@ -419,5 +419,5 @@ position = Vector2(2048, -1528)
 position = Vector2(2048, -1072)
 
 [node name="PlayerDetectWin" parent="." index="4" unique_id=1281271033 node_paths=PackedStringArray("level") instance=ExtResource("6_e5vnl")]
-position = Vector2(2448, -1280)
+position = Vector2(2352, -1224)
 level = NodePath("..")

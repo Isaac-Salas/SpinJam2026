@@ -4,6 +4,7 @@
 [ext_resource type="Resource" uid="uid://ej5crdqfa30c" path="res://dialogs/Level4/Level4Win.dialogue" id="2_13joh"]
 [ext_resource type="Script" uid="uid://b1ifuyqh4x2qv" path="res://scenes/camera_2d.gd" id="3_m7s51"]
 [ext_resource type="PackedScene" uid="uid://stjljdb8fl46" path="res://scenes/player.tscn" id="4_ptild"]
+[ext_resource type="PackedScene" uid="uid://bg1cb8cifda4h" path="res://scenes/levels/background.tscn" id="11_y1n0m"]
 
 [node name="Level_template" unique_id=244848219 node_paths=PackedStringArray("player") instance=ExtResource("1_f6scf")]
 ui_screen_text = "Move"
@@ -28,3 +29,5 @@ scale = Vector2(0.3, 0.3)
 
 [node name="CameraMarker" type="Marker2D" parent="Player" index="4" unique_id=1423218106]
 position = Vector2(0, -800)
+
+[node name="BackgroundLayer" parent="." index="2" unique_id=476540664 instance=ExtResource("11_y1n0m")]

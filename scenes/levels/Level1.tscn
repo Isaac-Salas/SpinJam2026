@@ -16,8 +16,7 @@ player_move = true
 ending_dialog = ExtResource("2_m00rq")
 player = NodePath("Player")
 
-[node name="CanvasLayer" parent="." index="0" unique_id=476540664 node_paths=PackedStringArray("player") instance=ExtResource("3_brv20")]
-player = NodePath("../Player")
+[node name="CanvasLayer" parent="." index="0" unique_id=476540664 instance=ExtResource("3_brv20")]
 
 [node name="Camera2D" type="Camera2D" parent="." index="1" unique_id=933591887 node_paths=PackedStringArray("target_follow")]
 position = Vector2(173, 128)
@@ -193,7 +192,7 @@ position = Vector2(-72, -312)
 position = Vector2(-72, -464)
 
 [node name="PlayerDetectWin" parent="." index="4" unique_id=1281271033 node_paths=PackedStringArray("level") instance=ExtResource("6_76cw8")]
-position = Vector2(4168, 16)
+position = Vector2(3880, 144)
 level = NodePath("..")
 
 [editable path="Player"]

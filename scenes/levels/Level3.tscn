@@ -101,7 +101,7 @@ second_view = NodePath("../../CanvasLayer/SecondView")
 robot = NodePath("..")
 
 [node name="PlayerDetectWin" parent="." index="4" unique_id=1281271033 node_paths=PackedStringArray("level") instance=ExtResource("13_i2tsv")]
-position = Vector2(5033, -1010)
+position = Vector2(5018, -890)
 level = NodePath("..")
 lose_on_robot = true
 
