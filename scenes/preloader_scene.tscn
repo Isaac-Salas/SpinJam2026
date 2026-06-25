@@ -11,6 +11,8 @@ script = ExtResource("1_nxqlb")
 all_particle_materials = Array[ParticleProcessMaterial]([ExtResource("2_vfsm5"), ExtResource("3_o5b1y"), ExtResource("4_6ar8l")])
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=26718888]
+top_level = true
+position = Vector2(651, 333)
 emitting = false
 amount = 18
 texture = ExtResource("5_vfsm5")

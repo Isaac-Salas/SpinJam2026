@@ -22,6 +22,9 @@ level_music_name = "main_drums"
 player_move = true
 player_jump = true
 player_shoot = true
+player_aim = true
+player_fly = true
+player_grapple = true
 ending_dialog = ExtResource("2_g8eim")
 player = NodePath("Player")
 
@@ -497,7 +500,7 @@ position = Vector2(495, -60)
 [node name="Fireplace2" parent="Extinguishables" index="1" unique_id=1526306789 instance=ExtResource("9_2xj4m")]
 position = Vector2(990, -60)
 
-[node name="ExtinguishWinTrigger" type="Node" parent="." index="4" unique_id=1217931619 node_paths=PackedStringArray("level", "all_extinguishables")]
+[node name="ExtinguishWinandTracker" type="Node" parent="." index="4" unique_id=1217931619 node_paths=PackedStringArray("level", "all_extinguishables")]
 script = ExtResource("10_u5dj7")
 level = NodePath("..")
 all_extinguishables = [NodePath("../Extinguishables/Fireplace"), NodePath("../Extinguishables/Fireplace2")]

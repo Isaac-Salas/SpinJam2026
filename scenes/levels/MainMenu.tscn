@@ -5,10 +5,18 @@
 [ext_resource type="Resource" uid="uid://dvsubbyhkwm0y" path="res://dialogs/Menu/MenuWin.dialogue" id="2_hyrlu"]
 [ext_resource type="Texture2D" uid="uid://dx7mrmv5mauik" path="res://assets/ESCRITORIO/Fondo.png" id="3_agb1x"]
 [ext_resource type="Texture2D" uid="uid://dl10p5hurh45m" path="res://assets/ESCRITORIO/Corazon.png" id="4_ue4lf"]
-[ext_resource type="Texture2D" uid="uid://c0s6b0sg1kqye" path="res://assets/light/light.png" id="5_7rblo"]
+[ext_resource type="Texture2D" uid="uid://wmheui8thwhn" path="res://assets/light/light.png" id="5_7rblo"]
+[ext_resource type="PackedScene" uid="uid://bg1cb8cifda4h" path="res://scenes/levels/background.tscn" id="6_81rgk"]
+[ext_resource type="Shader" uid="uid://ximmn68rtf0a" path="res://shaders/Blur.gdshader" id="8_a6001"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ue4lf"]
 blend_mode = 1
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_orblh"]
+shader = ExtResource("8_a6001")
+shader_parameter/blur_amount = 1.0000001424999998
+shader_parameter/mix_amount = 0.50000002375
+shader_parameter/color_over = Color(0, 0, 0, 1)
 
 [node name="Level_template" unique_id=244848219 instance=ExtResource("1_4xtjk")]
 ui_screen_text = "???"
@@ -29,18 +37,7 @@ anchor_bottom = 1.0
 grow_horizontal = 0
 grow_vertical = 2
 
-[node name="Fondo" type="TextureRect" parent="CanvasLayer/Control" index="0" unique_id=1221551467]
-modulate = Color(0.7, 0.7, 0.7, 1)
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("3_agb1x")
-expand_mode = 1
-
-[node name="Corazon" type="TextureRect" parent="CanvasLayer/Control" index="1" unique_id=1057652844]
+[node name="Corazon" type="TextureRect" parent="CanvasLayer/Control" index="0" unique_id=1057652844]
 custom_minimum_size = Vector2(700, 700)
 layout_mode = 1
 anchors_preset = 8
@@ -59,7 +56,7 @@ texture = ExtResource("4_ue4lf")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Luz" type="TextureRect" parent="CanvasLayer/Control" index="2" unique_id=895517999]
+[node name="Luz" type="TextureRect" parent="CanvasLayer/Control" index="1" unique_id=895517999]
 modulate = Color(0.81, 0.28350002, 0.51165, 0.3137255)
 material = SubResource("CanvasItemMaterial_ue4lf")
 custom_minimum_size = Vector2(700, 700)
@@ -90,3 +87,13 @@ luz = NodePath("../CanvasLayer/Control/Luz")
 
 [node name="Timer" type="Timer" parent="." index="3" unique_id=446724366]
 wait_time = 0.5
+
+[node name="BackgroundLayer" parent="." index="4" unique_id=476540664 instance=ExtResource("6_81rgk")]
+
+[node name="Background" parent="BackgroundLayer/Control" parent_id_path=PackedInt32Array(476540664, 2038293723) index="0" unique_id=1098504343]
+texture = ExtResource("3_agb1x")
+
+[node name="Shader" parent="BackgroundLayer/Control" parent_id_path=PackedInt32Array(476540664, 2038293723) index="1" unique_id=547968797]
+material = SubResource("ShaderMaterial_orblh")
+
+[editable path="BackgroundLayer"]
