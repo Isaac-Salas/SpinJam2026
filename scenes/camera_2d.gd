@@ -1,5 +1,7 @@
 extends Camera2D
+class_name TrackingCam
 @export var target_follow : Node2D
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

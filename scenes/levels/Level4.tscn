@@ -500,10 +500,15 @@ position = Vector2(495, -60)
 [node name="Fireplace2" parent="Extinguishables" index="1" unique_id=1526306789 instance=ExtResource("9_2xj4m")]
 position = Vector2(990, -60)
 
-[node name="ExtinguishWinandTracker" type="Node" parent="." index="4" unique_id=1217931619 node_paths=PackedStringArray("level", "all_extinguishables")]
+[node name="Fireplace3" parent="Extinguishables" index="2" unique_id=181321529 instance=ExtResource("9_2xj4m")]
+position = Vector2(2775, -75)
+
+[node name="ExtinguishWinandTracker" type="Node" parent="." index="4" unique_id=1217931619 node_paths=PackedStringArray("level", "player", "second_view", "all_extinguishables")]
 script = ExtResource("10_u5dj7")
 level = NodePath("..")
-all_extinguishables = [NodePath("../Extinguishables/Fireplace"), NodePath("../Extinguishables/Fireplace2")]
+player = NodePath("../Player")
+second_view = NodePath("../SecondView/SecondView")
+all_extinguishables = [NodePath("../Extinguishables/Fireplace"), NodePath("../Extinguishables/Fireplace2"), NodePath("../Extinguishables/Fireplace3")]
 
 [node name="SecondView" type="CanvasLayer" parent="." index="5" unique_id=622086023]
 
