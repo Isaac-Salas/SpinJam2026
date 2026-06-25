@@ -497,31 +497,29 @@ position = Vector2(495, -60)
 [node name="Fireplace2" parent="Extinguishables" index="1" unique_id=1526306789 instance=ExtResource("9_2xj4m")]
 position = Vector2(990, -60)
 
-[node name="ExtinguishTracker" type="Node" parent="." index="4" unique_id=1217931619 node_paths=PackedStringArray("level", "all_extinguishables")]
+[node name="ExtinguishWinTrigger" type="Node" parent="." index="4" unique_id=1217931619 node_paths=PackedStringArray("level", "all_extinguishables")]
 script = ExtResource("10_u5dj7")
 level = NodePath("..")
 all_extinguishables = [NodePath("../Extinguishables/Fireplace"), NodePath("../Extinguishables/Fireplace2")]
 
-[node name="CanvasLayer2" type="CanvasLayer" parent="." index="5" unique_id=622086023]
+[node name="SecondView" type="CanvasLayer" parent="." index="5" unique_id=622086023]
 
-[node name="SecondView" parent="CanvasLayer2" index="0" unique_id=1491427061 instance=ExtResource("3_2xj4m")]
+[node name="SecondView" parent="SecondView" index="0" unique_id=1491427061 instance=ExtResource("3_2xj4m")]
 
-[node name="SubViewport" parent="CanvasLayer2/SecondView/SubViewportContainer" parent_id_path=PackedInt32Array(1491427061, 879312510) index="0" unique_id=1573429894 node_paths=PackedStringArray("world_root")]
+[node name="SubViewport" parent="SecondView/SecondView/SubViewportContainer" parent_id_path=PackedInt32Array(1491427061, 879312510) index="0" unique_id=1573429894 node_paths=PackedStringArray("world_root")]
 world_root = NodePath("../../../..")
 
-[node name="Tracking_cam" parent="CanvasLayer2/SecondView/SubViewportContainer/SubViewport" index="0" unique_id=1373545733 node_paths=PackedStringArray("target_follow")]
+[node name="Tracking_cam" parent="SecondView/SecondView/SubViewportContainer/SubViewport" index="0" unique_id=1373545733 node_paths=PackedStringArray("target_follow")]
 target_follow = NodePath("../../../../../Extinguishables/Fireplace2")
 
-[node name="CanvasLayer" parent="." index="6" unique_id=476540664 instance=ExtResource("13_h6fe6")]
+[node name="Background" parent="." index="6" unique_id=476540664 instance=ExtResource("13_h6fe6")]
 
-[node name="CanvasModulate2" type="CanvasModulate" parent="CanvasLayer" index="1" unique_id=226843296]
+[node name="CanvasModulate2" type="CanvasModulate" parent="Background" index="1" unique_id=226843296]
 color = Color(0.31, 0.31, 0.31, 1)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." index="7" unique_id=1195061697]
 color = Color(0.31, 0.31, 0.31, 1)
 
 [editable path="Terrain/Invisible"]
-[editable path="Extinguishables/Fireplace"]
-[editable path="Extinguishables/Fireplace2"]
-[editable path="CanvasLayer2/SecondView"]
-[editable path="CanvasLayer"]
+[editable path="SecondView/SecondView"]
+[editable path="Background"]

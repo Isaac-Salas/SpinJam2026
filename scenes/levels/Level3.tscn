@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://dwswsr5q8tb7k" path="res://scenes/player_detect_win.tscn" id="13_i2tsv"]
 [ext_resource type="PackedScene" uid="uid://d22xiwyrkmjcu" path="res://scenes/second_view_cam.tscn" id="17_bqc3i"]
 [ext_resource type="PackedScene" uid="uid://bg1cb8cifda4h" path="res://scenes/levels/background.tscn" id="18_ljeji"]
+[ext_resource type="Texture2D" uid="uid://ceegvfnpu487n" path="res://assets/FONDOS/Parque.png" id="19_8qlrg"]
 
 [sub_resource type="Curve2D" id="Curve2D_bs2pm"]
 _data = {
@@ -1130,7 +1131,11 @@ world_root = NodePath("../../../..")
 [node name="Tracking_cam" parent="CanvasLayer/SecondView/SubViewportContainer/SubViewport" index="0" unique_id=1373545733 node_paths=PackedStringArray("target_follow")]
 target_follow = NodePath("../../../../../Robot")
 
-[node name="CanvasLayer2" parent="." index="7" unique_id=476540664 instance=ExtResource("18_ljeji")]
+[node name="BackgroundLayer" parent="." index="7" unique_id=476540664 instance=ExtResource("18_ljeji")]
+
+[node name="Background" parent="BackgroundLayer/Control" parent_id_path=PackedInt32Array(476540664, 2038293723) index="0" unique_id=1098504343]
+texture = ExtResource("19_8qlrg")
 
 [editable path="Terrain/Invisible"]
 [editable path="CanvasLayer/SecondView"]
+[editable path="BackgroundLayer"]
