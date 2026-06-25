@@ -8,7 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://di3etpmd87llx" path="res://scenes/blocks/InvisibleWalls.tscn" id="5_brtaq"]
 [ext_resource type="PackedScene" uid="uid://db5p4bgv5fdns" path="res://scenes/blocks/Level5/BlockA.tscn" id="7_8vmc0"]
 [ext_resource type="PackedScene" uid="uid://ddtth823mdofi" path="res://scenes/blocks/Level5/BlockB.tscn" id="8_r415l"]
+[ext_resource type="PackedScene" uid="uid://c2ixyiqwdsil6" path="res://scenes/fireplace.tscn" id="10_f6scf"]
+[ext_resource type="Script" uid="uid://ccehwci6f7hro" path="res://scripts/extinguish_tracker.gd" id="11_13joh"]
 [ext_resource type="PackedScene" uid="uid://bg1cb8cifda4h" path="res://scenes/levels/background.tscn" id="11_y1n0m"]
+[ext_resource type="PackedScene" uid="uid://d22xiwyrkmjcu" path="res://scenes/second_view_cam.tscn" id="12_13joh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g13nb"]
 size = Vector2(150, 8962)
@@ -20,7 +23,6 @@ level_music_name = "main_instruments"
 player_move = true
 player_jump = true
 player_shoot = true
-player_aim = true
 ending_dialog = ExtResource("2_rgf08")
 fail_dialog = ExtResource("3_3bc8p")
 player = NodePath("Player")
@@ -484,5 +486,29 @@ position = Vector2(9675, 225)
 
 [node name="BlockA144" parent="Terrain" index="144" unique_id=828708344 instance=ExtResource("8_r415l")]
 position = Vector2(9825, 225)
+
+[node name="Extinguishables" type="Node" parent="." index="4" unique_id=1504734790]
+
+[node name="Fireplace" parent="Extinguishables" index="0" unique_id=181321529 instance=ExtResource("10_f6scf")]
+position = Vector2(1425, -75)
+active = false
+
+[node name="Fireplace2" parent="Extinguishables" index="1" unique_id=35964268 instance=ExtResource("10_f6scf")]
+position = Vector2(2325, -75)
+active = false
+
+[node name="ExtinguishWinandTracker" type="Node" parent="." index="5" unique_id=1605142839 node_paths=PackedStringArray("level", "player", "second_view", "all_extinguishables")]
+script = ExtResource("11_13joh")
+randomize_active_extinguishables = true
+complete_timer = true
+level = NodePath("..")
+player = NodePath("../Player")
+second_view = NodePath("../CanvasLayer/SecondView")
+all_extinguishables = [NodePath("../Extinguishables/Fireplace"), NodePath("../Extinguishables/Fireplace2")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="6" unique_id=1624671047]
+
+[node name="SecondView" parent="CanvasLayer" index="0" unique_id=1491427061 node_paths=PackedStringArray("world_root") instance=ExtResource("12_13joh")]
+world_root = NodePath("../..")
 
 [editable path="Terrain/Invisible"]

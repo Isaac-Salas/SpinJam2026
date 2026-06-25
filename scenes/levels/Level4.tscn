@@ -20,6 +20,7 @@ size = Vector2(150, 8962)
 
 [node name="Level_template" unique_id=244848219 node_paths=PackedStringArray("player") instance=ExtResource("1_iisik")]
 ui_screen_text = "Move"
+play_music_on_ready = true
 level_music_name = "main_drums"
 player_move = true
 player_jump = true
@@ -867,13 +868,11 @@ all_extinguishables = [NodePath("../Extinguishables/Fireplace"), NodePath("../Ex
 
 [node name="SecondView" type="CanvasLayer" parent="." index="5" unique_id=622086023]
 
-[node name="SecondView" parent="SecondView" index="0" unique_id=1491427061 instance=ExtResource("3_2xj4m")]
+[node name="SecondView" parent="SecondView" index="0" unique_id=1491427061 node_paths=PackedStringArray("world_root") instance=ExtResource("3_2xj4m")]
+world_root = NodePath("../..")
 metadata/_edit_lock_ = true
 
-[node name="SubViewport" parent="SecondView/SecondView/SubViewportContainer" parent_id_path=PackedInt32Array(1491427061, 879312510) index="0" unique_id=1573429894 node_paths=PackedStringArray("world_root")]
-world_root = NodePath("../../../..")
-
-[node name="Tracking_cam" parent="SecondView/SecondView/SubViewportContainer/SubViewport" index="0" unique_id=1373545733 node_paths=PackedStringArray("target_follow")]
+[node name="Tracking_cam" parent="SecondView/SecondView/SubViewportContainer/SubViewport" parent_id_path=PackedInt32Array(1491427061, 1573429894) index="0" unique_id=1373545733 node_paths=PackedStringArray("target_follow")]
 zoom = Vector2(0.25, 0.25)
 target_follow = NodePath("../../../../../Extinguishables/Fireplace2")
 

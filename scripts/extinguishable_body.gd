@@ -1,15 +1,17 @@
 extends Area2D
 class_name Extinguishable
+@export var active : bool = true
 @onready var wood: Sprite2D = $Wood
 @onready var fire: Sprite2D = $Fire
 @onready var gpu_particles_2d: GPUParticles2D = $GPUParticles2D
 @onready var point_light_2d: PointLight2D = $PointLight2D
 @onready var timer: Timer = $Timer
 
-
 signal tween_fire_finish
+signal active_changed(value : bool)
 
 func _ready() -> void:
+	toggle_detection(active)
 	area_entered.connect(_on_area_entered)
 	_tween_fire()
 	tween_fire_finish.connect(_tween_fire)
@@ -26,12 +28,13 @@ func _kill():
 	gpu_particles_2d.emitting = true
 	await _snuff_fire_out()
 	await gpu_particles_2d.finished
-	
 	self.queue_free()
 
 func toggle_detection(value : bool):
 	self.set_deferred("monitoring",value)
 	self.set_deferred("monitorable",value)
+	active = value
+	active_changed.emit(value)
 
 func _snuff_fire_out():
 	tween_fire_finish.disconnect(_tween_fire)

@@ -34,6 +34,7 @@ size = Vector2(150, 8962)
 
 [node name="Level_template" unique_id=244848219 node_paths=PackedStringArray("player") instance=ExtResource("1_f3pvd")]
 ui_screen_text = "Move"
+play_music_on_ready = true
 level_music_name = "main_full"
 player_move = true
 player_jump = true
@@ -1120,12 +1121,12 @@ position = Vector2(7904, -736)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." index="6" unique_id=1923618080]
 
-[node name="SecondView" parent="CanvasLayer" index="0" unique_id=1491427061 instance=ExtResource("17_bqc3i")]
+[node name="SecondView" parent="CanvasLayer" index="0" unique_id=1491427061 node_paths=PackedStringArray("world_root") instance=ExtResource("17_bqc3i")]
 visible = false
+world_root = NodePath("../..")
 
-[node name="SubViewport" parent="CanvasLayer/SecondView/SubViewportContainer" parent_id_path=PackedInt32Array(1491427061, 879312510) index="0" unique_id=1573429894 node_paths=PackedStringArray("world_root")]
+[node name="SubViewport" parent="CanvasLayer/SecondView/SubViewportContainer" parent_id_path=PackedInt32Array(1491427061, 879312510) index="0" unique_id=1573429894]
 render_target_update_mode = 0
-world_root = NodePath("../../../..")
 
 [node name="Tracking_cam" parent="CanvasLayer/SecondView/SubViewportContainer/SubViewport" index="0" unique_id=1373545733 node_paths=PackedStringArray("target_follow")]
 target_follow = NodePath("../../../../../Robot")
