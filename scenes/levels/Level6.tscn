@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://qdb0me12puy5"]
+
+[ext_resource type="PackedScene" uid="uid://b7gui86a3ksvj" path="res://scenes/levels/Level_template.tscn" id="1_7obgn"]
+[ext_resource type="Resource" uid="uid://b6mjg1iis1hio" path="res://dialogs/Level6/Level6Win.dialogue" id="2_gpjci"]
+[ext_resource type="Resource" uid="uid://dhwq2b3m45ckj" path="res://dialogs/Level6/Level6Lose.dialogue" id="3_mxr2w"]
+[ext_resource type="Script" uid="uid://b1ifuyqh4x2qv" path="res://scenes/camera_2d.gd" id="4_17kxd"]
+[ext_resource type="PackedScene" uid="uid://stjljdb8fl46" path="res://scenes/player.tscn" id="5_4pfb2"]
+[ext_resource type="PackedScene" uid="uid://bg1cb8cifda4h" path="res://scenes/levels/background.tscn" id="6_f84us"]
+[ext_resource type="Texture2D" uid="uid://demadgshc071d" path="res://assets/FONDOS/Parque en llamas.png" id="7_gpjci"]
+
+[node name="Level_template" unique_id=244848219 node_paths=PackedStringArray("player") instance=ExtResource("1_7obgn")]
+ui_screen_text = "Move"
+win_after_music = true
+play_music_on_ready = true
+level_music_name = "boss_drums"
+player_move = true
+player_jump = true
+player_shoot = true
+player_aim = true
+ending_dialog = ExtResource("2_gpjci")
+fail_dialog = ExtResource("3_mxr2w")
+player = NodePath("Player")
+
+[node name="Camera2D" type="Camera2D" parent="." index="0" unique_id=933591887 node_paths=PackedStringArray("target_follow")]
+zoom = Vector2(0.6, 0.6)
+process_callback = 0
+limit_enabled = false
+script = ExtResource("4_17kxd")
+target_follow = NodePath("../Player/CameraMarker")
+
+[node name="Player" parent="." index="1" unique_id=1282337476 instance=ExtResource("5_4pfb2")]
+position = Vector2(105.00001, -120.00001)
+scale = Vector2(0.3, 0.3)
+
+[node name="CameraMarker" type="Marker2D" parent="Player" index="4" unique_id=1423218106]
+position = Vector2(0, -800)
+
+[node name="BackgroundLayer" parent="." index="2" unique_id=476540664 instance=ExtResource("6_f84us")]
+
+[node name="Background" parent="BackgroundLayer/Control" parent_id_path=PackedInt32Array(476540664, 2038293723) index="0" unique_id=1098504343]
+texture = ExtResource("7_gpjci")
+
+[editable path="BackgroundLayer"]

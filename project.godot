@@ -77,7 +77,7 @@ reset={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://dialogs/test.dialogue", "res://dialogs/Menu/MenuWin.dialogue", "res://dialogs/Level1/Level1Win.dialogue", "res://dialogs/Level2/Level2Win.dialogue", "res://dialogs/Level3/Level3Win.dialogue", "res://dialogs/Level3/Level3Lose.dialogue", "res://dialogs/Level4/Level4Win.dialogue", "res://dialogs/Level5/Level5Win.dialogue", "res://dialogs/Level5/Level5Lose.dialogue")
+locale/translations_pot_files=PackedStringArray("res://dialogs/test.dialogue", "res://dialogs/Menu/MenuWin.dialogue", "res://dialogs/Level1/Level1Win.dialogue", "res://dialogs/Level2/Level2Win.dialogue", "res://dialogs/Level3/Level3Win.dialogue", "res://dialogs/Level3/Level3Lose.dialogue", "res://dialogs/Level4/Level4Win.dialogue", "res://dialogs/Level5/Level5Win.dialogue", "res://dialogs/Level5/Level5Lose.dialogue", "res://dialogs/Level6/Level6Lose.dialogue", "res://dialogs/Level6/Level6Win.dialogue", "res://dialogs/Level7/Level7Lose.dialogue", "res://dialogs/Level7/Level7Win.dialogue")
 
 [layer_names]
 

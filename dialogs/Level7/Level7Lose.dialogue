@@ -1,0 +1,7 @@
+~ start
+News Anchor : Ooops, wrong tape folks!
+do OverlayUI.reload_scene()
+News Anchor : This is the one
+do OverlayUI.transitions.finish_transition()
+do OverlayUI.current_scene.start_music()
+=> END

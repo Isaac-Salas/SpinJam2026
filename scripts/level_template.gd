@@ -3,7 +3,7 @@ class_name Level
 
 @export_group("Overrides")
 @export var ui_screen_text : String
-@export var auto_win : bool
+@export var win_after_music : bool
 @export_group("Music")
 @export var play_music_on_ready : bool
 @export var level_music_name : String
@@ -32,8 +32,7 @@ func _ready() -> void:
 	if play_music_on_ready:
 		await SoundManager.ready
 		start_music()
-	if auto_win:
-		win()
+
 
 func start_level():
 	OverlayUI.wheel_view.rotator.toggle_disable(false)
@@ -45,6 +44,8 @@ func start_level():
 func start_music():
 	SoundManager.cross_fade_to_song(SoundManager.get(level_music_name.to_upper()),volume)
 	music_started.emit()
+	if win_after_music:
+		win()
 
 func win():
 	OverlayUI.wheel_view.rotator.toggle_disable(true)
