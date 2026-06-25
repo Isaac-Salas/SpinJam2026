@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://b2uo8m6if7sqi"]
+[gd_scene format=3 uid="uid://ddtth823mdofi"]
 
 [ext_resource type="Texture2D" uid="uid://dgp8xho8xb2r6" path="res://assets/PLACEHOLDERS/Double/block_strong_ciry.png" id="1_543bk"]
 
@@ -7,6 +7,8 @@ size = Vector2(150, 150)
 
 [node name="BlockA" type="StaticBody2D" unique_id=890028475]
 z_as_relative = false
+collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=966638850]
 shape = SubResource("RectangleShape2D_g4v7s")

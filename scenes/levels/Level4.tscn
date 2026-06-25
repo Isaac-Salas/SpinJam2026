@@ -4,11 +4,14 @@
 [ext_resource type="Resource" uid="uid://ej5crdqfa30c" path="res://dialogs/Level4/Level4Win.dialogue" id="2_g8eim"]
 [ext_resource type="PackedScene" uid="uid://d22xiwyrkmjcu" path="res://scenes/second_view_cam.tscn" id="3_2xj4m"]
 [ext_resource type="Script" uid="uid://b1ifuyqh4x2qv" path="res://scenes/camera_2d.gd" id="4_k5e6m"]
+[ext_resource type="Texture2D" uid="uid://wmheui8thwhn" path="res://assets/light/light.png" id="5_ml44n"]
 [ext_resource type="PackedScene" uid="uid://stjljdb8fl46" path="res://scenes/player.tscn" id="5_qdxfc"]
 [ext_resource type="PackedScene" uid="uid://c4slsrjvemqhw" path="res://scenes/blocks/Level4/BlockA.tscn" id="7_nxpvw"]
 [ext_resource type="PackedScene" uid="uid://be8hqqyvxreb1" path="res://scenes/blocks/Level4/BlockB.tscn" id="8_rrgde"]
 [ext_resource type="PackedScene" uid="uid://c2ixyiqwdsil6" path="res://scenes/fireplace.tscn" id="9_2xj4m"]
+[ext_resource type="PackedScene" uid="uid://ccmy2ja5uicgv" path="res://scenes/blocks/Level4/Platform.tscn" id="9_h6fe6"]
 [ext_resource type="Script" uid="uid://ccehwci6f7hro" path="res://scripts/extinguish_tracker.gd" id="10_u5dj7"]
+[ext_resource type="PackedScene" uid="uid://dswtgy5c3ofh6" path="res://scenes/blocks/Level4/BlockC.tscn" id="12_u5dj7"]
 [ext_resource type="PackedScene" uid="uid://bg1cb8cifda4h" path="res://scenes/levels/background.tscn" id="13_h6fe6"]
 [ext_resource type="PackedScene" uid="uid://di3etpmd87llx" path="res://scenes/blocks/InvisibleWalls.tscn" id="14_lcj2q"]
 
@@ -22,9 +25,6 @@ level_music_name = "main_drums"
 player_move = true
 player_jump = true
 player_shoot = true
-player_aim = true
-player_fly = true
-player_grapple = true
 ending_dialog = ExtResource("2_g8eim")
 player = NodePath("Player")
 
@@ -41,6 +41,12 @@ scale = Vector2(0.3, 0.3)
 
 [node name="CameraMarker" type="Marker2D" parent="Player" index="4" unique_id=1423218106]
 position = Vector2(0, -800)
+
+[node name="PointLight2D" type="PointLight2D" parent="Player" index="5" unique_id=830541070]
+position = Vector2(-2.5431314e-05, -49.999973)
+color = Color(0.81, 0.28350002, 0.51165, 1)
+texture = ExtResource("5_ml44n")
+texture_scale = 1.2
 
 [node name="Terrain" type="Node" parent="." index="2" unique_id=1313838287]
 
@@ -492,35 +498,390 @@ position = Vector2(9075, 225)
 [node name="BlockA150" parent="Terrain" index="146" unique_id=1930244059 instance=ExtResource("8_rrgde")]
 position = Vector2(9225, 225)
 
+[node name="BlockC" parent="Terrain" index="147" unique_id=1787762342 instance=ExtResource("12_u5dj7")]
+position = Vector2(1425, -75)
+
+[node name="BlockC2" parent="Terrain" index="148" unique_id=1357771861 instance=ExtResource("12_u5dj7")]
+position = Vector2(1425, -225)
+
+[node name="BlockC3" parent="Terrain" index="149" unique_id=1393438879 instance=ExtResource("12_u5dj7")]
+position = Vector2(1425, -375)
+
+[node name="BlockC4" parent="Terrain" index="150" unique_id=1187099496 instance=ExtResource("12_u5dj7")]
+position = Vector2(1425, -525)
+
+[node name="BlockC5" parent="Terrain" index="151" unique_id=501661102 instance=ExtResource("12_u5dj7")]
+position = Vector2(2175, -525)
+
+[node name="BlockC6" parent="Terrain" index="152" unique_id=1592568098 instance=ExtResource("12_u5dj7")]
+position = Vector2(2325, -525)
+
+[node name="BlockC10" parent="Terrain" index="153" unique_id=1501037137 instance=ExtResource("12_u5dj7")]
+position = Vector2(2175, -1125)
+
+[node name="BlockC11" parent="Terrain" index="154" unique_id=1103507947 instance=ExtResource("12_u5dj7")]
+position = Vector2(2325, -1125)
+
+[node name="BlockC15" parent="Terrain" index="155" unique_id=566811309 instance=ExtResource("12_u5dj7")]
+position = Vector2(2475, -1125)
+
+[node name="BlockC16" parent="Terrain" index="156" unique_id=2076877525 instance=ExtResource("12_u5dj7")]
+position = Vector2(2625, -1125)
+
+[node name="BlockC17" parent="Terrain" index="157" unique_id=407395075 instance=ExtResource("12_u5dj7")]
+position = Vector2(2775, -1125)
+
+[node name="BlockC18" parent="Terrain" index="158" unique_id=1592839533 instance=ExtResource("12_u5dj7")]
+position = Vector2(2925, -1125)
+
+[node name="BlockC19" parent="Terrain" index="159" unique_id=865629738 instance=ExtResource("12_u5dj7")]
+position = Vector2(3075, -1125)
+
+[node name="BlockC20" parent="Terrain" index="160" unique_id=281365681 instance=ExtResource("12_u5dj7")]
+position = Vector2(3225, -1125)
+
+[node name="BlockC24" parent="Terrain" index="161" unique_id=1574334802 instance=ExtResource("12_u5dj7")]
+position = Vector2(3825, -1125)
+
+[node name="BlockC25" parent="Terrain" index="162" unique_id=1891268477 instance=ExtResource("12_u5dj7")]
+position = Vector2(3975, -1125)
+
+[node name="BlockC26" parent="Terrain" index="163" unique_id=306615383 instance=ExtResource("12_u5dj7")]
+position = Vector2(4125, -1125)
+
+[node name="BlockC55" parent="Terrain" index="164" unique_id=1735977198 instance=ExtResource("12_u5dj7")]
+position = Vector2(4275, -1125)
+
+[node name="BlockC56" parent="Terrain" index="165" unique_id=949973768 instance=ExtResource("12_u5dj7")]
+position = Vector2(4275, -975)
+
+[node name="BlockC57" parent="Terrain" index="166" unique_id=2039889524 instance=ExtResource("12_u5dj7")]
+position = Vector2(4275, -825)
+
+[node name="BlockC58" parent="Terrain" index="167" unique_id=822347548 instance=ExtResource("12_u5dj7")]
+position = Vector2(4275, -675)
+
+[node name="BlockC59" parent="Terrain" index="168" unique_id=1731486061 instance=ExtResource("12_u5dj7")]
+position = Vector2(4275, -525)
+
+[node name="BlockC12" parent="Terrain" index="169" unique_id=1104390552 instance=ExtResource("12_u5dj7")]
+position = Vector2(3375, -525)
+
+[node name="BlockC14" parent="Terrain" index="170" unique_id=574693759 instance=ExtResource("12_u5dj7")]
+position = Vector2(3525, -525)
+
+[node name="BlockC27" parent="Terrain" index="171" unique_id=960264109 instance=ExtResource("12_u5dj7")]
+position = Vector2(3675, -525)
+
+[node name="BlockC13" parent="Terrain" index="172" unique_id=977846195 instance=ExtResource("12_u5dj7")]
+position = Vector2(1425, -1125)
+
+[node name="BlockC32" parent="Terrain" index="173" unique_id=494082706 instance=ExtResource("12_u5dj7")]
+position = Vector2(1425, -1875)
+
+[node name="BlockC33" parent="Terrain" index="174" unique_id=609593604 instance=ExtResource("12_u5dj7")]
+position = Vector2(1575, -1875)
+
+[node name="BlockC34" parent="Terrain" index="175" unique_id=1855485310 instance=ExtResource("12_u5dj7")]
+position = Vector2(1725, -1875)
+
+[node name="BlockC35" parent="Terrain" index="176" unique_id=1078750213 instance=ExtResource("12_u5dj7")]
+position = Vector2(1875, -1875)
+
+[node name="BlockC36" parent="Terrain" index="177" unique_id=1227637180 instance=ExtResource("12_u5dj7")]
+position = Vector2(2025, -1875)
+
+[node name="BlockC37" parent="Terrain" index="178" unique_id=1488064155 instance=ExtResource("12_u5dj7")]
+position = Vector2(2175, -1875)
+
+[node name="BlockC38" parent="Terrain" index="179" unique_id=752006747 instance=ExtResource("12_u5dj7")]
+position = Vector2(2325, -1875)
+
+[node name="BlockC39" parent="Terrain" index="180" unique_id=1689057173 instance=ExtResource("12_u5dj7")]
+position = Vector2(2475, -1875)
+
+[node name="BlockC40" parent="Terrain" index="181" unique_id=150900754 instance=ExtResource("12_u5dj7")]
+position = Vector2(2625, -1875)
+
+[node name="BlockC41" parent="Terrain" index="182" unique_id=2081363849 instance=ExtResource("12_u5dj7")]
+position = Vector2(2775, -1875)
+
+[node name="BlockC42" parent="Terrain" index="183" unique_id=1780115689 instance=ExtResource("12_u5dj7")]
+position = Vector2(2925, -1875)
+
+[node name="BlockC43" parent="Terrain" index="184" unique_id=334274534 instance=ExtResource("12_u5dj7")]
+position = Vector2(3075, -1875)
+
+[node name="BlockC44" parent="Terrain" index="185" unique_id=1787441426 instance=ExtResource("12_u5dj7")]
+position = Vector2(3225, -1875)
+
+[node name="BlockC45" parent="Terrain" index="186" unique_id=1071631060 instance=ExtResource("12_u5dj7")]
+position = Vector2(3375, -1875)
+
+[node name="BlockC46" parent="Terrain" index="187" unique_id=1582766422 instance=ExtResource("12_u5dj7")]
+position = Vector2(3525, -1875)
+
+[node name="BlockC47" parent="Terrain" index="188" unique_id=1419013220 instance=ExtResource("12_u5dj7")]
+position = Vector2(3675, -1875)
+
+[node name="BlockC48" parent="Terrain" index="189" unique_id=1928765610 instance=ExtResource("12_u5dj7")]
+position = Vector2(3825, -1875)
+
+[node name="BlockC49" parent="Terrain" index="190" unique_id=1968460285 instance=ExtResource("12_u5dj7")]
+position = Vector2(3975, -1875)
+
+[node name="BlockC50" parent="Terrain" index="191" unique_id=419658483 instance=ExtResource("12_u5dj7")]
+position = Vector2(4125, -1875)
+
+[node name="BlockC51" parent="Terrain" index="192" unique_id=329086906 instance=ExtResource("12_u5dj7")]
+position = Vector2(4275, -1875)
+
+[node name="BlockC52" parent="Terrain" index="193" unique_id=1441565693 instance=ExtResource("12_u5dj7")]
+position = Vector2(4425, -1875)
+
+[node name="BlockC53" parent="Terrain" index="194" unique_id=2144000359 instance=ExtResource("12_u5dj7")]
+position = Vector2(4575, -1875)
+
+[node name="BlockC54" parent="Terrain" index="195" unique_id=570795130 instance=ExtResource("12_u5dj7")]
+position = Vector2(4725, -1875)
+
+[node name="BlockC60" parent="Terrain" index="196" unique_id=1240333742 instance=ExtResource("12_u5dj7")]
+position = Vector2(4875, -1875)
+
+[node name="BlockC61" parent="Terrain" index="197" unique_id=2145399618 instance=ExtResource("12_u5dj7")]
+position = Vector2(4875, -1725)
+
+[node name="BlockC62" parent="Terrain" index="198" unique_id=351560513 instance=ExtResource("12_u5dj7")]
+position = Vector2(4875, -1575)
+
+[node name="BlockC63" parent="Terrain" index="199" unique_id=631890542 instance=ExtResource("12_u5dj7")]
+position = Vector2(4875, -1425)
+
+[node name="BlockC64" parent="Terrain" index="200" unique_id=1790272517 instance=ExtResource("12_u5dj7")]
+position = Vector2(4875, -1275)
+
+[node name="BlockC65" parent="Terrain" index="201" unique_id=1001633067 instance=ExtResource("12_u5dj7")]
+position = Vector2(4875, -1125)
+
+[node name="BlockC66" parent="Terrain" index="202" unique_id=1616277313 instance=ExtResource("12_u5dj7")]
+position = Vector2(4875, -975)
+
+[node name="BlockC67" parent="Terrain" index="203" unique_id=1538050491 instance=ExtResource("12_u5dj7")]
+position = Vector2(4875, -825)
+
+[node name="BlockC68" parent="Terrain" index="204" unique_id=861257815 instance=ExtResource("12_u5dj7")]
+position = Vector2(4875, -675)
+
+[node name="BlockC69" parent="Terrain" index="205" unique_id=1049950638 instance=ExtResource("12_u5dj7")]
+position = Vector2(4875, -525)
+
+[node name="BlockC70" parent="Terrain" index="206" unique_id=1481137639 instance=ExtResource("12_u5dj7")]
+position = Vector2(4875, -375)
+
+[node name="BlockC71" parent="Terrain" index="207" unique_id=1049778490 instance=ExtResource("12_u5dj7")]
+position = Vector2(4875, -225)
+
+[node name="BlockC72" parent="Terrain" index="208" unique_id=1963007869 instance=ExtResource("12_u5dj7")]
+position = Vector2(4875, -75)
+
+[node name="Platform" parent="Terrain" index="209" unique_id=494921154 instance=ExtResource("9_h6fe6")]
+position = Vector2(1575, -525)
+
+[node name="Platform2" parent="Terrain" index="210" unique_id=130276283 instance=ExtResource("9_h6fe6")]
+position = Vector2(1725, -525)
+
+[node name="Platform3" parent="Terrain" index="211" unique_id=951738207 instance=ExtResource("9_h6fe6")]
+position = Vector2(1125, -525)
+
+[node name="Platform4" parent="Terrain" index="212" unique_id=1638080385 instance=ExtResource("9_h6fe6")]
+position = Vector2(1275, -525)
+
+[node name="Platform17" parent="Terrain" index="213" unique_id=1148069927 instance=ExtResource("9_h6fe6")]
+position = Vector2(2475, -525)
+
+[node name="Platform18" parent="Terrain" index="214" unique_id=849406246 instance=ExtResource("9_h6fe6")]
+position = Vector2(2625, -525)
+
+[node name="Platform19" parent="Terrain" index="215" unique_id=946632418 instance=ExtResource("9_h6fe6")]
+position = Vector2(2775, -525)
+
+[node name="Platform20" parent="Terrain" index="216" unique_id=1645610998 instance=ExtResource("9_h6fe6")]
+position = Vector2(2925, -525)
+
+[node name="Platform21" parent="Terrain" index="217" unique_id=1435461543 instance=ExtResource("9_h6fe6")]
+position = Vector2(3075, -525)
+
+[node name="Platform22" parent="Terrain" index="218" unique_id=1451526354 instance=ExtResource("9_h6fe6")]
+position = Vector2(3225, -525)
+
+[node name="Platform24" parent="Terrain" index="219" unique_id=1354300415 instance=ExtResource("9_h6fe6")]
+position = Vector2(3825, -525)
+rotation = -3.1415925
+
+[node name="Platform25" parent="Terrain" index="220" unique_id=1391094081 instance=ExtResource("9_h6fe6")]
+position = Vector2(3975, -525)
+rotation = -3.1415925
+
+[node name="Platform26" parent="Terrain" index="221" unique_id=256782288 instance=ExtResource("9_h6fe6")]
+position = Vector2(4125, -525)
+rotation = -3.1415925
+
+[node name="Platform27" parent="Terrain" index="222" unique_id=424102028 instance=ExtResource("9_h6fe6")]
+position = Vector2(3375, -1125)
+rotation = 3.1415925
+
+[node name="Platform28" parent="Terrain" index="223" unique_id=624944761 instance=ExtResource("9_h6fe6")]
+position = Vector2(3525, -1125)
+rotation = 3.1415925
+
+[node name="Platform29" parent="Terrain" index="224" unique_id=1133070447 instance=ExtResource("9_h6fe6")]
+position = Vector2(3675, -1125)
+rotation = 3.1415925
+
+[node name="Platform37" parent="Terrain" index="225" unique_id=1758888817 instance=ExtResource("9_h6fe6")]
+position = Vector2(4425, -1125)
+
+[node name="Platform38" parent="Terrain" index="226" unique_id=425538824 instance=ExtResource("9_h6fe6")]
+position = Vector2(4575, -1125)
+
+[node name="Platform39" parent="Terrain" index="227" unique_id=120161711 instance=ExtResource("9_h6fe6")]
+position = Vector2(4725, -1125)
+
+[node name="Platform40" parent="Terrain" index="228" unique_id=203694213 instance=ExtResource("9_h6fe6")]
+position = Vector2(4425, -825)
+
+[node name="Platform41" parent="Terrain" index="229" unique_id=296063975 instance=ExtResource("9_h6fe6")]
+position = Vector2(4575, -825)
+
+[node name="Platform42" parent="Terrain" index="230" unique_id=738816366 instance=ExtResource("9_h6fe6")]
+position = Vector2(4725, -825)
+
+[node name="Platform43" parent="Terrain" index="231" unique_id=114074825 instance=ExtResource("9_h6fe6")]
+position = Vector2(4425, -525)
+
+[node name="Platform44" parent="Terrain" index="232" unique_id=599134892 instance=ExtResource("9_h6fe6")]
+position = Vector2(4575, -525)
+
+[node name="Platform45" parent="Terrain" index="233" unique_id=770290444 instance=ExtResource("9_h6fe6")]
+position = Vector2(4725, -525)
+
+[node name="Platform5" parent="Terrain" index="234" unique_id=2046182281 instance=ExtResource("9_h6fe6")]
+position = Vector2(1575, -1125)
+
+[node name="Platform6" parent="Terrain" index="235" unique_id=1084371269 instance=ExtResource("9_h6fe6")]
+position = Vector2(1725, -1125)
+
+[node name="Platform7" parent="Terrain" index="236" unique_id=879401049 instance=ExtResource("9_h6fe6")]
+position = Vector2(1875, -1125)
+
+[node name="Platform8" parent="Terrain" index="237" unique_id=965378289 instance=ExtResource("9_h6fe6")]
+position = Vector2(2025, -1125)
+
+[node name="Platform11" parent="Terrain" index="238" unique_id=1103448430 instance=ExtResource("9_h6fe6")]
+position = Vector2(2325, -975)
+rotation = -1.5707964
+
+[node name="Platform12" parent="Terrain" index="239" unique_id=2128226360 instance=ExtResource("9_h6fe6")]
+position = Vector2(2325, -825)
+rotation = -1.5707964
+
+[node name="Platform13" parent="Terrain" index="240" unique_id=1956264426 instance=ExtResource("9_h6fe6")]
+position = Vector2(2325, -675)
+rotation = -1.5707964
+
+[node name="Platform23" parent="Terrain" index="241" unique_id=503340415 instance=ExtResource("9_h6fe6")]
+position = Vector2(4125, -1575)
+rotation = -1.5707964
+
+[node name="Platform32" parent="Terrain" index="242" unique_id=731287902 instance=ExtResource("9_h6fe6")]
+position = Vector2(4125, -1725)
+rotation = -1.5707964
+
+[node name="Platform30" parent="Terrain" index="243" unique_id=1339662640 instance=ExtResource("9_h6fe6")]
+position = Vector2(4125, -1425)
+rotation = -1.5707964
+
+[node name="Platform31" parent="Terrain" index="244" unique_id=56023789 instance=ExtResource("9_h6fe6")]
+position = Vector2(4125, -1275)
+rotation = -1.5707964
+
+[node name="Platform33" parent="Terrain" index="245" unique_id=1346331480 instance=ExtResource("9_h6fe6")]
+position = Vector2(1425, -1575)
+rotation = -1.5707964
+
+[node name="Platform34" parent="Terrain" index="246" unique_id=2099553418 instance=ExtResource("9_h6fe6")]
+position = Vector2(1425, -1725)
+rotation = -1.5707964
+
+[node name="Platform35" parent="Terrain" index="247" unique_id=443070339 instance=ExtResource("9_h6fe6")]
+position = Vector2(1425, -1425)
+rotation = -1.5707964
+
+[node name="Platform36" parent="Terrain" index="248" unique_id=219534018 instance=ExtResource("9_h6fe6")]
+position = Vector2(1425, -1275)
+rotation = -1.5707964
+
+[node name="Platform14" parent="Terrain" index="249" unique_id=80633229 instance=ExtResource("9_h6fe6")]
+position = Vector2(1425, -975)
+rotation = 1.5707964
+
+[node name="Platform15" parent="Terrain" index="250" unique_id=339077183 instance=ExtResource("9_h6fe6")]
+position = Vector2(1425, -825)
+rotation = 1.5707964
+
+[node name="Platform16" parent="Terrain" index="251" unique_id=348336174 instance=ExtResource("9_h6fe6")]
+position = Vector2(1425, -675)
+rotation = 1.5707964
+
+[node name="Platform9" parent="Terrain" index="252" unique_id=169341244 instance=ExtResource("9_h6fe6")]
+position = Vector2(1875, -525)
+
+[node name="Platform10" parent="Terrain" index="253" unique_id=1819470054 instance=ExtResource("9_h6fe6")]
+position = Vector2(2025, -525)
+
 [node name="Extinguishables" type="Node" parent="." index="3" unique_id=902825087]
 
 [node name="Fireplace" parent="Extinguishables" index="0" unique_id=1059734652 instance=ExtResource("9_2xj4m")]
-position = Vector2(495, -60)
+position = Vector2(375, -75)
 
 [node name="Fireplace2" parent="Extinguishables" index="1" unique_id=1526306789 instance=ExtResource("9_2xj4m")]
-position = Vector2(990, -60)
+position = Vector2(1875, -675)
 
 [node name="Fireplace3" parent="Extinguishables" index="2" unique_id=181321529 instance=ExtResource("9_2xj4m")]
+position = Vector2(4575, -1275)
+
+[node name="Fireplace6" parent="Extinguishables" index="3" unique_id=1738776918 instance=ExtResource("9_2xj4m")]
 position = Vector2(2775, -75)
+
+[node name="Fireplace4" parent="Extinguishables" index="4" unique_id=1507848099 instance=ExtResource("9_2xj4m")]
+position = Vector2(2775, -1275)
+
+[node name="Fireplace5" parent="Extinguishables" index="5" unique_id=1429963332 instance=ExtResource("9_2xj4m")]
+position = Vector2(3525, -675)
 
 [node name="ExtinguishWinandTracker" type="Node" parent="." index="4" unique_id=1217931619 node_paths=PackedStringArray("level", "player", "second_view", "all_extinguishables")]
 script = ExtResource("10_u5dj7")
 level = NodePath("..")
 player = NodePath("../Player")
 second_view = NodePath("../SecondView/SecondView")
-all_extinguishables = [NodePath("../Extinguishables/Fireplace"), NodePath("../Extinguishables/Fireplace2"), NodePath("../Extinguishables/Fireplace3")]
+all_extinguishables = [NodePath("../Extinguishables/Fireplace"), NodePath("../Extinguishables/Fireplace2"), NodePath("../Extinguishables/Fireplace3"), NodePath("../Extinguishables/Fireplace4"), NodePath("../Extinguishables/Fireplace5"), NodePath("../Extinguishables/Fireplace6")]
 
 [node name="SecondView" type="CanvasLayer" parent="." index="5" unique_id=622086023]
 
 [node name="SecondView" parent="SecondView" index="0" unique_id=1491427061 instance=ExtResource("3_2xj4m")]
+metadata/_edit_lock_ = true
 
 [node name="SubViewport" parent="SecondView/SecondView/SubViewportContainer" parent_id_path=PackedInt32Array(1491427061, 879312510) index="0" unique_id=1573429894 node_paths=PackedStringArray("world_root")]
 world_root = NodePath("../../../..")
 
 [node name="Tracking_cam" parent="SecondView/SecondView/SubViewportContainer/SubViewport" index="0" unique_id=1373545733 node_paths=PackedStringArray("target_follow")]
+zoom = Vector2(0.25, 0.25)
 target_follow = NodePath("../../../../../Extinguishables/Fireplace2")
 
 [node name="Background" parent="." index="6" unique_id=476540664 instance=ExtResource("13_h6fe6")]
+
+[node name="Control" parent="Background" index="0" unique_id=2038293723]
+metadata/_edit_lock_ = true
 
 [node name="CanvasModulate2" type="CanvasModulate" parent="Background" index="1" unique_id=226843296]
 color = Color(0.31, 0.31, 0.31, 1)
