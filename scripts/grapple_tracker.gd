@@ -3,7 +3,7 @@ class_name GrappleTracker
 @export var level : Level
 @export var player : Player
 @export var second_view : SecondView
-@export var all_hookables : Array[Hookable]
+var all_hookables : Array[Hookable]
 
 var closest_objective : Node2D:
 	set(value):
@@ -18,7 +18,8 @@ func _ready() -> void:
 	closest_objective_changed.connect(_update_second_view_to_target)
 
 func _initialize_all_extinguishables():
-	for object in all_hookables:
+	for object : Hookable in get_children():
+		all_hookables.append(object)
 		object.tree_exiting.connect(_on_grapple.bind(object))
 
 func _on_grapple(from : Node):
