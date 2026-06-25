@@ -20,7 +20,7 @@ const JUMP_VELOCITY = -400.0
 
 func _ready() -> void:
 	update_unlocks()
-	crosshair.position.x += crosshair_offset_x
+	crosshair.pivot.position.x += crosshair_offset_x
 
 func _physics_process(delta: float) -> void:
 	if use_gavity:

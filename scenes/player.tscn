@@ -704,25 +704,26 @@ libraries/ = SubResource("AnimationLibrary_d2wvv")
 autoplay = &"Idle"
 
 [node name="Crosshair" type="Node2D" parent="." unique_id=1333286657 node_paths=PackedStringArray("state_machine")]
-visible = false
 script = ExtResource("13_qfm1y")
 state_machine = NodePath("../PlayerStateMachine")
 segment_color_full = Color(1, 1, 1, 1)
 segment_color_transparent = Color(1, 1, 1, 0.19607843)
 
-[node name="1" type="Sprite2D" parent="Crosshair" unique_id=1280771232]
+[node name="Pivot" type="Node2D" parent="Crosshair" unique_id=1485641744]
+
+[node name="1" type="Sprite2D" parent="Crosshair/Pivot" unique_id=1280771232]
 modulate = Color(1, 1, 1, 0.19607843)
 position = Vector2(500, 0)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("17_l71n6")
 
-[node name="2" type="Sprite2D" parent="Crosshair" unique_id=637467127]
+[node name="2" type="Sprite2D" parent="Crosshair/Pivot" unique_id=637467127]
 modulate = Color(1, 1, 1, 0.19607843)
 position = Vector2(840, 0)
 scale = Vector2(2, 2)
 texture = ExtResource("17_l71n6")
 
-[node name="3" type="Sprite2D" parent="Crosshair" unique_id=73800218]
+[node name="3" type="Sprite2D" parent="Crosshair/Pivot" unique_id=73800218]
 modulate = Color(1, 1, 1, 0.19607843)
 position = Vector2(1180, 0)
 scale = Vector2(3, 3)

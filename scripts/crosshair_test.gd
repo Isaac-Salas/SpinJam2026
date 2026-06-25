@@ -1,9 +1,12 @@
 extends Node2D
 class_name Crosshair
 @export var state_machine : PlayerStateMachine
-@onready var _1: Sprite2D = $"1"
-@onready var _2: Sprite2D = $"2"
-@onready var _3: Sprite2D = $"3"
+@onready var pivot: Node2D = $Pivot
+@onready var _1: Sprite2D = $"Pivot/1"
+@onready var _2: Sprite2D = $"Pivot/2"
+@onready var _3: Sprite2D = $"Pivot/3"
+
+
 
 @export var segment_color_full : Color
 @export var segment_color_transparent : Color
@@ -12,7 +15,7 @@ var original_scales : Array[Vector2]
 
 
 func _ready() -> void:
-	for child : Sprite2D in get_children():
+	for child : Sprite2D in pivot.get_children():
 		original_scales.append(child.scale)
 	if state_machine:
 		state_machine.state_changed.connect(_eval_croshair_visibility)
