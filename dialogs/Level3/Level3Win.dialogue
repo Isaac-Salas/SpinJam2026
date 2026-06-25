@@ -1,7 +1,8 @@
 ~ start
-News Anchor : Listo!
+News Anchor : Done!
 do OverlayUI.go_to_next_scene()
+News Anchor : Next!
 #News Anchor : Now [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#adc4ff]Spinamo[/color][/wave][/outline_size] gotta beat that guy!
-#do OverlayUI.transitions.finish_transition()
-#do OverlayUI.current_scene.start_music()
+do OverlayUI.transitions.finish_transition()
+do OverlayUI.current_scene.start_music()
 => END

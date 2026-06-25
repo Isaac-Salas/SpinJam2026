@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://d22xiwyrkmjcu"]
 
 [ext_resource type="Script" uid="uid://bv30l2mlrvsie" path="res://scripts/second_camera_view.gd" id="1_lea4m"]
-[ext_resource type="PackedScene" uid="uid://12strmjx6xii" path="res://scenes/SecondaryCam.tscn" id="2_fy0q5"]
+[ext_resource type="Texture2D" uid="uid://didmfcik1f616" path="res://assets/NOTICIERO/Fondo.png" id="2_fy0q5"]
+[ext_resource type="Script" uid="uid://be6srx3825ukb" path="res://scripts/secondary_cam.gd" id="2_lea4m"]
 [ext_resource type="Script" uid="uid://b1ifuyqh4x2qv" path="res://scenes/camera_2d.gd" id="3_761ww"]
+[ext_resource type="Texture2D" uid="uid://dvst3oifslt8k" path="res://assets/NOTICIERO/Barra superior.png" id="5_qa4v1"]
+[ext_resource type="FontFile" uid="uid://dg2knt0fjyuad" path="res://assets/fonts/NewakeFont-Demo.otf" id="6_gxjy4"]
 
 [node name="SecondView" type="Control" unique_id=1491427061]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -16,6 +18,7 @@ mouse_filter = 2
 script = ExtResource("1_lea4m")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=879312510]
+clip_contents = true
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -25,13 +28,58 @@ offset_bottom = 150.0
 grow_horizontal = 0
 stretch = true
 
-[node name="SubViewport" parent="SubViewportContainer" unique_id=1573429894 instance=ExtResource("2_fy0q5")]
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=1573429894]
 handle_input_locally = false
-render_target_update_mode = 0
+size = Vector2i(150, 150)
+render_target_update_mode = 4
+script = ExtResource("2_lea4m")
 
-[node name="Tracking_cam" type="Camera2D" parent="SubViewportContainer/SubViewport" unique_id=1373545733 node_paths=PackedStringArray("target_follow")]
+[node name="Tracking_cam" type="Camera2D" parent="SubViewportContainer/SubViewport" unique_id=1373545733]
 zoom = Vector2(0.3, 0.3)
 process_callback = 0
 limit_enabled = false
 script = ExtResource("3_761ww")
-target_follow = NodePath("")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="SubViewportContainer/SubViewport" unique_id=453886929]
+layer = -1
+
+[node name="Control" type="Control" parent="SubViewportContainer/SubViewport/CanvasLayer" unique_id=17008144]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="SubViewportContainer/SubViewport/CanvasLayer/Control" unique_id=2031608703]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_fy0q5")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="TextureRect2" type="TextureRect" parent="SubViewportContainer/SubViewport/CanvasLayer/Control" unique_id=581882509]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+texture = ExtResource("5_qa4v1")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="SubViewportContainer/SubViewport/CanvasLayer/Control/TextureRect2" unique_id=2053919081]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_gxjy4")
+theme_override_font_sizes/font_size = 15
+text = "L  I  V  E"
+horizontal_alignment = 1
+vertical_alignment = 1

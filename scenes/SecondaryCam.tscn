@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://12strmjx6xii"]
-
-[ext_resource type="Script" uid="uid://be6srx3825ukb" path="res://scripts/secondary_cam.gd" id="1_gxoox"]
-
-[node name="SubViewport" type="SubViewport" unique_id=1573429894]
-script = ExtResource("1_gxoox")

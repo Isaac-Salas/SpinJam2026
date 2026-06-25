@@ -10,7 +10,7 @@ class_name Player
 @onready var ext_manguera: Sprite2D = $BodyParts/ArmLBone/ExtManguera
 @onready var mira: Sprite2D = $BodyParts/HeadBone/Mira
 @onready var crosshair: Crosshair = $Crosshair
-
+@onready var state_machine: PlayerStateMachine = $PlayerStateMachine
 @export_category("Unlocked_skills")
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0

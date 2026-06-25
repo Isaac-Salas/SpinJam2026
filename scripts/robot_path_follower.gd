@@ -85,4 +85,5 @@ func _handle_points(delta : float):
 			current_point += 1
 
 func _on_current_point_changed(value:int):
-	print("now on : ", value)
+	#print("now on : ", value)
+	pass

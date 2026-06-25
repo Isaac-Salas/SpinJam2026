@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://c2ixyiqwdsil6"]
+
+[ext_resource type="Texture2D" uid="uid://dcq1bdn5w57kd" path="res://assets/PLACEHOLDERS/Double/Wood.png" id="1_ng1xj"]
+[ext_resource type="Script" uid="uid://bd4m5nq3c41li" path="res://scripts/extinguishable_body.gd" id="2_2g5uf"]
+[ext_resource type="Texture2D" uid="uid://crjugjihrxmlr" path="res://assets/ROBOT FUEGO/Flama.png" id="3_ydtw1"]
+[ext_resource type="Material" uid="uid://d0n0l7tewxfrh" path="res://particles/ExtinguisherProyectile.tres" id="4_ybvxn"]
+[ext_resource type="Texture2D" uid="uid://wmheui8thwhn" path="res://assets/light/light.png" id="5_w0ah3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_reskh"]
+size = Vector2(90, 150)
+
+[node name="Fireplace" type="Sprite2D" unique_id=1059734652]
+texture = ExtResource("1_ng1xj")
+
+[node name="Extinguishable" type="Area2D" parent="." unique_id=181321529]
+position = Vector2(0, -60)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("2_2g5uf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Extinguishable" unique_id=2061196255]
+position = Vector2(0, 45)
+shape = SubResource("RectangleShape2D_reskh")
+
+[node name="Sprite2D" type="Sprite2D" parent="Extinguishable" unique_id=604541059]
+position = Vector2(0, 30)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_ydtw1")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Extinguishable" unique_id=2049233183]
+emitting = false
+amount = 10
+texture = ExtResource("3_ydtw1")
+one_shot = true
+explosiveness = 1.0
+process_material = ExtResource("4_ybvxn")
+
+[node name="PointLight2D" type="PointLight2D" parent="Extinguishable" unique_id=1212533808]
+color = Color(1, 0.362161, 0.24214262, 1)
+texture = ExtResource("5_w0ah3")
+texture_scale = 3.0
+
+[node name="Timer" type="Timer" parent="." unique_id=1040481261]

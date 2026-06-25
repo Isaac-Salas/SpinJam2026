@@ -3,6 +3,8 @@ class_name Move
 @export var fixed_speed : float = 100.0
 var running_speed_multiplier : int
 
+signal speed_multiplier_change(value : int)
+
 func Enter():
 	OverlayUI.wheel_view.rotator.rotation_side_change.connect(_flip_sides)
 	OverlayUI.wheel_view.rotator.rotation_count_changed.connect(_on_count_changed)
@@ -16,6 +18,7 @@ func Update(_delta: float):
 
 func _on_count_changed(value : int):
 	running_speed_multiplier = value
+	speed_multiplier_change.emit(running_speed_multiplier)
 	if running_speed_multiplier != 0:
 		player.animation_player.play("run",0.1,running_speed_multiplier)
 	else:

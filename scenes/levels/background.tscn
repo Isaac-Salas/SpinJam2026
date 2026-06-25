@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://bg1cb8cifda4h"]
+
+[ext_resource type="Script" uid="uid://pdxjbi8wrw4u" path="res://scripts/background.gd" id="1_1iwx2"]
+[ext_resource type="Texture2D" uid="uid://v7vi604pbp58" path="res://assets/FONDOS/Lab.png" id="1_h6hs5"]
+[ext_resource type="Shader" uid="uid://ximmn68rtf0a" path="res://shaders/Blur.gdshader" id="2_1iwx2"]
+[ext_resource type="Texture2D" uid="uid://climcghotbknl" path="res://assets/Backtest/LabTest.png" id="2_4r0np"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dpm1s"]
+shader = ExtResource("2_1iwx2")
+shader_parameter/blur_amount = 2.0000001899999997
+shader_parameter/mix_amount = 0.0
+shader_parameter/color_over = Color(0, 0, 0, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=476540664]
+layer = -1
+script = ExtResource("1_1iwx2")
+
+[node name="Control" type="Control" parent="." unique_id=2038293723]
+show_behind_parent = true
+custom_minimum_size = Vector2(960, 720)
+layout_mode = 3
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -360.0
+offset_bottom = 360.0
+grow_horizontal = 0
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Background" type="TextureRect" parent="Control" unique_id=1098504343]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_4r0np")
+expand_mode = 5
+
+[node name="Shader" type="TextureRect" parent="Control" unique_id=547968797]
+material = SubResource("ShaderMaterial_dpm1s")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_h6hs5")
+expand_mode = 5

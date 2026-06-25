@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dwswsr5q8tb7k" path="res://scenes/player_detect_win.tscn" id="6_e5vnl"]
 [ext_resource type="PackedScene" uid="uid://di3etpmd87llx" path="res://scenes/blocks/InvisibleWalls.tscn" id="7_inlfm"]
 [ext_resource type="PackedScene" uid="uid://b84yo8nn7u8i7" path="res://scenes/blocks/Level1-2/BlockB.tscn" id="8_inlfm"]
+[ext_resource type="PackedScene" uid="uid://bg1cb8cifda4h" path="res://scenes/levels/background.tscn" id="9_e3qul"]
 
 [node name="Level_template" unique_id=244848219 node_paths=PackedStringArray("player") instance=ExtResource("1_1xtnv")]
 ui_screen_text = "Move"
@@ -17,7 +18,9 @@ player_jump = true
 ending_dialog = ExtResource("2_twycr")
 player = NodePath("Player")
 
-[node name="Camera2D" type="Camera2D" parent="." index="0" unique_id=933591887 node_paths=PackedStringArray("target_follow")]
+[node name="CanvasLayer" parent="." index="0" unique_id=476540664 instance=ExtResource("9_e3qul")]
+
+[node name="Camera2D" type="Camera2D" parent="." index="1" unique_id=933591887 node_paths=PackedStringArray("target_follow")]
 position = Vector2(173, 128)
 zoom = Vector2(0.6, 0.6)
 process_callback = 0
@@ -25,14 +28,14 @@ limit_enabled = false
 script = ExtResource("2_2p574")
 target_follow = NodePath("../Player/CameraMarker")
 
-[node name="Player" parent="." index="1" unique_id=1282337476 instance=ExtResource("3_e5vnl")]
+[node name="Player" parent="." index="2" unique_id=1282337476 instance=ExtResource("3_e5vnl")]
 position = Vector2(163.99998, 118.99999)
 scale = Vector2(0.3, 0.3)
 
 [node name="CameraMarker" type="Marker2D" parent="Player" index="4" unique_id=1423218106]
 position = Vector2(0, -800)
 
-[node name="Floor" type="Node" parent="." index="2" unique_id=1521715551]
+[node name="Floor" type="Node" parent="." index="3" unique_id=1521715551]
 
 [node name="Floor29" parent="Floor" index="0" unique_id=890028475 instance=ExtResource("4_twycr")]
 position = Vector2(-384, 296)
@@ -415,6 +418,6 @@ position = Vector2(2048, -1528)
 [node name="BlockA6" parent="Floor" index="126" unique_id=685942724 instance=ExtResource("8_inlfm")]
 position = Vector2(2048, -1072)
 
-[node name="PlayerDetectWin" parent="." index="3" unique_id=1281271033 node_paths=PackedStringArray("level") instance=ExtResource("6_e5vnl")]
+[node name="PlayerDetectWin" parent="." index="4" unique_id=1281271033 node_paths=PackedStringArray("level") instance=ExtResource("6_e5vnl")]
 position = Vector2(2448, -1280)
 level = NodePath("..")

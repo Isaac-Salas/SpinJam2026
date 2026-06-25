@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://b1ifuyqh4x2qv" path="res://scenes/camera_2d.gd" id="2_68ib6"]
 [ext_resource type="Resource" uid="uid://cb4aa7hl663ga" path="res://dialogs/Level1/Level1Win.dialogue" id="2_m00rq"]
 [ext_resource type="PackedScene" uid="uid://stjljdb8fl46" path="res://scenes/player.tscn" id="3_76cw8"]
+[ext_resource type="PackedScene" uid="uid://bg1cb8cifda4h" path="res://scenes/levels/background.tscn" id="3_brv20"]
 [ext_resource type="PackedScene" uid="uid://bmi0e7mhfik12" path="res://scenes/blocks/Level1-2/BlockA.tscn" id="4_fh0io"]
 [ext_resource type="PackedScene" uid="uid://cy0aqwxgfbawx" path="res://scenes/blocks/InvisibleBlock.tscn" id="5_68ib6"]
 [ext_resource type="PackedScene" uid="uid://dwswsr5q8tb7k" path="res://scenes/player_detect_win.tscn" id="6_76cw8"]
@@ -15,7 +16,10 @@ player_move = true
 ending_dialog = ExtResource("2_m00rq")
 player = NodePath("Player")
 
-[node name="Camera2D" type="Camera2D" parent="." index="0" unique_id=933591887 node_paths=PackedStringArray("target_follow")]
+[node name="CanvasLayer" parent="." index="0" unique_id=476540664 node_paths=PackedStringArray("player") instance=ExtResource("3_brv20")]
+player = NodePath("../Player")
+
+[node name="Camera2D" type="Camera2D" parent="." index="1" unique_id=933591887 node_paths=PackedStringArray("target_follow")]
 position = Vector2(173, 128)
 process_callback = 0
 limit_enabled = false
@@ -23,7 +27,7 @@ position_smoothing_speed = 20.0
 script = ExtResource("2_68ib6")
 target_follow = NodePath("../Player/CameraMarker")
 
-[node name="Player" parent="." index="1" unique_id=1282337476 instance=ExtResource("3_76cw8")]
+[node name="Player" parent="." index="2" unique_id=1282337476 instance=ExtResource("3_76cw8")]
 position = Vector2(232.00002, 120)
 scale = Vector2(0.3, 0.3)
 
@@ -33,7 +37,7 @@ stumpy_mode = true
 [node name="CameraMarker" type="Marker2D" parent="Player" index="4" unique_id=1123239895]
 position = Vector2(5.086263e-05, -369.99994)
 
-[node name="Terrain" type="Node" parent="." index="2" unique_id=1521715551]
+[node name="Terrain" type="Node" parent="." index="3" unique_id=1521715551]
 
 [node name="Invisible6" parent="Terrain" index="0" unique_id=1633449358 instance=ExtResource("5_68ib6")]
 position = Vector2(4184, 144)
@@ -188,7 +192,7 @@ position = Vector2(-72, -312)
 [node name="Invisible5" parent="Terrain" index="50" unique_id=29267269 instance=ExtResource("5_68ib6")]
 position = Vector2(-72, -464)
 
-[node name="PlayerDetectWin" parent="." index="3" unique_id=1281271033 node_paths=PackedStringArray("level") instance=ExtResource("6_76cw8")]
+[node name="PlayerDetectWin" parent="." index="4" unique_id=1281271033 node_paths=PackedStringArray("level") instance=ExtResource("6_76cw8")]
 position = Vector2(4168, 16)
 level = NodePath("..")
 

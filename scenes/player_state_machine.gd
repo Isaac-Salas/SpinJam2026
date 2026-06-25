@@ -14,6 +14,7 @@ func _ready() -> void:
 	if initial_state:
 		initial_state.Enter()
 		current_state = initial_state
+		state_changed.emit(current_state)
 
 func _process(delta: float) -> void:
 	if current_state:

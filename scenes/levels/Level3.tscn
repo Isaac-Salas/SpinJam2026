@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://dfk6nh7l0d81b" path="res://scenes/blocks/Level3/Platform.tscn" id="12_bs2pm"]
 [ext_resource type="PackedScene" uid="uid://dwswsr5q8tb7k" path="res://scenes/player_detect_win.tscn" id="13_i2tsv"]
 [ext_resource type="PackedScene" uid="uid://d22xiwyrkmjcu" path="res://scenes/second_view_cam.tscn" id="17_bqc3i"]
+[ext_resource type="PackedScene" uid="uid://bg1cb8cifda4h" path="res://scenes/levels/background.tscn" id="18_ljeji"]
 
 [sub_resource type="Curve2D" id="Curve2D_bs2pm"]
 _data = {
@@ -95,7 +96,7 @@ shape = SubResource("CircleShape2D_yf5fn")
 [node name="SecondViewToggle" type="Node" parent="Robot" index="3" unique_id=909142189 node_paths=PackedStringArray("second_view", "robot")]
 script = ExtResource("10_ljeji")
 toggle_treshold = 1000.0
-second_view = NodePath("")
+second_view = NodePath("../../CanvasLayer/SecondView")
 robot = NodePath("..")
 
 [node name="PlayerDetectWin" parent="." index="4" unique_id=1281271033 node_paths=PackedStringArray("level") instance=ExtResource("13_i2tsv")]
@@ -1120,5 +1121,15 @@ position = Vector2(7904, -736)
 [node name="CanvasLayer" type="CanvasLayer" parent="." index="6" unique_id=1923618080]
 
 [node name="SecondView" parent="CanvasLayer" index="0" unique_id=1491427061 instance=ExtResource("17_bqc3i")]
+visible = false
+
+[node name="SubViewport" parent="CanvasLayer/SecondView/SubViewportContainer" parent_id_path=PackedInt32Array(1491427061, 879312510) index="0" unique_id=1573429894]
+render_target_update_mode = 0
+
+[node name="Tracking_cam" parent="CanvasLayer/SecondView/SubViewportContainer/SubViewport" index="0" unique_id=1373545733 node_paths=PackedStringArray("target_follow")]
+target_follow = NodePath("../../../../../Robot")
+
+[node name="CanvasLayer2" parent="." index="7" unique_id=476540664 instance=ExtResource("18_ljeji")]
 
 [editable path="Terrain/Invisible"]
+[editable path="CanvasLayer/SecondView"]
