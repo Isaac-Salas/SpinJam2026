@@ -7,6 +7,8 @@ class_name Grapple
 var arm : ArmGrapple
 var current_target : Node2D 
 
+signal finished_grapple_animation
+
 func Enter():
 	arm = player.body_parts.arm_r_grapple
 	_reset_arm_rotation()
@@ -68,3 +70,5 @@ func _tween_shoot():
 	tween.tween_property(arm,"scale",new_scale,0.1).set_trans(Tween.TRANS_BOUNCE)
 	tween.tween_property(arm,"scale",Vector2.ONE,0.1).set_trans(Tween.TRANS_BOUNCE)
 	await tween.finished
+	finished_grapple_animation.emit()
+	tween.kill()

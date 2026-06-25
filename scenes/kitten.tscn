@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cf6ctm4v1ly8s"]
+
+[ext_resource type="Script" uid="uid://d21vt6mw63k52" path="res://scripts/hookable_body.gd" id="1_hpm1y"]
+[ext_resource type="Texture2D" uid="uid://dhskhuimdxim6" path="res://assets/PLACEHOLDERS/Double/mouse_walk_a.png" id="2_2mo8n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_reskh"]
+size = Vector2(150, 150)
+
+[node name="Kitten" type="Area2D" unique_id=181321529]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_hpm1y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2061196255]
+shape = SubResource("RectangleShape2D_reskh")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1059734652]
+texture = ExtResource("2_2mo8n")

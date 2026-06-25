@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://didmfcik1f616" path="res://assets/NOTICIERO/Fondo.png" id="7_ocn3w"]
 [ext_resource type="PackedScene" uid="uid://bqjjpnxxwc0i5" path="res://scenes/blocks/Level7/BlockA.tscn" id="9_kj8k3"]
 [ext_resource type="PackedScene" uid="uid://di3etpmd87llx" path="res://scenes/blocks/InvisibleWalls.tscn" id="9_vxftt"]
+[ext_resource type="PackedScene" uid="uid://cf6ctm4v1ly8s" path="res://scenes/kitten.tscn" id="10_kj8k3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g13nb"]
 size = Vector2(150, 8962)
@@ -36,6 +37,7 @@ target_follow = NodePath("../Player/CameraMarker")
 [node name="Player" parent="." index="1" unique_id=1282337476 instance=ExtResource("5_w2poo")]
 position = Vector2(105.00001, -120.00001)
 scale = Vector2(0.3, 0.3)
+crosshair_offset_x = 500.0
 
 [node name="CameraMarker" type="Marker2D" parent="Player" index="4" unique_id=1423218106]
 position = Vector2(0, -800)
@@ -272,6 +274,21 @@ position = Vector2(-675, 75)
 
 [node name="BlockA7" parent="Terrain" index="72" unique_id=1100851602 instance=ExtResource("9_kj8k3")]
 position = Vector2(-825, 75)
+
+[node name="Kitten" parent="." index="4" unique_id=181321529 instance=ExtResource("10_kj8k3")]
+position = Vector2(330, -75)
+
+[node name="Kitten2" parent="." index="5" unique_id=1933564240 instance=ExtResource("10_kj8k3")]
+position = Vector2(480, -75)
+
+[node name="Kitten3" parent="." index="6" unique_id=298405161 instance=ExtResource("10_kj8k3")]
+position = Vector2(630, -75)
+
+[node name="Kitten4" parent="." index="7" unique_id=1058024140 instance=ExtResource("10_kj8k3")]
+position = Vector2(405, -225)
+
+[node name="Kitten5" parent="." index="8" unique_id=1696019830 instance=ExtResource("10_kj8k3")]
+position = Vector2(555, -225)
 
 [editable path="BackgroundLayer"]
 [editable path="Terrain/Invisible"]

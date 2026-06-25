@@ -23,7 +23,7 @@ func _eval_croshair_visibility(current_state : State):
 		self.visible = true
 		if state_name == "grapple":
 			_swap_connection_mode(true)
-		else:
+		elif state_name != "aim":
 			_swap_connection_mode(false)
 	else:
 		self.visible = false

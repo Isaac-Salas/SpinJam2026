@@ -1,13 +1,18 @@
 [gd_scene format=3 uid="uid://jqb0k5c0icb0"]
 
 [ext_resource type="Script" uid="uid://d4ga7s4q54xe8" path="res://scripts/proyectile_grapple.gd" id="1_xab51"]
-[ext_resource type="Texture2D" uid="uid://bkn4jnm6vquva" path="res://assets/ROBOT/Garra.png" id="2_jv0ah"]
+[ext_resource type="Texture2D" uid="uid://bkn4jnm6vquva" path="res://assets/ROBOT SPINAMO/Garra.png" id="2_jv0ah"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
 radius = 110.0
 
-[node name="Proyectile" type="Node2D" unique_id=909918044]
+[node name="Grapple" type="Area2D" unique_id=407789152]
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_xab51")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=15728678]
+shape = SubResource("CircleShape2D_g4v7s")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=789349271]
 z_index = -1
@@ -15,10 +20,3 @@ z_as_relative = false
 position = Vector2(0, -8)
 rotation = -1.1591597
 texture = ExtResource("2_jv0ah")
-
-[node name="Area2D" type="Area2D" parent="." unique_id=407789152]
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=15728678]
-shape = SubResource("CircleShape2D_g4v7s")

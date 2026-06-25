@@ -2,6 +2,7 @@ extends CharacterBody2D
 class_name Player
 @export var use_gavity : bool = true
 @export var gravity_multiplier : float = 0.1
+@export var crosshair_offset_x : float = 0.0
 @onready var body_parts: PlayerBodyParts = $BodyParts
 @onready var hook: Sprite2D = $BodyParts/ArmRBone/Hook
 @onready var propulsorR: Sprite2D = $BodyParts/LegRBone/Propulsor
@@ -19,6 +20,7 @@ const JUMP_VELOCITY = -400.0
 
 func _ready() -> void:
 	update_unlocks()
+	crosshair.position.x += crosshair_offset_x
 
 func _physics_process(delta: float) -> void:
 	if use_gavity:
