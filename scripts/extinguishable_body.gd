@@ -1,9 +1,11 @@
 extends Area2D
 class_name Extinguishable
-@onready var sprite_2d: Sprite2D = $Sprite2D
+@onready var wood: Sprite2D = $Wood
+@onready var fire: Sprite2D = $Fire
 @onready var gpu_particles_2d: GPUParticles2D = $GPUParticles2D
 @onready var point_light_2d: PointLight2D = $PointLight2D
-@onready var timer: Timer = $"../Timer"
+@onready var timer: Timer = $Timer
+
 
 signal tween_fire_finish
 
@@ -19,7 +21,8 @@ func _on_area_entered(area : Area2D):
 
 func _kill():
 	toggle_detection(false)
-	sprite_2d.visible = false
+	fire.visible = false
+	wood.visible = false
 	gpu_particles_2d.emitting = true
 	await _snuff_fire_out()
 	await gpu_particles_2d.finished

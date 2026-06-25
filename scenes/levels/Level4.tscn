@@ -500,7 +500,7 @@ position = Vector2(990, -60)
 [node name="ExtinguishTracker" type="Node" parent="." index="4" unique_id=1217931619 node_paths=PackedStringArray("level", "all_extinguishables")]
 script = ExtResource("10_u5dj7")
 level = NodePath("..")
-all_extinguishables = [NodePath("../Extinguishables/Fireplace/Extinguishable"), NodePath("../Extinguishables/Fireplace2/Extinguishable")]
+all_extinguishables = [NodePath("../Extinguishables/Fireplace"), NodePath("../Extinguishables/Fireplace2")]
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="." index="5" unique_id=622086023]
 

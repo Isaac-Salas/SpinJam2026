@@ -329,7 +329,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("1_avh0g")
-current_scene_number = 3
+current_scene_number = 4
 scene_array = Array[PackedScene]([ExtResource("2_3c6ce"), ExtResource("3_th6i0"), ExtResource("4_uxxwa"), ExtResource("5_aqtce"), ExtResource("6_isvv0"), ExtResource("7_rjrju")])
 
 [node name="Gameview" type="SubViewportContainer" parent="." unique_id=1858111535]
