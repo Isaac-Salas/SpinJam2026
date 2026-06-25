@@ -21,8 +21,8 @@ func _on_area_entered(area : Area2D):
 
 func _kill():
 	toggle_detection(false)
+	_tween_scale_wood()
 	fire.visible = false
-	wood.visible = false
 	gpu_particles_2d.emitting = true
 	await _snuff_fire_out()
 	await gpu_particles_2d.finished
@@ -47,3 +47,12 @@ func _tween_fire():
 	await tween.finished
 	tween.kill()
 	tween_fire_finish.emit()
+
+func _tween_scale_wood():
+	var original_scale = wood.scale
+	var tween : Tween = create_tween()
+	tween.tween_property(wood,"scale",original_scale * 1.5,0.1)
+	tween.tween_property(wood,"scale",original_scale,0.1)
+	await tween.finished
+	wood.visible = false
+	tween.kill()
