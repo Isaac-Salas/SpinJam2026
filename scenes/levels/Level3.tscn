@@ -34,7 +34,6 @@ size = Vector2(150, 8962)
 
 [node name="Level_template" unique_id=244848219 node_paths=PackedStringArray("player") instance=ExtResource("1_f3pvd")]
 ui_screen_text = "Move"
-play_music_on_ready = true
 level_music_name = "main_full"
 player_move = true
 player_jump = true
