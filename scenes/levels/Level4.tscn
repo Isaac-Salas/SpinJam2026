@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://dswtgy5c3ofh6" path="res://scenes/blocks/Level4/BlockC.tscn" id="12_u5dj7"]
 [ext_resource type="PackedScene" uid="uid://bg1cb8cifda4h" path="res://scenes/levels/background.tscn" id="13_h6fe6"]
 [ext_resource type="PackedScene" uid="uid://di3etpmd87llx" path="res://scenes/blocks/InvisibleWalls.tscn" id="14_lcj2q"]
+[ext_resource type="Texture2D" uid="uid://d1epb6g0aqmjp" path="res://assets/FONDOS/Ciudad de noche.jpg" id="15_iisik"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x3k3d"]
 size = Vector2(150, 8962)
@@ -876,17 +877,17 @@ metadata/_edit_lock_ = true
 zoom = Vector2(0.25, 0.25)
 target_follow = NodePath("../../../../../Extinguishables/Fireplace2")
 
-[node name="Background" parent="." index="6" unique_id=476540664 instance=ExtResource("13_h6fe6")]
+[node name="CanvasModulate" type="CanvasModulate" parent="." index="6" unique_id=1195061697]
+color = Color(0.5, 0.5, 0.5, 1)
 
-[node name="Control" parent="Background" index="0" unique_id=2038293723]
-metadata/_edit_lock_ = true
+[node name="BackgroundLayer" parent="." index="7" unique_id=476540664 instance=ExtResource("13_h6fe6")]
 
-[node name="CanvasModulate2" type="CanvasModulate" parent="Background" index="1" unique_id=226843296]
-color = Color(0.31, 0.31, 0.31, 1)
+[node name="CanvasModulate2" type="CanvasModulate" parent="BackgroundLayer" index="0" unique_id=1668456720]
+color = Color(0.8, 0.8, 0.8, 1)
 
-[node name="CanvasModulate" type="CanvasModulate" parent="." index="7" unique_id=1195061697]
-color = Color(0.31, 0.31, 0.31, 1)
+[node name="Background" parent="BackgroundLayer/Control" parent_id_path=PackedInt32Array(476540664, 2038293723) index="0" unique_id=1098504343]
+texture = ExtResource("15_iisik")
 
 [editable path="Terrain/Invisible"]
 [editable path="SecondView/SecondView"]
-[editable path="Background"]
+[editable path="BackgroundLayer"]

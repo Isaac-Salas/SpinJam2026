@@ -53,6 +53,7 @@ func win():
 	level_won.emit()
 
 func lose():
+	print("LOSE")
 	OverlayUI.wheel_view.rotator.toggle_disable(true)
 	OverlayUI.transitions.start_transition(fail_dialog,"start")
 	SoundManager.cross_fade_to_song(SoundManager.NEWS,4.0)

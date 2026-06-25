@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://wmheui8thwhn" path="res://assets/light/light.png" id="5_w0ah3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_reskh"]
-size = Vector2(90, 150)
+size = Vector2(150, 150)
 
 [node name="Extinguishable" type="Area2D" unique_id=181321529]
 collision_layer = 2
@@ -38,5 +38,3 @@ process_material = ExtResource("4_ybvxn")
 color = Color(1, 0.362161, 0.24214262, 1)
 texture = ExtResource("5_w0ah3")
 texture_scale = 3.0
-
-[node name="Timer" type="Timer" parent="." unique_id=1040481261]

@@ -5,10 +5,9 @@ class_name Extinguishable
 @onready var fire: Sprite2D = $Fire
 @onready var gpu_particles_2d: GPUParticles2D = $GPUParticles2D
 @onready var point_light_2d: PointLight2D = $PointLight2D
-@onready var timer: Timer = $Timer
 
 signal tween_fire_finish
-signal active_changed(value : bool)
+signal active_changed()
 
 func _ready() -> void:
 	toggle_detection(active)
@@ -34,7 +33,7 @@ func toggle_detection(value : bool):
 	self.set_deferred("monitoring",value)
 	self.set_deferred("monitorable",value)
 	active = value
-	active_changed.emit(value)
+	active_changed.emit()
 
 func _snuff_fire_out():
 	tween_fire_finish.disconnect(_tween_fire)
