@@ -512,9 +512,6 @@ world_root = NodePath("../../../..")
 [node name="Tracking_cam" parent="CanvasLayer2/SecondView/SubViewportContainer/SubViewport" index="0" unique_id=1373545733 node_paths=PackedStringArray("target_follow")]
 target_follow = NodePath("../../../../../Extinguishables/Fireplace2")
 
-[node name="CanvasLayer" parent="CanvasLayer2/SecondView/SubViewportContainer/SubViewport" index="1" unique_id=453886929]
-visible = true
-
 [node name="CanvasLayer" parent="." index="6" unique_id=476540664 instance=ExtResource("13_h6fe6")]
 
 [node name="CanvasModulate2" type="CanvasModulate" parent="CanvasLayer" index="1" unique_id=226843296]
