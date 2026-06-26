@@ -1,16 +1,13 @@
 [gd_scene format=3 uid="uid://beank0vk71oy6"]
 
 [ext_resource type="PackedScene" uid="uid://b7gui86a3ksvj" path="res://scenes/levels/Level_template.tscn" id="1_gowir"]
-[ext_resource type="Resource" uid="uid://c06n6saqluwvt" path="res://dialogs/Level7/Level7Win.dialogue" id="2_j0ttt"]
-[ext_resource type="Resource" uid="uid://dugp2vblgkqlj" path="res://dialogs/Level7/Level7Lose.dialogue" id="3_sse1k"]
 [ext_resource type="Script" uid="uid://b1ifuyqh4x2qv" path="res://scenes/camera_2d.gd" id="5_qmogg"]
 [ext_resource type="PackedScene" uid="uid://stjljdb8fl46" path="res://scenes/player.tscn" id="6_tplmm"]
 [ext_resource type="PackedScene" uid="uid://bg1cb8cifda4h" path="res://scenes/levels/background.tscn" id="7_gppdt"]
-[ext_resource type="Texture2D" uid="uid://vqfbxc0tpav4" path="res://assets/FONDOS/Ciudad vegetación.png" id="8_np0j7"]
+[ext_resource type="Texture2D" uid="uid://dgp8xho8xb2r6" path="res://assets/PLACEHOLDERS/Double/block_strong_ciry.png" id="7_keegh"]
 [ext_resource type="PackedScene" uid="uid://di3etpmd87llx" path="res://scenes/blocks/InvisibleWalls.tscn" id="9_rweuh"]
 [ext_resource type="PackedScene" uid="uid://bqjjpnxxwc0i5" path="res://scenes/blocks/Level7/BlockA.tscn" id="10_yb5nh"]
 [ext_resource type="PackedScene" uid="uid://cc4t1rsdt6kiu" path="res://scenes/blocks/Level7/BlockB.tscn" id="11_slo3c"]
-[ext_resource type="Script" uid="uid://cf5qd2g8fgmt3" path="res://scripts/grapple_tracker.gd" id="14_p2q6y"]
 [ext_resource type="PackedScene" uid="uid://d22xiwyrkmjcu" path="res://scenes/second_view_cam.tscn" id="16_ipb20"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g13nb"]
@@ -19,14 +16,13 @@ size = Vector2(150, 8962)
 [node name="Level_template" unique_id=244848219 node_paths=PackedStringArray("player") instance=ExtResource("1_gowir")]
 ui_screen_text = "Move"
 play_music_on_ready = true
-level_music_name = "boss_drums"
+level_music_name = "main_instruments"
 player_move = true
 player_jump = true
 player_shoot = true
 player_aim = true
+player_fly = true
 player_grapple = true
-ending_dialog = ExtResource("2_j0ttt")
-fail_dialog = ExtResource("3_sse1k")
 player = NodePath("Player")
 
 [node name="Camera2D" type="Camera2D" parent="." index="0" unique_id=933591887 node_paths=PackedStringArray("target_follow")]
@@ -46,7 +42,7 @@ position = Vector2(0, -800)
 [node name="BackgroundLayer" parent="." index="2" unique_id=476540664 instance=ExtResource("7_gppdt")]
 
 [node name="Background" parent="BackgroundLayer/Control" parent_id_path=PackedInt32Array(476540664, 2038293723) index="0" unique_id=1098504343]
-texture = ExtResource("8_np0j7")
+texture = ExtResource("7_keegh")
 
 [node name="Terrain" type="Node" parent="." index="3" unique_id=972198966]
 
@@ -492,13 +488,7 @@ position = Vector2(9675, 225)
 [node name="BlockA144" parent="Terrain" index="144" unique_id=893919303 instance=ExtResource("11_slo3c")]
 position = Vector2(9825, 225)
 
-[node name="GrappleTracker" type="Node" parent="." index="4" unique_id=88755387 node_paths=PackedStringArray("level", "player", "second_view")]
-script = ExtResource("14_p2q6y")
-level = NodePath("..")
-player = NodePath("../Player")
-second_view = NodePath("../CanvasLayer/SecondView")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." index="5" unique_id=1324981923]
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="4" unique_id=1324981923]
 
 [node name="SecondView" parent="CanvasLayer" index="0" unique_id=1491427061 node_paths=PackedStringArray("world_root") instance=ExtResource("16_ipb20")]
 world_root = NodePath("../..")

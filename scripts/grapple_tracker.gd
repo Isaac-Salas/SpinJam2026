@@ -14,8 +14,9 @@ var closest_objective : Node2D:
 signal closest_objective_changed(value : Node2D)
 
 func _ready() -> void:
-	_initialize_all_extinguishables()
-	closest_objective_changed.connect(_update_second_view_to_target)
+	if not level.win_after_music:
+		_initialize_all_extinguishables()
+		closest_objective_changed.connect(_update_second_view_to_target)
 
 func _initialize_all_extinguishables():
 	for object : Hookable in get_children():
@@ -26,6 +27,7 @@ func _on_grapple(from : Node):
 	all_hookables.erase(from)
 	if all_hookables.size() == 0:
 		level.win()
+		self.queue_free()
 
 func _process(_delta: float) -> void:
 	closest_objective = _get_closest_objective()
