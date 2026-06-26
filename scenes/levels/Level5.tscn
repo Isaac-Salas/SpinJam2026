@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://7kwx8yf1yv83" path="res://scenes/blocks/Level5/Platform.tscn" id="11_p6f4l"]
 [ext_resource type="PackedScene" uid="uid://bg1cb8cifda4h" path="res://scenes/levels/background.tscn" id="11_y1n0m"]
 [ext_resource type="PackedScene" uid="uid://d22xiwyrkmjcu" path="res://scenes/second_view_cam.tscn" id="12_13joh"]
-[ext_resource type="PackedScene" uid="uid://brjkuwop5yemu" path="res://scenes/extinguishable/ice_cream_truck.tscn" id="12_xdb0i"]
+[ext_resource type="PackedScene" uid="uid://brjkuwop5yemu" path="res://scenes/ice_cream_truck.tscn" id="12_xdb0i"]
 [ext_resource type="Script" uid="uid://b84llo25o2alg" path="res://scripts/extinguish_countdown_ui.gd" id="13_m7s51"]
 [ext_resource type="FontFile" uid="uid://chqw74du7qjap" path="res://assets/fonts/Lexend-ExtraBold.ttf" id="13_ptild"]
 

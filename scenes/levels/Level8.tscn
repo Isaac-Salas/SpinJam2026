@@ -1,14 +1,12 @@
 [gd_scene format=3 uid="uid://beank0vk71oy6"]
 
 [ext_resource type="PackedScene" uid="uid://b7gui86a3ksvj" path="res://scenes/levels/Level_template.tscn" id="1_gowir"]
-[ext_resource type="Texture2D" uid="uid://dhyg55xjwms2w" path="res://assets/FONDOS/Circo.png" id="5_2b21a"]
 [ext_resource type="Script" uid="uid://b1ifuyqh4x2qv" path="res://scenes/camera_2d.gd" id="5_qmogg"]
 [ext_resource type="PackedScene" uid="uid://stjljdb8fl46" path="res://scenes/player.tscn" id="6_tplmm"]
 [ext_resource type="PackedScene" uid="uid://bg1cb8cifda4h" path="res://scenes/levels/background.tscn" id="7_gppdt"]
+[ext_resource type="Texture2D" uid="uid://dgp8xho8xb2r6" path="res://assets/PLACEHOLDERS/Double/block_strong_ciry.png" id="7_keegh"]
 [ext_resource type="PackedScene" uid="uid://di3etpmd87llx" path="res://scenes/blocks/InvisibleWalls.tscn" id="9_rweuh"]
-[ext_resource type="Script" uid="uid://cf5qd2g8fgmt3" path="res://scripts/grapple_tracker.gd" id="10_fgy3j"]
 [ext_resource type="PackedScene" uid="uid://bqjjpnxxwc0i5" path="res://scenes/blocks/Level7/BlockA.tscn" id="10_yb5nh"]
-[ext_resource type="PackedScene" uid="uid://c03a6lnw1bpmq" path="res://scenes/hookable/balloon.tscn" id="11_qyvhn"]
 [ext_resource type="PackedScene" uid="uid://cc4t1rsdt6kiu" path="res://scenes/blocks/Level7/BlockB.tscn" id="11_slo3c"]
 [ext_resource type="PackedScene" uid="uid://d22xiwyrkmjcu" path="res://scenes/second_view_cam.tscn" id="16_ipb20"]
 
@@ -27,57 +25,26 @@ player_fly = true
 player_grapple = true
 player = NodePath("Player")
 
-[node name="GrappleTracker" type="Node" parent="." index="0" unique_id=1520231419 node_paths=PackedStringArray("level", "player", "second_view")]
-script = ExtResource("10_fgy3j")
-randomize_active_extinguishables = true
-level = NodePath("..")
-player = NodePath("../Player")
-second_view = NodePath("../CanvasLayer/SecondView")
-metadata/_custom_type_script = "uid://cf5qd2g8fgmt3"
-
-[node name="Balloon" parent="GrappleTracker" index="0" unique_id=181321529 instance=ExtResource("11_qyvhn")]
-position = Vector2(831, -590)
-active = false
-
-[node name="Balloon2" parent="GrappleTracker" index="1" unique_id=843462205 instance=ExtResource("11_qyvhn")]
-position = Vector2(1777, -404)
-active = false
-
-[node name="Balloon3" parent="GrappleTracker" index="2" unique_id=2094798138 instance=ExtResource("11_qyvhn")]
-position = Vector2(2782, -863)
-active = false
-
-[node name="Balloon4" parent="GrappleTracker" index="3" unique_id=1050001393 instance=ExtResource("11_qyvhn")]
-position = Vector2(3659, -395)
-active = false
-
-[node name="Balloon5" parent="GrappleTracker" index="4" unique_id=771748617 instance=ExtResource("11_qyvhn")]
-position = Vector2(4771, -879)
-active = false
-
-[node name="LimitTimer" type="Timer" parent="GrappleTracker" index="5" unique_id=1930037880]
-one_shot = true
-
-[node name="Camera2D" type="Camera2D" parent="." index="1" unique_id=933591887 node_paths=PackedStringArray("target_follow")]
+[node name="Camera2D" type="Camera2D" parent="." index="0" unique_id=933591887 node_paths=PackedStringArray("target_follow")]
 zoom = Vector2(0.6, 0.6)
 process_callback = 0
 limit_enabled = false
 script = ExtResource("5_qmogg")
 target_follow = NodePath("../Player/CameraMarker")
 
-[node name="Player" parent="." index="2" unique_id=1282337476 instance=ExtResource("6_tplmm")]
+[node name="Player" parent="." index="1" unique_id=1282337476 instance=ExtResource("6_tplmm")]
 position = Vector2(105.00001, -120.00001)
 scale = Vector2(0.3, 0.3)
 
 [node name="CameraMarker" type="Marker2D" parent="Player" index="4" unique_id=1423218106]
-position = Vector2(0, -1200)
+position = Vector2(0, -800)
 
-[node name="BackgroundLayer" parent="." index="3" unique_id=476540664 instance=ExtResource("7_gppdt")]
+[node name="BackgroundLayer" parent="." index="2" unique_id=476540664 instance=ExtResource("7_gppdt")]
 
 [node name="Background" parent="BackgroundLayer/Control" parent_id_path=PackedInt32Array(476540664, 2038293723) index="0" unique_id=1098504343]
-texture = ExtResource("5_2b21a")
+texture = ExtResource("7_keegh")
 
-[node name="Terrain" type="Node" parent="." index="4" unique_id=972198966]
+[node name="Terrain" type="Node" parent="." index="3" unique_id=972198966]
 
 [node name="Invisible" parent="Terrain" index="0" unique_id=462407768 instance=ExtResource("9_rweuh")]
 position = Vector2(-75, -1200)
@@ -87,7 +54,7 @@ position = Vector2(4559, -3224)
 shape = SubResource("RectangleShape2D_g13nb")
 
 [node name="CollisionShape2D3" parent="Terrain/Invisible" index="2" unique_id=1033001078]
-position = Vector2(3750, -1048)
+position = Vector2(9120, -1048)
 
 [node name="BlockA" parent="Terrain" index="1" unique_id=890028475 instance=ExtResource("10_yb5nh")]
 position = Vector2(75, 75)
@@ -521,10 +488,14 @@ position = Vector2(9675, 225)
 [node name="BlockA144" parent="Terrain" index="144" unique_id=893919303 instance=ExtResource("11_slo3c")]
 position = Vector2(9825, 225)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." index="5" unique_id=1324981923]
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="4" unique_id=1324981923]
 
 [node name="SecondView" parent="CanvasLayer" index="0" unique_id=1491427061 node_paths=PackedStringArray("world_root") instance=ExtResource("16_ipb20")]
 world_root = NodePath("../..")
 
+[node name="Tracking_cam" parent="CanvasLayer/SecondView/SubViewportContainer/SubViewport" parent_id_path=PackedInt32Array(1491427061, 1573429894) index="0" unique_id=1373545733]
+zoom = Vector2(0.1, 0.1)
+
 [editable path="BackgroundLayer"]
 [editable path="Terrain/Invisible"]
+[editable path="CanvasLayer/SecondView"]

@@ -3,12 +3,13 @@
 [ext_resource type="PackedScene" uid="uid://b7gui86a3ksvj" path="res://scenes/levels/Level_template.tscn" id="1_kuq1l"]
 [ext_resource type="Resource" uid="uid://c06n6saqluwvt" path="res://dialogs/Level7/Level7Win.dialogue" id="2_ocn3w"]
 [ext_resource type="Script" uid="uid://b1ifuyqh4x2qv" path="res://scenes/camera_2d.gd" id="4_0h58p"]
+[ext_resource type="Texture2D" uid="uid://bkn4jnm6vquva" path="res://assets/ROBOT SPINAMO/Garra.png" id="4_ui8ht"]
 [ext_resource type="PackedScene" uid="uid://stjljdb8fl46" path="res://scenes/player.tscn" id="5_w2poo"]
 [ext_resource type="PackedScene" uid="uid://bg1cb8cifda4h" path="res://scenes/levels/background.tscn" id="6_5rrn1"]
 [ext_resource type="Texture2D" uid="uid://vqfbxc0tpav4" path="res://assets/FONDOS/Ciudad vegetación.png" id="7_kj8k3"]
 [ext_resource type="PackedScene" uid="uid://bqjjpnxxwc0i5" path="res://scenes/blocks/Level7/BlockA.tscn" id="9_kj8k3"]
 [ext_resource type="PackedScene" uid="uid://di3etpmd87llx" path="res://scenes/blocks/InvisibleWalls.tscn" id="9_vxftt"]
-[ext_resource type="PackedScene" uid="uid://cf6ctm4v1ly8s" path="res://scenes/hookable/kitten.tscn" id="10_kj8k3"]
+[ext_resource type="PackedScene" uid="uid://cf6ctm4v1ly8s" path="res://scenes/kitten.tscn" id="10_kj8k3"]
 [ext_resource type="Script" uid="uid://cf5qd2g8fgmt3" path="res://scripts/grapple_tracker.gd" id="11_kjheb"]
 [ext_resource type="PackedScene" uid="uid://d22xiwyrkmjcu" path="res://scenes/second_view_cam.tscn" id="12_dsv7y"]
 [ext_resource type="PackedScene" uid="uid://cc4t1rsdt6kiu" path="res://scenes/blocks/Level7/BlockB.tscn" id="14_45ogs"]
@@ -20,6 +21,7 @@ size = Vector2(150, 8962)
 
 [node name="Level_template" unique_id=244848219 node_paths=PackedStringArray("player") instance=ExtResource("1_kuq1l")]
 ui_screen_text = "Move"
+win_after_music = true
 play_music_on_ready = true
 level_music_name = "main_drums"
 player_move = true
@@ -37,6 +39,7 @@ z_as_relative = false
 position = Vector2(2370, -2160)
 rotation = -2.7458475
 scale = Vector2(22.21, 22.21)
+texture = ExtResource("4_ui8ht")
 metadata/_edit_lock_ = true
 
 [node name="Camera2D" type="Camera2D" parent="." index="1" unique_id=933591887 node_paths=PackedStringArray("target_follow")]
