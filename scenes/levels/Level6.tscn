@@ -576,13 +576,19 @@ vertical_alignment = 1
 position = Vector2(1245, -1080)
 scale = Vector2(0.3, 0.3)
 
-[node name="BossTracker" type="Node" parent="FireBoss" index="0" unique_id=1733125481 node_paths=PackedStringArray("tracker", "time_label", "get_him_label", "boss")]
+[node name="BossTracker" type="Node" parent="FireBoss" index="0" unique_id=1733125481 node_paths=PackedStringArray("tracker", "time_label", "follow_target", "get_him_label", "boss", "down_position", "fly_position", "head_flames", "level")]
 script = ExtResource("14_gffwq")
 tracker = NodePath("../../ExtinguishTracker")
 phases_random_amount = Array[int]([2, 3, 4])
+phases_limit_time = Array[float]([20.0, 25.0, 30.0])
 time_label = NodePath("../../SecondView/SecondView/Label")
+follow_target = NodePath("../FollowTarget")
 get_him_label = NodePath("../../SecondView/SecondView/Label2")
 boss = NodePath("..")
+down_position = NodePath("../../DownPosition")
+fly_position = NodePath("../../FlyPosition")
+head_flames = [NodePath("../Extinguishable"), NodePath("../Extinguishable2"), NodePath("../Extinguishable3")]
+level = NodePath("../..")
 
 [node name="FollowTarget" type="Node" parent="FireBoss" index="2" unique_id=612491012 node_paths=PackedStringArray("move_node", "target_node")]
 script = ExtResource("18_opaix")
@@ -590,5 +596,29 @@ speed = 300.0
 move_node = NodePath("..")
 target_node = NodePath("../../Player")
 follow_x = true
+
+[node name="Extinguishable" parent="FireBoss" index="3" unique_id=1329922751 instance=ExtResource("11_efxx5")]
+visible = false
+position = Vector2(-13.333333, -406.66666)
+scale = Vector2(1.6666666, 1.6666666)
+active = false
+
+[node name="Extinguishable2" parent="FireBoss" index="4" unique_id=1225890639 instance=ExtResource("11_efxx5")]
+visible = false
+position = Vector2(-13.333333, -406.66666)
+scale = Vector2(1.6666666, 1.6666666)
+active = false
+
+[node name="Extinguishable3" parent="FireBoss" index="5" unique_id=617198733 instance=ExtResource("11_efxx5")]
+visible = false
+position = Vector2(-13.333333, -406.66666)
+scale = Vector2(1.6666666, 1.6666666)
+active = false
+
+[node name="DownPosition" type="Marker2D" parent="." index="7" unique_id=2023436169]
+position = Vector2(1203, -93.99994)
+
+[node name="FlyPosition" type="Marker2D" parent="." index="8" unique_id=414941167]
+position = Vector2(1203, -1084)
 
 [editable path="BackgroundLayer"]

@@ -35,9 +35,9 @@ func _ready() -> void:
 	if extinguish_time_limit:
 		if not do_on_phases:
 			target_extinguished.connect(_reset_timer.bind(limit_time_amount))
+			level.music_started.connect(_reset_timer.bind(limit_time_amount))
 		else:
 			target_extinguished.connect(limit_timer.stop)
-		level.music_started.connect(_reset_timer.bind(limit_time_amount))
 		limit_timer.timeout.connect(_on_limit_timeout)
 		finished.connect(limit_timer.stop)
 
