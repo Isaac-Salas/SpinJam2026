@@ -840,34 +840,31 @@ position = Vector2(1875, -525)
 [node name="Platform10" parent="Terrain" index="253" unique_id=1819470054 instance=ExtResource("9_h6fe6")]
 position = Vector2(2025, -525)
 
-[node name="Extinguishables" type="Node" parent="." index="3" unique_id=902825087]
-
-[node name="Fireplace" parent="Extinguishables" index="0" unique_id=1059734652 instance=ExtResource("9_2xj4m")]
-position = Vector2(375, -75)
-
-[node name="Fireplace2" parent="Extinguishables" index="1" unique_id=1526306789 instance=ExtResource("9_2xj4m")]
-position = Vector2(1875, -675)
-
-[node name="Fireplace3" parent="Extinguishables" index="2" unique_id=181321529 instance=ExtResource("9_2xj4m")]
-position = Vector2(4575, -1275)
-
-[node name="Fireplace6" parent="Extinguishables" index="3" unique_id=1738776918 instance=ExtResource("9_2xj4m")]
-position = Vector2(2775, -75)
-
-[node name="Fireplace4" parent="Extinguishables" index="4" unique_id=1507848099 instance=ExtResource("9_2xj4m")]
-position = Vector2(2775, -1275)
-
-[node name="Fireplace5" parent="Extinguishables" index="5" unique_id=1429963332 instance=ExtResource("9_2xj4m")]
-position = Vector2(3525, -675)
-
-[node name="ExtinguishWinandTracker" type="Node" parent="." index="4" unique_id=1217931619 node_paths=PackedStringArray("level", "player", "second_view", "all_extinguishables")]
+[node name="ExtinguishWinandTracker" type="Node" parent="." index="3" unique_id=1217931619 node_paths=PackedStringArray("level", "player", "second_view")]
 script = ExtResource("10_u5dj7")
 level = NodePath("..")
 player = NodePath("../Player")
 second_view = NodePath("../SecondView/SecondView")
-all_extinguishables = [NodePath("../Extinguishables/Fireplace"), NodePath("../Extinguishables/Fireplace2"), NodePath("../Extinguishables/Fireplace3"), NodePath("../Extinguishables/Fireplace4"), NodePath("../Extinguishables/Fireplace5"), NodePath("../Extinguishables/Fireplace6")]
 
-[node name="SecondView" type="CanvasLayer" parent="." index="5" unique_id=622086023]
+[node name="Fireplace" parent="ExtinguishWinandTracker" index="0" unique_id=1059734652 instance=ExtResource("9_2xj4m")]
+position = Vector2(375, -75)
+
+[node name="Fireplace2" parent="ExtinguishWinandTracker" index="1" unique_id=1526306789 instance=ExtResource("9_2xj4m")]
+position = Vector2(1875, -675)
+
+[node name="Fireplace3" parent="ExtinguishWinandTracker" index="2" unique_id=181321529 instance=ExtResource("9_2xj4m")]
+position = Vector2(4575, -1275)
+
+[node name="Fireplace6" parent="ExtinguishWinandTracker" index="3" unique_id=1738776918 instance=ExtResource("9_2xj4m")]
+position = Vector2(2775, -75)
+
+[node name="Fireplace4" parent="ExtinguishWinandTracker" index="4" unique_id=1507848099 instance=ExtResource("9_2xj4m")]
+position = Vector2(2775, -1275)
+
+[node name="Fireplace5" parent="ExtinguishWinandTracker" index="5" unique_id=1429963332 instance=ExtResource("9_2xj4m")]
+position = Vector2(3525, -675)
+
+[node name="SecondView" type="CanvasLayer" parent="." index="4" unique_id=622086023]
 
 [node name="SecondView" parent="SecondView" index="0" unique_id=1491427061 node_paths=PackedStringArray("world_root") instance=ExtResource("3_2xj4m")]
 world_root = NodePath("../..")
@@ -875,12 +872,12 @@ metadata/_edit_lock_ = true
 
 [node name="Tracking_cam" parent="SecondView/SecondView/SubViewportContainer/SubViewport" parent_id_path=PackedInt32Array(1491427061, 1573429894) index="0" unique_id=1373545733 node_paths=PackedStringArray("target_follow")]
 zoom = Vector2(0.25, 0.25)
-target_follow = NodePath("../../../../../Extinguishables/Fireplace2")
+target_follow = NodePath("../../../../../ExtinguishWinandTracker/Fireplace2")
 
-[node name="CanvasModulate" type="CanvasModulate" parent="." index="6" unique_id=1195061697]
+[node name="CanvasModulate" type="CanvasModulate" parent="." index="5" unique_id=1195061697]
 color = Color(0.5, 0.5, 0.5, 1)
 
-[node name="BackgroundLayer" parent="." index="7" unique_id=476540664 instance=ExtResource("13_h6fe6")]
+[node name="BackgroundLayer" parent="." index="6" unique_id=476540664 instance=ExtResource("13_h6fe6")]
 
 [node name="CanvasModulate2" type="CanvasModulate" parent="BackgroundLayer" index="0" unique_id=1668456720]
 color = Color(0.8, 0.8, 0.8, 1)

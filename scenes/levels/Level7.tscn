@@ -635,16 +635,16 @@ position = Vector2(675, -2325)
 position = Vector2(3675, -2625)
 
 [node name="Kitten7" parent="GrappleTracker" index="4" unique_id=997770317 instance=ExtResource("10_kj8k3")]
-position = Vector2(2325, -4125)
+position = Vector2(2325, -3825)
 
 [node name="Kitten8" parent="GrappleTracker" index="5" unique_id=196383811 instance=ExtResource("10_kj8k3")]
-position = Vector2(2475, -4125)
+position = Vector2(2475, -3825)
 
 [node name="Kitten9" parent="GrappleTracker" index="6" unique_id=1547844097 instance=ExtResource("10_kj8k3")]
-position = Vector2(2625, -4125)
+position = Vector2(2625, -3825)
 
 [node name="Kitten10" parent="GrappleTracker" index="7" unique_id=561820657 instance=ExtResource("10_kj8k3")]
-position = Vector2(2775, -4125)
+position = Vector2(2775, -3825)
 
 [node name="Kitten11" parent="GrappleTracker" index="8" unique_id=133564440 instance=ExtResource("10_kj8k3")]
 position = Vector2(1425, -3225)
