@@ -17,7 +17,7 @@ func _process(_delta: float) -> void:
 	line_2d.set_point_position(1,to_local(proyectile.global_position))
 
 func shoot(target_position : Vector2):
-	proyectile.toggle_detection(true)
+	await proyectile.toggle_detection(true)
 	var tween : Tween = create_tween()
 	tween.tween_property(proyectile,"global_position",target_position,0.25)
 	tween.tween_property(proyectile,"position",initial_proyectile_position,0.25)

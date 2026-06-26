@@ -837,16 +837,16 @@ position = Vector2(3525, -3075)
 position = Vector2(3675, -3075)
 
 [node name="Platform58" parent="Terrain" index="255" unique_id=756489316 instance=ExtResource("16_kuq1l")]
-position = Vector2(2325, -2775)
+position = Vector2(2325, -2625)
 
 [node name="Platform59" parent="Terrain" index="256" unique_id=93021365 instance=ExtResource("16_kuq1l")]
-position = Vector2(2475, -2775)
+position = Vector2(2475, -2625)
 
 [node name="Platform60" parent="Terrain" index="257" unique_id=1869644770 instance=ExtResource("16_kuq1l")]
-position = Vector2(2625, -2775)
+position = Vector2(2625, -2625)
 
 [node name="Platform61" parent="Terrain" index="258" unique_id=1476847199 instance=ExtResource("16_kuq1l")]
-position = Vector2(2775, -2775)
+position = Vector2(2775, -2625)
 
 [node name="Platform62" parent="Terrain" index="259" unique_id=1745013713 instance=ExtResource("16_kuq1l")]
 position = Vector2(1275, -3225)
@@ -888,42 +888,36 @@ second_view = NodePath("../CanvasLayer/SecondView")
 position = Vector2(2475, -375)
 
 [node name="Kitten2" parent="GrappleTracker" index="1" unique_id=1860748223 instance=ExtResource("10_kj8k3")]
-position = Vector2(3075, -975)
+position = Vector2(2340, -1425)
 
-[node name="Kitten3" parent="GrappleTracker" index="2" unique_id=1992060317 instance=ExtResource("10_kj8k3")]
-position = Vector2(1725, -1125)
-
-[node name="Kitten4" parent="GrappleTracker" index="3" unique_id=1667511536 instance=ExtResource("10_kj8k3")]
-position = Vector2(3375, -2175)
-
-[node name="Kitten5" parent="GrappleTracker" index="4" unique_id=1828264196 instance=ExtResource("10_kj8k3")]
+[node name="Kitten5" parent="GrappleTracker" index="2" unique_id=1828264196 instance=ExtResource("10_kj8k3")]
 position = Vector2(675, -2325)
 
-[node name="Kitten6" parent="GrappleTracker" index="5" unique_id=144873978 instance=ExtResource("10_kj8k3")]
+[node name="Kitten6" parent="GrappleTracker" index="3" unique_id=144873978 instance=ExtResource("10_kj8k3")]
 position = Vector2(3675, -2625)
 
-[node name="Kitten7" parent="GrappleTracker" index="6" unique_id=997770317 instance=ExtResource("10_kj8k3")]
+[node name="Kitten7" parent="GrappleTracker" index="4" unique_id=997770317 instance=ExtResource("10_kj8k3")]
 position = Vector2(2325, -4125)
 
-[node name="Kitten8" parent="GrappleTracker" index="7" unique_id=196383811 instance=ExtResource("10_kj8k3")]
+[node name="Kitten8" parent="GrappleTracker" index="5" unique_id=196383811 instance=ExtResource("10_kj8k3")]
 position = Vector2(2475, -4125)
 
-[node name="Kitten9" parent="GrappleTracker" index="8" unique_id=1547844097 instance=ExtResource("10_kj8k3")]
+[node name="Kitten9" parent="GrappleTracker" index="6" unique_id=1547844097 instance=ExtResource("10_kj8k3")]
 position = Vector2(2625, -4125)
 
-[node name="Kitten10" parent="GrappleTracker" index="9" unique_id=561820657 instance=ExtResource("10_kj8k3")]
+[node name="Kitten10" parent="GrappleTracker" index="7" unique_id=561820657 instance=ExtResource("10_kj8k3")]
 position = Vector2(2775, -4125)
 
-[node name="Kitten11" parent="GrappleTracker" index="10" unique_id=133564440 instance=ExtResource("10_kj8k3")]
+[node name="Kitten11" parent="GrappleTracker" index="8" unique_id=133564440 instance=ExtResource("10_kj8k3")]
 position = Vector2(1425, -3225)
 
-[node name="Kitten12" parent="GrappleTracker" index="11" unique_id=311551060 instance=ExtResource("10_kj8k3")]
+[node name="Kitten12" parent="GrappleTracker" index="9" unique_id=311551060 instance=ExtResource("10_kj8k3")]
 position = Vector2(4275, -3375)
 
-[node name="Kitten13" parent="GrappleTracker" index="12" unique_id=427048762 instance=ExtResource("10_kj8k3")]
+[node name="Kitten13" parent="GrappleTracker" index="10" unique_id=427048762 instance=ExtResource("10_kj8k3")]
 position = Vector2(1275, -3825)
 
-[node name="Kitten14" parent="GrappleTracker" index="13" unique_id=1464233202 instance=ExtResource("10_kj8k3")]
+[node name="Kitten14" parent="GrappleTracker" index="11" unique_id=1464233202 instance=ExtResource("10_kj8k3")]
 position = Vector2(3525, -3675)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." index="6" unique_id=1324981923]

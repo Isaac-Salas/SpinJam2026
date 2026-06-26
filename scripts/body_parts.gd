@@ -20,7 +20,6 @@ var original_scale : Vector2
 
 func _ready() -> void:
 	_toggle_stumpy_mode(stumpy_mode)
-	original_scale = self.scale
 	OverlayUI.wheel_view.state_button_pressed.connect(_tween_scale)
 
 func toggle_rocket_particles(value : bool):
@@ -28,6 +27,7 @@ func toggle_rocket_particles(value : bool):
 	p_rocket_r.emitting = value
 
 func _tween_scale():
+	original_scale = self.scale
 	var tween : Tween = create_tween()
 	tween.tween_property(self,"scale",self.scale*1.1,0.1)
 	tween.tween_property(self,"scale",original_scale,0.1)
