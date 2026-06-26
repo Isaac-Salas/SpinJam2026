@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://d4ga7s4q54xe8" path="res://scripts/proyectile_grapple.gd" id="1_xab51"]
 [ext_resource type="Texture2D" uid="uid://bkn4jnm6vquva" path="res://assets/ROBOT SPINAMO/Garra.png" id="2_jv0ah"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2mo8n"]
-size = Vector2(150, 150)
+[sub_resource type="CircleShape2D" id="CircleShape2D_dic7l"]
+radius = 120.0
 
 [node name="Grapple" type="Area2D" unique_id=407789152]
 collision_layer = 2
@@ -14,7 +14,7 @@ priority = 1
 script = ExtResource("1_xab51")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=15728678]
-shape = SubResource("RectangleShape2D_2mo8n")
+shape = SubResource("CircleShape2D_dic7l")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=789349271]
 z_index = -1
