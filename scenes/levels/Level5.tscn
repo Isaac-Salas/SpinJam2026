@@ -666,89 +666,61 @@ position = Vector2(5025, -525)
 
 [node name="Extinguishables" type="Node" parent="." index="4" unique_id=1504734790]
 
-[node name="Extinguishable" parent="Extinguishables" index="0" unique_id=181321529 instance=ExtResource("12_xdb0i")]
-position = Vector2(1725, -225)
-active = false
-
-[node name="Extinguishable2" parent="Extinguishables" index="1" unique_id=385006756 instance=ExtResource("12_xdb0i")]
-position = Vector2(2625, -375)
-active = false
-
-[node name="Extinguishable5" parent="Extinguishables" index="2" unique_id=1132430147 instance=ExtResource("12_xdb0i")]
-position = Vector2(5625, -375)
-active = false
-
-[node name="Extinguishable9" parent="Extinguishables" index="3" unique_id=136123053 instance=ExtResource("12_xdb0i")]
-position = Vector2(4125, -675)
-active = false
-
-[node name="Extinguishable6" parent="Extinguishables" index="4" unique_id=770103692 instance=ExtResource("12_xdb0i")]
-position = Vector2(6525, -225)
-active = false
-
-[node name="Extinguishable7" parent="Extinguishables" index="5" unique_id=1922046968 instance=ExtResource("12_xdb0i")]
-position = Vector2(7575, -375)
-active = false
-
-[node name="Extinguishable8" parent="Extinguishables" index="6" unique_id=1364839787 instance=ExtResource("12_xdb0i")]
-position = Vector2(8625, -675)
-active = false
-
-[node name="BlockC" parent="Extinguishables" index="7" unique_id=600773115 instance=ExtResource("10_xdb0i")]
+[node name="BlockC" parent="Extinguishables" index="0" unique_id=600773115 instance=ExtResource("10_xdb0i")]
 position = Vector2(75, -75)
 
-[node name="BlockC2" parent="Extinguishables" index="8" unique_id=84490084 instance=ExtResource("10_xdb0i")]
+[node name="BlockC2" parent="Extinguishables" index="1" unique_id=84490084 instance=ExtResource("10_xdb0i")]
 position = Vector2(225, -75)
 
-[node name="BlockC16" parent="Extinguishables" index="9" unique_id=642576119 instance=ExtResource("10_xdb0i")]
+[node name="BlockC16" parent="Extinguishables" index="2" unique_id=642576119 instance=ExtResource("10_xdb0i")]
 position = Vector2(-75, -225)
 
-[node name="BlockC17" parent="Extinguishables" index="10" unique_id=1459647413 instance=ExtResource("10_xdb0i")]
+[node name="BlockC17" parent="Extinguishables" index="3" unique_id=1459647413 instance=ExtResource("10_xdb0i")]
 position = Vector2(-75, -75)
 
-[node name="BlockC18" parent="Extinguishables" index="11" unique_id=533801132 instance=ExtResource("10_xdb0i")]
+[node name="BlockC18" parent="Extinguishables" index="4" unique_id=533801132 instance=ExtResource("10_xdb0i")]
 position = Vector2(-75, -375)
 
-[node name="BlockC19" parent="Extinguishables" index="12" unique_id=1575002383 instance=ExtResource("10_xdb0i")]
+[node name="BlockC19" parent="Extinguishables" index="5" unique_id=1575002383 instance=ExtResource("10_xdb0i")]
 position = Vector2(75, -375)
 
-[node name="BlockC20" parent="Extinguishables" index="13" unique_id=132017456 instance=ExtResource("10_xdb0i")]
+[node name="BlockC20" parent="Extinguishables" index="6" unique_id=132017456 instance=ExtResource("10_xdb0i")]
 position = Vector2(225, -375)
 
-[node name="BlockC5" parent="Extinguishables" index="14" unique_id=1547034712 instance=ExtResource("10_xdb0i")]
+[node name="BlockC5" parent="Extinguishables" index="7" unique_id=1547034712 instance=ExtResource("10_xdb0i")]
 position = Vector2(225, -225)
 
-[node name="BlockC6" parent="Extinguishables" index="15" unique_id=968215617 instance=ExtResource("10_xdb0i")]
+[node name="BlockC6" parent="Extinguishables" index="8" unique_id=968215617 instance=ExtResource("10_xdb0i")]
 position = Vector2(75, -225)
 
-[node name="BlockC7" parent="Extinguishables" index="16" unique_id=1124287475 instance=ExtResource("10_xdb0i")]
+[node name="BlockC7" parent="Extinguishables" index="9" unique_id=1124287475 instance=ExtResource("10_xdb0i")]
 position = Vector2(675, -75)
 
-[node name="BlockC8" parent="Extinguishables" index="17" unique_id=387327926 instance=ExtResource("10_xdb0i")]
+[node name="BlockC8" parent="Extinguishables" index="10" unique_id=387327926 instance=ExtResource("10_xdb0i")]
 position = Vector2(675, -225)
 
-[node name="BlockC9" parent="Extinguishables" index="18" unique_id=1078175939 instance=ExtResource("10_xdb0i")]
+[node name="BlockC9" parent="Extinguishables" index="11" unique_id=1078175939 instance=ExtResource("10_xdb0i")]
 position = Vector2(675, -375)
 
-[node name="BlockC10" parent="Extinguishables" index="19" unique_id=945469820 instance=ExtResource("10_xdb0i")]
+[node name="BlockC10" parent="Extinguishables" index="12" unique_id=945469820 instance=ExtResource("10_xdb0i")]
 position = Vector2(1425, -75)
 
-[node name="BlockC11" parent="Extinguishables" index="20" unique_id=2139103004 instance=ExtResource("10_xdb0i")]
+[node name="BlockC11" parent="Extinguishables" index="13" unique_id=2139103004 instance=ExtResource("10_xdb0i")]
 position = Vector2(3225, -75)
 
-[node name="BlockC12" parent="Extinguishables" index="21" unique_id=252882236 instance=ExtResource("10_xdb0i")]
+[node name="BlockC12" parent="Extinguishables" index="14" unique_id=252882236 instance=ExtResource("10_xdb0i")]
 position = Vector2(3225, -225)
 
-[node name="BlockC13" parent="Extinguishables" index="22" unique_id=2140326594 instance=ExtResource("10_xdb0i")]
+[node name="BlockC13" parent="Extinguishables" index="15" unique_id=2140326594 instance=ExtResource("10_xdb0i")]
 position = Vector2(6225, -75)
 
-[node name="BlockC14" parent="Extinguishables" index="23" unique_id=282930592 instance=ExtResource("10_xdb0i")]
+[node name="BlockC14" parent="Extinguishables" index="16" unique_id=282930592 instance=ExtResource("10_xdb0i")]
 position = Vector2(6225, -225)
 
-[node name="BlockC15" parent="Extinguishables" index="24" unique_id=180259173 instance=ExtResource("10_xdb0i")]
+[node name="BlockC15" parent="Extinguishables" index="17" unique_id=180259173 instance=ExtResource("10_xdb0i")]
 position = Vector2(6225, -375)
 
-[node name="ExtinguishWinandTracker" type="Node" parent="." index="5" unique_id=1605142839 node_paths=PackedStringArray("level", "player", "second_view", "limit_timer", "all_extinguishables")]
+[node name="ExtinguishWinandTracker" type="Node" parent="." index="5" unique_id=1605142839 node_paths=PackedStringArray("level", "player", "second_view", "limit_timer")]
 script = ExtResource("11_13joh")
 randomize_active_extinguishables = true
 extinguish_time_limit = true
@@ -757,10 +729,37 @@ level = NodePath("..")
 player = NodePath("../Player")
 second_view = NodePath("../CanvasLayer/SecondView")
 limit_timer = NodePath("LimitTimer")
-all_extinguishables = [NodePath("../Extinguishables/Extinguishable"), NodePath("../Extinguishables/Extinguishable2"), NodePath("../Extinguishables/Extinguishable5"), NodePath("../Extinguishables/Extinguishable9"), NodePath("../Extinguishables/Extinguishable6"), NodePath("../Extinguishables/Extinguishable7"), NodePath("../Extinguishables/Extinguishable8")]
 
 [node name="LimitTimer" type="Timer" parent="ExtinguishWinandTracker" index="0" unique_id=1577969874]
 one_shot = true
+
+[node name="Extinguishable" parent="ExtinguishWinandTracker" index="1" unique_id=181321529 instance=ExtResource("12_xdb0i")]
+position = Vector2(1725, -225)
+active = false
+
+[node name="Extinguishable2" parent="ExtinguishWinandTracker" index="2" unique_id=385006756 instance=ExtResource("12_xdb0i")]
+position = Vector2(2625, -375)
+active = false
+
+[node name="Extinguishable5" parent="ExtinguishWinandTracker" index="3" unique_id=1132430147 instance=ExtResource("12_xdb0i")]
+position = Vector2(5625, -375)
+active = false
+
+[node name="Extinguishable9" parent="ExtinguishWinandTracker" index="4" unique_id=136123053 instance=ExtResource("12_xdb0i")]
+position = Vector2(4125, -675)
+active = false
+
+[node name="Extinguishable6" parent="ExtinguishWinandTracker" index="5" unique_id=770103692 instance=ExtResource("12_xdb0i")]
+position = Vector2(6525, -225)
+active = false
+
+[node name="Extinguishable7" parent="ExtinguishWinandTracker" index="6" unique_id=1922046968 instance=ExtResource("12_xdb0i")]
+position = Vector2(7575, -375)
+active = false
+
+[node name="Extinguishable8" parent="ExtinguishWinandTracker" index="7" unique_id=1364839787 instance=ExtResource("12_xdb0i")]
+position = Vector2(8625, -675)
+active = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." index="6" unique_id=1624671047]
 

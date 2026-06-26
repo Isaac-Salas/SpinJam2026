@@ -58,3 +58,6 @@ func _tween_scale_wood():
 	await tween.finished
 	wood.visible = false
 	tween.kill()
+
+func toggle_visibility(value : bool):
+	self.visible = value

@@ -1,6 +1,7 @@
 extends Node2D
 class_name RobotPathFollower
 @export var start: bool
+@export var loop : bool
 @export var fixed_speed: float = 100
 @export var normal_speed_multiplier : int = 1
 @export var rubber_band : bool = true
@@ -81,8 +82,10 @@ func _handle_points(delta : float):
 		direction = global_position.direction_to(all_points[current_point])
 		global_position +=  direction * (fixed_speed*current_speed_multiplier) * delta
 	else:
-		if current_point+1 < all_points.size():
+		if current_point < all_points.size() - 1:
 			current_point += 1
+		elif current_point == all_points.size() -1 and loop:
+			current_point = 0
 
 func _on_current_point_changed(value:int):
 	#print("now on : ", value)

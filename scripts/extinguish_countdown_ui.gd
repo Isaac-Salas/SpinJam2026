@@ -1,4 +1,5 @@
 extends Label
+class_name ExtinguishCountdown
 @export var tracker : ExtinguishTracker
 var time_left_int : int :
 	set(value):
@@ -13,3 +14,6 @@ func _process(_delta: float) -> void:
 		self.text = "Time left: "+ str(time_left_int + 1)
 	else:
 		self.text = "DONE!"
+
+func toggle_visibility(value : bool):
+	self.visible = value

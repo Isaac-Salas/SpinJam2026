@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://cp8u0hjggsist"]
+
+[ext_resource type="PackedScene" uid="uid://b421ssvhrko3" path="res://scenes/robots/robot_template.tscn" id="1_nwdeq"]
+[ext_resource type="Script" uid="uid://8nhjqwv1puy0" path="res://scripts/robot_template.gd" id="2_s68a7"]
+[ext_resource type="Texture2D" uid="uid://da05e27bbobe8" path="res://assets/ROBOT FUEGO/Brazo R.png" id="3_ojcdy"]
+[ext_resource type="Texture2D" uid="uid://ba2liarfyp2hx" path="res://assets/ROBOT FUEGO/Pierna R.png" id="4_nu5yn"]
+[ext_resource type="Texture2D" uid="uid://b0x77vve1x57x" path="res://assets/ROBOT FUEGO/Pierna L.png" id="5_8ycux"]
+[ext_resource type="Texture2D" uid="uid://hk3gwnjeqlse" path="res://assets/ROBOT FUEGO/Torso.png" id="6_nwdeq"]
+[ext_resource type="Texture2D" uid="uid://cw1em7y3wk7mo" path="res://assets/ROBOT FUEGO/Brazo L.png" id="7_s68a7"]
+[ext_resource type="Texture2D" uid="uid://fty6yvipo641" path="res://assets/ROBOT FUEGO/Cabeza.png" id="8_cr48h"]
+
+[node name="RobotTemplate" unique_id=180808173 instance=ExtResource("1_nwdeq")]
+script = ExtResource("2_s68a7")
+
+[node name="ArmRBone" parent="BodyParts" parent_id_path=PackedInt32Array(1141699891) index="0" unique_id=1523555488]
+texture = null
+
+[node name="ArmR" parent="BodyParts/ArmRBone" index="0" unique_id=1381022201]
+position = Vector2(66.02657, 131.8039)
+rotation = 0.3673165
+texture = ExtResource("3_ojcdy")
+
+[node name="LegRBone" parent="BodyParts" parent_id_path=PackedInt32Array(1141699891) index="1" unique_id=909584300]
+texture = null
+
+[node name="LegR" parent="BodyParts/LegRBone" index="0" unique_id=1670789407]
+position = Vector2(66, 97)
+texture = ExtResource("4_nu5yn")
+
+[node name="LegLBone" parent="BodyParts" parent_id_path=PackedInt32Array(1141699891) index="2" unique_id=316859834]
+texture = null
+
+[node name="LegL" parent="BodyParts/LegLBone" index="0" unique_id=117902137]
+position = Vector2(-30, 101)
+rotation = 0.2394724
+texture = ExtResource("5_8ycux")
+
+[node name="NormalTorso" parent="BodyParts/TorsoBone" parent_id_path=PackedInt32Array(143993143) index="0" unique_id=747951563]
+texture = ExtResource("6_nwdeq")
+
+[node name="ArmLBone" parent="BodyParts" parent_id_path=PackedInt32Array(1141699891) index="4" unique_id=1853484707]
+texture = null
+
+[node name="ArmL" parent="BodyParts/ArmLBone" index="0" unique_id=1912753409]
+position = Vector2(-36.068764, 136.69804)
+texture = ExtResource("7_s68a7")
+
+[node name="HeadBone" parent="BodyParts" parent_id_path=PackedInt32Array(1141699891) index="5" unique_id=1491399677]
+texture = null
+
+[node name="Head" parent="BodyParts/HeadBone" index="0" unique_id=65726633]
+position = Vector2(-9, -96)
+texture = ExtResource("8_cr48h")
+
+[node name="AnimationPlayer" parent="BodyParts" parent_id_path=PackedInt32Array(1141699891) index="6" unique_id=1194297198]
+autoplay = &"fly"

@@ -7,10 +7,20 @@
 [ext_resource type="PackedScene" uid="uid://stjljdb8fl46" path="res://scenes/player.tscn" id="5_4pfb2"]
 [ext_resource type="PackedScene" uid="uid://bg1cb8cifda4h" path="res://scenes/levels/background.tscn" id="6_f84us"]
 [ext_resource type="Texture2D" uid="uid://demadgshc071d" path="res://assets/FONDOS/Parque en llamas.png" id="7_gpjci"]
+[ext_resource type="PackedScene" uid="uid://degst3an3g748" path="res://scenes/blocks/Level6/BlockA.tscn" id="8_mxr2w"]
+[ext_resource type="Script" uid="uid://ccehwci6f7hro" path="res://scripts/extinguish_tracker.gd" id="9_87aj8"]
+[ext_resource type="PackedScene" uid="uid://d22xiwyrkmjcu" path="res://scenes/second_view_cam.tscn" id="10_3voxf"]
+[ext_resource type="PackedScene" uid="uid://ck4khpsu773hj" path="res://scenes/Fire.tscn" id="11_efxx5"]
+[ext_resource type="PackedScene" uid="uid://dgvqij3m73aro" path="res://scenes/blocks/Level6/BlockB.tscn" id="12_3voxf"]
+[ext_resource type="FontFile" uid="uid://chqw74du7qjap" path="res://assets/fonts/Lexend-ExtraBold.ttf" id="13_6ajt6"]
+[ext_resource type="PackedScene" uid="uid://dqui4p2to3yti" path="res://scenes/blocks/Level6/BlockC.tscn" id="13_efxx5"]
+[ext_resource type="Script" uid="uid://b84llo25o2alg" path="res://scripts/extinguish_countdown_ui.gd" id="14_7obgn"]
+[ext_resource type="Script" uid="uid://cgyhr8naurujx" path="res://scripts/boss_phase_tracker.gd" id="14_gffwq"]
+[ext_resource type="PackedScene" uid="uid://cp8u0hjggsist" path="res://scenes/robots/robot_fire.tscn" id="17_7obgn"]
+[ext_resource type="Script" uid="uid://dymywd5vyedra" path="res://scripts/follow_target_component.gd" id="18_opaix"]
 
 [node name="Level_template" unique_id=244848219 node_paths=PackedStringArray("player") instance=ExtResource("1_7obgn")]
 ui_screen_text = "Move"
-win_after_music = true
 play_music_on_ready = true
 level_music_name = "boss_drums"
 player_move = true
@@ -22,22 +32,563 @@ fail_dialog = ExtResource("3_mxr2w")
 player = NodePath("Player")
 
 [node name="Camera2D" type="Camera2D" parent="." index="0" unique_id=933591887 node_paths=PackedStringArray("target_follow")]
-zoom = Vector2(0.6, 0.6)
+position = Vector2(1080, -960)
+zoom = Vector2(0.4, 0.4)
 process_callback = 0
 limit_enabled = false
 script = ExtResource("4_17kxd")
 target_follow = NodePath("../Player/CameraMarker")
 
 [node name="Player" parent="." index="1" unique_id=1282337476 instance=ExtResource("5_4pfb2")]
-position = Vector2(105.00001, -120.00001)
+position = Vector2(1200, -120.00001)
 scale = Vector2(0.3, 0.3)
+crosshair_offset_x = 600.0
 
 [node name="CameraMarker" type="Marker2D" parent="Player" index="4" unique_id=1423218106]
-position = Vector2(0, -800)
+position = Vector2(0, -1800)
 
 [node name="BackgroundLayer" parent="." index="2" unique_id=476540664 instance=ExtResource("6_f84us")]
 
 [node name="Background" parent="BackgroundLayer/Control" parent_id_path=PackedInt32Array(476540664, 2038293723) index="0" unique_id=1098504343]
 texture = ExtResource("7_gpjci")
+
+[node name="Terrain" type="Node" parent="." index="3" unique_id=1481611759]
+
+[node name="BlockC" parent="Terrain" index="0" unique_id=1627257446 instance=ExtResource("13_efxx5")]
+position = Vector2(2175, -75)
+
+[node name="BlockC2" parent="Terrain" index="1" unique_id=661100967 instance=ExtResource("13_efxx5")]
+position = Vector2(225, -75)
+
+[node name="BlockC3" parent="Terrain" index="2" unique_id=30436286 instance=ExtResource("13_efxx5")]
+position = Vector2(675, -75)
+
+[node name="BlockC4" parent="Terrain" index="3" unique_id=495048662 instance=ExtResource("13_efxx5")]
+position = Vector2(1200, -60)
+
+[node name="BlockC5" parent="Terrain" index="4" unique_id=1467506895 instance=ExtResource("13_efxx5")]
+position = Vector2(1725, -75)
+
+[node name="BlockA" parent="Terrain" index="5" unique_id=890028475 instance=ExtResource("8_mxr2w")]
+position = Vector2(75, 75)
+
+[node name="BlockA17" parent="Terrain" index="6" unique_id=368433468 instance=ExtResource("8_mxr2w")]
+position = Vector2(-75, -75)
+
+[node name="BlockA18" parent="Terrain" index="7" unique_id=536716101 instance=ExtResource("8_mxr2w")]
+position = Vector2(-225, -225)
+
+[node name="BlockA19" parent="Terrain" index="8" unique_id=752889895 instance=ExtResource("8_mxr2w")]
+position = Vector2(2475, -75)
+
+[node name="BlockA20" parent="Terrain" index="9" unique_id=1335981032 instance=ExtResource("8_mxr2w")]
+position = Vector2(2625, -225)
+
+[node name="BlockA2" parent="Terrain" index="10" unique_id=267582878 instance=ExtResource("8_mxr2w")]
+position = Vector2(225, 75)
+
+[node name="BlockA3" parent="Terrain" index="11" unique_id=776453979 instance=ExtResource("8_mxr2w")]
+position = Vector2(375, 75)
+
+[node name="BlockA4" parent="Terrain" index="12" unique_id=1743056035 instance=ExtResource("8_mxr2w")]
+position = Vector2(525, 75)
+
+[node name="BlockA5" parent="Terrain" index="13" unique_id=1680421829 instance=ExtResource("8_mxr2w")]
+position = Vector2(675, 75)
+
+[node name="BlockA21" parent="Terrain" index="14" unique_id=1807523968 instance=ExtResource("8_mxr2w")]
+position = Vector2(-975, 75)
+
+[node name="BlockA22" parent="Terrain" index="15" unique_id=1000563034 instance=ExtResource("8_mxr2w")]
+position = Vector2(-825, 75)
+
+[node name="BlockA23" parent="Terrain" index="16" unique_id=1837688249 instance=ExtResource("8_mxr2w")]
+position = Vector2(-675, 75)
+
+[node name="BlockA24" parent="Terrain" index="17" unique_id=109578636 instance=ExtResource("8_mxr2w")]
+position = Vector2(-525, 75)
+
+[node name="BlockA25" parent="Terrain" index="18" unique_id=521853693 instance=ExtResource("8_mxr2w")]
+position = Vector2(-1575, 75)
+
+[node name="BlockA26" parent="Terrain" index="19" unique_id=1459387782 instance=ExtResource("8_mxr2w")]
+position = Vector2(-1425, 75)
+
+[node name="BlockA27" parent="Terrain" index="20" unique_id=608436350 instance=ExtResource("8_mxr2w")]
+position = Vector2(-1275, 75)
+
+[node name="BlockA28" parent="Terrain" index="21" unique_id=1840676331 instance=ExtResource("8_mxr2w")]
+position = Vector2(-1125, 75)
+
+[node name="BlockA29" parent="Terrain" index="22" unique_id=1600107127 instance=ExtResource("8_mxr2w")]
+position = Vector2(2925, 75)
+
+[node name="BlockA30" parent="Terrain" index="23" unique_id=1201599918 instance=ExtResource("8_mxr2w")]
+position = Vector2(3075, 75)
+
+[node name="BlockA31" parent="Terrain" index="24" unique_id=43680175 instance=ExtResource("8_mxr2w")]
+position = Vector2(3225, 75)
+
+[node name="BlockA32" parent="Terrain" index="25" unique_id=379168286 instance=ExtResource("8_mxr2w")]
+position = Vector2(3375, 75)
+
+[node name="BlockA33" parent="Terrain" index="26" unique_id=2015844278 instance=ExtResource("8_mxr2w")]
+position = Vector2(3525, 75)
+
+[node name="BlockA34" parent="Terrain" index="27" unique_id=1056962081 instance=ExtResource("8_mxr2w")]
+position = Vector2(3675, 75)
+
+[node name="BlockA35" parent="Terrain" index="28" unique_id=1675898646 instance=ExtResource("8_mxr2w")]
+position = Vector2(3825, 75)
+
+[node name="BlockA36" parent="Terrain" index="29" unique_id=620329740 instance=ExtResource("8_mxr2w")]
+position = Vector2(3975, 75)
+
+[node name="BlockA6" parent="Terrain" index="30" unique_id=408160808 instance=ExtResource("8_mxr2w")]
+position = Vector2(825, 75)
+
+[node name="BlockA7" parent="Terrain" index="31" unique_id=1829266311 instance=ExtResource("8_mxr2w")]
+position = Vector2(975, 75)
+
+[node name="BlockA8" parent="Terrain" index="32" unique_id=477568534 instance=ExtResource("8_mxr2w")]
+position = Vector2(1125, 75)
+
+[node name="BlockA9" parent="Terrain" index="33" unique_id=154798793 instance=ExtResource("8_mxr2w")]
+position = Vector2(1275, 75)
+
+[node name="BlockA10" parent="Terrain" index="34" unique_id=563132290 instance=ExtResource("8_mxr2w")]
+position = Vector2(1425, 75)
+
+[node name="BlockA11" parent="Terrain" index="35" unique_id=2016579140 instance=ExtResource("8_mxr2w")]
+position = Vector2(1575, 75)
+
+[node name="BlockA12" parent="Terrain" index="36" unique_id=241288640 instance=ExtResource("8_mxr2w")]
+position = Vector2(1725, 75)
+
+[node name="BlockA13" parent="Terrain" index="37" unique_id=994358834 instance=ExtResource("8_mxr2w")]
+position = Vector2(1875, 75)
+
+[node name="BlockA14" parent="Terrain" index="38" unique_id=1975437365 instance=ExtResource("8_mxr2w")]
+position = Vector2(2025, 75)
+
+[node name="BlockA15" parent="Terrain" index="39" unique_id=1371672323 instance=ExtResource("8_mxr2w")]
+position = Vector2(2175, 75)
+
+[node name="BlockA16" parent="Terrain" index="40" unique_id=681999265 instance=ExtResource("8_mxr2w")]
+position = Vector2(2325, 75)
+
+[node name="BlockA37" parent="Terrain" index="41" unique_id=419347197 instance=ExtResource("12_3voxf")]
+position = Vector2(75, 225)
+
+[node name="BlockA38" parent="Terrain" index="42" unique_id=1694372915 instance=ExtResource("12_3voxf")]
+position = Vector2(225, 225)
+
+[node name="BlockA39" parent="Terrain" index="43" unique_id=1189741414 instance=ExtResource("12_3voxf")]
+position = Vector2(375, 225)
+
+[node name="BlockA40" parent="Terrain" index="44" unique_id=1132540141 instance=ExtResource("12_3voxf")]
+position = Vector2(525, 225)
+
+[node name="BlockA41" parent="Terrain" index="45" unique_id=1013198459 instance=ExtResource("12_3voxf")]
+position = Vector2(675, 225)
+
+[node name="BlockA79" parent="Terrain" index="46" unique_id=740204963 instance=ExtResource("12_3voxf")]
+position = Vector2(-975, 225)
+
+[node name="BlockA80" parent="Terrain" index="47" unique_id=1195092 instance=ExtResource("12_3voxf")]
+position = Vector2(-825, 225)
+
+[node name="BlockA81" parent="Terrain" index="48" unique_id=1289870858 instance=ExtResource("12_3voxf")]
+position = Vector2(-675, 225)
+
+[node name="BlockA82" parent="Terrain" index="49" unique_id=945484279 instance=ExtResource("12_3voxf")]
+position = Vector2(-525, 225)
+
+[node name="BlockA83" parent="Terrain" index="50" unique_id=223410893 instance=ExtResource("12_3voxf")]
+position = Vector2(-1575, 225)
+
+[node name="BlockA84" parent="Terrain" index="51" unique_id=1051313221 instance=ExtResource("12_3voxf")]
+position = Vector2(-1425, 225)
+
+[node name="BlockA85" parent="Terrain" index="52" unique_id=1665219410 instance=ExtResource("12_3voxf")]
+position = Vector2(-1275, 225)
+
+[node name="BlockA86" parent="Terrain" index="53" unique_id=1229510504 instance=ExtResource("12_3voxf")]
+position = Vector2(-1125, 225)
+
+[node name="BlockA87" parent="Terrain" index="54" unique_id=1201321947 instance=ExtResource("12_3voxf")]
+position = Vector2(2925, 225)
+
+[node name="BlockA88" parent="Terrain" index="55" unique_id=1537093633 instance=ExtResource("12_3voxf")]
+position = Vector2(3075, 225)
+
+[node name="BlockA89" parent="Terrain" index="56" unique_id=1510483167 instance=ExtResource("12_3voxf")]
+position = Vector2(3225, 225)
+
+[node name="BlockA90" parent="Terrain" index="57" unique_id=1665499291 instance=ExtResource("12_3voxf")]
+position = Vector2(3375, 225)
+
+[node name="BlockA91" parent="Terrain" index="58" unique_id=254120126 instance=ExtResource("12_3voxf")]
+position = Vector2(3525, 225)
+
+[node name="BlockA92" parent="Terrain" index="59" unique_id=657577315 instance=ExtResource("12_3voxf")]
+position = Vector2(3675, 225)
+
+[node name="BlockA93" parent="Terrain" index="60" unique_id=1295740256 instance=ExtResource("12_3voxf")]
+position = Vector2(3825, 225)
+
+[node name="BlockA94" parent="Terrain" index="61" unique_id=1526207137 instance=ExtResource("12_3voxf")]
+position = Vector2(3975, 225)
+
+[node name="BlockA42" parent="Terrain" index="62" unique_id=1934252831 instance=ExtResource("12_3voxf")]
+position = Vector2(825, 225)
+
+[node name="BlockA43" parent="Terrain" index="63" unique_id=1417799697 instance=ExtResource("12_3voxf")]
+position = Vector2(975, 225)
+
+[node name="BlockA44" parent="Terrain" index="64" unique_id=1911859093 instance=ExtResource("12_3voxf")]
+position = Vector2(1125, 225)
+
+[node name="BlockA45" parent="Terrain" index="65" unique_id=1420501785 instance=ExtResource("12_3voxf")]
+position = Vector2(1275, 225)
+
+[node name="BlockA46" parent="Terrain" index="66" unique_id=1653438285 instance=ExtResource("12_3voxf")]
+position = Vector2(1425, 225)
+
+[node name="BlockA47" parent="Terrain" index="67" unique_id=359890992 instance=ExtResource("12_3voxf")]
+position = Vector2(1575, 225)
+
+[node name="BlockA48" parent="Terrain" index="68" unique_id=1528613173 instance=ExtResource("12_3voxf")]
+position = Vector2(1725, 225)
+
+[node name="BlockA49" parent="Terrain" index="69" unique_id=1186353207 instance=ExtResource("12_3voxf")]
+position = Vector2(1875, 225)
+
+[node name="BlockA50" parent="Terrain" index="70" unique_id=1538987570 instance=ExtResource("12_3voxf")]
+position = Vector2(2025, 225)
+
+[node name="BlockA51" parent="Terrain" index="71" unique_id=1838078738 instance=ExtResource("12_3voxf")]
+position = Vector2(2175, 225)
+
+[node name="BlockA52" parent="Terrain" index="72" unique_id=1311509399 instance=ExtResource("12_3voxf")]
+position = Vector2(2325, 225)
+
+[node name="BlockA53" parent="Terrain" index="73" unique_id=2115480906 instance=ExtResource("12_3voxf")]
+position = Vector2(2475, 75)
+
+[node name="BlockA54" parent="Terrain" index="74" unique_id=2111847141 instance=ExtResource("12_3voxf")]
+position = Vector2(2475, 225)
+
+[node name="BlockA55" parent="Terrain" index="75" unique_id=672876396 instance=ExtResource("12_3voxf")]
+position = Vector2(2625, 225)
+
+[node name="BlockA56" parent="Terrain" index="76" unique_id=1381703785 instance=ExtResource("12_3voxf")]
+position = Vector2(2625, 75)
+
+[node name="BlockA57" parent="Terrain" index="77" unique_id=2049194625 instance=ExtResource("12_3voxf")]
+position = Vector2(2625, -75)
+
+[node name="BlockA58" parent="Terrain" index="78" unique_id=423163090 instance=ExtResource("12_3voxf")]
+position = Vector2(-75, 225)
+
+[node name="BlockA59" parent="Terrain" index="79" unique_id=177310850 instance=ExtResource("12_3voxf")]
+position = Vector2(-75, 75)
+
+[node name="BlockA60" parent="Terrain" index="80" unique_id=1382725791 instance=ExtResource("12_3voxf")]
+position = Vector2(-225, -75)
+
+[node name="BlockA61" parent="Terrain" index="81" unique_id=1408987557 instance=ExtResource("12_3voxf")]
+position = Vector2(-225, 75)
+
+[node name="BlockA62" parent="Terrain" index="82" unique_id=822017966 instance=ExtResource("12_3voxf")]
+position = Vector2(-225, 225)
+
+[node name="BlockA63" parent="Terrain" index="83" unique_id=312984173 instance=ExtResource("12_3voxf")]
+position = Vector2(-375, 225)
+
+[node name="BlockA64" parent="Terrain" index="84" unique_id=632333311 instance=ExtResource("12_3voxf")]
+position = Vector2(-375, 75)
+
+[node name="BlockA65" parent="Terrain" index="85" unique_id=66862624 instance=ExtResource("12_3voxf")]
+position = Vector2(-375, -75)
+
+[node name="BlockA66" parent="Terrain" index="86" unique_id=156512936 instance=ExtResource("12_3voxf")]
+position = Vector2(-375, -225)
+
+[node name="BlockA67" parent="Terrain" index="87" unique_id=1518545317 instance=ExtResource("12_3voxf")]
+position = Vector2(-375, -375)
+
+[node name="BlockA68" parent="Terrain" index="88" unique_id=413514715 instance=ExtResource("12_3voxf")]
+position = Vector2(-375, -525)
+
+[node name="BlockA69" parent="Terrain" index="89" unique_id=1689899076 instance=ExtResource("12_3voxf")]
+position = Vector2(-375, -675)
+
+[node name="BlockA70" parent="Terrain" index="90" unique_id=1965643309 instance=ExtResource("12_3voxf")]
+position = Vector2(-375, -825)
+
+[node name="BlockA71" parent="Terrain" index="91" unique_id=1859998966 instance=ExtResource("12_3voxf")]
+position = Vector2(-375, -975)
+
+[node name="BlockA72" parent="Terrain" index="92" unique_id=1522507832 instance=ExtResource("12_3voxf")]
+position = Vector2(-375, -1125)
+
+[node name="BlockA73" parent="Terrain" index="93" unique_id=710761080 instance=ExtResource("12_3voxf")]
+position = Vector2(-375, -1275)
+
+[node name="BlockA74" parent="Terrain" index="94" unique_id=1608580584 instance=ExtResource("12_3voxf")]
+position = Vector2(-375, -1425)
+
+[node name="BlockA75" parent="Terrain" index="95" unique_id=100248420 instance=ExtResource("12_3voxf")]
+position = Vector2(-375, -1575)
+
+[node name="BlockA76" parent="Terrain" index="96" unique_id=430224462 instance=ExtResource("12_3voxf")]
+position = Vector2(-375, -1725)
+
+[node name="BlockA77" parent="Terrain" index="97" unique_id=1631303133 instance=ExtResource("12_3voxf")]
+position = Vector2(-375, -1875)
+
+[node name="BlockA78" parent="Terrain" index="98" unique_id=524146688 instance=ExtResource("12_3voxf")]
+position = Vector2(2775, 225)
+
+[node name="BlockA95" parent="Terrain" index="99" unique_id=1922119276 instance=ExtResource("12_3voxf")]
+position = Vector2(75, -2025)
+
+[node name="BlockA96" parent="Terrain" index="100" unique_id=2027489362 instance=ExtResource("12_3voxf")]
+position = Vector2(225, -2025)
+
+[node name="BlockA97" parent="Terrain" index="101" unique_id=1278711819 instance=ExtResource("12_3voxf")]
+position = Vector2(375, -2025)
+
+[node name="BlockA98" parent="Terrain" index="102" unique_id=1871927339 instance=ExtResource("12_3voxf")]
+position = Vector2(525, -2025)
+
+[node name="BlockA99" parent="Terrain" index="103" unique_id=1199108662 instance=ExtResource("12_3voxf")]
+position = Vector2(675, -2025)
+
+[node name="BlockA100" parent="Terrain" index="104" unique_id=1875990575 instance=ExtResource("12_3voxf")]
+position = Vector2(825, -2025)
+
+[node name="BlockA101" parent="Terrain" index="105" unique_id=638374064 instance=ExtResource("12_3voxf")]
+position = Vector2(975, -2025)
+
+[node name="BlockA102" parent="Terrain" index="106" unique_id=1501591697 instance=ExtResource("12_3voxf")]
+position = Vector2(1125, -2025)
+
+[node name="BlockA103" parent="Terrain" index="107" unique_id=1510870326 instance=ExtResource("12_3voxf")]
+position = Vector2(1275, -2025)
+
+[node name="BlockA104" parent="Terrain" index="108" unique_id=1991550649 instance=ExtResource("12_3voxf")]
+position = Vector2(1425, -2025)
+
+[node name="BlockA105" parent="Terrain" index="109" unique_id=1498007648 instance=ExtResource("12_3voxf")]
+position = Vector2(1575, -2025)
+
+[node name="BlockA106" parent="Terrain" index="110" unique_id=324744963 instance=ExtResource("12_3voxf")]
+position = Vector2(1725, -2025)
+
+[node name="BlockA107" parent="Terrain" index="111" unique_id=497652870 instance=ExtResource("12_3voxf")]
+position = Vector2(1875, -2025)
+
+[node name="BlockA108" parent="Terrain" index="112" unique_id=453605580 instance=ExtResource("12_3voxf")]
+position = Vector2(2025, -2025)
+
+[node name="BlockA109" parent="Terrain" index="113" unique_id=1864900963 instance=ExtResource("12_3voxf")]
+position = Vector2(2175, -2025)
+
+[node name="BlockA110" parent="Terrain" index="114" unique_id=1408882010 instance=ExtResource("12_3voxf")]
+position = Vector2(2325, -2025)
+
+[node name="BlockA111" parent="Terrain" index="115" unique_id=146138730 instance=ExtResource("12_3voxf")]
+position = Vector2(2475, -2025)
+
+[node name="BlockA112" parent="Terrain" index="116" unique_id=1049192476 instance=ExtResource("12_3voxf")]
+position = Vector2(2625, -2025)
+
+[node name="BlockA113" parent="Terrain" index="117" unique_id=1048820651 instance=ExtResource("12_3voxf")]
+position = Vector2(-75, -2025)
+
+[node name="BlockA114" parent="Terrain" index="118" unique_id=1749263171 instance=ExtResource("12_3voxf")]
+position = Vector2(-225, -2025)
+
+[node name="BlockA115" parent="Terrain" index="119" unique_id=1252684958 instance=ExtResource("12_3voxf")]
+position = Vector2(-375, -2025)
+
+[node name="BlockA116" parent="Terrain" index="120" unique_id=319907720 instance=ExtResource("12_3voxf")]
+position = Vector2(2775, -2025)
+
+[node name="BlockA117" parent="Terrain" index="121" unique_id=80477106 instance=ExtResource("12_3voxf")]
+position = Vector2(2775, 75)
+
+[node name="BlockA118" parent="Terrain" index="122" unique_id=291092946 instance=ExtResource("12_3voxf")]
+position = Vector2(2775, -75)
+
+[node name="BlockA119" parent="Terrain" index="123" unique_id=959393561 instance=ExtResource("12_3voxf")]
+position = Vector2(2775, -225)
+
+[node name="BlockA120" parent="Terrain" index="124" unique_id=1494368952 instance=ExtResource("12_3voxf")]
+position = Vector2(2775, -375)
+
+[node name="BlockA121" parent="Terrain" index="125" unique_id=824711951 instance=ExtResource("12_3voxf")]
+position = Vector2(2775, -525)
+
+[node name="BlockA122" parent="Terrain" index="126" unique_id=1891232490 instance=ExtResource("12_3voxf")]
+position = Vector2(2775, -675)
+
+[node name="BlockA123" parent="Terrain" index="127" unique_id=1666075986 instance=ExtResource("12_3voxf")]
+position = Vector2(2775, -825)
+
+[node name="BlockA124" parent="Terrain" index="128" unique_id=1718210495 instance=ExtResource("12_3voxf")]
+position = Vector2(2775, -975)
+
+[node name="BlockA125" parent="Terrain" index="129" unique_id=103496047 instance=ExtResource("12_3voxf")]
+position = Vector2(2775, -1125)
+
+[node name="BlockA126" parent="Terrain" index="130" unique_id=1026753432 instance=ExtResource("12_3voxf")]
+position = Vector2(2775, -1275)
+
+[node name="BlockA127" parent="Terrain" index="131" unique_id=555286472 instance=ExtResource("12_3voxf")]
+position = Vector2(2775, -1425)
+
+[node name="BlockA128" parent="Terrain" index="132" unique_id=1177358080 instance=ExtResource("12_3voxf")]
+position = Vector2(2775, -1575)
+
+[node name="BlockA129" parent="Terrain" index="133" unique_id=1690702146 instance=ExtResource("12_3voxf")]
+position = Vector2(2775, -1725)
+
+[node name="BlockA130" parent="Terrain" index="134" unique_id=778378890 instance=ExtResource("12_3voxf")]
+position = Vector2(2775, -1875)
+
+[node name="ExtinguishTracker" type="Node" parent="." index="4" unique_id=920293864 node_paths=PackedStringArray("level", "player", "second_view", "limit_timer")]
+script = ExtResource("9_87aj8")
+randomize_active_extinguishables = true
+randomize_amount = 2
+do_on_phases = true
+extinguish_time_limit = true
+limit_time_amount = 20.0
+level = NodePath("..")
+player = NodePath("../Player")
+second_view = NodePath("../SecondView/SecondView")
+limit_timer = NodePath("Timer")
+metadata/_custom_type_script = "uid://ccehwci6f7hro"
+
+[node name="Extinguishable" parent="ExtinguishTracker" index="0" unique_id=181321529 instance=ExtResource("11_efxx5")]
+visible = false
+position = Vector2(75, -450)
+active = false
+
+[node name="Extinguishable2" parent="ExtinguishTracker" index="1" unique_id=526236035 instance=ExtResource("11_efxx5")]
+visible = false
+position = Vector2(375, -450)
+active = false
+
+[node name="Extinguishable3" parent="ExtinguishTracker" index="2" unique_id=1747568294 instance=ExtResource("11_efxx5")]
+visible = false
+position = Vector2(675, -450)
+active = false
+
+[node name="Extinguishable4" parent="ExtinguishTracker" index="3" unique_id=174622003 instance=ExtResource("11_efxx5")]
+visible = false
+position = Vector2(1215, -450)
+active = false
+
+[node name="Extinguishable5" parent="ExtinguishTracker" index="4" unique_id=2017819781 instance=ExtResource("11_efxx5")]
+visible = false
+position = Vector2(1725, -450)
+active = false
+
+[node name="Extinguishable6" parent="ExtinguishTracker" index="5" unique_id=318728050 instance=ExtResource("11_efxx5")]
+visible = false
+position = Vector2(2175, -450)
+active = false
+
+[node name="Extinguishable7" parent="ExtinguishTracker" index="6" unique_id=564458689 instance=ExtResource("11_efxx5")]
+visible = false
+position = Vector2(2400, -600)
+active = false
+
+[node name="Extinguishable8" parent="ExtinguishTracker" index="7" unique_id=1880233180 instance=ExtResource("11_efxx5")]
+visible = false
+position = Vector2(915, -600)
+active = false
+
+[node name="Extinguishable9" parent="ExtinguishTracker" index="8" unique_id=633681424 instance=ExtResource("11_efxx5")]
+visible = false
+position = Vector2(1485, -600)
+active = false
+
+[node name="Extinguishable10" parent="ExtinguishTracker" index="9" unique_id=296580659 instance=ExtResource("11_efxx5")]
+visible = false
+position = Vector2(240, -630)
+active = false
+
+[node name="Extinguishable11" parent="ExtinguishTracker" index="10" unique_id=187502504 instance=ExtResource("11_efxx5")]
+visible = false
+position = Vector2(540, -615)
+active = false
+
+[node name="Extinguishable12" parent="ExtinguishTracker" index="11" unique_id=867416074 instance=ExtResource("11_efxx5")]
+visible = false
+position = Vector2(1920, -615)
+active = false
+
+[node name="Timer" type="Timer" parent="ExtinguishTracker" index="12" unique_id=841469745]
+
+[node name="SecondView" type="CanvasLayer" parent="." index="5" unique_id=1858377964]
+
+[node name="SecondView" parent="SecondView" index="0" unique_id=1491427061 node_paths=PackedStringArray("world_root") instance=ExtResource("10_3voxf")]
+world_root = NodePath("../..")
+
+[node name="Label" type="Label" parent="SecondView/SecondView" index="1" unique_id=1359626097 node_paths=PackedStringArray("tracker")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -149.0
+offset_top = 150.0
+offset_bottom = 173.00002
+grow_horizontal = 0
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("13_6ajt6")
+text = "TIME LEFT: 10"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("14_7obgn")
+tracker = NodePath("../../../ExtinguishTracker")
+
+[node name="Label2" type="Label" parent="SecondView/SecondView" index="2" unique_id=1210850878]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -149.0
+offset_top = 150.0
+offset_bottom = 173.00002
+grow_horizontal = 0
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("13_6ajt6")
+text = "GET HIM!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FireBoss" parent="." index="6" unique_id=180808173 instance=ExtResource("17_7obgn")]
+position = Vector2(1245, -1080)
+scale = Vector2(0.3, 0.3)
+
+[node name="BossTracker" type="Node" parent="FireBoss" index="0" unique_id=1733125481 node_paths=PackedStringArray("tracker", "time_label", "get_him_label", "boss")]
+script = ExtResource("14_gffwq")
+tracker = NodePath("../../ExtinguishTracker")
+phases_random_amount = Array[int]([2, 3, 4])
+time_label = NodePath("../../SecondView/SecondView/Label")
+get_him_label = NodePath("../../SecondView/SecondView/Label2")
+boss = NodePath("..")
+
+[node name="FollowTarget" type="Node" parent="FireBoss" index="2" unique_id=612491012 node_paths=PackedStringArray("move_node", "target_node")]
+script = ExtResource("18_opaix")
+speed = 300.0
+move_node = NodePath("..")
+target_node = NodePath("../../Player")
+follow_x = true
 
 [editable path="BackgroundLayer"]

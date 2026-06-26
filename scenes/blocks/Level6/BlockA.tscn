@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://degst3an3g748"]
 
-[ext_resource type="Texture2D" uid="uid://c1mg45k50exgl" path="res://assets/PLACEHOLDERS/Double/terrain_stone_block.png" id="1_odlw7"]
+[ext_resource type="Texture2D" uid="uid://q71qiscqfclt" path="res://assets/PLACEHOLDERS/Double/terrain_dirt_block.png" id="1_odlw7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(150, 150)
