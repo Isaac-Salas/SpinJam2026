@@ -734,7 +734,7 @@ second_view = NodePath("../CanvasLayer/SecondView")
 position = Vector2(2475, -375)
 
 [node name="Kitten2" parent="GrappleTracker" index="1" unique_id=1860748223 instance=ExtResource("10_kj8k3")]
-position = Vector2(2340, -1425)
+position = Vector2(2325, -1425)
 
 [node name="Kitten5" parent="GrappleTracker" index="2" unique_id=1828264196 instance=ExtResource("10_kj8k3")]
 position = Vector2(675, -2325)

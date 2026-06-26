@@ -7,8 +7,9 @@ class_name ExtinguishTracker
 @export var level : Level
 @export var player : Player
 @export var second_view : SecondView
+@export var limit_timer: Timer 
 @export var all_extinguishables : Array[Extinguishable]
-@onready var limit_timer: Timer = $LimitTimer
+
 
 
 var closest_objective : Node2D:
@@ -39,7 +40,8 @@ func _process(_delta: float) -> void:
 func update_all_extinguishables():
 	for fire : Extinguishable in all_extinguishables:
 		if fire.active:
-			fire.tree_exiting.connect(_on_extinguish.bind(fire))
+			if not fire.tree_exiting.is_connected(_on_extinguish):
+				fire.tree_exiting.connect(_on_extinguish.bind(fire))
 		if not fire.active_changed.is_connected(update_all_extinguishables):
 			fire.active_changed.connect(update_all_extinguishables)
 

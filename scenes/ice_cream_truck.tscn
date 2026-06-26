@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://brjkuwop5yemu"]
 
 [ext_resource type="Script" uid="uid://bd4m5nq3c41li" path="res://scripts/extinguishable_body.gd" id="1_3xulh"]
-[ext_resource type="Texture2D" uid="uid://bf4ksgd4pdvso" path="res://assets/ROBOT ESPACIAL/Cabeza.png" id="2_3xulh"]
+[ext_resource type="Texture2D" uid="uid://b5q5vlondwywj" path="res://assets/OBJETOS/Camion.png" id="2_3xulh"]
 [ext_resource type="Texture2D" uid="uid://dq1hxulh35umk" path="res://assets/particles/Extinguisher.png" id="3_3xulh"]
 [ext_resource type="Material" uid="uid://d0n0l7tewxfrh" path="res://particles/ExtinguisherProyectile.tres" id="4_u6m7n"]
 [ext_resource type="Texture2D" uid="uid://wmheui8thwhn" path="res://assets/light/light.png" id="5_ca5g5"]
@@ -21,7 +21,7 @@ shape = SubResource("RectangleShape2D_reskh")
 position = Vector2(0, 15)
 
 [node name="Fire" type="Sprite2D" parent="." unique_id=604541059]
-scale = Vector2(0.45, 0.45)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_3xulh")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=2049233183]

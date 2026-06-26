@@ -42,7 +42,8 @@ func start_level():
 	OverlayUI.wheel_view.rotator.toggle_disable(false)
 	unlocks()
 	if player_initial_state != "":
-		player.state_machine.transition_to_new_state(player_initial_state)
+		if player:
+			player.state_machine.transition_to_new_state(player_initial_state)
 	override_ui_screen_text()
 	if player:
 		player.update_unlocks()

@@ -8,6 +8,7 @@ var target
 func _ready() -> void:
 	toggle_detection(active)
 	area_entered.connect(_on_area_entered)
+	area_exited.connect(_on_area_entered)
 
 
 func _on_area_entered(area : Area2D):

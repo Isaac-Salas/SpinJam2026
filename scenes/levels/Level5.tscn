@@ -748,7 +748,7 @@ position = Vector2(6225, -225)
 [node name="BlockC15" parent="Extinguishables" index="24" unique_id=180259173 instance=ExtResource("10_xdb0i")]
 position = Vector2(6225, -375)
 
-[node name="ExtinguishWinandTracker" type="Node" parent="." index="5" unique_id=1605142839 node_paths=PackedStringArray("level", "player", "second_view", "all_extinguishables")]
+[node name="ExtinguishWinandTracker" type="Node" parent="." index="5" unique_id=1605142839 node_paths=PackedStringArray("level", "player", "second_view", "limit_timer", "all_extinguishables")]
 script = ExtResource("11_13joh")
 randomize_active_extinguishables = true
 extinguish_time_limit = true
@@ -756,6 +756,7 @@ limit_time_amount = 20.0
 level = NodePath("..")
 player = NodePath("../Player")
 second_view = NodePath("../CanvasLayer/SecondView")
+limit_timer = NodePath("LimitTimer")
 all_extinguishables = [NodePath("../Extinguishables/Extinguishable"), NodePath("../Extinguishables/Extinguishable2"), NodePath("../Extinguishables/Extinguishable5"), NodePath("../Extinguishables/Extinguishable9"), NodePath("../Extinguishables/Extinguishable6"), NodePath("../Extinguishables/Extinguishable7"), NodePath("../Extinguishables/Extinguishable8")]
 
 [node name="LimitTimer" type="Timer" parent="ExtinguishWinandTracker" index="0" unique_id=1577969874]

@@ -2,7 +2,7 @@
 News Anchor : That's our [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#adc4ff]Spinamo![/color][/wave][/outline_size] The new sensation among all the kids in town.
 News Anchor : But listen everyone, we've just received word that there's a new evil robot threatening to burn down the kids' favorite park!
 do OverlayUI.go_to_next_scene()
-News Anchor : But fear not—our beloved local hero is on the case! He'll have to put out the fire in the trees within the time limit, and then fire a cooling shot at the evil robot.
+News Anchor : But fear not—our beloved local hero is on the case! He'll have to [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#e52d40]put out the fire[/color][/wave][/outline_size] in the trees within the time limit, and then [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#e52d40]fire a cooling shot at the evil robot[/color][/wave][/outline_size].
 News Anchor: Researchers say that if this is done correctly three times, he will be able to stop his enemy single-handedly and secure the park.
 News Anchor: Come on, [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#adc4ff]Spinamo[/color][/wave][/outline_size], we know you can do it—save the day and defeat that nasty guy!
 #News Anchor : Now [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#adc4ff]Spinamo[/color][/wave][/outline_size] gotta beat that guy!

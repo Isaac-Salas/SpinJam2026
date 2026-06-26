@@ -6,9 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://stjljdb8fl46" path="res://scenes/player.tscn" id="3_3dbjk"]
 [ext_resource type="Resource" uid="uid://dtrolr7sgo6sb" path="res://dialogs/Level8/Level8Lose.dialogue" id="3_qyvhn"]
 [ext_resource type="PackedScene" uid="uid://bg1cb8cifda4h" path="res://scenes/levels/background.tscn" id="4_ab508"]
-[ext_resource type="Texture2D" uid="uid://cabaryv36verj" path="res://assets/FONDOS/Espacio.png" id="5_gl16g"]
 [ext_resource type="PackedScene" uid="uid://di3etpmd87llx" path="res://scenes/blocks/InvisibleWalls.tscn" id="6_4f038"]
 [ext_resource type="PackedScene" uid="uid://bqjjpnxxwc0i5" path="res://scenes/blocks/Level7/BlockA.tscn" id="7_1xpr3"]
+[ext_resource type="Texture2D" uid="uid://dhyg55xjwms2w" path="res://assets/FONDOS/Circo.png" id="7_qyvhn"]
 [ext_resource type="PackedScene" uid="uid://cc4t1rsdt6kiu" path="res://scenes/blocks/Level7/BlockB.tscn" id="8_q2gnw"]
 [ext_resource type="PackedScene" uid="uid://d22xiwyrkmjcu" path="res://scenes/second_view_cam.tscn" id="9_0xlr4"]
 
@@ -46,7 +46,7 @@ position = Vector2(0, -800)
 [node name="BackgroundLayer" parent="." index="2" unique_id=476540664 instance=ExtResource("4_ab508")]
 
 [node name="Background" parent="BackgroundLayer/Control" parent_id_path=PackedInt32Array(476540664, 2038293723) index="0" unique_id=1098504343]
-texture = ExtResource("5_gl16g")
+texture = ExtResource("7_qyvhn")
 
 [node name="Terrain" type="Node" parent="." index="3" unique_id=972198966]
 
