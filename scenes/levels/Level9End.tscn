@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://bmuqbboa1fygr"]
 
 [ext_resource type="PackedScene" uid="uid://b7gui86a3ksvj" path="res://scenes/levels/Level_template.tscn" id="1_vbplc"]
+[ext_resource type="Resource" uid="uid://doeqquok8tkuf" path="res://dialogs/Level9/Level9Win.dialogue" id="2_b8r8v"]
 [ext_resource type="Script" uid="uid://b1ifuyqh4x2qv" path="res://scenes/camera_2d.gd" id="2_bpd0v"]
 [ext_resource type="PackedScene" uid="uid://stjljdb8fl46" path="res://scenes/player.tscn" id="3_b8r8v"]
+[ext_resource type="Resource" uid="uid://ctkl82uh1xsnb" path="res://dialogs/Level9/Level9Lose.dialogue" id="3_vg0n7"]
 [ext_resource type="PackedScene" uid="uid://bg1cb8cifda4h" path="res://scenes/levels/background.tscn" id="4_vg0n7"]
 [ext_resource type="Texture2D" uid="uid://dgp8xho8xb2r6" path="res://assets/PLACEHOLDERS/Double/block_strong_ciry.png" id="5_7pr46"]
 [ext_resource type="PackedScene" uid="uid://di3etpmd87llx" path="res://scenes/blocks/InvisibleWalls.tscn" id="6_obeh5"]
@@ -14,15 +16,21 @@
 size = Vector2(150, 8962)
 
 [node name="Level_template" unique_id=244848219 node_paths=PackedStringArray("player") instance=ExtResource("1_vbplc")]
-ui_screen_text = "Move"
+player_initial_state = "Fly"
+ui_screen_text = "Fly"
+win_after_music = true
 play_music_on_ready = true
-level_music_name = "main_instruments"
+level_music_name = "boss_full"
+music_name_win = "Ending"
+ending_volume = 1.0
 player_move = true
 player_jump = true
 player_shoot = true
 player_aim = true
 player_fly = true
 player_grapple = true
+ending_dialog = ExtResource("2_b8r8v")
+fail_dialog = ExtResource("3_vg0n7")
 player = NodePath("Player")
 
 [node name="Camera2D" type="Camera2D" parent="." index="0" unique_id=933591887 node_paths=PackedStringArray("target_follow")]

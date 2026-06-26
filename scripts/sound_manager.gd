@@ -14,6 +14,7 @@ const NEWS = preload("uid://bb5cfo5w70wsg")
 const BUTTON_PRESS = preload("uid://cp0kebs4tjn2q")
 const ENERGY_BUTTON_PRESS = preload("uid://dbifmuc3oscr1")
 const MENU = preload("uid://bwfnt1t8821ex")
+const ENDING = preload("uid://mpegdfmgbse0")
 
 func _ready() -> void:
 	OverlayUI.wheel_view.rotator.rotation_count_changed.connect(play_wheel_turn.unbind(1))

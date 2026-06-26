@@ -8,7 +8,10 @@ class_name Level
 @export_group("Music")
 @export var play_music_on_ready : bool
 @export var level_music_name : String
-@export_range(1.0,20.0,0.1) var volume : float = 1
+@export var music_name_win : String = "News"
+@export var music_name_lose : String = "News"
+@export_range(1.0,20.0,0.1) var level_volume : float = 1
+@export_range(1.0,20.0,0.1) var ending_volume : float = 4
 @export_group("Unlocks")
 @export var player_move : bool = true
 @export var player_jump : bool
@@ -46,22 +49,25 @@ func start_level():
 		
 
 func start_music():
-	SoundManager.cross_fade_to_song(SoundManager.get(level_music_name.to_upper()),volume)
-	music_started.emit()
+	if level_music_name != "":
+		SoundManager.cross_fade_to_song(SoundManager.get(level_music_name.to_upper()),level_volume)
+		music_started.emit()
 	if win_after_music:
 		win()
 
 func win():
+	var song = SoundManager.get(music_name_win.to_upper())
 	OverlayUI.wheel_view.rotator.toggle_disable(true)
 	OverlayUI.transitions.start_transition(ending_dialog,"start")
-	SoundManager.cross_fade_to_song(SoundManager.NEWS,4.0)
+	SoundManager.cross_fade_to_song(song,ending_volume)
 	level_won.emit()
 
 func lose():
 	print("LOSE")
+	var song = SoundManager.get(music_name_lose.to_upper())
 	OverlayUI.wheel_view.rotator.toggle_disable(true)
 	OverlayUI.transitions.start_transition(fail_dialog,"start")
-	SoundManager.cross_fade_to_song(SoundManager.NEWS,4.0)
+	SoundManager.cross_fade_to_song(song,ending_volume)
 	level_lost.emit()
 
 func unlocks():

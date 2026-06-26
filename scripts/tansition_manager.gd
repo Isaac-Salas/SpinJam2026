@@ -4,6 +4,8 @@ class_name TransitionManager
 @onready var stripe: TextureRect = $Stripe
 @onready var text: Label = $Stripe/Text
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+signal transition_started()
+signal transition_ending()
 
 func _ready() -> void:
 	#play_transition_in_animation()
@@ -21,8 +23,9 @@ func start_transition(dialogue : DialogueResource, start_at : String):
 	await animation_player.animation_finished
 	if dialogue:
 		DialogueManager.show_dialogue_balloon(dialogue, start_at)
+	transition_started.emit()
 
 
 func finish_transition():
 	animation_player.play("OUT")
-	
+	transition_ending.emit()

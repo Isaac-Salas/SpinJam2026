@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://byb3nhgdvwfil"]
 
 [ext_resource type="PackedScene" uid="uid://b7gui86a3ksvj" path="res://scenes/levels/Level_template.tscn" id="1_gl16g"]
+[ext_resource type="Resource" uid="uid://dv0yncedkegm3" path="res://dialogs/Level8/Level8Win.dialogue" id="2_fgy3j"]
 [ext_resource type="Script" uid="uid://b1ifuyqh4x2qv" path="res://scenes/camera_2d.gd" id="2_yk3vr"]
 [ext_resource type="PackedScene" uid="uid://stjljdb8fl46" path="res://scenes/player.tscn" id="3_3dbjk"]
+[ext_resource type="Resource" uid="uid://dtrolr7sgo6sb" path="res://dialogs/Level8/Level8Lose.dialogue" id="3_qyvhn"]
 [ext_resource type="PackedScene" uid="uid://bg1cb8cifda4h" path="res://scenes/levels/background.tscn" id="4_ab508"]
 [ext_resource type="Texture2D" uid="uid://cabaryv36verj" path="res://assets/FONDOS/Espacio.png" id="5_gl16g"]
 [ext_resource type="PackedScene" uid="uid://di3etpmd87llx" path="res://scenes/blocks/InvisibleWalls.tscn" id="6_4f038"]
@@ -23,6 +25,8 @@ player_shoot = true
 player_aim = true
 player_fly = true
 player_grapple = true
+ending_dialog = ExtResource("2_fgy3j")
+fail_dialog = ExtResource("3_qyvhn")
 player = NodePath("Player")
 
 [node name="Camera2D" type="Camera2D" parent="." index="0" unique_id=933591887 node_paths=PackedStringArray("target_follow")]

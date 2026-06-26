@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cabaryv36verj" path="res://assets/FONDOS/Espacio.png" id="5_gl16g"]
 [ext_resource type="PackedScene" uid="uid://di3etpmd87llx" path="res://scenes/blocks/InvisibleWalls.tscn" id="6_4f038"]
 [ext_resource type="FontFile" uid="uid://chqw74du7qjap" path="res://assets/fonts/Lexend-ExtraBold.ttf" id="7_h134e"]
+[ext_resource type="Script" uid="uid://df8t6s3uyofg5" path="res://scripts/ending_animation_player.gd" id="8_ubyu6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h134e"]
 size = Vector2(150, 720)
@@ -14,11 +15,96 @@ size = Vector2(150, 720)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g13nb"]
 size = Vector2(150, 960)
 
+[sub_resource type="Animation" id="Animation_h134e"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BackgroundLayer/Control:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/Control:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ubyu6"]
+resource_name = "fade_in"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BackgroundLayer/Control:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/Control:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gl16g"]
+_data = {
+&"RESET": SubResource("Animation_h134e"),
+&"fade_in": SubResource("Animation_ubyu6")
+}
+
 [node name="Level_template" unique_id=244848219 node_paths=PackedStringArray("player") instance=ExtResource("1_gl16g")]
+modulate = Color(0, 0, 0, 1)
 player_initial_state = "Fly"
 ui_screen_text = "THANKS!"
-play_music_on_ready = true
-level_music_name = "main_instruments"
+level_music_name = ""
 player_move = true
 player_jump = true
 player_shoot = true
@@ -44,7 +130,10 @@ position = Vector2(0, -1200)
 [node name="BackgroundLayer" parent="." index="2" unique_id=476540664 instance=ExtResource("4_ab508")]
 layer = -2
 
-[node name="Background" parent="BackgroundLayer/Control" parent_id_path=PackedInt32Array(476540664, 2038293723) index="0" unique_id=1098504343]
+[node name="Control" parent="BackgroundLayer" index="0" unique_id=2038293723]
+modulate = Color(0, 0, 0, 1)
+
+[node name="Background" parent="BackgroundLayer/Control" index="0" unique_id=1098504343]
 texture = ExtResource("5_gl16g")
 
 [node name="Terrain" type="Node" parent="." index="3" unique_id=972198966]
@@ -71,6 +160,7 @@ position = Vector2(9120, -1048)
 layer = -1
 
 [node name="Control" type="Control" parent="CanvasLayer" index="0" unique_id=1265124392]
+modulate = Color(0, 0, 0, 1)
 custom_minimum_size = Vector2(960, 720)
 layout_mode = 3
 anchors_preset = 6
@@ -123,6 +213,12 @@ May they continue to create and improve more people's lives.
 
 [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#dacb80]Thank you for playing and beign our hero for today! [/color][/wave][/outline_size]"
 horizontal_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="5" unique_id=1299517362]
+libraries/ = SubResource("AnimationLibrary_gl16g")
+
+[node name="Ending_animation_player" type="Node" parent="." index="6" unique_id=897977449]
+script = ExtResource("8_ubyu6")
 
 [editable path="BackgroundLayer"]
 [editable path="Terrain/Invisible"]

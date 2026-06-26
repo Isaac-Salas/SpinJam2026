@@ -1,0 +1,8 @@
+~ start
+News Anchor : [[Just kidding!|Got you!|Psyche!]]
+do OverlayUI.reload_scene()
+News Anchor : That's not what really happened, our mighty hero wouldn't let us down like that.
+News Anchor: This is what really happened!
+do OverlayUI.transitions.finish_transition()
+do OverlayUI.current_scene.start_music()
+=> END

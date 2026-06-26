@@ -1,0 +1,12 @@
+~ start
+do MetaGame.meta_game_complete(MetaGame.Id)
+News Anchor : [outline_size=10][wave amp=50.0 freq=20.0 connected=0][color=#adc4ff]YOU DID IT SPINAMO![/color][/wave][/outline_size]
+News Anchor : And to think that just a few days ago, he was so small.
+News Anchor : From this day forward, the planet is in a perpetual state of harmony, free from threat and prepared should any new one arise.
+News Anchor: This was the story of [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#adc4ff]Spinamo[/color][/wave][/outline_size], our little friend who ended up being of enormous help to everyone.
+News Anchor: Remember, whenever you're in need...
+News Anchor: There will always be someone in the sky [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#adc4ff]looking out for you.[/color][/wave][/outline_size]
+do OverlayUI.go_to_next_scene()
+News Anchor: Good night, everyone.
+do OverlayUI.transitions.finish_transition()
+=> END
