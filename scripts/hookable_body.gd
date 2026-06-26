@@ -4,6 +4,7 @@ class_name Hookable
 @export var active : bool = true
 @export var player : Player
 var target 
+signal active_changed()
 
 func _ready() -> void:
 	toggle_detection(active)
@@ -28,6 +29,7 @@ func toggle_detection(value : bool):
 	self.set_deferred("monitoring",value)
 	self.set_deferred("monitorable",value)
 	active = value
+	active_changed.emit()
 
 func _tween_disappear():
 	var tween : Tween = create_tween()
