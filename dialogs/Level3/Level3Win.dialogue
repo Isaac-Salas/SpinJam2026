@@ -1,8 +1,13 @@
 ~ start
-News Anchor : Done!
+News Anchor : A decisive victory for [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#adc4ff]Spinamo[/color][/wave][/outline_size], ladies and gentlemen!
+News Anchor: His popularity, heart, and size just keep growing and growing, and we couldn't be happier to keep reporting on it.
+News Anchor: But anyway, as we all knew, aside from Spinamo's arrival, a beautiful meteor shower was forecast for tonight.
+News Anchor: In preparation for this wonderful event, many children took their telescopes out into the yard and lit bonfires so they could spend the whole night stargazing.
+News Anchor: But, since kids will be kids, after watching the stars, they decided to go home, forgetting to put out their campfires, which led to many complaints from neighbors who couldn't sleep because of the light.
 do OverlayUI.go_to_next_scene()
-News Anchor : Next!
+News Anchor : And who better to solve this problem than the city's new hero, [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#adc4ff]Spinamo[/color][/wave][/outline_size], equipped with [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#e52d40]a new tool[/color][/wave][/outline_size] that can easily put out these annoying campfires with a single [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#e52d40]shot[/color][/wave][/outline_size]!
 #News Anchor : Now [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#adc4ff]Spinamo[/color][/wave][/outline_size] gotta beat that guy!
+News Anchor : Get comfortable and let's watch our friend get to work!
 do OverlayUI.transitions.finish_transition()
 do OverlayUI.current_scene.start_music()
 => END

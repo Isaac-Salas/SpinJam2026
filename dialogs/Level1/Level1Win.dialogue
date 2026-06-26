@@ -1,13 +1,13 @@
 ~ start
-News Anchor : Funny little guy isnt he folks.
-News Anchor : Sorry to interrupt your enjoyment, but I just got word that our little guy now has a name, and after watching that last clip, well...
-News Anchor : What could be more newsworthy than that, I say.
+News Anchor : Funny little guy isn't he, folks?
+News Anchor : Sorry to interrupt your enjoyment, but I just got word that our little guy now has a name.
+News Anchor : And well, what could be more newsworthy than that, I say?
 do OverlayUI.go_to_next_scene()
-News Anchor : His new name is [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#adc4ff] Spinamo [/color][/wave][/outline_size], named after the technology that keeps his little heart beating.
-News Anchor: Although, he doesnt look that little anymore as you can see.
-News Anchor: His creator tells me that he can now [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#00cc8b] jump [/color][/wave][/outline_size] and has a fresh new look.
-News Anchor: What a world we live in huh folks.
-News Anchor: Anyways, place your bets now people, can [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#adc4ff] Spinamo [/color][/wave][/outline_size] really get to the top? Lets find out!.
+News Anchor : His new name is [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#adc4ff]Spinamo[/color][/wave][/outline_size], named after the technology that keeps his little heart beating.
+News Anchor: Although, he doesn't look that little anymore, as you can see.
+News Anchor: His creator has told us [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#adc4ff]Spinamo[/color][/wave][/outline_size] can now [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#00cc8b]jump[/color][/wave][/outline_size] and has a fresh new look.
+News Anchor: What a world we live in, huh, folks?
+News Anchor: Anyways, place your bets now, people. Will our new friend really get to the top? Let's find out!.
 do OverlayUI.transitions.finish_transition()
 do OverlayUI.current_scene.start_music()
 => END

@@ -1,5 +1,6 @@
 ~ start
-News Anchor : Done!
+News Anchor : What a fun day today! Completely free of balloon-induced sadness—all thanks to [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#adc4ff]Spinamo[/color][/wave][/outline_size], once again.
+News Anchor : 
 do OverlayUI.go_to_next_scene()
 News Anchor : Next!
 #News Anchor : Now [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#adc4ff]Spinamo[/color][/wave][/outline_size] gotta beat that guy!

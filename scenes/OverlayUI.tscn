@@ -17,10 +17,12 @@
 [ext_resource type="Texture2D" uid="uid://wmheui8thwhn" path="res://assets/light/light.png" id="8_gjyue"]
 [ext_resource type="PackedScene" uid="uid://qdb0me12puy5" path="res://scenes/levels/Level6.tscn" id="8_ta0q5"]
 [ext_resource type="PackedScene" uid="uid://cvxiegmdvp3gn" path="res://scenes/levels/Level7.tscn" id="9_65v41"]
-[ext_resource type="PackedScene" uid="uid://beank0vk71oy6" path="res://scenes/levels/Level8.tscn" id="10_kvc2d"]
+[ext_resource type="PackedScene" uid="uid://beank0vk71oy6" path="res://scenes/levels/Level10Credits.tscn" id="10_kvc2d"]
 [ext_resource type="Texture2D" uid="uid://ca2fhr7h6i2qu" path="res://assets/CONTROL/Pantalla.png" id="10_s76nm"]
+[ext_resource type="PackedScene" uid="uid://bmuqbboa1fygr" path="res://scenes/levels/Level9End.tscn" id="11_57l74"]
 [ext_resource type="Texture2D" uid="uid://xmyd70wolmmy" path="res://assets/CONTROL/Avanzar.png" id="11_hni88"]
 [ext_resource type="FontFile" uid="uid://cirgieqkqdak6" path="res://assets/fonts/Funky Catch.otf" id="11_r7xw2"]
+[ext_resource type="PackedScene" uid="uid://byb3nhgdvwfil" path="res://scenes/levels/Level8.tscn" id="12_2u3cx"]
 [ext_resource type="Texture2D" uid="uid://diulau5fs7xs5" path="res://assets/CONTROL/AvanzarPressed.png" id="12_6wbka"]
 [ext_resource type="Texture2D" uid="uid://dbwcj80w6xh7j" path="res://assets/CONTROL/AvanzarDis.png" id="13_ix3sf"]
 [ext_resource type="Texture2D" uid="uid://dn3wc3s7c56l7" path="res://assets/CONTROL/Saltar.png" id="14_o5xw7"]
@@ -332,8 +334,8 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("1_avh0g")
-current_scene_number = 7
-scene_array = Array[PackedScene]([ExtResource("2_3c6ce"), ExtResource("3_th6i0"), ExtResource("4_uxxwa"), ExtResource("5_aqtce"), ExtResource("6_isvv0"), ExtResource("7_rjrju"), ExtResource("8_ta0q5"), ExtResource("9_65v41"), ExtResource("10_kvc2d")])
+current_scene_number = 10
+scene_array = Array[PackedScene]([ExtResource("2_3c6ce"), ExtResource("3_th6i0"), ExtResource("4_uxxwa"), ExtResource("5_aqtce"), ExtResource("6_isvv0"), ExtResource("7_rjrju"), ExtResource("8_ta0q5"), ExtResource("9_65v41"), ExtResource("12_2u3cx"), ExtResource("11_57l74"), ExtResource("10_kvc2d")])
 
 [node name="Gameview" type="SubViewportContainer" parent="." unique_id=1858111535]
 custom_minimum_size = Vector2(960, 0)

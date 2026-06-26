@@ -1,0 +1,128 @@
+[gd_scene format=3 uid="uid://beank0vk71oy6"]
+
+[ext_resource type="PackedScene" uid="uid://b7gui86a3ksvj" path="res://scenes/levels/Level_template.tscn" id="1_gl16g"]
+[ext_resource type="Script" uid="uid://b1ifuyqh4x2qv" path="res://scenes/camera_2d.gd" id="2_yk3vr"]
+[ext_resource type="PackedScene" uid="uid://stjljdb8fl46" path="res://scenes/player.tscn" id="3_3dbjk"]
+[ext_resource type="PackedScene" uid="uid://bg1cb8cifda4h" path="res://scenes/levels/background.tscn" id="4_ab508"]
+[ext_resource type="Texture2D" uid="uid://cabaryv36verj" path="res://assets/FONDOS/Espacio.png" id="5_gl16g"]
+[ext_resource type="PackedScene" uid="uid://di3etpmd87llx" path="res://scenes/blocks/InvisibleWalls.tscn" id="6_4f038"]
+[ext_resource type="FontFile" uid="uid://chqw74du7qjap" path="res://assets/fonts/Lexend-ExtraBold.ttf" id="7_h134e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h134e"]
+size = Vector2(150, 720)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g13nb"]
+size = Vector2(150, 960)
+
+[node name="Level_template" unique_id=244848219 node_paths=PackedStringArray("player") instance=ExtResource("1_gl16g")]
+player_initial_state = "Fly"
+ui_screen_text = "THANKS!"
+play_music_on_ready = true
+level_music_name = "main_instruments"
+player_move = true
+player_jump = true
+player_shoot = true
+player_aim = true
+player_fly = true
+player_grapple = true
+player = NodePath("Player")
+
+[node name="Camera2D" type="Camera2D" parent="." index="0" unique_id=933591887 node_paths=PackedStringArray("target_follow")]
+zoom = Vector2(0.6, 0.6)
+process_callback = 0
+limit_enabled = false
+script = ExtResource("2_yk3vr")
+target_follow = NodePath("../Player/CameraMarker")
+
+[node name="Player" parent="." index="1" unique_id=1282337476 instance=ExtResource("3_3dbjk")]
+position = Vector2(123, -343)
+scale = Vector2(0.3, 0.3)
+
+[node name="CameraMarker" type="Marker2D" parent="Player" index="4" unique_id=1423218106]
+position = Vector2(0, -1200)
+
+[node name="BackgroundLayer" parent="." index="2" unique_id=476540664 instance=ExtResource("4_ab508")]
+layer = -2
+
+[node name="Background" parent="BackgroundLayer/Control" parent_id_path=PackedInt32Array(476540664, 2038293723) index="0" unique_id=1098504343]
+texture = ExtResource("5_gl16g")
+
+[node name="Terrain" type="Node" parent="." index="3" unique_id=972198966]
+
+[node name="Invisible" parent="Terrain" index="0" unique_id=462407768 instance=ExtResource("6_4f038")]
+position = Vector2(-75, -1200)
+
+[node name="CollisionShape2D" parent="Terrain/Invisible" index="0" unique_id=1425998938]
+position = Vector2(0, 840)
+shape = SubResource("RectangleShape2D_h134e")
+
+[node name="CollisionShape2D2" parent="Terrain/Invisible" index="1" unique_id=607817907]
+position = Vector2(405, 405)
+shape = SubResource("RectangleShape2D_g13nb")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Terrain/Invisible" index="2" unique_id=959510944]
+position = Vector2(960, 720)
+shape = SubResource("RectangleShape2D_g13nb")
+
+[node name="CollisionShape2D3" parent="Terrain/Invisible" index="3" unique_id=1033001078]
+position = Vector2(9120, -1048)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="4" unique_id=1390823997]
+layer = -1
+
+[node name="Control" type="Control" parent="CanvasLayer" index="0" unique_id=1265124392]
+custom_minimum_size = Vector2(960, 720)
+layout_mode = 3
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -360.0
+offset_bottom = 360.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control" index="0" unique_id=40230274]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = -290
+alignment = 1
+
+[node name="MadeBy" type="RichTextLabel" parent="CanvasLayer/Control/VBoxContainer" index="0" unique_id=320304032]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("7_h134e")
+theme_override_font_sizes/normal_font_size = 36
+bbcode_enabled = true
+text = "
+Made by:
+[outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#99d4e6]Pau(Artist)[/color][/wave][/outline_size] and [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#cc925e]Isaac (Programmer)[/color][/wave][/outline_size]
+[outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#76c379]Known together as JellyDog![/color][/wave][/outline_size]
+
+"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="TEXT" type="RichTextLabel" parent="CanvasLayer/Control/VBoxContainer" index="1" unique_id=69119824]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("7_h134e")
+theme_override_font_sizes/normal_font_size = 25
+bbcode_enabled = true
+text = "This game was made for The Very Serious Juniper Dev Game Jam, and is dedicated to all the all the heroes—big and small—in our everyday lives.
+May they continue to create and improve more people's lives.
+
+
+[outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#dacb80]Thank you for playing and beign our hero for today! [/color][/wave][/outline_size]"
+horizontal_alignment = 1
+
+[editable path="BackgroundLayer"]
+[editable path="Terrain/Invisible"]

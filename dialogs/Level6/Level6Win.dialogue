@@ -1,7 +1,10 @@
 ~ start
-News Anchor : Done!
+News Anchor : Amazing, [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#adc4ff]Spinamo![/color][/wave][/outline_size] The park is safe and open another day for the kids to enjoy.
+News Anchor: It seems that after saving all the trees, nature feels more at ease than ever and has decided to start spreading into the city.
 do OverlayUI.go_to_next_scene()
-News Anchor : Next!
+News Anchor : This caused a gigantic tree to grow right in the middle of the city, which all the local cats immediately decided to climb!
+News Anchor: Fortunately, [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#adc4ff]Spinamo[/color][/wave][/outline_size] was recently equipped with a [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#19baff]grappling hook[/color][/wave][/outline_size], which will allow him to [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#19baff]rescue all the cats in the tree[/color][/wave][/outline_size] so they can return home safe and sound.
+News Anchor: Is there anything our great and strong hero can't do? Let's keep watching and hope that one day we can be just like him!
 #News Anchor : Now [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#adc4ff]Spinamo[/color][/wave][/outline_size] gotta beat that guy!
 do OverlayUI.transitions.finish_transition()
 do OverlayUI.current_scene.start_music()

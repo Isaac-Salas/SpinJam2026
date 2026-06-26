@@ -1,8 +1,12 @@
 ~ start
-News Anchor : Done!
+News Anchor : That's [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#adc4ff]Spinamo[/color][/wave][/outline_size], winning people's affection by helping them rest easier, knowing that there's someone looking out for them.
+News Anchor: But today is a brand-new, sunny day in the city everyone, and an impending heat wave has given all the kids in town a ravenous appetite for ice cream!
 do OverlayUI.go_to_next_scene()
-News Anchor : Next!
+News Anchor : A whole bunch of ice cream trucks have rolled out, but the heat is putting the ice cream at risk, threatening a very sticky and melted future—if it weren't for our hero...
+News Anchor : [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#adc4ff]Spinamo![/color][/wave][/outline_size] Equipped with a [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#ffffff]new ability[/color][/wave][/outline_size] that lets him [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#ffffff]aim his icy projectiles[/color][/wave][/outline_size] at the trucks to keep them cold.
+News Anchor: But he'll have to move quickly from side to side, making sure not to let too much time pass so that the next truck doesn't have a chance to cool down, or this could be a huge disappointment for the city's children.
 #News Anchor : Now [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#adc4ff]Spinamo[/color][/wave][/outline_size] gotta beat that guy!
+News Anchor: Let's go, [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#adc4ff]Spinamo![/color][/wave][/outline_size] We believe in you!
 do OverlayUI.transitions.finish_transition()
 do OverlayUI.current_scene.start_music()
 => END

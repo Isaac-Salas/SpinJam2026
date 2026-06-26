@@ -2,6 +2,7 @@ extends Node2D
 class_name Level
 
 @export_group("Overrides")
+@export var player_initial_state : String = "Move"
 @export var ui_screen_text : String
 @export var win_after_music : bool
 @export_group("Music")
@@ -37,9 +38,12 @@ func _ready() -> void:
 func start_level():
 	OverlayUI.wheel_view.rotator.toggle_disable(false)
 	unlocks()
+	if player_initial_state != "":
+		player.state_machine.transition_to_new_state(player_initial_state)
 	override_ui_screen_text()
 	if player:
 		player.update_unlocks()
+		
 
 func start_music():
 	SoundManager.cross_fade_to_song(SoundManager.get(level_music_name.to_upper()),volume)

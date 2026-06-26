@@ -1,7 +1,8 @@
 ~ start
-News Anchor : Ooops, wrong tape folks!
+News Anchor : [[Ooops, wrong tape folks!|Sorry people, wrong clip!|Sorry again guys!]]
+News Anchor : That was just an AI video of what it would look like if our hero weren't fast enough.
 do OverlayUI.reload_scene()
-News Anchor : This is the one
+News Anchor : But here's what really happened!
 do OverlayUI.transitions.finish_transition()
 do OverlayUI.current_scene.start_music()
 => END

@@ -1,7 +1,12 @@
 ~ start
-News Anchor : Quick!
+News Anchor: [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#adc4ff]Spinamo[/color][/wave][/outline_size] does it again, folks!
+News Anchor: It seems our new friend is gaining popularity among our beloved viewers, and both his creator and us are very excited to hear that.
+News Anchor: However, with any kind of fame, there will always be jealous people, and this is where [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#adc4ff]Spinamo's[/color][/wave][/outline_size] first major challenge arises.
 do OverlayUI.go_to_next_scene()
-News Anchor : Now [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#adc4ff]Spinamo[/color][/wave][/outline_size] gotta beat that guy!
+News Anchor: There's a new robot in town, folks, and its creator says its technology is vastly superior to Spinamo's weak little heart.
+News Anchor: Although, from what we can tell, it seems to be a heartless version of our beloved guy.
+News Anchor : This robot is challenging our friend to a race that will decide who is truly the superior robot. It's all or nothing people.
+News Anchor: Can [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#adc4ff]Spinamo[/color][/wave][/outline_size] claim victory and prove his opponents wrong? Let's find out!
 do OverlayUI.transitions.finish_transition()
 do OverlayUI.current_scene.start_music()
 => END
