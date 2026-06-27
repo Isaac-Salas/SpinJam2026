@@ -37,7 +37,7 @@ func _make_boss_return():
 	if not win:
 		update_lable_phase_done(false)
 		await _return_boss_up()
-		_toggle_follow_player(false)
+		_toggle_follow_player(true)
 		_activate_phase(true)
 	
 
@@ -55,10 +55,11 @@ func _bring_boss_down():
 	animation_player.play("fly_down")
 	await animation_player.animation_finished
 	animation_player.play("run_around")
+	boss.animation_player.play("run")
 
 func _return_boss_up():
 	animation_player.play_backwards("fly_down",1.0)
-	
+	boss.animation_player.play("fly")
 	await animation_player.animation_finished
 
 
