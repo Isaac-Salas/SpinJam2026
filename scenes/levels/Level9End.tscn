@@ -10,13 +10,20 @@
 [ext_resource type="Texture2D" uid="uid://cabaryv36verj" path="res://assets/FONDOS/Espacio.png" id="7_vbplc"]
 [ext_resource type="PackedScene" uid="uid://dixgvfncilb58" path="res://scenes/robots/robot_space.tscn" id="9_vbplc"]
 [ext_resource type="PackedScene" uid="uid://dsk47tqddxb4y" path="res://scenes/spawn_manager.tscn" id="10_b8r8v"]
+[ext_resource type="Script" uid="uid://bln475l4pudjp" path="res://scripts/boss_health.gd" id="10_w4kym"]
+[ext_resource type="Texture2D" uid="uid://b3afhcmw2mkyf" path="res://assets/CONTROL/Bar/Back.png" id="10_yq577"]
 [ext_resource type="PackedScene" uid="uid://b4b2vhgke77g5" path="res://scenes/spawner.tscn" id="11_vg0n7"]
+[ext_resource type="Texture2D" uid="uid://fo03bqknsnxd" path="res://assets/CONTROL/Barra ⚡ marco.png" id="11_w4kym"]
+[ext_resource type="Texture2D" uid="uid://edqavsp418nj" path="res://assets/CONTROL/Barra ⚡ fondo.png" id="12_3ujip"]
 [ext_resource type="PackedScene" uid="uid://cdqo13mq4nc2v" path="res://scenes/Meteorite.tscn" id="12_7pr46"]
 [ext_resource type="Script" uid="uid://d2p3ot0bxmi6d" path="res://scripts/spawners_last_boss.gd" id="12_vg0n7"]
 [ext_resource type="PackedScene" uid="uid://d2wwxe655kb67" path="res://scenes/planet_earth.tscn" id="14_obeh5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g13nb"]
 size = Vector2(150, 8962)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(600, 799.9999)
 
 [sub_resource type="Animation" id="Animation_obeh5"]
 length = 0.001
@@ -55,6 +62,9 @@ _data = {
 &"RESET": SubResource("Animation_obeh5"),
 &"boss_fly": SubResource("Animation_5lq7v")
 }
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_yf5fn"]
+viewport_path = NodePath("RobotTemplate/BossHealth/SubViewport")
 
 [node name="Level_template" unique_id=244848219 node_paths=PackedStringArray("player") instance=ExtResource("1_vbplc")]
 player_initial_state = "Fly"
@@ -116,11 +126,56 @@ position = Vector2(2850, 116)
 position = Vector2(2070, -945.00006)
 scale = Vector2(-0.3, 0.3)
 
-[node name="Node" type="Node" parent="RobotTemplate" index="1" unique_id=2138335639]
+[node name="Hitbox" type="Area2D" parent="RobotTemplate" index="0" unique_id=516350748]
+collision_layer = 2
+collision_mask = 2
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="RobotTemplate" index="2" unique_id=112408864]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RobotTemplate/Hitbox" index="0" unique_id=47662455]
+position = Vector2(-50, 0.00024414063)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="Node" type="Node" parent="RobotTemplate" index="2" unique_id=2138335639]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="RobotTemplate" index="3" unique_id=112408864]
 libraries/ = SubResource("AnimationLibrary_xem52")
 autoplay = &"boss_fly"
+
+[node name="BossHealth" type="Sprite2D" parent="RobotTemplate" index="4" unique_id=280888675 node_paths=PackedStringArray("level", "boss_spawner", "hitbox")]
+position = Vector2(-50, -499.9998)
+texture = SubResource("ViewportTexture_yf5fn")
+flip_h = true
+script = ExtResource("10_w4kym")
+level = NodePath("../..")
+boss_spawner = NodePath("../../SpawnerLastBoss")
+hitbox = NodePath("../Hitbox")
+
+[node name="SubViewport" type="SubViewport" parent="RobotTemplate/BossHealth" index="0" unique_id=1361577977]
+transparent_bg = true
+handle_input_locally = false
+
+[node name="Control" type="Control" parent="RobotTemplate/BossHealth/SubViewport" index="0" unique_id=1407679909]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ProgressBar" type="TextureProgressBar" parent="RobotTemplate/BossHealth/SubViewport/Control" index="0" unique_id=1342290785]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -0.5
+offset_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+nine_patch_stretch = true
+texture_under = ExtResource("10_yq577")
+texture_over = ExtResource("11_w4kym")
+texture_progress = ExtResource("12_3ujip")
 
 [node name="SpawnManager" parent="." index="5" unique_id=1779595530 instance=ExtResource("10_b8r8v")]
 position = Vector2(2175, -935)
@@ -129,40 +184,43 @@ position = Vector2(2175, -935)
 spawn_scene = ExtResource("12_7pr46")
 
 [node name="SpawnHere" parent="SpawnManager/Spawner" index="0" unique_id=1166153249]
-position = Vector2(-300, -10)
+position = Vector2(-140, -5)
 
 [node name="Spawner2" parent="SpawnManager" index="1" unique_id=356663038 instance=ExtResource("11_vg0n7")]
 position = Vector2(0, -340)
 spawn_scene = ExtResource("12_7pr46")
 
 [node name="SpawnHere" parent="SpawnManager/Spawner2" index="0" unique_id=1166153249]
-position = Vector2(-300, -10)
+position = Vector2(-140, -5)
 
 [node name="Spawner3" parent="SpawnManager" index="2" unique_id=2007629732 instance=ExtResource("11_vg0n7")]
 position = Vector2(0, -700)
 spawn_scene = ExtResource("12_7pr46")
 
 [node name="SpawnHere" parent="SpawnManager/Spawner3" index="0" unique_id=1166153249]
-position = Vector2(-300, -10)
+position = Vector2(-140, -5)
 
 [node name="Spawner4" parent="SpawnManager" index="3" unique_id=100325977 instance=ExtResource("11_vg0n7")]
 position = Vector2(0, 350)
 spawn_scene = ExtResource("12_7pr46")
 
 [node name="SpawnHere" parent="SpawnManager/Spawner4" index="0" unique_id=1166153249]
-position = Vector2(-300, -10)
+position = Vector2(-140, -5)
 
 [node name="Spawner5" parent="SpawnManager" index="4" unique_id=1033461932 instance=ExtResource("11_vg0n7")]
 position = Vector2(0, 695)
 spawn_scene = ExtResource("12_7pr46")
 
 [node name="SpawnHere" parent="SpawnManager/Spawner5" index="0" unique_id=1166153249]
-position = Vector2(-300, -10)
+position = Vector2(-140, -5)
 
 [node name="SpawnerLastBoss" type="Node" parent="." index="6" unique_id=1952079312 node_paths=PackedStringArray("spawn_manager", "level")]
 script = ExtResource("12_vg0n7")
 spawn_manager = NodePath("../SpawnManager")
 level = NodePath("..")
+
+[node name="CooldownTimer" type="Timer" parent="SpawnerLastBoss" index="0" unique_id=142185917]
+one_shot = true
 
 [node name="Earth" parent="." index="7" unique_id=1323401540 instance=ExtResource("14_obeh5")]
 position = Vector2(255, -973)

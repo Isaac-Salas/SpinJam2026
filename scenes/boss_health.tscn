@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://41txvs5adn7m"]
+
+[ext_resource type="Script" uid="uid://bln475l4pudjp" path="res://scripts/boss_health.gd" id="1_b3opw"]
+[ext_resource type="Texture2D" uid="uid://b3afhcmw2mkyf" path="res://assets/CONTROL/Bar/Back.png" id="2_svf70"]
+[ext_resource type="Texture2D" uid="uid://fo03bqknsnxd" path="res://assets/CONTROL/Barra ⚡ marco.png" id="3_el3f4"]
+[ext_resource type="Texture2D" uid="uid://edqavsp418nj" path="res://assets/CONTROL/Barra ⚡ fondo.png" id="4_js4kc"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_yf5fn"]
+viewport_path = NodePath("RobotTemplate/BossHealth/SubViewport")
+
+[node name="BossHealth" type="Sprite2D" unique_id=536597777 node_paths=PackedStringArray("level", "boss_spawner", "hitbox")]
+texture = SubResource("ViewportTexture_yf5fn")
+flip_h = true
+script = ExtResource("1_b3opw")
+level = NodePath("")
+boss_spawner = NodePath("")
+hitbox = NodePath("")
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=584382854]
+transparent_bg = true
+handle_input_locally = false
+
+[node name="Control" type="Control" parent="SubViewport" unique_id=1756754247]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ProgressBar" type="TextureProgressBar" parent="SubViewport/Control" unique_id=1512676166]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -0.5
+offset_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+nine_patch_stretch = true
+texture_under = ExtResource("2_svf70")
+texture_over = ExtResource("3_el3f4")
+texture_progress = ExtResource("4_js4kc")
