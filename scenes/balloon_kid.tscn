@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://c03a6lnw1bpmq"]
+
+[ext_resource type="Script" uid="uid://d21vt6mw63k52" path="res://scripts/hookable_body.gd" id="1_h0s4l"]
+[ext_resource type="Texture2D" uid="uid://bksfq74x4ijcd" path="res://assets/OBJETOS/Globo.png" id="2_f5q54"]
+[ext_resource type="Script" uid="uid://b388lywla7org" path="res://scenes/fly_away.gd" id="3_f5q54"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2mo8n"]
+size = Vector2(150, 150)
+
+[node name="Balloon" type="Area2D" unique_id=181321529]
+modulate = Color(0, 0.8, 0.54509807, 1)
+collision_layer = 2
+collision_mask = 2
+priority = 1
+script = ExtResource("1_h0s4l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2061196255]
+shape = SubResource("RectangleShape2D_2mo8n")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1059734652]
+z_index = -1
+z_as_relative = false
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_f5q54")
+
+[node name="FlyAway" type="Node" parent="." unique_id=1911603145 node_paths=PackedStringArray("target")]
+script = ExtResource("3_f5q54")
+target = NodePath("..")

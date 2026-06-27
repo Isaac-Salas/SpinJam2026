@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bgs0u3nawuj24"]
+
+[ext_resource type="Script" uid="uid://dkhv21y8i4vpk" path="res://scripts/grapple_killer.gd" id="1_50y6k"]
+[ext_resource type="Texture2D" uid="uid://bw3qxmqgnhij5" path="res://assets/Nube.png" id="2_j4txm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(150, 150)
+
+[node name="GrappleKiller" type="Area2D" unique_id=1272909810]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_50y6k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1499560063]
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=989826157]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_j4txm")

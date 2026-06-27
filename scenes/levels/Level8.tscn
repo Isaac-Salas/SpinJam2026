@@ -11,13 +11,11 @@
 [ext_resource type="Texture2D" uid="uid://dhyg55xjwms2w" path="res://assets/FONDOS/Circo.png" id="7_qyvhn"]
 [ext_resource type="PackedScene" uid="uid://cc4t1rsdt6kiu" path="res://scenes/blocks/Level7/BlockB.tscn" id="8_q2gnw"]
 [ext_resource type="PackedScene" uid="uid://d22xiwyrkmjcu" path="res://scenes/second_view_cam.tscn" id="9_0xlr4"]
-[ext_resource type="Script" uid="uid://xi0ia5j43egw" path="res://scripts/spawner.gd" id="12_keegh"]
+[ext_resource type="PackedScene" uid="uid://b084l2kfa0klp" path="res://scenes/spawner_kid.tscn" id="13_jyp1i"]
+[ext_resource type="PackedScene" uid="uid://bdl6ghpe6akqr" path="res://scenes/levels/spawner_girl.tscn" id="14_gowir"]
 [ext_resource type="PackedScene" uid="uid://dsk47tqddxb4y" path="res://scenes/spawn_manager.tscn" id="14_jyp1i"]
-[ext_resource type="Script" uid="uid://de3tica3kjmhe" path="res://scripts/child_balloon_spawner.gd" id="14_sse1k"]
-[ext_resource type="Texture2D" uid="uid://cc4dgbs1lvx71" path="res://assets/OBJETOS/NIño.png" id="15_gowir"]
 [ext_resource type="Script" uid="uid://d3kv0fmvjdvth" path="res://scripts/make_spawn_time.gd" id="15_jyp1i"]
-[ext_resource type="Texture2D" uid="uid://bksfq74x4ijcd" path="res://assets/OBJETOS/Globo.png" id="16_gowir"]
-[ext_resource type="PackedScene" uid="uid://c03a6lnw1bpmq" path="res://scenes/balloon.tscn" id="16_sse1k"]
+[ext_resource type="PackedScene" uid="uid://bgs0u3nawuj24" path="res://scenes/grapple_killer.tscn" id="16_gowir"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g13nb"]
 size = Vector2(150, 8962)
@@ -44,8 +42,9 @@ script = ExtResource("2_yk3vr")
 target_follow = NodePath("../Player/CameraMarker")
 
 [node name="Player" parent="." index="1" unique_id=1282337476 instance=ExtResource("3_3dbjk")]
-position = Vector2(105.00001, -120.00001)
+position = Vector2(1062, -116)
 scale = Vector2(0.3, 0.3)
+crosshair_offset_x = 100.0
 
 [node name="CameraMarker" type="Marker2D" parent="Player" index="4" unique_id=1423218106]
 position = Vector2(0, -800)
@@ -65,7 +64,7 @@ position = Vector2(4559, -3224)
 shape = SubResource("RectangleShape2D_g13nb")
 
 [node name="CollisionShape2D3" parent="Terrain/Invisible" index="2" unique_id=1033001078]
-position = Vector2(9120, -1048)
+position = Vector2(2250, -1048)
 
 [node name="BlockA" parent="Terrain" index="1" unique_id=890028475 instance=ExtResource("7_1xpr3")]
 position = Vector2(75, 75)
@@ -499,94 +498,96 @@ position = Vector2(9675, 225)
 [node name="BlockA144" parent="Terrain" index="144" unique_id=893919303 instance=ExtResource("8_q2gnw")]
 position = Vector2(9825, 225)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." index="4" unique_id=1324981923]
+[node name="GrappleKiller" parent="Terrain" index="145" unique_id=1272909810 instance=ExtResource("16_gowir")]
+position = Vector2(153, -1569)
 
-[node name="SecondView" parent="CanvasLayer" index="0" unique_id=1491427061 node_paths=PackedStringArray("world_root") instance=ExtResource("9_0xlr4")]
-world_root = NodePath("../..")
+[node name="GrappleKiller2" parent="Terrain" index="146" unique_id=1315178581 instance=ExtResource("16_gowir")]
+position = Vector2(297, -1607)
 
-[node name="Tracking_cam" parent="CanvasLayer/SecondView/SubViewportContainer/SubViewport" parent_id_path=PackedInt32Array(1491427061, 1573429894) index="0" unique_id=1373545733]
-zoom = Vector2(0.1, 0.1)
+[node name="GrappleKiller3" parent="Terrain" index="147" unique_id=1410051771 instance=ExtResource("16_gowir")]
+position = Vector2(435, -1538)
 
-[node name="MakeSpawnTime" type="Node" parent="." index="5" unique_id=1449608366 node_paths=PackedStringArray("spawn_manager", "level")]
+[node name="GrappleKiller4" parent="Terrain" index="148" unique_id=234716677 instance=ExtResource("16_gowir")]
+position = Vector2(564, -1613)
+
+[node name="GrappleKiller5" parent="Terrain" index="149" unique_id=1300056172 instance=ExtResource("16_gowir")]
+position = Vector2(712, -1509)
+
+[node name="GrappleKiller6" parent="Terrain" index="150" unique_id=590600937 instance=ExtResource("16_gowir")]
+position = Vector2(847, -1622)
+
+[node name="GrappleKiller7" parent="Terrain" index="151" unique_id=548714063 instance=ExtResource("16_gowir")]
+position = Vector2(982, -1493)
+
+[node name="GrappleKiller8" parent="Terrain" index="152" unique_id=1484670601 instance=ExtResource("16_gowir")]
+position = Vector2(1107, -1597)
+
+[node name="GrappleKiller9" parent="Terrain" index="153" unique_id=1323539976 instance=ExtResource("16_gowir")]
+position = Vector2(1239, -1481)
+
+[node name="GrappleKiller10" parent="Terrain" index="154" unique_id=404108141 instance=ExtResource("16_gowir")]
+position = Vector2(2, -1503)
+
+[node name="GrappleKiller12" parent="Terrain" index="155" unique_id=708539912 instance=ExtResource("16_gowir")]
+position = Vector2(1384, -1595)
+
+[node name="GrappleKiller13" parent="Terrain" index="156" unique_id=907239663 instance=ExtResource("16_gowir")]
+position = Vector2(1522, -1526)
+
+[node name="GrappleKiller14" parent="Terrain" index="157" unique_id=1665436879 instance=ExtResource("16_gowir")]
+position = Vector2(1651, -1601)
+
+[node name="GrappleKiller15" parent="Terrain" index="158" unique_id=934971182 instance=ExtResource("16_gowir")]
+position = Vector2(1799, -1497)
+
+[node name="GrappleKiller16" parent="Terrain" index="159" unique_id=1412164491 instance=ExtResource("16_gowir")]
+position = Vector2(1934, -1610)
+
+[node name="GrappleKiller17" parent="Terrain" index="160" unique_id=525256599 instance=ExtResource("16_gowir")]
+position = Vector2(2069, -1481)
+
+[node name="GrappleKiller18" parent="Terrain" index="161" unique_id=2511341 instance=ExtResource("16_gowir")]
+position = Vector2(2194, -1585)
+
+[node name="GrappleKiller19" parent="Terrain" index="162" unique_id=290504128 instance=ExtResource("16_gowir")]
+position = Vector2(2326, -1469)
+
+[node name="MakeSpawnTime" type="Node" parent="." index="4" unique_id=1449608366 node_paths=PackedStringArray("spawn_manager", "second_view", "level")]
 script = ExtResource("15_jyp1i")
 spawn_manager = NodePath("../SpawnManager")
+despawns_to_win = 6
 can_repeat_spawner = false
+second_view = NodePath("../SecondView/SecondView")
 level = NodePath("..")
 
-[node name="SpawnManager" parent="." index="6" unique_id=1779595530 instance=ExtResource("14_jyp1i")]
+[node name="SpawnManager" parent="." index="5" unique_id=1779595530 instance=ExtResource("14_jyp1i")]
 
-[node name="Spawner" type="Node2D" parent="SpawnManager" index="0" unique_id=1796958845 node_paths=PackedStringArray("spawn_manager", "spawn_here")]
-position = Vector2(674, -44)
-script = ExtResource("12_keegh")
-spawn_scene = ExtResource("16_sse1k")
-spawn_manager = NodePath("..")
-spawn_here = NodePath("SpawnHere")
+[node name="SpawnerKid" parent="SpawnManager" index="0" unique_id=72827443 instance=ExtResource("13_jyp1i")]
+position = Vector2(75, -46)
 
-[node name="SpawnHere" type="Marker2D" parent="SpawnManager/Spawner" index="0" unique_id=1166153249]
-position = Vector2(30, -24)
+[node name="SpawnerKid3" parent="SpawnManager" index="1" unique_id=831547371 instance=ExtResource("13_jyp1i")]
+position = Vector2(602, -46)
 
-[node name="Sprite" type="Sprite2D" parent="SpawnManager/Spawner" index="1" unique_id=91383758]
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("15_gowir")
+[node name="SpawnerGirl" parent="SpawnManager" index="2" unique_id=1455406136 instance=ExtResource("14_gowir")]
+position = Vector2(338, -46)
 
-[node name="Balloon" type="Sprite2D" parent="SpawnManager/Spawner" index="2" unique_id=484272528]
-position = Vector2(30, -24)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("16_gowir")
+[node name="SpawnerGirl3" parent="SpawnManager" index="3" unique_id=223084778 instance=ExtResource("14_gowir")]
+position = Vector2(1425, -46)
 
-[node name="ChildBalloonSpawner" type="Node2D" parent="SpawnManager/Spawner" index="3" unique_id=1806695760 node_paths=PackedStringArray("spawn_manager")]
-position = Vector2(-674, 44)
-script = ExtResource("14_sse1k")
-spawn_manager = NodePath("../..")
+[node name="SpawnerKid2" parent="SpawnManager" index="4" unique_id=899983552 instance=ExtResource("13_jyp1i")]
+position = Vector2(1725, -46)
 
-[node name="Spawner2" type="Node2D" parent="SpawnManager" index="1" unique_id=1448977781 node_paths=PackedStringArray("spawn_manager", "spawn_here")]
-position = Vector2(1009, -40)
-script = ExtResource("12_keegh")
-spawn_scene = ExtResource("16_sse1k")
-spawn_manager = NodePath("..")
-spawn_here = NodePath("SpawnHere")
+[node name="SpawnerGirl2" parent="SpawnManager" index="5" unique_id=1193519064 instance=ExtResource("14_gowir")]
+position = Vector2(2002, -46)
 
-[node name="SpawnHere" type="Marker2D" parent="SpawnManager/Spawner2" index="0" unique_id=1441412770]
-position = Vector2(30, -24)
+[node name="SecondView" type="CanvasLayer" parent="." index="6" unique_id=1324981923]
 
-[node name="Sprite" type="Sprite2D" parent="SpawnManager/Spawner2" index="1" unique_id=1261100078]
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("15_gowir")
+[node name="SecondView" parent="SecondView" index="0" unique_id=1491427061 node_paths=PackedStringArray("world_root") instance=ExtResource("9_0xlr4")]
+world_root = NodePath("../..")
 
-[node name="Balloon" type="Sprite2D" parent="SpawnManager/Spawner2" index="2" unique_id=1545154133]
-position = Vector2(30, -24)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("16_gowir")
-
-[node name="ChildBalloonSpawner" type="Node2D" parent="SpawnManager/Spawner2" index="3" unique_id=642681538 node_paths=PackedStringArray("spawn_manager")]
-position = Vector2(-674, 44)
-script = ExtResource("14_sse1k")
-spawn_manager = NodePath("../..")
-
-[node name="Spawner3" type="Node2D" parent="SpawnManager" index="2" unique_id=986163871 node_paths=PackedStringArray("spawn_manager", "spawn_here")]
-position = Vector2(1323, -40)
-script = ExtResource("12_keegh")
-spawn_scene = ExtResource("16_sse1k")
-spawn_manager = NodePath("..")
-spawn_here = NodePath("SpawnHere")
-
-[node name="SpawnHere" type="Marker2D" parent="SpawnManager/Spawner3" index="0" unique_id=85262499]
-position = Vector2(30, -24)
-
-[node name="Sprite" type="Sprite2D" parent="SpawnManager/Spawner3" index="1" unique_id=2013176404]
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("15_gowir")
-
-[node name="Balloon" type="Sprite2D" parent="SpawnManager/Spawner3" index="2" unique_id=874536033]
-position = Vector2(30, -24)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("16_gowir")
-
-[node name="ChildBalloonSpawner" type="Node2D" parent="SpawnManager/Spawner3" index="3" unique_id=1364844854 node_paths=PackedStringArray("spawn_manager")]
-position = Vector2(-674, 44)
-script = ExtResource("14_sse1k")
-spawn_manager = NodePath("../..")
+[node name="Tracking_cam" parent="SecondView/SecondView/SubViewportContainer/SubViewport" parent_id_path=PackedInt32Array(1491427061, 1573429894) index="0" unique_id=1373545733]
+zoom = Vector2(0.1, 0.1)
 
 [editable path="BackgroundLayer"]
 [editable path="Terrain/Invisible"]
-[editable path="CanvasLayer/SecondView"]
+[editable path="SecondView/SecondView"]

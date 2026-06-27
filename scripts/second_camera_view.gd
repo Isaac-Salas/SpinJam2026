@@ -8,3 +8,6 @@ class_name SecondView
 func toggle_show_view(value : bool):
 	print(value)
 	self.visible = value
+
+func set_target(target : Node2D):
+	tracking_cam.target_follow = target

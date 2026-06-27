@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://b084l2kfa0klp"]
+
+[ext_resource type="Script" uid="uid://xi0ia5j43egw" path="res://scripts/spawner.gd" id="1_6ml5r"]
+[ext_resource type="PackedScene" uid="uid://c03a6lnw1bpmq" path="res://scenes/balloon_kid.tscn" id="2_vgrwo"]
+[ext_resource type="Texture2D" uid="uid://cc4dgbs1lvx71" path="res://assets/OBJETOS/NIño.png" id="3_6caq8"]
+[ext_resource type="Texture2D" uid="uid://bksfq74x4ijcd" path="res://assets/OBJETOS/Globo.png" id="4_xuu58"]
+[ext_resource type="Script" uid="uid://de3tica3kjmhe" path="res://scripts/child_balloon_spawner.gd" id="5_iluxq"]
+
+[node name="SpawnerKid" type="Node2D" unique_id=72827443]
+script = ExtResource("1_6ml5r")
+spawn_scene = ExtResource("2_vgrwo")
+
+[node name="SpawnHere" type="Marker2D" parent="." unique_id=537803238]
+position = Vector2(30, -24)
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1525454772]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_6caq8")
+
+[node name="Balloon" type="Sprite2D" parent="." unique_id=389758660]
+modulate = Color(0, 0.8, 0.54509807, 1)
+position = Vector2(30, -24)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_xuu58")
+
+[node name="KidBalloonSpawner" type="Node2D" parent="." unique_id=81986446 node_paths=PackedStringArray("spawn_manager")]
+position = Vector2(-674, 44)
+script = ExtResource("5_iluxq")
+spawn_manager = NodePath("")

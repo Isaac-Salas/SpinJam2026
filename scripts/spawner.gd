@@ -1,8 +1,8 @@
 extends Node2D
 class_name Spawner
 @export var spawn_scene : PackedScene
-@export var spawn_manager : SpawnManager
-@export var spawn_here: Marker2D
+@onready var spawn_here: Marker2D = $SpawnHere
+@onready var spawn_manager: SpawnManager = $".."
 
 signal spawned(object : Node2D)
 

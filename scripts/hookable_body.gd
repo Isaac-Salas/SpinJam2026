@@ -3,7 +3,9 @@ class_name Hookable
 @onready var sprite: Sprite2D = $Sprite
 @export var active : bool = true
 @export var player : Player
-var target 
+
+signal killed_by_player
+signal killed_by_killer
 
 func _ready() -> void:
 	toggle_detection(active)
@@ -12,7 +14,10 @@ func _ready() -> void:
 
 func _on_area_entered(area : Area2D):
 	if area is ProyectileGrapple:
-		_finish(area)
+		await _finish(area)
+		killed_by_player.emit()
+	if area is GrappleKiller:
+		killed_by_killer.emit()
 
 func _finish(target_parent : Node2D):
 	toggle_detection(false)
