@@ -1,8 +1,6 @@
 extends Node
 class_name LastBossSpawners
 @export var spawn_manager : SpawnManager
-@export var can_repeat_spawner : bool = true
-@export var second_view : SecondView
 @export var level : Level
 var scambled_numbers : Array
 const METEORITE = preload("uid://cdqo13mq4nc2v")
@@ -25,10 +23,6 @@ func _spawn_random_object():
 	var random_to_spawn : PackedScene = both_objects.pick_random()
 	var pick_number: int = scambled_numbers.pick_random()
 	spawn_manager.all_spawners[pick_number].spawn(random_to_spawn)
-	if not can_repeat_spawner:
-		scambled_numbers.erase(pick_number)
-
-
 
 func get_shuffled_range(from: int, to: int) -> Array:
 	var numbers = []
