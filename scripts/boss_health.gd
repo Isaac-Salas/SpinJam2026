@@ -1,13 +1,16 @@
 extends Sprite2D
 @onready var progress_bar: TextureProgressBar = $SubViewport/Control/ProgressBar
 @export var max_health : int = 5
+@export var boss : Robot
 @export var level : Level
 @export var boss_spawner : LastBossSpawners
 @export var hitbox : Area2D
 var current_health : int
+var initial_boss_scale : Vector2
 signal no_more_health
 
 func _ready() -> void:
+	initial_boss_scale = boss.scale
 	_init_health()
 	_initilize_hitbox()
 
@@ -34,3 +37,11 @@ func _on_no_more_health():
 func _on_hitbox_area_entered(area : Area2D):
 	if area is ProyectileGrapple or area is ProyectileArea:
 		_hurt()
+		_tween_scale_hurt()
+
+func _tween_scale_hurt():
+	var tween : Tween = create_tween()
+	tween.tween_property(boss,"scale",initial_boss_scale *1.5, 0.05)
+	tween.tween_property(boss,"scale",initial_boss_scale, 0.05)
+	await tween.finished
+	tween.kill()

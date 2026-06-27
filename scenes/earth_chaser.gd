@@ -1,6 +1,6 @@
 extends Node
 @export var target : Node2D
-@export var speed : float = 100
+@export var speed : float = 150
 var earth : PlanetEarth
 
 func _ready() -> void:
@@ -8,7 +8,6 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	if earth:
-		print(earth)
 		_chase_earth(delta)
 
 func _chase_earth(delta : float):
