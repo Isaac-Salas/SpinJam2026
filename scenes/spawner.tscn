@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://b4b2vhgke77g5"]
+
+[ext_resource type="Script" uid="uid://xi0ia5j43egw" path="res://scripts/spawner.gd" id="1_ik2nu"]
+[ext_resource type="PackedScene" uid="uid://cf6ctm4v1ly8s" path="res://scenes/kitten.tscn" id="2_tx2ig"]
+
+[node name="Spawner" type="Node2D" unique_id=1796958845 node_paths=PackedStringArray("spawn_manager")]
+script = ExtResource("1_ik2nu")
+spawn_scene = ExtResource("2_tx2ig")
+spawn_manager = NodePath("")
+
+[node name="SpawnHere" type="Marker2D" parent="." unique_id=1166153249]

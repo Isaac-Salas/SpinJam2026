@@ -2,11 +2,9 @@ extends Node2D
 class_name Spawner
 @export var spawn_scene : PackedScene
 @export var spawn_manager : SpawnManager
-@onready var spawn_here: Marker2D = $SpawnHere
+@export var spawn_here: Marker2D
 
 signal spawned(object : Node2D)
-
-
 
 func spawn():
 	var new_instance : Node2D = spawn_scene.instantiate()

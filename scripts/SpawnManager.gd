@@ -7,7 +7,6 @@ signal object_spawned (object : Node2D)
 signal object_despawned (object : Node2D)
 signal all_despawned
 
-
 func _get_spawners_and_connect():
 	for child in get_children():
 		if child is Spawner:
@@ -18,7 +17,6 @@ func _update_spawned_objects(new_object : Node2D):
 	new_object.tree_exiting.connect(_on_spawned_exiting_tree.bind(new_object))
 	spawned_objects.append(new_object)
 	object_spawned.emit(new_object)
-
 
 func _on_spawned_exiting_tree(from : Node):
 	if from.is_queued_for_deletion():

@@ -6,7 +6,7 @@ extends Node
 var scambled_numbers : Array
 
 func _ready() -> void:
-	_initialize_manager()
+	level.music_started.connect(_initialize_manager)
 
 func _initialize_manager():
 	spawn_manager._get_spawners_and_connect()
