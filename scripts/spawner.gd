@@ -9,6 +9,6 @@ signal spawned(object : Node2D)
 func spawn():
 	var new_instance : Node2D = spawn_scene.instantiate()
 	spawn_manager.add_child.call_deferred(new_instance)
-	new_instance.global_position = spawn_here.global_position
+	new_instance.set_deferred("global_position",spawn_here.global_position)
 	spawned.emit(new_instance)
 	return

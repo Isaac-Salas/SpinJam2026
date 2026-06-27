@@ -20,7 +20,7 @@ func _initialize_manager():
 func _update_count():
 	despawns_to_win -= 1
 	print(despawns_to_win)
-	if despawns_to_win == 0:
+	if despawns_to_win <= 0:
 		level.win()
 		self.queue_free()
 
@@ -35,11 +35,13 @@ func get_shuffled_range(from: int, to: int) -> Array:
 	for i in range(from, to):
 		numbers.append(i)
 	numbers.shuffle()
+	print(numbers)
 	return numbers
 
 func _on_object_despawned(_object : Node2D):
 	_update_count()
-	_spawn_object()
+	if despawns_to_win != 0:
+		_spawn_object()
 
 func _on_object_spawned(object : Node2D):
 	second_view.set_target(object)
