@@ -3,7 +3,8 @@ News Anchor : What a fun day today! Completely free of balloon-induced sadnessâ€
 News Anchor : But seeing all this happiness, the evil inventor couldn't stand it, so he decided to build a new and final robot that threatens to destroy the entire world!
 do OverlayUI.go_to_next_scene()
 News Anchor : Come on, [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#adc4ff]Spinamo[/color][/wave][/outline_size], we know you can save the day by using all your powerful abilities!
-News Anchor: You'll have to [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#e52d40]put out the fireballs[/color][/wave][/outline_size] and [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#19baff]catch the meteorites[/color][/wave][/outline_size] before they hit Earth. We're all counting on [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#adc4ff]you[/color][/wave][/outline_size], save us one last time!
+News Anchor: You'll have to hit him with all you got! And at the same time[outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#e52d40]put out the fireballs[/color][/wave][/outline_size] and [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#19baff]catch the meteorites[/color][/wave][/outline_size] before they hit Earth.
+News Anchor: We're all counting on [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#adc4ff]you[/color][/wave][/outline_size] to save us one last time!
 #News Anchor : Now [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#adc4ff]Spinamo[/color][/wave][/outline_size] gotta beat that guy!
 do OverlayUI.transitions.finish_transition()
 do OverlayUI.current_scene.start_music()

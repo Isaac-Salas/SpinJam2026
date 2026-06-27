@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://b4b2vhgke77g5" path="res://scenes/spawner.tscn" id="11_vg0n7"]
 [ext_resource type="PackedScene" uid="uid://cdqo13mq4nc2v" path="res://scenes/Meteorite.tscn" id="12_7pr46"]
 [ext_resource type="Script" uid="uid://d2p3ot0bxmi6d" path="res://scripts/spawners_last_boss.gd" id="12_vg0n7"]
+[ext_resource type="PackedScene" uid="uid://d2wwxe655kb67" path="res://scenes/planet_earth.tscn" id="14_obeh5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g13nb"]
 size = Vector2(150, 8962)
@@ -114,11 +115,14 @@ spawn_scene = ExtResource("12_7pr46")
 [node name="SpawnHere" parent="SpawnManager/Spawner5" index="0" unique_id=1166153249]
 position = Vector2(-300, -10)
 
-[node name="MakeSpawnTime" type="Node" parent="." index="6" unique_id=1952079312 node_paths=PackedStringArray("spawn_manager", "level")]
+[node name="SpawnerLastBoss" type="Node" parent="." index="6" unique_id=1952079312 node_paths=PackedStringArray("spawn_manager", "level")]
 script = ExtResource("12_vg0n7")
 spawn_manager = NodePath("../SpawnManager")
 can_repeat_spawner = false
 level = NodePath("..")
+
+[node name="Earth" parent="." index="7" unique_id=1323401540 instance=ExtResource("14_obeh5")]
+position = Vector2(255, -973)
 
 [editable path="BackgroundLayer"]
 [editable path="Terrain/Invisible"]

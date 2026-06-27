@@ -6,8 +6,8 @@ class_name Spawner
 
 signal spawned(object : Node2D)
 
-func spawn():
-	var new_instance : Node2D = spawn_scene.instantiate()
+func spawn(packed : PackedScene = spawn_scene):
+	var new_instance : Node2D = packed.instantiate()
 	spawn_manager.add_child.call_deferred(new_instance)
 	new_instance.set_deferred("global_position",spawn_here.global_position)
 	spawned.emit(new_instance)

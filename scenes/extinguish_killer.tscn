@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(150, 150)
 
-[node name="GrappleKiller" type="Area2D" unique_id=1272909810]
+[node name="ExtinguishKiller" type="Area2D" unique_id=1272909810]
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_75uqt")

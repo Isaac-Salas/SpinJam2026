@@ -5,6 +5,10 @@ class_name LastBossSpawners
 @export var second_view : SecondView
 @export var level : Level
 var scambled_numbers : Array
+const METEORITE = preload("uid://cdqo13mq4nc2v")
+const FIREBALL = preload("uid://22s16nwsu7bx")
+var both_objects : Array[PackedScene] = [METEORITE,FIREBALL]
+
 
 func _ready() -> void:
 	level.music_started.connect(_initialize_manager)
@@ -15,13 +19,16 @@ func _initialize_manager():
 	spawn_manager.object_spawned.connect(_on_object_spawned)
 	scambled_numbers = get_shuffled_range(0,spawn_manager.all_spawners.size())
 	print(spawn_manager.all_spawners)
-	_spawn_object()
+	_spawn_random_object()
 
-func _spawn_object():
+func _spawn_random_object():
+	var random_to_spawn : PackedScene = both_objects.pick_random()
 	var pick_number: int = scambled_numbers.pick_random()
-	spawn_manager.all_spawners[pick_number].spawn()
+	spawn_manager.all_spawners[pick_number].spawn(random_to_spawn)
 	if not can_repeat_spawner:
 		scambled_numbers.erase(pick_number)
+
+
 
 func get_shuffled_range(from: int, to: int) -> Array:
 	var numbers = []
@@ -32,7 +39,7 @@ func get_shuffled_range(from: int, to: int) -> Array:
 	return numbers
 
 func _on_object_despawned(_object : Node2D):
-	_spawn_object()
+	_spawn_random_object()
 
 func _on_object_spawned(object : Node2D):
 	if object is Hookable or object is Extinguishable:

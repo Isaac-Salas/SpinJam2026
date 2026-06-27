@@ -6,11 +6,12 @@
 [ext_resource type="Texture2D" uid="uid://cqk834fxr2sd3" path="res://assets/OBJETOS/Bola de fuego.png" id="3_rfmch"]
 [ext_resource type="Material" uid="uid://d0n0l7tewxfrh" path="res://particles/ExtinguisherProyectile.tres" id="4_j1r2c"]
 [ext_resource type="Texture2D" uid="uid://wmheui8thwhn" path="res://assets/light/light.png" id="5_4ws6w"]
+[ext_resource type="Script" uid="uid://bg7y84eblm0dy" path="res://scenes/earth_chaser.gd" id="7_bl534"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_reskh"]
 size = Vector2(150, 150)
 
-[node name="Extinguishable" type="Area2D" unique_id=181321529]
+[node name="Fireball" type="Area2D" unique_id=181321529]
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_v6c2k")
@@ -41,3 +42,7 @@ process_material = ExtResource("4_j1r2c")
 color = Color(1, 0.362161, 0.24214262, 1)
 texture = ExtResource("5_4ws6w")
 texture_scale = 3.0
+
+[node name="EarthChaser" type="Node" parent="." unique_id=1811604462 node_paths=PackedStringArray("target")]
+script = ExtResource("7_bl534")
+target = NodePath("..")
