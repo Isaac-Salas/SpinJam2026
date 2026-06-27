@@ -8,6 +8,8 @@ class_name Extinguishable
 
 signal tween_fire_finish
 signal active_changed()
+signal killed_by_player
+signal killed_by_killer
 
 func _ready() -> void:
 	toggle_detection(active)
@@ -18,7 +20,11 @@ func _ready() -> void:
 
 func _on_area_entered(area : Area2D):
 	if area is ProyectileArea:
-		_kill()
+		await _kill()
+		killed_by_player.emit()
+	elif area is ExtinguishKiller:
+		await _kill()
+		killed_by_killer.emit()
 
 func _kill():
 	toggle_detection(false)
@@ -28,6 +34,7 @@ func _kill():
 	await _snuff_fire_out()
 	await gpu_particles_2d.finished
 	self.queue_free()
+	
 
 func toggle_detection(value : bool):
 	self.set_deferred("monitoring",value)

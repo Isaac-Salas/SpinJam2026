@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://dixgvfncilb58"]
+
+[ext_resource type="PackedScene" uid="uid://b421ssvhrko3" path="res://scenes/robots/robot_template.tscn" id="1_71ath"]
+[ext_resource type="Script" uid="uid://8nhjqwv1puy0" path="res://scripts/robot_template.gd" id="2_0prdb"]
+[ext_resource type="Texture2D" uid="uid://brf4baeqxddmg" path="res://assets/ROBOT ESPACIAL/Brazo R.png" id="3_71ath"]
+[ext_resource type="Texture2D" uid="uid://cu73px2371b57" path="res://assets/ROBOT ESPACIAL/Pierna R.png" id="4_0prdb"]
+[ext_resource type="Texture2D" uid="uid://gapf35de6krr" path="res://assets/ROBOT ESPACIAL/Pierna L.png" id="5_avmv2"]
+[ext_resource type="Texture2D" uid="uid://bvl3p4knuljr3" path="res://assets/ROBOT ESPACIAL/Aleta R.png" id="5_l8mvd"]
+[ext_resource type="Texture2D" uid="uid://bo66qc37t70c7" path="res://assets/ROBOT ESPACIAL/Torso.png" id="6_l8mvd"]
+[ext_resource type="Texture2D" uid="uid://ba2j5ifdermmv" path="res://assets/ROBOT ESPACIAL/Propulsor.png" id="7_0prdb"]
+[ext_resource type="Texture2D" uid="uid://2oe6anph4jfw" path="res://assets/ROBOT ESPACIAL/Brazo L.png" id="7_d4qa0"]
+[ext_resource type="Texture2D" uid="uid://dwi72oy5m01vj" path="res://assets/ROBOT ESPACIAL/Aleta L.png" id="7_oqyqr"]
+[ext_resource type="Texture2D" uid="uid://bf4ksgd4pdvso" path="res://assets/ROBOT ESPACIAL/Cabeza.png" id="8_oqyqr"]
+
+[node name="RobotTemplate" unique_id=180808173 instance=ExtResource("1_71ath")]
+script = ExtResource("2_0prdb")
+
+[node name="ArmRBone" parent="BodyParts" parent_id_path=PackedInt32Array(1141699891) index="0" unique_id=1523555488]
+texture = null
+
+[node name="ArmR" parent="BodyParts/ArmRBone" index="0" unique_id=1381022201]
+position = Vector2(66.02657, 131.8039)
+rotation = 0.3673165
+texture = ExtResource("3_71ath")
+
+[node name="LegRBone" parent="BodyParts" parent_id_path=PackedInt32Array(1141699891) index="1" unique_id=909584300]
+texture = null
+
+[node name="LegR" parent="BodyParts/LegRBone" index="0" unique_id=1670789407]
+position = Vector2(66, 97)
+texture = ExtResource("4_0prdb")
+
+[node name="Aleta" type="Sprite2D" parent="BodyParts/LegRBone/LegR" index="0" unique_id=515577748]
+z_index = -1
+position = Vector2(-70, 92.000015)
+rotation = -0.0191405
+texture = ExtResource("5_l8mvd")
+
+[node name="LegLBone" parent="BodyParts" parent_id_path=PackedInt32Array(1141699891) index="2" unique_id=316859834]
+texture = null
+
+[node name="LegL" parent="BodyParts/LegLBone" index="0" unique_id=117902137]
+position = Vector2(-30, 101)
+rotation = 0.2394724
+texture = ExtResource("5_avmv2")
+
+[node name="Aleta" type="Sprite2D" parent="BodyParts/LegLBone/LegL" index="0" unique_id=537320027]
+z_index = -1
+position = Vector2(-85.816765, 36.39344)
+rotation = 0.062275123
+texture = ExtResource("7_oqyqr")
+
+[node name="NormalTorso" parent="BodyParts/TorsoBone" parent_id_path=PackedInt32Array(143993143) index="0" unique_id=747951563]
+texture = ExtResource("6_l8mvd")
+
+[node name="Propulsor" type="Sprite2D" parent="BodyParts/TorsoBone" parent_id_path=PackedInt32Array(143993143) index="1" unique_id=723660191]
+z_index = -1
+position = Vector2(-204, 0)
+texture = ExtResource("7_0prdb")
+
+[node name="ArmLBone" parent="BodyParts" parent_id_path=PackedInt32Array(1141699891) index="4" unique_id=1853484707]
+texture = null
+
+[node name="ArmL" parent="BodyParts/ArmLBone" index="0" unique_id=1912753409]
+position = Vector2(-36.068764, 136.69804)
+texture = ExtResource("7_d4qa0")
+
+[node name="HeadBone" parent="BodyParts" parent_id_path=PackedInt32Array(1141699891) index="5" unique_id=1491399677]
+texture = null
+
+[node name="Head" parent="BodyParts/HeadBone" index="0" unique_id=65726633]
+position = Vector2(-9, -96)
+texture = ExtResource("8_oqyqr")
+
+[node name="AnimationPlayer" parent="BodyParts" parent_id_path=PackedInt32Array(1141699891) index="6" unique_id=1194297198]
+autoplay = &"fly"

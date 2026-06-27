@@ -16,7 +16,8 @@ func _on_area_entered(area : Area2D):
 	if area is ProyectileGrapple:
 		await _finish(area)
 		killed_by_player.emit()
-	if area is GrappleKiller:
+	elif area is GrappleKiller:
+		await _finish(area)
 		killed_by_killer.emit()
 
 func _finish(target_parent : Node2D):

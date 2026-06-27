@@ -6,9 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://stjljdb8fl46" path="res://scenes/player.tscn" id="3_b8r8v"]
 [ext_resource type="Resource" uid="uid://ctkl82uh1xsnb" path="res://dialogs/Level9/Level9Lose.dialogue" id="3_vg0n7"]
 [ext_resource type="PackedScene" uid="uid://bg1cb8cifda4h" path="res://scenes/levels/background.tscn" id="4_vg0n7"]
-[ext_resource type="Texture2D" uid="uid://dgp8xho8xb2r6" path="res://assets/PLACEHOLDERS/Double/block_strong_ciry.png" id="5_7pr46"]
 [ext_resource type="PackedScene" uid="uid://di3etpmd87llx" path="res://scenes/blocks/InvisibleWalls.tscn" id="6_obeh5"]
-[ext_resource type="PackedScene" uid="uid://d22xiwyrkmjcu" path="res://scenes/second_view_cam.tscn" id="9_yq577"]
+[ext_resource type="Texture2D" uid="uid://cabaryv36verj" path="res://assets/FONDOS/Espacio.png" id="7_vbplc"]
+[ext_resource type="PackedScene" uid="uid://dixgvfncilb58" path="res://scenes/robots/robot_space.tscn" id="9_vbplc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g13nb"]
 size = Vector2(150, 8962)
@@ -16,7 +16,6 @@ size = Vector2(150, 8962)
 [node name="Level_template" unique_id=244848219 node_paths=PackedStringArray("player") instance=ExtResource("1_vbplc")]
 player_initial_state = "Fly"
 ui_screen_text = "Fly"
-win_after_music = true
 play_music_on_ready = true
 level_music_name = "boss_full"
 music_name_win = "Ending"
@@ -32,44 +31,47 @@ fail_dialog = ExtResource("3_vg0n7")
 player = NodePath("Player")
 
 [node name="Camera2D" type="Camera2D" parent="." index="0" unique_id=933591887 node_paths=PackedStringArray("target_follow")]
-zoom = Vector2(0.6, 0.6)
+zoom = Vector2(0.35, 0.35)
 process_callback = 0
 limit_enabled = false
 script = ExtResource("2_bpd0v")
 target_follow = NodePath("../Player/CameraMarker")
 
 [node name="Player" parent="." index="1" unique_id=1282337476 instance=ExtResource("3_b8r8v")]
-position = Vector2(105.00001, -120.00001)
+position = Vector2(1200, -951.00006)
 scale = Vector2(0.3, 0.3)
+crosshair_offset_x = 1000.0
 
 [node name="CameraMarker" type="Marker2D" parent="Player" index="4" unique_id=1423218106]
-position = Vector2(0, -800)
 
 [node name="BackgroundLayer" parent="." index="2" unique_id=476540664 instance=ExtResource("4_vg0n7")]
 
 [node name="Background" parent="BackgroundLayer/Control" parent_id_path=PackedInt32Array(476540664, 2038293723) index="0" unique_id=1098504343]
-texture = ExtResource("5_7pr46")
+texture = ExtResource("7_vbplc")
 
 [node name="Terrain" type="Node" parent="." index="3" unique_id=972198966]
 
 [node name="Invisible" parent="Terrain" index="0" unique_id=462407768 instance=ExtResource("6_obeh5")]
 position = Vector2(-75, -1200)
 
+[node name="CollisionShape2D" parent="Terrain/Invisible" index="0" unique_id=1425998938]
+position = Vector2(-300, 14)
+
 [node name="CollisionShape2D2" parent="Terrain/Invisible" index="1" unique_id=607817907]
-position = Vector2(4559, -3224)
+position = Vector2(1352, -825)
 shape = SubResource("RectangleShape2D_g13nb")
 
-[node name="CollisionShape2D3" parent="Terrain/Invisible" index="2" unique_id=1033001078]
-position = Vector2(9120, -1048)
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Terrain/Invisible" index="2" unique_id=1635858968]
+position = Vector2(1278, 1275)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_g13nb")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." index="4" unique_id=1324981923]
+[node name="CollisionShape2D3" parent="Terrain/Invisible" index="3" unique_id=1033001078]
+position = Vector2(2850, 116)
 
-[node name="SecondView" parent="CanvasLayer" index="0" unique_id=1491427061 node_paths=PackedStringArray("world_root") instance=ExtResource("9_yq577")]
-world_root = NodePath("../..")
-
-[node name="Tracking_cam" parent="CanvasLayer/SecondView/SubViewportContainer/SubViewport" parent_id_path=PackedInt32Array(1491427061, 1573429894) index="0" unique_id=1373545733]
-zoom = Vector2(0.1, 0.1)
+[node name="RobotTemplate" parent="." index="4" unique_id=180808173 instance=ExtResource("9_vbplc")]
+position = Vector2(2070, -945.00006)
+scale = Vector2(0.3, 0.3)
 
 [editable path="BackgroundLayer"]
 [editable path="Terrain/Invisible"]
-[editable path="CanvasLayer/SecondView"]
