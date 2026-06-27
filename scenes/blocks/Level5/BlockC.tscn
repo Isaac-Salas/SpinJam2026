@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ciuwgsj2jwdjw"]
 
-[ext_resource type="Texture2D" uid="uid://b4kjyseslfl77" path="res://assets/PLACEHOLDERS/Double/block_blue_gray.png" id="1_x3lcc"]
+[ext_resource type="Texture2D" uid="uid://b1u03rublebhm" path="res://assets/BLOQUES/NIVEL 5/Bloque C.png" id="1_x3lcc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(150, 150)
@@ -14,8 +14,7 @@ collision_mask = 0
 shape = SubResource("RectangleShape2D_g4v7s")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2016050094]
-modulate = Color(0.7, 0.7, 0.7, 1)
 z_index = -20
 z_as_relative = false
-scale = Vector2(1.2, 1.2)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_x3lcc")

@@ -556,112 +556,118 @@ position = Vector2(2475, -225)
 [node name="Platform2" parent="Terrain" index="164" unique_id=458712627 instance=ExtResource("11_p6f4l")]
 position = Vector2(2325, -225)
 
-[node name="Platform29" parent="Terrain" index="165" unique_id=536205604 instance=ExtResource("11_p6f4l")]
+[node name="Platform35" parent="Terrain" index="165" unique_id=397101390 instance=ExtResource("11_p6f4l")]
+position = Vector2(1725, -75)
+
+[node name="Platform36" parent="Terrain" index="166" unique_id=2145711578 instance=ExtResource("11_p6f4l")]
+position = Vector2(6525, -75)
+
+[node name="Platform29" parent="Terrain" index="167" unique_id=536205604 instance=ExtResource("11_p6f4l")]
 position = Vector2(2625, -225)
 
-[node name="Platform30" parent="Terrain" index="166" unique_id=628234448 instance=ExtResource("11_p6f4l")]
+[node name="Platform30" parent="Terrain" index="168" unique_id=628234448 instance=ExtResource("11_p6f4l")]
 position = Vector2(3825, -525)
 
-[node name="Platform31" parent="Terrain" index="167" unique_id=647933619 instance=ExtResource("11_p6f4l")]
+[node name="Platform31" parent="Terrain" index="169" unique_id=647933619 instance=ExtResource("11_p6f4l")]
 position = Vector2(4575, -525)
 
-[node name="Platform32" parent="Terrain" index="168" unique_id=1922214932 instance=ExtResource("11_p6f4l")]
+[node name="Platform32" parent="Terrain" index="170" unique_id=1922214932 instance=ExtResource("11_p6f4l")]
 position = Vector2(5625, -225)
 
-[node name="Platform33" parent="Terrain" index="169" unique_id=164228705 instance=ExtResource("11_p6f4l")]
+[node name="Platform33" parent="Terrain" index="171" unique_id=164228705 instance=ExtResource("11_p6f4l")]
 position = Vector2(7575, -225)
 
-[node name="Platform34" parent="Terrain" index="170" unique_id=121053947 instance=ExtResource("11_p6f4l")]
+[node name="Platform34" parent="Terrain" index="172" unique_id=121053947 instance=ExtResource("11_p6f4l")]
 position = Vector2(8625, -525)
 
-[node name="Platform15" parent="Terrain" index="171" unique_id=911354774 instance=ExtResource("11_p6f4l")]
+[node name="Platform15" parent="Terrain" index="173" unique_id=911354774 instance=ExtResource("11_p6f4l")]
 position = Vector2(2925, -225)
 
-[node name="Platform16" parent="Terrain" index="172" unique_id=428618578 instance=ExtResource("11_p6f4l")]
+[node name="Platform16" parent="Terrain" index="174" unique_id=428618578 instance=ExtResource("11_p6f4l")]
 position = Vector2(2775, -225)
 
-[node name="BlockC4" parent="Terrain" index="173" unique_id=1454307509 instance=ExtResource("10_xdb0i")]
+[node name="BlockC4" parent="Terrain" index="175" unique_id=1454307509 instance=ExtResource("10_xdb0i")]
 position = Vector2(5625, -75)
 
-[node name="BlockC5" parent="Terrain" index="174" unique_id=721913485 instance=ExtResource("10_xdb0i")]
+[node name="BlockC5" parent="Terrain" index="176" unique_id=721913485 instance=ExtResource("10_xdb0i")]
 position = Vector2(5625, -225)
 
-[node name="Platform17" parent="Terrain" index="175" unique_id=2086397192 instance=ExtResource("11_p6f4l")]
+[node name="Platform17" parent="Terrain" index="177" unique_id=2086397192 instance=ExtResource("11_p6f4l")]
 position = Vector2(5475, -225)
 
-[node name="Platform18" parent="Terrain" index="176" unique_id=1984283327 instance=ExtResource("11_p6f4l")]
+[node name="Platform18" parent="Terrain" index="178" unique_id=1984283327 instance=ExtResource("11_p6f4l")]
 position = Vector2(5325, -225)
 
-[node name="Platform19" parent="Terrain" index="177" unique_id=252686909 instance=ExtResource("11_p6f4l")]
+[node name="Platform19" parent="Terrain" index="179" unique_id=252686909 instance=ExtResource("11_p6f4l")]
 position = Vector2(5925, -225)
 
-[node name="Platform20" parent="Terrain" index="178" unique_id=1597343384 instance=ExtResource("11_p6f4l")]
+[node name="Platform20" parent="Terrain" index="180" unique_id=1597343384 instance=ExtResource("11_p6f4l")]
 position = Vector2(5775, -225)
 
-[node name="BlockC18" parent="Terrain" index="179" unique_id=1604960456 instance=ExtResource("10_xdb0i")]
+[node name="BlockC18" parent="Terrain" index="181" unique_id=1604960456 instance=ExtResource("10_xdb0i")]
 position = Vector2(7575, -75)
 
-[node name="BlockC19" parent="Terrain" index="180" unique_id=1145624288 instance=ExtResource("10_xdb0i")]
+[node name="BlockC19" parent="Terrain" index="182" unique_id=1145624288 instance=ExtResource("10_xdb0i")]
 position = Vector2(7575, -225)
 
-[node name="Platform21" parent="Terrain" index="181" unique_id=847095893 instance=ExtResource("11_p6f4l")]
+[node name="Platform21" parent="Terrain" index="183" unique_id=847095893 instance=ExtResource("11_p6f4l")]
 position = Vector2(7425, -225)
 
-[node name="Platform22" parent="Terrain" index="182" unique_id=291869111 instance=ExtResource("11_p6f4l")]
+[node name="Platform22" parent="Terrain" index="184" unique_id=291869111 instance=ExtResource("11_p6f4l")]
 position = Vector2(7275, -225)
 
-[node name="Platform27" parent="Terrain" index="183" unique_id=630769749 instance=ExtResource("11_p6f4l")]
+[node name="Platform27" parent="Terrain" index="185" unique_id=630769749 instance=ExtResource("11_p6f4l")]
 position = Vector2(8175, -525)
 
-[node name="Platform28" parent="Terrain" index="184" unique_id=1099528557 instance=ExtResource("11_p6f4l")]
+[node name="Platform28" parent="Terrain" index="186" unique_id=1099528557 instance=ExtResource("11_p6f4l")]
 position = Vector2(8025, -525)
 
-[node name="Platform23" parent="Terrain" index="185" unique_id=362820560 instance=ExtResource("11_p6f4l")]
+[node name="Platform23" parent="Terrain" index="187" unique_id=362820560 instance=ExtResource("11_p6f4l")]
 position = Vector2(7875, -225)
 
-[node name="Platform24" parent="Terrain" index="186" unique_id=1914796431 instance=ExtResource("11_p6f4l")]
+[node name="Platform24" parent="Terrain" index="188" unique_id=1914796431 instance=ExtResource("11_p6f4l")]
 position = Vector2(7725, -225)
 
-[node name="Platform3" parent="Terrain" index="187" unique_id=1948938330 instance=ExtResource("11_p6f4l")]
+[node name="Platform3" parent="Terrain" index="189" unique_id=1948938330 instance=ExtResource("11_p6f4l")]
 position = Vector2(3675, -525)
 
-[node name="Platform4" parent="Terrain" index="188" unique_id=267747628 instance=ExtResource("11_p6f4l")]
+[node name="Platform4" parent="Terrain" index="190" unique_id=267747628 instance=ExtResource("11_p6f4l")]
 position = Vector2(3525, -525)
 
-[node name="Platform25" parent="Terrain" index="189" unique_id=203702172 instance=ExtResource("11_p6f4l")]
+[node name="Platform25" parent="Terrain" index="191" unique_id=203702172 instance=ExtResource("11_p6f4l")]
 position = Vector2(3375, -525)
 
-[node name="Platform26" parent="Terrain" index="190" unique_id=590596405 instance=ExtResource("11_p6f4l")]
+[node name="Platform26" parent="Terrain" index="192" unique_id=590596405 instance=ExtResource("11_p6f4l")]
 position = Vector2(3225, -525)
 
-[node name="Platform5" parent="Terrain" index="191" unique_id=2033997831 instance=ExtResource("11_p6f4l")]
+[node name="Platform5" parent="Terrain" index="193" unique_id=2033997831 instance=ExtResource("11_p6f4l")]
 position = Vector2(4125, -525)
 
-[node name="Platform6" parent="Terrain" index="192" unique_id=2069271032 instance=ExtResource("11_p6f4l")]
+[node name="Platform6" parent="Terrain" index="194" unique_id=2069271032 instance=ExtResource("11_p6f4l")]
 position = Vector2(3975, -525)
 
-[node name="Platform7" parent="Terrain" index="193" unique_id=2121226297 instance=ExtResource("11_p6f4l")]
+[node name="Platform7" parent="Terrain" index="195" unique_id=2121226297 instance=ExtResource("11_p6f4l")]
 position = Vector2(4425, -525)
 
-[node name="Platform8" parent="Terrain" index="194" unique_id=102956387 instance=ExtResource("11_p6f4l")]
+[node name="Platform8" parent="Terrain" index="196" unique_id=102956387 instance=ExtResource("11_p6f4l")]
 position = Vector2(4275, -525)
 
-[node name="Platform9" parent="Terrain" index="195" unique_id=1077605790 instance=ExtResource("11_p6f4l")]
+[node name="Platform9" parent="Terrain" index="197" unique_id=1077605790 instance=ExtResource("11_p6f4l")]
 position = Vector2(4875, -525)
 
-[node name="Platform10" parent="Terrain" index="196" unique_id=364290459 instance=ExtResource("11_p6f4l")]
+[node name="Platform10" parent="Terrain" index="198" unique_id=364290459 instance=ExtResource("11_p6f4l")]
 position = Vector2(4725, -525)
 
-[node name="Platform11" parent="Terrain" index="197" unique_id=565705824 instance=ExtResource("11_p6f4l")]
+[node name="Platform11" parent="Terrain" index="199" unique_id=565705824 instance=ExtResource("11_p6f4l")]
 position = Vector2(8475, -525)
 
-[node name="Platform12" parent="Terrain" index="198" unique_id=446922269 instance=ExtResource("11_p6f4l")]
+[node name="Platform12" parent="Terrain" index="200" unique_id=446922269 instance=ExtResource("11_p6f4l")]
 position = Vector2(8325, -525)
 
-[node name="Platform13" parent="Terrain" index="199" unique_id=885418012 instance=ExtResource("11_p6f4l")]
+[node name="Platform13" parent="Terrain" index="201" unique_id=885418012 instance=ExtResource("11_p6f4l")]
 position = Vector2(5175, -525)
 
-[node name="Platform14" parent="Terrain" index="200" unique_id=316709008 instance=ExtResource("11_p6f4l")]
+[node name="Platform14" parent="Terrain" index="202" unique_id=316709008 instance=ExtResource("11_p6f4l")]
 position = Vector2(5025, -525)
 
 [node name="Extinguishables" type="Node" parent="." index="4" unique_id=1504734790]

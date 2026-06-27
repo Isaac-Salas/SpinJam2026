@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cc4t1rsdt6kiu"]
 
-[ext_resource type="Texture2D" uid="uid://dgp8xho8xb2r6" path="res://assets/PLACEHOLDERS/Double/block_strong_ciry.png" id="1_cugyx"]
+[ext_resource type="Texture2D" uid="uid://d30yhuxwu6q5y" path="res://assets/BLOQUES/NIVEL 4/Bloque B.png" id="1_cugyx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(150, 150)
@@ -16,5 +16,5 @@ shape = SubResource("RectangleShape2D_g4v7s")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2016050094]
 z_index = -10
 z_as_relative = false
-scale = Vector2(1.2, 1.2)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_cugyx")

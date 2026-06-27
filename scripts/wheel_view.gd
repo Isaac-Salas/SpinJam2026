@@ -36,6 +36,8 @@ class_name WheelControl
 	"grapple" : Color(1.0, 1.0, 1.0, 1.0)
 }
 
+var actions_array : Array[String] = ["move", "jump","shoot","aim","fly", "grapple"]
+
 
 var current_state : String:
 	set(value):
@@ -60,7 +62,18 @@ func _ready() -> void:
 	rotator.rotation_side_change.connect(update_side_indicator)
 	energy_bar_updated.connect(on_update_energy_bar)
 	activate.pressed.connect(_on_bar_button_press)
-	
+
+
+func _input(event: InputEvent) -> void:
+	_check_keys(event)
+
+func _check_keys(event : InputEvent):
+	for action in actions_array:
+		var pascal_action : String = action.to_pascal_case()
+		if event.is_action_pressed(pascal_action):
+			var button : TextureButton = get(action)
+			if not button.disabled:
+				_on_state_button_press(action)
 
 func _on_bar_button_press():
 	bar_button_pressed.emit()

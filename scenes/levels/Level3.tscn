@@ -101,7 +101,7 @@ second_view = NodePath("../../CanvasLayer/SecondView")
 robot = NodePath("..")
 
 [node name="PlayerDetectWin" parent="." index="4" unique_id=1281271033 node_paths=PackedStringArray("level") instance=ExtResource("13_i2tsv")]
-position = Vector2(5018, -890)
+position = Vector2(5018, -888)
 level = NodePath("..")
 lose_on_robot = true
 
@@ -1107,16 +1107,19 @@ position = Vector2(1368, -2408)
 [node name="BlockC18" parent="Terrain" index="330" unique_id=1370502319 instance=ExtResource("8_x3k3d")]
 position = Vector2(1368, -2560)
 
-[node name="Platform3" parent="Terrain" index="331" unique_id=1757799626 instance=ExtResource("12_bs2pm")]
+[node name="BlockC76" parent="Terrain" index="331" unique_id=1023892694 instance=ExtResource("8_x3k3d")]
+position = Vector2(1368, -2560)
+
+[node name="Platform3" parent="Terrain" index="332" unique_id=1757799626 instance=ExtResource("12_bs2pm")]
 position = Vector2(7448, -736)
 
-[node name="Platform4" parent="Terrain" index="332" unique_id=1793922123 instance=ExtResource("12_bs2pm")]
+[node name="Platform4" parent="Terrain" index="333" unique_id=1793922123 instance=ExtResource("12_bs2pm")]
 position = Vector2(7600, -736)
 
-[node name="Platform15" parent="Terrain" index="333" unique_id=934973299 instance=ExtResource("12_bs2pm")]
+[node name="Platform15" parent="Terrain" index="334" unique_id=934973299 instance=ExtResource("12_bs2pm")]
 position = Vector2(7752, -736)
 
-[node name="Platform16" parent="Terrain" index="334" unique_id=971933136 instance=ExtResource("12_bs2pm")]
+[node name="Platform16" parent="Terrain" index="335" unique_id=971933136 instance=ExtResource("12_bs2pm")]
 position = Vector2(7904, -736)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." index="6" unique_id=1923618080]

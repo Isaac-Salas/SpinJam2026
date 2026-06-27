@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ccmy2ja5uicgv"]
 
-[ext_resource type="Texture2D" uid="uid://i11o6di8bfq7" path="res://assets/PLACEHOLDERS/Double/bridge.png" id="1_0n01j"]
-[ext_resource type="Texture2D" uid="uid://wu36bsswh3tm" path="res://assets/PLACEHOLDERS/Double/sign_right.png" id="2_kb0xy"]
+[ext_resource type="Texture2D" uid="uid://cl0w7vuicrplq" path="res://assets/BLOQUES/NIVEL 4/Plataforma.png" id="1_kb0xy"]
+[ext_resource type="Texture2D" uid="uid://6p3hvo5qy802" path="res://assets/BLOQUES/NIVEL 5/Plataforma triangulo.png" id="2_kb0xy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(150, 150)
@@ -18,13 +18,12 @@ one_way_collision = true
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2016050094]
 z_index = -10
 z_as_relative = false
-scale = Vector2(1.2, 1.2)
-texture = ExtResource("1_0n01j")
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_kb0xy")
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=95431454]
 z_index = -10
 z_as_relative = false
 position = Vector2(-8.5265033e-14, -38.000004)
-rotation = -1.5707964
-scale = Vector2(0.385, 0.385)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_kb0xy")

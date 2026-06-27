@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dwswsr5q8tb7k"]
 
 [ext_resource type="Script" uid="uid://7wb72d03mqv7" path="res://scripts/player_detect_win.gd" id="1_mrtd8"]
-[ext_resource type="Texture2D" uid="uid://tlftyprlgmwa" path="res://assets/PLACEHOLDERS/Double/flag_red_a.png" id="2_xuko4"]
+[ext_resource type="Texture2D" uid="uid://d62rbm6pvie6" path="res://assets/Bandere.png" id="2_xuko4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rjrju"]
 size = Vector2(150, 150)
@@ -13,5 +13,5 @@ script = ExtResource("1_mrtd8")
 shape = SubResource("RectangleShape2D_rjrju")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=263965927]
-scale = Vector2(1.17, 1.17)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_xuko4")

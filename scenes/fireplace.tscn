@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://c2ixyiqwdsil6"]
 
-[ext_resource type="Texture2D" uid="uid://dcq1bdn5w57kd" path="res://assets/PLACEHOLDERS/Double/Wood.png" id="1_ng1xj"]
 [ext_resource type="Script" uid="uid://bd4m5nq3c41li" path="res://scripts/extinguishable_body.gd" id="2_2g5uf"]
+[ext_resource type="Texture2D" uid="uid://5xa7w4jpdigc" path="res://assets/BLOQUES/NIVEL 4/Hoguera 1.png" id="2_ng1xj"]
+[ext_resource type="Texture2D" uid="uid://cjjqw2dxomrnf" path="res://assets/BLOQUES/NIVEL 4/Hoguera 2.png" id="3_2g5uf"]
 [ext_resource type="Texture2D" uid="uid://crjugjihrxmlr" path="res://assets/ROBOT FUEGO/Flama.png" id="3_ydtw1"]
 [ext_resource type="Material" uid="uid://d0n0l7tewxfrh" path="res://particles/ExtinguisherProyectile.tres" id="4_ybvxn"]
 [ext_resource type="Texture2D" uid="uid://wmheui8thwhn" path="res://assets/light/light.png" id="5_w0ah3"]
@@ -18,13 +19,13 @@ script = ExtResource("2_2g5uf")
 shape = SubResource("RectangleShape2D_reskh")
 
 [node name="Wood" type="Sprite2D" parent="." unique_id=1059734652]
-position = Vector2(0, 15)
-texture = ExtResource("1_ng1xj")
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_ng1xj")
 
 [node name="Fire" type="Sprite2D" parent="." unique_id=604541059]
 position = Vector2(0, -15)
-scale = Vector2(0.6, 0.6)
-texture = ExtResource("3_ydtw1")
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_2g5uf")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=2049233183]
 emitting = false

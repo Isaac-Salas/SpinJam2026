@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b7bijipic5ffx"]
 
-[ext_resource type="Texture2D" uid="uid://d37pb38kyu3vx" path="res://assets/PLACEHOLDERS/Double/terrain_grass_block.png" id="1_fg4os"]
+[ext_resource type="Texture2D" uid="uid://dxe6p2u8be548" path="res://assets/BLOQUES/NIVEL 3/Bloque A.png" id="1_md0wf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(150, 150)
@@ -15,5 +15,5 @@ shape = SubResource("RectangleShape2D_g4v7s")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2016050094]
 z_index = -10
 z_as_relative = false
-scale = Vector2(1.2, 1.2)
-texture = ExtResource("1_fg4os")
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_md0wf")
