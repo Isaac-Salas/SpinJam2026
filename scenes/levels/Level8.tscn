@@ -11,6 +11,10 @@
 [ext_resource type="Texture2D" uid="uid://dhyg55xjwms2w" path="res://assets/FONDOS/Circo.png" id="7_qyvhn"]
 [ext_resource type="PackedScene" uid="uid://cc4t1rsdt6kiu" path="res://scenes/blocks/Level7/BlockB.tscn" id="8_q2gnw"]
 [ext_resource type="PackedScene" uid="uid://d22xiwyrkmjcu" path="res://scenes/second_view_cam.tscn" id="9_0xlr4"]
+[ext_resource type="Script" uid="uid://d1svsw3swkyvm" path="res://scripts/SpawnManager.gd" id="12_0xit0"]
+[ext_resource type="Script" uid="uid://xi0ia5j43egw" path="res://scripts/spawner.gd" id="12_keegh"]
+[ext_resource type="PackedScene" uid="uid://cf6ctm4v1ly8s" path="res://scenes/kitten.tscn" id="14_tfacm"]
+[ext_resource type="Script" uid="uid://d3kv0fmvjdvth" path="res://scripts/make_spawn_time.gd" id="15_jyp1i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g13nb"]
 size = Vector2(150, 8962)
@@ -499,6 +503,24 @@ world_root = NodePath("../..")
 
 [node name="Tracking_cam" parent="CanvasLayer/SecondView/SubViewportContainer/SubViewport" parent_id_path=PackedInt32Array(1491427061, 1573429894) index="0" unique_id=1373545733]
 zoom = Vector2(0.1, 0.1)
+
+[node name="SpawnManager" type="Node2D" parent="." index="5" unique_id=129560185]
+script = ExtResource("12_0xit0")
+
+[node name="Spawner" type="Node2D" parent="SpawnManager" index="0" unique_id=585548533 node_paths=PackedStringArray("spawn_manager")]
+script = ExtResource("12_keegh")
+spawn_scene = ExtResource("14_tfacm")
+spawn_manager = NodePath("..")
+
+[node name="SpawnHere" type="Marker2D" parent="SpawnManager/Spawner" index="0" unique_id=1812028249]
+position = Vector2(720, -133)
+
+[node name="MakeSpawnTime" type="Node" parent="SpawnManager" index="1" unique_id=1449608366 node_paths=PackedStringArray("spawn_manager", "level")]
+script = ExtResource("15_jyp1i")
+spawn_manager = NodePath("..")
+level = NodePath("../..")
+
+[node name="Timer" type="Timer" parent="SpawnManager/MakeSpawnTime" index="0" unique_id=2038961972]
 
 [editable path="BackgroundLayer"]
 [editable path="Terrain/Invisible"]

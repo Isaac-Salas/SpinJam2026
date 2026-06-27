@@ -16,7 +16,6 @@ class_name PlayerBodyParts
 @onready var p_rocket_r: GPUParticles2D = $LegRBone/Propulsor/GPUParticles2D
 @onready var p_rocket_l: GPUParticles2D = $LegLBone/Propulsor/GPUParticles2D
 
-var original_scale : Vector2
 
 func _ready() -> void:
 	_toggle_stumpy_mode(stumpy_mode)
@@ -27,10 +26,11 @@ func toggle_rocket_particles(value : bool):
 	p_rocket_r.emitting = value
 
 func _tween_scale():
-	original_scale = self.scale
+	var original_direction = sign(self.scale.x)
+	var reset_scale := Vector2(original_direction,1.0)
 	var tween : Tween = create_tween()
-	tween.tween_property(self,"scale",self.scale*1.1,0.1)
-	tween.tween_property(self,"scale",original_scale,0.1)
+	tween.tween_property(self,"scale",reset_scale*1.2,0.1)
+	tween.tween_property(self,"scale",reset_scale,0.1)
 	await tween.finished
 	tween.kill()
 
