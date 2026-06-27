@@ -16,7 +16,8 @@ func _initialize_manager():
 	_spawn_object()
 
 func _update_count():
-	despawns_to_win =- 1
+	despawns_to_win -= 1
+	print(despawns_to_win)
 	if despawns_to_win == 0:
 		level.win()
 		self.queue_free()

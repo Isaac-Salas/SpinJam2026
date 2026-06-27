@@ -520,8 +520,6 @@ script = ExtResource("15_jyp1i")
 spawn_manager = NodePath("..")
 level = NodePath("../..")
 
-[node name="Timer" type="Timer" parent="SpawnManager/MakeSpawnTime" index="0" unique_id=2038961972]
-
 [editable path="BackgroundLayer"]
 [editable path="Terrain/Invisible"]
 [editable path="CanvasLayer/SecondView"]
