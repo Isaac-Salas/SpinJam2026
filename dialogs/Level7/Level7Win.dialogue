@@ -5,7 +5,7 @@ do OverlayUI.go_to_next_scene()
 News Anchor: One of the many wonders is getting to meet the great [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#adc4ff]Spinamo[/color][/wave][/outline_size], who will be outside the circus to greet all the children.
 News Anchor: On top of that, our hero wants to try to prevent one of the worst tragedies that can happen to anyone who visits the circus...
 News Anchor: [outline_size=10][wave amp=50.0 freq=15.0 connected=0][color=#ef604a]ACCIDENTLY LETTING GO OF THEIR BALLOON!!![/color][/wave][/outline_size]
-News Anchor: Good thing our clever friend is always prepared—this time with [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#ef604a]rockets[/color][/wave][/outline_size] that let him [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#ef604a]fly and reach all the loose balloons[/color][/wave][/outline_size] with great precision.
+News Anchor: Good thing our clever friend is always prepared—this time with [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#ef604a]rockets[/color][/wave][/outline_size] that let him [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#ef604a]fly[/color][/wave][/outline_size] and [outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#19baff]reach[/color][/wave][/outline_size] all the loose balloons before they touch the clouds!.
 News Anchor : For everyone who decided to enjoy the circus from the comfort of their own home, stay with us and let's watch another act of kindness from our dear friend.
 do OverlayUI.transitions.finish_transition()
 do OverlayUI.current_scene.start_music()

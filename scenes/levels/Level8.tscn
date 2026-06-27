@@ -60,7 +60,7 @@ texture = ExtResource("7_qyvhn")
 position = Vector2(-75, -1200)
 
 [node name="CollisionShape2D2" parent="Terrain/Invisible" index="1" unique_id=607817907]
-position = Vector2(4559, -3224)
+position = Vector2(1155, -345)
 shape = SubResource("RectangleShape2D_g13nb")
 
 [node name="CollisionShape2D3" parent="Terrain/Invisible" index="2" unique_id=1033001078]
@@ -135,421 +135,187 @@ position = Vector2(3225, 75)
 [node name="BlockA29" parent="Terrain" index="23" unique_id=31430897 instance=ExtResource("7_1xpr3")]
 position = Vector2(3375, 75)
 
-[node name="BlockA30" parent="Terrain" index="24" unique_id=230152495 instance=ExtResource("7_1xpr3")]
-position = Vector2(3525, 75)
-
-[node name="BlockA31" parent="Terrain" index="25" unique_id=1569334932 instance=ExtResource("7_1xpr3")]
-position = Vector2(3675, 75)
-
-[node name="BlockA32" parent="Terrain" index="26" unique_id=807561831 instance=ExtResource("7_1xpr3")]
-position = Vector2(3825, 75)
-
-[node name="BlockA33" parent="Terrain" index="27" unique_id=991190983 instance=ExtResource("7_1xpr3")]
-position = Vector2(3975, 75)
-
-[node name="BlockA34" parent="Terrain" index="28" unique_id=1962740945 instance=ExtResource("7_1xpr3")]
-position = Vector2(4125, 75)
-
-[node name="BlockA35" parent="Terrain" index="29" unique_id=1733725112 instance=ExtResource("7_1xpr3")]
-position = Vector2(4275, 75)
-
-[node name="BlockA36" parent="Terrain" index="30" unique_id=1000894686 instance=ExtResource("7_1xpr3")]
-position = Vector2(4425, 75)
-
-[node name="BlockA37" parent="Terrain" index="31" unique_id=1864238912 instance=ExtResource("7_1xpr3")]
-position = Vector2(4575, 75)
-
-[node name="BlockA38" parent="Terrain" index="32" unique_id=1147607461 instance=ExtResource("7_1xpr3")]
-position = Vector2(4725, 75)
-
-[node name="BlockA39" parent="Terrain" index="33" unique_id=1811490977 instance=ExtResource("7_1xpr3")]
-position = Vector2(4875, 75)
-
-[node name="BlockA40" parent="Terrain" index="34" unique_id=666293003 instance=ExtResource("7_1xpr3")]
-position = Vector2(5025, 75)
-
-[node name="BlockA41" parent="Terrain" index="35" unique_id=419840506 instance=ExtResource("7_1xpr3")]
-position = Vector2(5175, 75)
-
-[node name="BlockA42" parent="Terrain" index="36" unique_id=86984729 instance=ExtResource("7_1xpr3")]
-position = Vector2(5325, 75)
-
-[node name="BlockA43" parent="Terrain" index="37" unique_id=196107106 instance=ExtResource("7_1xpr3")]
-position = Vector2(5475, 75)
-
-[node name="BlockA44" parent="Terrain" index="38" unique_id=411368865 instance=ExtResource("7_1xpr3")]
-position = Vector2(5625, 75)
-
-[node name="BlockA45" parent="Terrain" index="39" unique_id=1518990670 instance=ExtResource("7_1xpr3")]
-position = Vector2(5775, 75)
-
-[node name="BlockA46" parent="Terrain" index="40" unique_id=1386009968 instance=ExtResource("7_1xpr3")]
-position = Vector2(5925, 75)
-
-[node name="BlockA47" parent="Terrain" index="41" unique_id=1574682962 instance=ExtResource("7_1xpr3")]
-position = Vector2(6075, 75)
-
-[node name="BlockA48" parent="Terrain" index="42" unique_id=1106632717 instance=ExtResource("7_1xpr3")]
-position = Vector2(6225, 75)
-
-[node name="BlockA49" parent="Terrain" index="43" unique_id=1476451263 instance=ExtResource("7_1xpr3")]
-position = Vector2(6375, 75)
-
-[node name="BlockA50" parent="Terrain" index="44" unique_id=671015516 instance=ExtResource("7_1xpr3")]
-position = Vector2(6525, 75)
-
-[node name="BlockA51" parent="Terrain" index="45" unique_id=883933895 instance=ExtResource("7_1xpr3")]
-position = Vector2(6675, 75)
-
-[node name="BlockA52" parent="Terrain" index="46" unique_id=5351724 instance=ExtResource("7_1xpr3")]
-position = Vector2(6825, 75)
-
-[node name="BlockA53" parent="Terrain" index="47" unique_id=1426803031 instance=ExtResource("7_1xpr3")]
-position = Vector2(6975, 75)
-
-[node name="BlockA54" parent="Terrain" index="48" unique_id=1653165754 instance=ExtResource("7_1xpr3")]
-position = Vector2(7125, 75)
-
-[node name="BlockA55" parent="Terrain" index="49" unique_id=1890463113 instance=ExtResource("7_1xpr3")]
-position = Vector2(7275, 75)
-
-[node name="BlockA56" parent="Terrain" index="50" unique_id=777773807 instance=ExtResource("7_1xpr3")]
-position = Vector2(7425, 75)
-
-[node name="BlockA57" parent="Terrain" index="51" unique_id=465086377 instance=ExtResource("7_1xpr3")]
-position = Vector2(7575, 75)
-
-[node name="BlockA58" parent="Terrain" index="52" unique_id=622686056 instance=ExtResource("7_1xpr3")]
-position = Vector2(7725, 75)
-
-[node name="BlockA59" parent="Terrain" index="53" unique_id=30322782 instance=ExtResource("7_1xpr3")]
-position = Vector2(7875, 75)
-
-[node name="BlockA60" parent="Terrain" index="54" unique_id=1355681638 instance=ExtResource("7_1xpr3")]
-position = Vector2(8025, 75)
-
-[node name="BlockA61" parent="Terrain" index="55" unique_id=1277193853 instance=ExtResource("7_1xpr3")]
-position = Vector2(8175, 75)
-
-[node name="BlockA62" parent="Terrain" index="56" unique_id=1168023478 instance=ExtResource("7_1xpr3")]
-position = Vector2(8325, 75)
-
-[node name="BlockA63" parent="Terrain" index="57" unique_id=1853870198 instance=ExtResource("7_1xpr3")]
-position = Vector2(8475, 75)
-
-[node name="BlockA64" parent="Terrain" index="58" unique_id=1523147748 instance=ExtResource("7_1xpr3")]
-position = Vector2(8625, 75)
-
-[node name="BlockA65" parent="Terrain" index="59" unique_id=610761519 instance=ExtResource("7_1xpr3")]
-position = Vector2(8775, 75)
-
-[node name="BlockA66" parent="Terrain" index="60" unique_id=1140354984 instance=ExtResource("7_1xpr3")]
-position = Vector2(8925, 75)
-
-[node name="BlockA67" parent="Terrain" index="61" unique_id=1843703318 instance=ExtResource("7_1xpr3")]
-position = Vector2(9075, 75)
-
-[node name="BlockA68" parent="Terrain" index="62" unique_id=1563923528 instance=ExtResource("7_1xpr3")]
-position = Vector2(9225, 75)
-
-[node name="BlockA69" parent="Terrain" index="63" unique_id=2000917524 instance=ExtResource("7_1xpr3")]
-position = Vector2(9375, 75)
-
-[node name="BlockA70" parent="Terrain" index="64" unique_id=1567490514 instance=ExtResource("7_1xpr3")]
-position = Vector2(9525, 75)
-
-[node name="BlockA71" parent="Terrain" index="65" unique_id=1119608792 instance=ExtResource("7_1xpr3")]
-position = Vector2(9675, 75)
-
-[node name="BlockA72" parent="Terrain" index="66" unique_id=1985289666 instance=ExtResource("7_1xpr3")]
-position = Vector2(9825, 75)
-
-[node name="BlockA2" parent="Terrain" index="67" unique_id=1089797783 instance=ExtResource("7_1xpr3")]
+[node name="BlockA2" parent="Terrain" index="24" unique_id=1089797783 instance=ExtResource("7_1xpr3")]
 position = Vector2(-75, 75)
 
-[node name="BlockA3" parent="Terrain" index="68" unique_id=310116807 instance=ExtResource("7_1xpr3")]
+[node name="BlockA3" parent="Terrain" index="25" unique_id=310116807 instance=ExtResource("7_1xpr3")]
 position = Vector2(-225, 75)
 
-[node name="BlockA4" parent="Terrain" index="69" unique_id=1821200464 instance=ExtResource("7_1xpr3")]
+[node name="BlockA4" parent="Terrain" index="26" unique_id=1821200464 instance=ExtResource("7_1xpr3")]
 position = Vector2(-375, 75)
 
-[node name="BlockA5" parent="Terrain" index="70" unique_id=1341170282 instance=ExtResource("7_1xpr3")]
+[node name="BlockA5" parent="Terrain" index="27" unique_id=1341170282 instance=ExtResource("7_1xpr3")]
 position = Vector2(-525, 75)
 
-[node name="BlockA6" parent="Terrain" index="71" unique_id=894714149 instance=ExtResource("7_1xpr3")]
+[node name="BlockA6" parent="Terrain" index="28" unique_id=894714149 instance=ExtResource("7_1xpr3")]
 position = Vector2(-675, 75)
 
-[node name="BlockA7" parent="Terrain" index="72" unique_id=1100851602 instance=ExtResource("7_1xpr3")]
+[node name="BlockA7" parent="Terrain" index="29" unique_id=1100851602 instance=ExtResource("7_1xpr3")]
 position = Vector2(-825, 75)
 
-[node name="BlockA73" parent="Terrain" index="73" unique_id=97598287 instance=ExtResource("8_q2gnw")]
+[node name="BlockA73" parent="Terrain" index="30" unique_id=97598287 instance=ExtResource("8_q2gnw")]
 position = Vector2(-825, 225)
 
-[node name="BlockA74" parent="Terrain" index="74" unique_id=696633014 instance=ExtResource("8_q2gnw")]
+[node name="BlockA74" parent="Terrain" index="31" unique_id=696633014 instance=ExtResource("8_q2gnw")]
 position = Vector2(-675, 225)
 
-[node name="BlockA75" parent="Terrain" index="75" unique_id=172185956 instance=ExtResource("8_q2gnw")]
+[node name="BlockA75" parent="Terrain" index="32" unique_id=172185956 instance=ExtResource("8_q2gnw")]
 position = Vector2(-525, 225)
 
-[node name="BlockA76" parent="Terrain" index="76" unique_id=357057195 instance=ExtResource("8_q2gnw")]
+[node name="BlockA76" parent="Terrain" index="33" unique_id=357057195 instance=ExtResource("8_q2gnw")]
 position = Vector2(-375, 225)
 
-[node name="BlockA77" parent="Terrain" index="77" unique_id=968346198 instance=ExtResource("8_q2gnw")]
+[node name="BlockA30" parent="Terrain" index="34" unique_id=2010418410 instance=ExtResource("7_1xpr3")]
+position = Vector2(-975, 75)
+
+[node name="BlockA31" parent="Terrain" index="35" unique_id=1020256369 instance=ExtResource("7_1xpr3")]
+position = Vector2(-1125, 75)
+
+[node name="BlockA32" parent="Terrain" index="36" unique_id=1896401863 instance=ExtResource("7_1xpr3")]
+position = Vector2(-1275, 75)
+
+[node name="BlockA33" parent="Terrain" index="37" unique_id=903335847 instance=ExtResource("7_1xpr3")]
+position = Vector2(-1425, 75)
+
+[node name="BlockA102" parent="Terrain" index="38" unique_id=1301086078 instance=ExtResource("8_q2gnw")]
+position = Vector2(-1425, 225)
+
+[node name="BlockA103" parent="Terrain" index="39" unique_id=688715768 instance=ExtResource("8_q2gnw")]
+position = Vector2(-1275, 225)
+
+[node name="BlockA104" parent="Terrain" index="40" unique_id=1462035006 instance=ExtResource("8_q2gnw")]
+position = Vector2(-1125, 225)
+
+[node name="BlockA105" parent="Terrain" index="41" unique_id=76124361 instance=ExtResource("8_q2gnw")]
+position = Vector2(-975, 225)
+
+[node name="BlockA77" parent="Terrain" index="42" unique_id=968346198 instance=ExtResource("8_q2gnw")]
 position = Vector2(-225, 225)
 
-[node name="BlockA78" parent="Terrain" index="78" unique_id=1712061515 instance=ExtResource("8_q2gnw")]
+[node name="BlockA78" parent="Terrain" index="43" unique_id=1712061515 instance=ExtResource("8_q2gnw")]
 position = Vector2(-75, 225)
 
-[node name="BlockA79" parent="Terrain" index="79" unique_id=1242899298 instance=ExtResource("8_q2gnw")]
+[node name="BlockA79" parent="Terrain" index="44" unique_id=1242899298 instance=ExtResource("8_q2gnw")]
 position = Vector2(75, 225)
 
-[node name="BlockA80" parent="Terrain" index="80" unique_id=1456442324 instance=ExtResource("8_q2gnw")]
+[node name="BlockA80" parent="Terrain" index="45" unique_id=1456442324 instance=ExtResource("8_q2gnw")]
 position = Vector2(225, 225)
 
-[node name="BlockA81" parent="Terrain" index="81" unique_id=991335328 instance=ExtResource("8_q2gnw")]
+[node name="BlockA81" parent="Terrain" index="46" unique_id=991335328 instance=ExtResource("8_q2gnw")]
 position = Vector2(375, 225)
 
-[node name="BlockA82" parent="Terrain" index="82" unique_id=775054357 instance=ExtResource("8_q2gnw")]
+[node name="BlockA82" parent="Terrain" index="47" unique_id=775054357 instance=ExtResource("8_q2gnw")]
 position = Vector2(525, 225)
 
-[node name="BlockA83" parent="Terrain" index="83" unique_id=305741489 instance=ExtResource("8_q2gnw")]
+[node name="BlockA83" parent="Terrain" index="48" unique_id=305741489 instance=ExtResource("8_q2gnw")]
 position = Vector2(675, 225)
 
-[node name="BlockA84" parent="Terrain" index="84" unique_id=58841273 instance=ExtResource("8_q2gnw")]
+[node name="BlockA84" parent="Terrain" index="49" unique_id=58841273 instance=ExtResource("8_q2gnw")]
 position = Vector2(825, 225)
 
-[node name="BlockA85" parent="Terrain" index="85" unique_id=1801513056 instance=ExtResource("8_q2gnw")]
+[node name="BlockA85" parent="Terrain" index="50" unique_id=1801513056 instance=ExtResource("8_q2gnw")]
 position = Vector2(975, 225)
 
-[node name="BlockA86" parent="Terrain" index="86" unique_id=1253390551 instance=ExtResource("8_q2gnw")]
+[node name="BlockA86" parent="Terrain" index="51" unique_id=1253390551 instance=ExtResource("8_q2gnw")]
 position = Vector2(1125, 225)
 
-[node name="BlockA87" parent="Terrain" index="87" unique_id=1864263816 instance=ExtResource("8_q2gnw")]
+[node name="BlockA87" parent="Terrain" index="52" unique_id=1864263816 instance=ExtResource("8_q2gnw")]
 position = Vector2(1275, 225)
 
-[node name="BlockA88" parent="Terrain" index="88" unique_id=221763624 instance=ExtResource("8_q2gnw")]
+[node name="BlockA88" parent="Terrain" index="53" unique_id=221763624 instance=ExtResource("8_q2gnw")]
 position = Vector2(1425, 225)
 
-[node name="BlockA89" parent="Terrain" index="89" unique_id=797606714 instance=ExtResource("8_q2gnw")]
+[node name="BlockA89" parent="Terrain" index="54" unique_id=797606714 instance=ExtResource("8_q2gnw")]
 position = Vector2(1575, 225)
 
-[node name="BlockA90" parent="Terrain" index="90" unique_id=1083320952 instance=ExtResource("8_q2gnw")]
+[node name="BlockA90" parent="Terrain" index="55" unique_id=1083320952 instance=ExtResource("8_q2gnw")]
 position = Vector2(1725, 225)
 
-[node name="BlockA91" parent="Terrain" index="91" unique_id=709015123 instance=ExtResource("8_q2gnw")]
+[node name="BlockA91" parent="Terrain" index="56" unique_id=709015123 instance=ExtResource("8_q2gnw")]
 position = Vector2(1875, 225)
 
-[node name="BlockA92" parent="Terrain" index="92" unique_id=1872479443 instance=ExtResource("8_q2gnw")]
+[node name="BlockA92" parent="Terrain" index="57" unique_id=1872479443 instance=ExtResource("8_q2gnw")]
 position = Vector2(2025, 225)
 
-[node name="BlockA93" parent="Terrain" index="93" unique_id=1504691493 instance=ExtResource("8_q2gnw")]
+[node name="BlockA93" parent="Terrain" index="58" unique_id=1504691493 instance=ExtResource("8_q2gnw")]
 position = Vector2(2175, 225)
 
-[node name="BlockA94" parent="Terrain" index="94" unique_id=1404394247 instance=ExtResource("8_q2gnw")]
+[node name="BlockA94" parent="Terrain" index="59" unique_id=1404394247 instance=ExtResource("8_q2gnw")]
 position = Vector2(2325, 225)
 
-[node name="BlockA95" parent="Terrain" index="95" unique_id=1244955361 instance=ExtResource("8_q2gnw")]
+[node name="BlockA95" parent="Terrain" index="60" unique_id=1244955361 instance=ExtResource("8_q2gnw")]
 position = Vector2(2475, 225)
 
-[node name="BlockA96" parent="Terrain" index="96" unique_id=1191768935 instance=ExtResource("8_q2gnw")]
+[node name="BlockA96" parent="Terrain" index="61" unique_id=1191768935 instance=ExtResource("8_q2gnw")]
 position = Vector2(2625, 225)
 
-[node name="BlockA97" parent="Terrain" index="97" unique_id=1638979611 instance=ExtResource("8_q2gnw")]
+[node name="BlockA97" parent="Terrain" index="62" unique_id=1638979611 instance=ExtResource("8_q2gnw")]
 position = Vector2(2775, 225)
 
-[node name="BlockA98" parent="Terrain" index="98" unique_id=819749476 instance=ExtResource("8_q2gnw")]
+[node name="BlockA98" parent="Terrain" index="63" unique_id=819749476 instance=ExtResource("8_q2gnw")]
 position = Vector2(2925, 225)
 
-[node name="BlockA99" parent="Terrain" index="99" unique_id=2063400370 instance=ExtResource("8_q2gnw")]
+[node name="BlockA99" parent="Terrain" index="64" unique_id=2063400370 instance=ExtResource("8_q2gnw")]
 position = Vector2(3075, 225)
 
-[node name="BlockA100" parent="Terrain" index="100" unique_id=1616436847 instance=ExtResource("8_q2gnw")]
+[node name="BlockA100" parent="Terrain" index="65" unique_id=1616436847 instance=ExtResource("8_q2gnw")]
 position = Vector2(3225, 225)
 
-[node name="BlockA101" parent="Terrain" index="101" unique_id=953503945 instance=ExtResource("8_q2gnw")]
+[node name="BlockA101" parent="Terrain" index="66" unique_id=953503945 instance=ExtResource("8_q2gnw")]
 position = Vector2(3375, 225)
 
-[node name="BlockA102" parent="Terrain" index="102" unique_id=379058026 instance=ExtResource("8_q2gnw")]
-position = Vector2(3525, 225)
-
-[node name="BlockA103" parent="Terrain" index="103" unique_id=451700029 instance=ExtResource("8_q2gnw")]
-position = Vector2(3675, 225)
-
-[node name="BlockA104" parent="Terrain" index="104" unique_id=436453865 instance=ExtResource("8_q2gnw")]
-position = Vector2(3825, 225)
-
-[node name="BlockA105" parent="Terrain" index="105" unique_id=596836683 instance=ExtResource("8_q2gnw")]
-position = Vector2(3975, 225)
-
-[node name="BlockA106" parent="Terrain" index="106" unique_id=27925451 instance=ExtResource("8_q2gnw")]
-position = Vector2(4125, 225)
-
-[node name="BlockA107" parent="Terrain" index="107" unique_id=2020155763 instance=ExtResource("8_q2gnw")]
-position = Vector2(4275, 225)
-
-[node name="BlockA108" parent="Terrain" index="108" unique_id=1058780289 instance=ExtResource("8_q2gnw")]
-position = Vector2(4425, 225)
-
-[node name="BlockA109" parent="Terrain" index="109" unique_id=164380248 instance=ExtResource("8_q2gnw")]
-position = Vector2(4575, 225)
-
-[node name="BlockA110" parent="Terrain" index="110" unique_id=977864358 instance=ExtResource("8_q2gnw")]
-position = Vector2(4725, 225)
-
-[node name="BlockA111" parent="Terrain" index="111" unique_id=653567595 instance=ExtResource("8_q2gnw")]
-position = Vector2(4875, 225)
-
-[node name="BlockA112" parent="Terrain" index="112" unique_id=1497044120 instance=ExtResource("8_q2gnw")]
-position = Vector2(5025, 225)
-
-[node name="BlockA113" parent="Terrain" index="113" unique_id=1141086290 instance=ExtResource("8_q2gnw")]
-position = Vector2(5175, 225)
-
-[node name="BlockA114" parent="Terrain" index="114" unique_id=637288360 instance=ExtResource("8_q2gnw")]
-position = Vector2(5325, 225)
-
-[node name="BlockA115" parent="Terrain" index="115" unique_id=605598224 instance=ExtResource("8_q2gnw")]
-position = Vector2(5475, 225)
-
-[node name="BlockA116" parent="Terrain" index="116" unique_id=349409663 instance=ExtResource("8_q2gnw")]
-position = Vector2(5625, 225)
-
-[node name="BlockA117" parent="Terrain" index="117" unique_id=737006712 instance=ExtResource("8_q2gnw")]
-position = Vector2(5775, 225)
-
-[node name="BlockA118" parent="Terrain" index="118" unique_id=554845561 instance=ExtResource("8_q2gnw")]
-position = Vector2(5925, 225)
-
-[node name="BlockA119" parent="Terrain" index="119" unique_id=1776390002 instance=ExtResource("8_q2gnw")]
-position = Vector2(6075, 225)
-
-[node name="BlockA120" parent="Terrain" index="120" unique_id=213480792 instance=ExtResource("8_q2gnw")]
-position = Vector2(6225, 225)
-
-[node name="BlockA121" parent="Terrain" index="121" unique_id=82790315 instance=ExtResource("8_q2gnw")]
-position = Vector2(6375, 225)
-
-[node name="BlockA122" parent="Terrain" index="122" unique_id=768272010 instance=ExtResource("8_q2gnw")]
-position = Vector2(6525, 225)
-
-[node name="BlockA123" parent="Terrain" index="123" unique_id=167443078 instance=ExtResource("8_q2gnw")]
-position = Vector2(6675, 225)
-
-[node name="BlockA124" parent="Terrain" index="124" unique_id=1674839379 instance=ExtResource("8_q2gnw")]
-position = Vector2(6825, 225)
-
-[node name="BlockA125" parent="Terrain" index="125" unique_id=1507754130 instance=ExtResource("8_q2gnw")]
-position = Vector2(6975, 225)
-
-[node name="BlockA126" parent="Terrain" index="126" unique_id=698763615 instance=ExtResource("8_q2gnw")]
-position = Vector2(7125, 225)
-
-[node name="BlockA127" parent="Terrain" index="127" unique_id=44979955 instance=ExtResource("8_q2gnw")]
-position = Vector2(7275, 225)
-
-[node name="BlockA128" parent="Terrain" index="128" unique_id=1202491017 instance=ExtResource("8_q2gnw")]
-position = Vector2(7425, 225)
-
-[node name="BlockA129" parent="Terrain" index="129" unique_id=127058298 instance=ExtResource("8_q2gnw")]
-position = Vector2(7575, 225)
-
-[node name="BlockA130" parent="Terrain" index="130" unique_id=630628146 instance=ExtResource("8_q2gnw")]
-position = Vector2(7725, 225)
-
-[node name="BlockA131" parent="Terrain" index="131" unique_id=350043060 instance=ExtResource("8_q2gnw")]
-position = Vector2(7875, 225)
-
-[node name="BlockA132" parent="Terrain" index="132" unique_id=1220918291 instance=ExtResource("8_q2gnw")]
-position = Vector2(8025, 225)
-
-[node name="BlockA133" parent="Terrain" index="133" unique_id=814930461 instance=ExtResource("8_q2gnw")]
-position = Vector2(8175, 225)
-
-[node name="BlockA134" parent="Terrain" index="134" unique_id=914601605 instance=ExtResource("8_q2gnw")]
-position = Vector2(8325, 225)
-
-[node name="BlockA135" parent="Terrain" index="135" unique_id=2087442488 instance=ExtResource("8_q2gnw")]
-position = Vector2(8475, 225)
-
-[node name="BlockA136" parent="Terrain" index="136" unique_id=877134846 instance=ExtResource("8_q2gnw")]
-position = Vector2(8625, 225)
-
-[node name="BlockA137" parent="Terrain" index="137" unique_id=927047221 instance=ExtResource("8_q2gnw")]
-position = Vector2(8775, 225)
-
-[node name="BlockA138" parent="Terrain" index="138" unique_id=1753889445 instance=ExtResource("8_q2gnw")]
-position = Vector2(8925, 225)
-
-[node name="BlockA139" parent="Terrain" index="139" unique_id=1479490852 instance=ExtResource("8_q2gnw")]
-position = Vector2(9075, 225)
-
-[node name="BlockA140" parent="Terrain" index="140" unique_id=1309076812 instance=ExtResource("8_q2gnw")]
-position = Vector2(9225, 225)
-
-[node name="BlockA141" parent="Terrain" index="141" unique_id=470236152 instance=ExtResource("8_q2gnw")]
-position = Vector2(9375, 225)
-
-[node name="BlockA142" parent="Terrain" index="142" unique_id=199354915 instance=ExtResource("8_q2gnw")]
-position = Vector2(9525, 225)
-
-[node name="BlockA143" parent="Terrain" index="143" unique_id=1071606123 instance=ExtResource("8_q2gnw")]
-position = Vector2(9675, 225)
-
-[node name="BlockA144" parent="Terrain" index="144" unique_id=893919303 instance=ExtResource("8_q2gnw")]
-position = Vector2(9825, 225)
-
-[node name="GrappleKiller" parent="Terrain" index="145" unique_id=1272909810 instance=ExtResource("16_gowir")]
+[node name="GrappleKiller" parent="Terrain" index="67" unique_id=1272909810 instance=ExtResource("16_gowir")]
 position = Vector2(153, -1569)
 
-[node name="GrappleKiller2" parent="Terrain" index="146" unique_id=1315178581 instance=ExtResource("16_gowir")]
+[node name="GrappleKiller2" parent="Terrain" index="68" unique_id=1315178581 instance=ExtResource("16_gowir")]
 position = Vector2(297, -1607)
 
-[node name="GrappleKiller3" parent="Terrain" index="147" unique_id=1410051771 instance=ExtResource("16_gowir")]
+[node name="GrappleKiller3" parent="Terrain" index="69" unique_id=1410051771 instance=ExtResource("16_gowir")]
 position = Vector2(435, -1538)
 
-[node name="GrappleKiller4" parent="Terrain" index="148" unique_id=234716677 instance=ExtResource("16_gowir")]
+[node name="GrappleKiller4" parent="Terrain" index="70" unique_id=234716677 instance=ExtResource("16_gowir")]
 position = Vector2(564, -1613)
 
-[node name="GrappleKiller5" parent="Terrain" index="149" unique_id=1300056172 instance=ExtResource("16_gowir")]
+[node name="GrappleKiller5" parent="Terrain" index="71" unique_id=1300056172 instance=ExtResource("16_gowir")]
 position = Vector2(712, -1509)
 
-[node name="GrappleKiller6" parent="Terrain" index="150" unique_id=590600937 instance=ExtResource("16_gowir")]
+[node name="GrappleKiller6" parent="Terrain" index="72" unique_id=590600937 instance=ExtResource("16_gowir")]
 position = Vector2(847, -1622)
 
-[node name="GrappleKiller7" parent="Terrain" index="151" unique_id=548714063 instance=ExtResource("16_gowir")]
+[node name="GrappleKiller7" parent="Terrain" index="73" unique_id=548714063 instance=ExtResource("16_gowir")]
 position = Vector2(982, -1493)
 
-[node name="GrappleKiller8" parent="Terrain" index="152" unique_id=1484670601 instance=ExtResource("16_gowir")]
+[node name="GrappleKiller8" parent="Terrain" index="74" unique_id=1484670601 instance=ExtResource("16_gowir")]
 position = Vector2(1107, -1597)
 
-[node name="GrappleKiller9" parent="Terrain" index="153" unique_id=1323539976 instance=ExtResource("16_gowir")]
+[node name="GrappleKiller9" parent="Terrain" index="75" unique_id=1323539976 instance=ExtResource("16_gowir")]
 position = Vector2(1239, -1481)
 
-[node name="GrappleKiller10" parent="Terrain" index="154" unique_id=404108141 instance=ExtResource("16_gowir")]
+[node name="GrappleKiller10" parent="Terrain" index="76" unique_id=404108141 instance=ExtResource("16_gowir")]
 position = Vector2(2, -1503)
 
-[node name="GrappleKiller12" parent="Terrain" index="155" unique_id=708539912 instance=ExtResource("16_gowir")]
+[node name="GrappleKiller12" parent="Terrain" index="77" unique_id=708539912 instance=ExtResource("16_gowir")]
 position = Vector2(1384, -1595)
 
-[node name="GrappleKiller13" parent="Terrain" index="156" unique_id=907239663 instance=ExtResource("16_gowir")]
+[node name="GrappleKiller13" parent="Terrain" index="78" unique_id=907239663 instance=ExtResource("16_gowir")]
 position = Vector2(1522, -1526)
 
-[node name="GrappleKiller14" parent="Terrain" index="157" unique_id=1665436879 instance=ExtResource("16_gowir")]
+[node name="GrappleKiller14" parent="Terrain" index="79" unique_id=1665436879 instance=ExtResource("16_gowir")]
 position = Vector2(1651, -1601)
 
-[node name="GrappleKiller15" parent="Terrain" index="158" unique_id=934971182 instance=ExtResource("16_gowir")]
+[node name="GrappleKiller15" parent="Terrain" index="80" unique_id=934971182 instance=ExtResource("16_gowir")]
 position = Vector2(1799, -1497)
 
-[node name="GrappleKiller16" parent="Terrain" index="159" unique_id=1412164491 instance=ExtResource("16_gowir")]
+[node name="GrappleKiller16" parent="Terrain" index="81" unique_id=1412164491 instance=ExtResource("16_gowir")]
 position = Vector2(1934, -1610)
 
-[node name="GrappleKiller17" parent="Terrain" index="160" unique_id=525256599 instance=ExtResource("16_gowir")]
+[node name="GrappleKiller17" parent="Terrain" index="82" unique_id=525256599 instance=ExtResource("16_gowir")]
 position = Vector2(2069, -1481)
 
-[node name="GrappleKiller18" parent="Terrain" index="161" unique_id=2511341 instance=ExtResource("16_gowir")]
+[node name="GrappleKiller18" parent="Terrain" index="83" unique_id=2511341 instance=ExtResource("16_gowir")]
 position = Vector2(2194, -1585)
 
-[node name="GrappleKiller19" parent="Terrain" index="162" unique_id=290504128 instance=ExtResource("16_gowir")]
+[node name="GrappleKiller19" parent="Terrain" index="84" unique_id=290504128 instance=ExtResource("16_gowir")]
 position = Vector2(2326, -1469)
 
 [node name="MakeSpawnTime" type="Node" parent="." index="4" unique_id=1449608366 node_paths=PackedStringArray("spawn_manager", "second_view", "level")]
