@@ -7,11 +7,10 @@ class_name BossTrackerExtinguish
 @export var follow_target : FollowTarget
 @export var get_him_label : Label
 @export var boss : Robot
-@export var down_position : Marker2D
-@export var fly_position : Marker2D
 @export var head_flames : Array[Extinguishable]
 @export var level : Level
 var current_phase : int = 0
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 
 
@@ -27,9 +26,10 @@ func _on_phase_done():
 func _make_boss_hittable():
 	update_lable_phase_done(true)
 	_second_cam_track_boss()
-	_bring_boss_down()
 	_toggle_follow_player(false)
 	_activate_head_flame()
+	_bring_boss_down()
+	
 
 func _make_boss_return():
 	head_flames.remove_at(0)
@@ -37,6 +37,7 @@ func _make_boss_return():
 	if not win:
 		update_lable_phase_done(false)
 		await _return_boss_up()
+		_toggle_follow_player(false)
 		_activate_phase(true)
 	
 
@@ -49,14 +50,21 @@ func _second_cam_track_boss():
 	tracker.update_second_view_to_target(boss)
 
 func _bring_boss_down():
-	tween_position(down_position.global_position)
+	var initial := Vector2(1245,-1080)
+	await tween_position(initial, 0.5)
+	animation_player.play("fly_down")
+	await animation_player.animation_finished
+	animation_player.play("run_around")
 
 func _return_boss_up():
-	tween_position(fly_position.global_position)
+	animation_player.play_backwards("fly_down",1.0)
+	
+	await animation_player.animation_finished
 
-func tween_position(target_position : Vector2):
+
+func tween_position(target_position : Vector2, time : float = 1.0):
 	var tween : Tween = create_tween()
-	tween.tween_property(boss,"global_position",target_position,1.0)
+	tween.tween_property(boss,"global_position",target_position,time)
 	await tween.finished
 	tween.kill()
 
