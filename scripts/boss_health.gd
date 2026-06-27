@@ -5,6 +5,9 @@ extends Sprite2D
 @export var level : Level
 @export var boss_spawner : LastBossSpawners
 @export var hitbox : Area2D
+@onready var animation_player: AnimationPlayer = $"../AnimationPlayer"
+@onready var gpu_particles_2d: GPUParticles2D = $"../GPUParticles2D"
+
 var current_health : int
 var initial_boss_scale : Vector2
 signal no_more_health
@@ -31,6 +34,9 @@ func _hurt():
 
 func _on_no_more_health():
 	level.win()
+	animation_player.play("lose_shake")
+	gpu_particles_2d.emitting = true
+	self.visible = false
 	if boss_spawner:
 		boss_spawner._clear_self_and_spawner()
 

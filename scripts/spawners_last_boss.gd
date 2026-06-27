@@ -42,6 +42,15 @@ func _on_object_despawned(_object : Node2D):
 func _on_object_spawned(object : Node2D):
 	if object is Hookable or object is Extinguishable:
 		object.killed_by_killer.connect(_on_object_killed_by_killer)
+		_tween_scale_spawn(object)
+
+func _tween_scale_spawn(target : Node2D):
+	var reset := Vector2.ONE
+	var tween : Tween = create_tween()
+	tween.tween_property(target,"scale",reset*1.3, 0.1)
+	tween.tween_property(target,"scale",reset, 0.1)
+	await tween.finished
+	tween.kill()
 
 func _on_object_killed_by_killer():
 	level.lose()

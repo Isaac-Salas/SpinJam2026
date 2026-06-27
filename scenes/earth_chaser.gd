@@ -1,6 +1,6 @@
 extends Node
 @export var target : Node2D
-@export var speed : float = 150
+@export var speed : float = 100
 var earth : PlanetEarth
 
 func _ready() -> void:
