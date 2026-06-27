@@ -28,7 +28,8 @@ func _hurt():
 
 func _on_no_more_health():
 	level.win()
-	boss_spawner._clear_self_and_spawner()
+	if boss_spawner:
+		boss_spawner._clear_self_and_spawner()
 
 func _on_hitbox_area_entered(area : Area2D):
 	if area is ProyectileGrapple or area is ProyectileArea:
