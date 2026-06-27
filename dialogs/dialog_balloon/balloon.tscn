@@ -177,6 +177,7 @@ layout_mode = 2
 size_flags_horizontal = 8
 offset_transform_enabled = true
 offset_transform_position = Vector2(-25, -17)
+mouse_filter = 2
 texture = ExtResource("5_8msoj")
 stretch_mode = 5
 

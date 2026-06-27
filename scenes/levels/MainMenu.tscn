@@ -22,7 +22,7 @@ shader_parameter/color_over = Color(0, 0, 0, 1)
 ui_screen_text = "???"
 play_music_on_ready = true
 level_music_name = "MENU"
-volume = 20.0
+level_volume = 10.0
 ending_dialog = ExtResource("2_hyrlu")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." index="0" unique_id=692211403]
