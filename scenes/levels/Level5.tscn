@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://vv8ug5aomn2e"]
 
 [ext_resource type="PackedScene" uid="uid://b7gui86a3ksvj" path="res://scenes/levels/Level_template.tscn" id="1_f6scf"]
-[ext_resource type="Resource" uid="uid://mopljsjvpidb" path="res://dialogs/Level5/Level5Lose.dialogue" id="2_rgf08"]
-[ext_resource type="Resource" uid="uid://de6xdr0vfnrks" path="res://dialogs/Level5/Level5Win.dialogue" id="3_3bc8p"]
+[ext_resource type="Resource" uid="uid://bdti0si1rvthg" path="res://dialogs/Level5/Level5Lose.dialogue" id="2_rgf08"]
+[ext_resource type="Resource" uid="uid://br82dckdr0c26" path="res://dialogs/Level5/Level5Win.dialogue" id="3_3bc8p"]
 [ext_resource type="Script" uid="uid://b1ifuyqh4x2qv" path="res://scenes/camera_2d.gd" id="3_m7s51"]
 [ext_resource type="PackedScene" uid="uid://stjljdb8fl46" path="res://scenes/player.tscn" id="4_ptild"]
 [ext_resource type="PackedScene" uid="uid://di3etpmd87llx" path="res://scenes/blocks/InvisibleWalls.tscn" id="5_brtaq"]
@@ -730,7 +730,7 @@ position = Vector2(6225, -375)
 script = ExtResource("11_13joh")
 randomize_active_extinguishables = true
 extinguish_time_limit = true
-limit_time_amount = 20.0
+limit_time_amount = 25.0
 level = NodePath("..")
 player = NodePath("../Player")
 second_view = NodePath("../CanvasLayer/SecondView")
