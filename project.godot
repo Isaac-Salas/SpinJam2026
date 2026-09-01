@@ -106,8 +106,10 @@ Grapple={
 
 [internationalization]
 
+locale/translations=PackedStringArray("res://translations/es.mo")
 locale/translations_pot_files=PackedStringArray("res://dialogs/test.dialogue", "res://dialogs/Menu/MenuWin.dialogue", "res://dialogs/Level1/Level1Win.dialogue", "res://dialogs/Level2/Level2Win.dialogue", "res://dialogs/Level3/Level3Win.dialogue", "res://dialogs/Level3/Level3Lose.dialogue", "res://dialogs/Level4/Level4Win.dialogue", "res://dialogs/Level5/Level5Win.dialogue", "res://dialogs/Level5/Level5Lose.dialogue", "res://dialogs/Level6/Level6Lose.dialogue", "res://dialogs/Level6/Level6Win.dialogue", "res://dialogs/Level7/Level7Lose.dialogue", "res://dialogs/Level7/Level7Win.dialogue", "res://dialogs/Level8/Level8Lose.dialogue", "res://dialogs/Level8/Level8Win.dialogue", "res://dialogs/Level9/Level9Lose.dialogue", "res://dialogs/Level9/Level9Win.dialogue")
 locale/translation_add_builtin_strings_to_pot=true
+locale/test="en"
 
 [layer_names]
 

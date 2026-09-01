@@ -1,0 +1,1066 @@
+# LANGUAGE translation for SpinJam2026 for the following files:
+# res://dialogs/test.dialogue
+# res://dialogs/Menu/MenuWin.dialogue
+# res://dialogs/Level1/Level1Win.dialogue
+# res://dialogs/Level2/Level2Win.dialogue
+# res://dialogs/Level3/Level3Win.dialogue
+# res://dialogs/Level3/Level3Lose.dialogue
+# res://dialogs/Level4/Level4Win.dialogue
+# res://dialogs/Level5/Level5Win.dialogue
+# res://dialogs/Level5/Level5Lose.dialogue
+# res://dialogs/Level6/Level6Lose.dialogue
+# res://dialogs/Level6/Level6Win.dialogue
+# res://dialogs/Level7/Level7Lose.dialogue
+# res://dialogs/Level7/Level7Win.dialogue
+# res://dialogs/Level8/Level8Lose.dialogue
+# res://dialogs/Level8/Level8Win.dialogue
+# res://dialogs/Level9/Level9Lose.dialogue
+# res://dialogs/Level9/Level9Win.dialogue
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SpinJam2026\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.9\n"
+
+#. TRANSLATORS: Character name
+#: dialogs/test.dialogue
+msgctxt "dialogue"
+msgid "Nathan"
+msgstr ""
+
+#: dialogs/test.dialogue
+msgid "[[Hi|Hello|Howdy]], this is some dialogue."
+msgstr ""
+
+#: dialogs/test.dialogue
+msgid "Lets switch this scene up"
+msgstr ""
+
+#: dialogs/test.dialogue
+msgid "Mutch better!"
+msgstr ""
+
+#: dialogs/test.dialogue
+msgid "See ya!"
+msgstr ""
+
+#. TRANSLATORS: Character name
+#: dialogs/Menu/MenuWin.dialogue dialogs/Level1/Level1Win.dialogue
+#: dialogs/Level2/Level2Win.dialogue dialogs/Level3/Level3Win.dialogue
+#: dialogs/Level3/Level3Lose.dialogue dialogs/Level4/Level4Win.dialogue
+#: dialogs/Level5/Level5Win.dialogue dialogs/Level5/Level5Lose.dialogue
+#: dialogs/Level6/Level6Lose.dialogue dialogs/Level6/Level6Win.dialogue
+#: dialogs/Level7/Level7Lose.dialogue dialogs/Level7/Level7Win.dialogue
+#: dialogs/Level8/Level8Lose.dialogue dialogs/Level8/Level8Win.dialogue
+#: dialogs/Level9/Level9Lose.dialogue dialogs/Level9/Level9Win.dialogue
+msgctxt "dialogue"
+msgid "News Anchor"
+msgstr "Presentador de Noticias"
+
+#: dialogs/Menu/MenuWin.dialogue
+msgid "Hello folks, how are we doing today."
+msgstr "Hola a todos, como se encuentran el dia de hoy?"
+
+#: dialogs/Menu/MenuWin.dialogue
+msgid ""
+"Thank you very much for choosing us as your primary source of very serious "
+"news."
+msgstr ""
+"Muchas gracias por escogernos como su fuente principal de noticias sumamente "
+"serias."
+
+#: dialogs/Menu/MenuWin.dialogue
+msgid ""
+"What you just watched was special footage of a man that claims to have "
+"invented something amazing."
+msgstr ""
+"Lo que acaban de ver son imágenes inéditas de un hombre que dice haber "
+"inventado algo increíble."
+
+#: dialogs/Menu/MenuWin.dialogue
+msgid ""
+"A device that can turn a simple \"spin\" motion into enough energy to power "
+"a whole house."
+msgstr ""
+"Un dispositivo que puede convertir un simple movimiento de “rotación” en "
+"energía suficiente para una ciudad entera."
+
+#: dialogs/Menu/MenuWin.dialogue
+msgid ""
+"However, It seems this man has other goals in mind, given that he just "
+"granted us exclusive access to never-before-seen footage showing the device "
+"being used as a power source for a rather peculiar little machine."
+msgstr ""
+"Sin embargo, parece que este hombre tiene otros objetivos en mente, dado a "
+"que nos acaba de dar acceso a un video exclusivo nunca antes visto que "
+"muestra el dispositivo siendo usado como fuente de poder para una maquinita "
+"muy peculiar."
+
+#: dialogs/Menu/MenuWin.dialogue
+msgid ""
+"Im told this little guy can [outline_size=10][wave amp=50.0 freq=5.0 "
+"connected=0][color=#ffd877] move [/color][/wave][/outline_size] like "
+"nobody's business."
+msgstr ""
+"Me informan que este pequeño puede [outline_size=10][wave amp=50.0 freq=5.0 "
+"connected=0][color=#ffd877] moverse [/color][/wave][/outline_size] por todos "
+"lados."
+
+#: dialogs/Menu/MenuWin.dialogue
+msgid "Anyway folks, see for yourselves."
+msgstr "Pero no me tienen que creer a mi gente, véanlo ustedes mismos."
+
+#: dialogs/Level1/Level1Win.dialogue
+msgid "Funny little guy isn't he, folks?"
+msgstr "Un pequeño muy curioso, no creen?"
+
+#: dialogs/Level1/Level1Win.dialogue
+msgid ""
+"Sorry to interrupt your enjoyment, but I just got word that our little guy "
+"now has a name."
+msgstr ""
+"Disculpen la interrupción, pero me acaban de informar que nuestro nuevo "
+"amigo ahora tiene nombre."
+
+#: dialogs/Level1/Level1Win.dialogue
+msgid "And well, what could be more newsworthy than that, I say?"
+msgstr "Y bueno, que podría ser mas importante que eso?"
+
+#: dialogs/Level1/Level1Win.dialogue
+msgid ""
+"His new name is [outline_size=10][wave amp=50.0 freq=5.0 connected=0]"
+"[color=#adc4ff]Spinamo[/color][/wave][/outline_size], named after the "
+"technology that keeps his little heart beating."
+msgstr ""
+"Su nombre es [outline_size=10][wave amp=50.0 freq=5.0 connected=0]"
+"[color=#adc4ff]Spinamo[/color][/wave][/outline_size], nombrado así por la "
+"tecnología que mantiene su pequeño corazón latiendo."
+
+#: dialogs/Level1/Level1Win.dialogue
+msgid "Although, he doesn't look that little anymore, as you can see."
+msgstr "Aunque, ya no se ve tan pequeño como podrán ver."
+
+#: dialogs/Level1/Level1Win.dialogue
+msgid ""
+"His creator has told us [outline_size=10][wave amp=50.0 freq=5.0 connected=0]"
+"[color=#adc4ff]Spinamo[/color][/wave][/outline_size] can now "
+"[outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#00cc8b]jump[/"
+"color][/wave][/outline_size] and has a fresh new look."
+msgstr ""
+"Su creador nos informa que [outline_size=10][wave amp=50.0 freq=5.0 "
+"connected=0][color=#adc4ff]Spinamo[/color][/wave][/outline_size] ahora puede "
+"[outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#00cc8b]saltar[/"
+"color][/wave][/outline_size] y tiene un estilo nuevo y mejorado."
+
+#: dialogs/Level1/Level1Win.dialogue
+msgid "What a world we live in, huh, folks?"
+msgstr "Vaya mundo en el que vivimos eh gente."
+
+#: dialogs/Level1/Level1Win.dialogue
+msgid ""
+"Anyways, place your bets now, people. Will our new friend really get to the "
+"top? Let's find out!."
+msgstr ""
+"Pero bueno, hagan sus apuestas. Puede nuestro nuevo amigo llegar a la cima? "
+"Descubrámoslo!"
+
+#: dialogs/Level2/Level2Win.dialogue
+msgid ""
+"[outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#adc4ff]Spinamo[/"
+"color][/wave][/outline_size] does it again, folks!"
+msgstr ""
+
+#: dialogs/Level2/Level2Win.dialogue
+msgid ""
+"It seems our new friend is gaining popularity among our beloved viewers, and "
+"both his creator and us are very excited to hear that."
+msgstr ""
+
+#: dialogs/Level2/Level2Win.dialogue
+msgid ""
+"However, with any kind of fame, there will always be jealous people, and "
+"this is where [outline_size=10][wave amp=50.0 freq=5.0 connected=0]"
+"[color=#adc4ff]Spinamo's[/color][/wave][/outline_size] first major challenge "
+"arises."
+msgstr ""
+
+#: dialogs/Level2/Level2Win.dialogue
+msgid ""
+"There's a new robot in town, folks, and its creator says its technology is "
+"vastly superior to Spinamo's weak little heart."
+msgstr ""
+
+#: dialogs/Level2/Level2Win.dialogue
+msgid ""
+"Although, from what we can tell, it seems to be a heartless version of our "
+"beloved guy."
+msgstr ""
+
+#: dialogs/Level2/Level2Win.dialogue
+msgid ""
+"This robot is challenging our friend to a race that will decide who is truly "
+"the superior robot. It's all or nothing people."
+msgstr ""
+
+#: dialogs/Level2/Level2Win.dialogue
+msgid ""
+"Can [outline_size=10][wave amp=50.0 freq=5.0 connected=0]"
+"[color=#adc4ff]Spinamo[/color][/wave][/outline_size] claim victory and prove "
+"his opponents wrong? Let's find out!"
+msgstr ""
+
+#: dialogs/Level3/Level3Win.dialogue
+msgid ""
+"A decisive victory for [outline_size=10][wave amp=50.0 freq=5.0 connected=0]"
+"[color=#adc4ff]Spinamo[/color][/wave][/outline_size], ladies and gentlemen!"
+msgstr ""
+
+#: dialogs/Level3/Level3Win.dialogue
+msgid ""
+"His popularity, heart, and size just keep growing and growing, and we "
+"couldn't be happier to keep reporting on it."
+msgstr ""
+
+#: dialogs/Level3/Level3Win.dialogue
+msgid ""
+"But anyway, as we all knew, aside from Spinamo's arrival, a beautiful meteor "
+"shower was forecast for tonight."
+msgstr ""
+
+#: dialogs/Level3/Level3Win.dialogue
+msgid ""
+"In preparation for this wonderful event, many children took their telescopes "
+"out into the yard and lit bonfires so they could spend the whole night "
+"stargazing."
+msgstr ""
+
+#: dialogs/Level3/Level3Win.dialogue
+msgid ""
+"But, since kids will be kids, after watching the stars, they decided to go "
+"home, forgetting to put out their campfires, which led to many complaints "
+"from neighbors who couldn't sleep because of the light."
+msgstr ""
+
+#: dialogs/Level3/Level3Win.dialogue
+msgid ""
+"And who better to solve this problem than the city's new hero, "
+"[outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#adc4ff]Spinamo[/"
+"color][/wave][/outline_size], equipped with [outline_size=10][wave amp=50.0 "
+"freq=5.0 connected=0][color=#e52d40]a new tool[/color][/wave][/outline_size] "
+"that can easily put out these annoying campfires with a single "
+"[outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#e52d40]shot[/"
+"color][/wave][/outline_size]!"
+msgstr ""
+
+#: dialogs/Level3/Level3Win.dialogue
+msgid "Get comfortable and let's watch our friend get to work!"
+msgstr ""
+
+#: dialogs/Level3/Level3Lose.dialogue dialogs/Level5/Level5Lose.dialogue
+#: dialogs/Level6/Level6Lose.dialogue dialogs/Level8/Level8Lose.dialogue
+msgid ""
+"[[Ooops, wrong tape folks!|Sorry people, wrong clip!|Sorry again guys!]]"
+msgstr ""
+
+#: dialogs/Level3/Level3Lose.dialogue
+msgid "That's just footage of the pre-race warmup."
+msgstr ""
+
+#: dialogs/Level3/Level3Lose.dialogue
+msgid "All right, let the race begin!"
+msgstr ""
+
+#: dialogs/Level4/Level4Win.dialogue
+msgid ""
+"That's [outline_size=10][wave amp=50.0 freq=5.0 connected=0]"
+"[color=#adc4ff]Spinamo[/color][/wave][/outline_size], winning people's "
+"affection by helping them rest easier, knowing that there's someone looking "
+"out for them."
+msgstr ""
+
+#: dialogs/Level4/Level4Win.dialogue
+msgid ""
+"But today is a brand-new, sunny day in the city everyone, and an impending "
+"heat wave has given all the kids in town a ravenous appetite for ice cream!"
+msgstr ""
+
+#: dialogs/Level4/Level4Win.dialogue
+msgid ""
+"A whole bunch of ice cream trucks have rolled out, but the heat is putting "
+"the ice cream at risk, threatening a very sticky and melted future—if it "
+"weren't for our hero..."
+msgstr ""
+
+#: dialogs/Level4/Level4Win.dialogue
+msgid ""
+"[outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#adc4ff]Spinamo!"
+"[/color][/wave][/outline_size] Equipped with a [outline_size=10][wave "
+"amp=50.0 freq=5.0 connected=0][color=#ffffff]new ability[/color][/wave][/"
+"outline_size] that lets him [outline_size=10][wave amp=50.0 freq=5.0 "
+"connected=0][color=#ffffff]aim his icy projectiles[/color][/wave][/"
+"outline_size] at the trucks to keep them cold."
+msgstr ""
+
+#: dialogs/Level4/Level4Win.dialogue
+msgid ""
+"But he'll have to move quickly from side to side, making sure not to let too "
+"much time pass so that the next truck doesn't have a chance to cool down, or "
+"this could be a huge disappointment for the city's children."
+msgstr ""
+
+#: dialogs/Level4/Level4Win.dialogue
+msgid ""
+"Let's go, [outline_size=10][wave amp=50.0 freq=5.0 connected=0]"
+"[color=#adc4ff]Spinamo![/color][/wave][/outline_size] We believe in you!"
+msgstr ""
+
+#: dialogs/Level5/Level5Win.dialogue
+msgid ""
+"That's our [outline_size=10][wave amp=50.0 freq=5.0 connected=0]"
+"[color=#adc4ff]Spinamo![/color][/wave][/outline_size] The new sensation "
+"among all the kids in town."
+msgstr ""
+
+#: dialogs/Level5/Level5Win.dialogue
+msgid ""
+"But listen everyone, we've just received word that there's a new evil robot "
+"threatening to burn down the kids' favorite park!"
+msgstr ""
+
+#: dialogs/Level5/Level5Win.dialogue
+msgid ""
+"But fear not—our beloved local hero is on the case! He'll have to "
+"[outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#e52d40]put out "
+"the fire[/color][/wave][/outline_size] in the trees within the time limit, "
+"and then [outline_size=10][wave amp=50.0 freq=5.0 connected=0]"
+"[color=#e52d40]fire a cooling shot at the evil robot[/color][/wave][/"
+"outline_size]."
+msgstr ""
+
+#: dialogs/Level5/Level5Win.dialogue
+msgid ""
+"Researchers say that if this is done correctly three times, he will be able "
+"to stop his enemy single-handedly and secure the park."
+msgstr ""
+
+#: dialogs/Level5/Level5Win.dialogue
+msgid ""
+"Come on, [outline_size=10][wave amp=50.0 freq=5.0 connected=0]"
+"[color=#adc4ff]Spinamo[/color][/wave][/outline_size], we know you can do it—"
+"save the day and defeat that nasty guy!"
+msgstr ""
+
+#: dialogs/Level5/Level5Lose.dialogue
+msgid ""
+"That was just an AI video of what it would look like if our hero weren't "
+"fast enough."
+msgstr ""
+
+#: dialogs/Level5/Level5Lose.dialogue
+msgid "But here's what really happened!"
+msgstr ""
+
+#: dialogs/Level6/Level6Lose.dialogue
+msgid ""
+"That was just a clip the evil robot generated of what victory for him might "
+"look like."
+msgstr ""
+
+#: dialogs/Level6/Level6Lose.dialogue
+msgid "However, this is what actually happened!"
+msgstr ""
+
+#: dialogs/Level6/Level6Win.dialogue
+msgid ""
+"Amazing, [outline_size=10][wave amp=50.0 freq=5.0 connected=0]"
+"[color=#adc4ff]Spinamo![/color][/wave][/outline_size] The park is safe and "
+"open another day for the kids to enjoy."
+msgstr ""
+
+#: dialogs/Level6/Level6Win.dialogue
+msgid ""
+"It seems that after saving all the trees, nature feels more at ease than "
+"ever and has decided to start spreading into the city."
+msgstr ""
+
+#: dialogs/Level6/Level6Win.dialogue
+msgid ""
+"This caused a gigantic tree to grow right in the middle of the city, which "
+"all the local cats immediately decided to climb!"
+msgstr ""
+
+#: dialogs/Level6/Level6Win.dialogue
+msgid ""
+"Fortunately, [outline_size=10][wave amp=50.0 freq=5.0 connected=0]"
+"[color=#adc4ff]Spinamo[/color][/wave][/outline_size] was recently equipped "
+"with a [outline_size=10][wave amp=50.0 freq=5.0 connected=0]"
+"[color=#19baff]grappling hook[/color][/wave][/outline_size], which will "
+"allow him to [outline_size=10][wave amp=50.0 freq=5.0 connected=0]"
+"[color=#19baff]rescue all the cats in the tree[/color][/wave][/outline_size] "
+"so they can return home safe and sound."
+msgstr ""
+
+#: dialogs/Level6/Level6Win.dialogue
+msgid ""
+"Is there anything our great and strong hero can't do? Let's keep watching "
+"and hope that one day we can be just like him!"
+msgstr ""
+
+#: dialogs/Level7/Level7Lose.dialogue
+msgid "Ooops, wrong tape folks!"
+msgstr ""
+
+#: dialogs/Level7/Level7Lose.dialogue
+msgid "This is the one"
+msgstr ""
+
+#: dialogs/Level7/Level7Win.dialogue
+msgid ""
+"All cats can rest easy at home today, knowing that [outline_size=10][wave "
+"amp=50.0 freq=5.0 connected=0][color=#adc4ff]Spinamo[/color][/wave][/"
+"outline_size] is the hero of humans, plants, and pets alike!"
+msgstr ""
+
+#: dialogs/Level7/Level7Win.dialogue
+msgid ""
+"Nature seems to have returned to normal, and to celebrate, the city decided "
+"to bring in a circus full of wonders for everyone to enjoy."
+msgstr ""
+
+#: dialogs/Level7/Level7Win.dialogue
+msgid ""
+"One of the many wonders is getting to meet the great [outline_size=10][wave "
+"amp=50.0 freq=5.0 connected=0][color=#adc4ff]Spinamo[/color][/wave][/"
+"outline_size], who will be outside the circus to greet all the children."
+msgstr ""
+
+#: dialogs/Level7/Level7Win.dialogue
+msgid ""
+"On top of that, our hero wants to try to prevent one of the worst tragedies "
+"that can happen to anyone who visits the circus..."
+msgstr ""
+
+#: dialogs/Level7/Level7Win.dialogue
+msgid ""
+"[outline_size=10][wave amp=50.0 freq=15.0 connected=0]"
+"[color=#ef604a]ACCIDENTLY LETTING GO OF THEIR BALLOON!!![/color][/wave][/"
+"outline_size]"
+msgstr ""
+
+#: dialogs/Level7/Level7Win.dialogue
+msgid ""
+"Good thing our clever friend is always prepared—this time with "
+"[outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#ef604a]rockets[/"
+"color][/wave][/outline_size] that let him [outline_size=10][wave amp=50.0 "
+"freq=5.0 connected=0][color=#ef604a]fly[/color][/wave][/outline_size] and "
+"[outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#19baff]reach[/"
+"color][/wave][/outline_size] all the loose balloons before they touch the "
+"clouds!."
+msgstr ""
+
+#: dialogs/Level7/Level7Win.dialogue
+msgid ""
+"For everyone who decided to enjoy the circus from the comfort of their own "
+"home, stay with us and let's watch another act of kindness from our dear "
+"friend."
+msgstr ""
+
+#: dialogs/Level8/Level8Lose.dialogue
+msgid "We all know those balloons didn't get away."
+msgstr ""
+
+#: dialogs/Level8/Level8Lose.dialogue
+msgid "Have a look!"
+msgstr ""
+
+#: dialogs/Level8/Level8Win.dialogue
+msgid ""
+"What a fun day today! Completely free of balloon-induced sadness—all thanks "
+"to [outline_size=10][wave amp=50.0 freq=5.0 connected=0]"
+"[color=#adc4ff]Spinamo[/color][/wave][/outline_size], once again."
+msgstr ""
+
+#: dialogs/Level8/Level8Win.dialogue
+msgid ""
+"But seeing all this happiness, the evil inventor couldn't stand it, so he "
+"decided to build a new and final robot that threatens to destroy the entire "
+"world!"
+msgstr ""
+
+#: dialogs/Level8/Level8Win.dialogue
+msgid ""
+"Come on, [outline_size=10][wave amp=50.0 freq=5.0 connected=0]"
+"[color=#adc4ff]Spinamo[/color][/wave][/outline_size], we know you can save "
+"the day by using all your powerful abilities!"
+msgstr ""
+
+#: dialogs/Level8/Level8Win.dialogue
+msgid ""
+"You'll have to hit him with all you got! And at the same "
+"time[outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#e52d40]put "
+"out the fireballs[/color][/wave][/outline_size] and [outline_size=10][wave "
+"amp=50.0 freq=5.0 connected=0][color=#19baff]catch the meteorites[/color][/"
+"wave][/outline_size] before they hit Earth."
+msgstr ""
+
+#: dialogs/Level8/Level8Win.dialogue
+msgid ""
+"We're all counting on [outline_size=10][wave amp=50.0 freq=5.0 connected=0]"
+"[color=#adc4ff]you[/color][/wave][/outline_size] to save us one last time!"
+msgstr ""
+
+#: dialogs/Level9/Level9Lose.dialogue
+msgid "[[Just kidding!|Got you!|Psyche!]]"
+msgstr ""
+
+#: dialogs/Level9/Level9Lose.dialogue
+msgid ""
+"That's not what really happened, our mighty hero wouldn't let us down like "
+"that."
+msgstr ""
+
+#: dialogs/Level9/Level9Lose.dialogue
+msgid "This is what really happened!"
+msgstr ""
+
+#: dialogs/Level9/Level9Win.dialogue
+msgid ""
+"[outline_size=10][wave amp=50.0 freq=20.0 connected=0][color=#adc4ff]YOU DID "
+"IT SPINAMO![/color][/wave][/outline_size]"
+msgstr ""
+
+#: dialogs/Level9/Level9Win.dialogue
+msgid "And to think that just a few days ago, he was so small."
+msgstr ""
+
+#: dialogs/Level9/Level9Win.dialogue
+msgid ""
+"From this day forward, the planet is in a perpetual state of harmony, free "
+"from threat and prepared should any new one arise."
+msgstr ""
+
+#: dialogs/Level9/Level9Win.dialogue
+msgid ""
+"This was the story of [outline_size=10][wave amp=50.0 freq=5.0 connected=0]"
+"[color=#adc4ff]Spinamo[/color][/wave][/outline_size], our little friend who "
+"ended up being of enormous help to everyone."
+msgstr ""
+
+#: dialogs/Level9/Level9Win.dialogue
+msgid "Remember, whenever you're in need..."
+msgstr ""
+
+#: dialogs/Level9/Level9Win.dialogue
+msgid ""
+"There will always be someone in the sky [outline_size=10][wave amp=50.0 "
+"freq=5.0 connected=0][color=#adc4ff]looking out for you.[/color][/wave][/"
+"outline_size]"
+msgstr ""
+
+#: dialogs/Level9/Level9Win.dialogue
+msgid "Good night, everyone."
+msgstr ""
+
+msgid "Open in File Manager"
+msgstr ""
+
+msgid "Show in File Manager"
+msgstr ""
+
+msgid "Open in Files"
+msgstr ""
+
+msgid "Show in Files"
+msgstr ""
+
+msgid "Open in Finder"
+msgstr ""
+
+msgid "Show in Finder"
+msgstr ""
+
+msgid "Open in File Explorer"
+msgstr ""
+
+msgid "Show in File Explorer"
+msgstr ""
+
+msgid "Code completion list:"
+msgstr ""
+
+msgid "New Code Region"
+msgstr ""
+
+msgid "Linear"
+msgstr ""
+
+msgid "Pick a color from the screen."
+msgstr ""
+
+msgid "Pick a color from the application window."
+msgstr ""
+
+msgid "Alpha"
+msgstr ""
+
+msgid "Intensity"
+msgstr ""
+
+msgid "Expr"
+msgstr ""
+
+msgid "Hex"
+msgstr ""
+
+msgid "Enter a hex code (\"#ff0000\") or named color (\"red\")."
+msgstr ""
+
+msgid "Load Color Palette"
+msgstr ""
+
+msgid "Save Color Palette"
+msgstr ""
+
+msgid "The changes to this palette have not been saved to a file."
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "Save the current color palette to reuse later."
+msgstr ""
+
+msgid "Save As"
+msgstr ""
+
+msgid "Save the current color palette as a new to reuse later."
+msgstr ""
+
+msgid "Load"
+msgstr ""
+
+msgid "Load existing color palette."
+msgstr ""
+
+msgid "Clear"
+msgstr ""
+
+msgid "Clear the currently loaded color palettes in the picker."
+msgstr ""
+
+msgid "Pick"
+msgstr ""
+
+msgid "Select a picker shape."
+msgstr ""
+
+msgid "Select a picker mode."
+msgstr ""
+
+msgid "Colorized Sliders"
+msgstr ""
+
+msgid "Hexadecimal Values"
+msgstr ""
+
+msgid "Hex code or named color"
+msgstr ""
+
+msgid "Copy the color value."
+msgstr ""
+
+msgid "Copy Color"
+msgstr ""
+
+msgid "Swatches"
+msgstr ""
+
+msgid "Show all options available."
+msgstr ""
+
+msgid "Recent Colors"
+msgstr ""
+
+msgid "Add current color as a preset."
+msgstr ""
+
+msgid "Screen Recording permission missing!"
+msgstr ""
+
+msgid ""
+"Screen Recording permission is required to pick colors from the other "
+"application windows.\n"
+"Click here to request access..."
+msgstr ""
+
+msgid ""
+"Color: %s\n"
+"LMB: Apply color"
+msgstr ""
+
+msgid ""
+"Color: %s\n"
+"LMB: Apply color\n"
+"RMB: Remove preset"
+msgstr ""
+
+msgid "Color: %s"
+msgstr ""
+
+msgid "HSV Rectangle"
+msgstr ""
+
+msgid "OK HS Rectangle"
+msgstr ""
+
+msgid "OK HL Rectangle"
+msgstr ""
+
+msgid "HSV Wheel"
+msgstr ""
+
+msgid "VHS Circle"
+msgstr ""
+
+msgid "OKHSL Circle"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "OK"
+msgstr ""
+
+msgid "Alert!"
+msgstr ""
+
+msgid "Please Confirm..."
+msgstr ""
+
+msgid "Network"
+msgstr ""
+
+msgid ""
+"File \"%s\" already exists.\n"
+"Do you want to overwrite it?"
+msgstr ""
+
+msgid "Open"
+msgstr ""
+
+msgid "Select Current Folder"
+msgstr ""
+
+msgid "Select This Folder"
+msgstr ""
+
+msgid "Copy Path"
+msgstr ""
+
+msgid "Delete"
+msgstr ""
+
+msgid "New Folder..."
+msgstr ""
+
+msgid "Refresh"
+msgstr ""
+
+msgid "Show Package Contents"
+msgstr ""
+
+msgid "You don't have permission to access contents of this folder."
+msgstr ""
+
+msgid "All Recognized"
+msgstr ""
+
+msgid "All Files"
+msgstr ""
+
+msgid "Open a File"
+msgstr ""
+
+msgid "Open File(s)"
+msgstr ""
+
+msgid "Open a Directory"
+msgstr ""
+
+msgid "Open a File or Directory"
+msgstr ""
+
+msgid "Save a File"
+msgstr ""
+
+msgid "Go to previous folder."
+msgstr ""
+
+msgid "Go to next folder."
+msgstr ""
+
+msgid "Go to parent folder."
+msgstr ""
+
+msgid "Path:"
+msgstr ""
+
+msgid "Drive"
+msgstr ""
+
+msgid "Refresh files."
+msgstr ""
+
+msgid "(Un)favorite current folder."
+msgstr ""
+
+msgid "Create a new folder."
+msgstr ""
+
+msgid "Favorites:"
+msgstr ""
+
+msgid "Recent:"
+msgstr ""
+
+msgid "Directories & Files:"
+msgstr ""
+
+msgid "Toggle the visibility of hidden files."
+msgstr ""
+
+msgid "View items as a grid of thumbnails."
+msgstr ""
+
+msgid "View items as a list."
+msgstr ""
+
+msgid "Toggle the visibility of the filter for file names."
+msgstr ""
+
+msgid "Sort files"
+msgstr ""
+
+msgid "Sort by Name (Ascending)"
+msgstr ""
+
+msgid "Sort by Name (Descending)"
+msgstr ""
+
+msgid "Sort by Type (Ascending)"
+msgstr ""
+
+msgid "Sort by Type (Descending)"
+msgstr ""
+
+msgid "Sort by Modified Time (Newest First)"
+msgstr ""
+
+msgid "Sort by Modified Time (Oldest First)"
+msgstr ""
+
+msgid "Filter:"
+msgstr ""
+
+msgid "Filename Filter:"
+msgstr ""
+
+msgid "File:"
+msgstr ""
+
+msgid ""
+"Delete the selected file?\n"
+"Depending on your filesystem configuration, the files will either be moved "
+"to the system trash or deleted permanently."
+msgstr ""
+
+msgid "Create Folder"
+msgstr ""
+
+msgid "Name:"
+msgstr ""
+
+msgid "Could not create folder."
+msgstr ""
+
+msgid "Invalid extension, or empty filename."
+msgstr ""
+
+msgid "connection to %s (%s) port %d"
+msgstr ""
+
+msgid "connection from %s (%s) port %d"
+msgstr ""
+
+msgid "Zoom Out"
+msgstr ""
+
+msgid "Zoom Reset"
+msgstr ""
+
+msgid "Zoom In"
+msgstr ""
+
+msgid "Toggle the visual grid."
+msgstr ""
+
+msgid "Toggle snapping to the grid."
+msgstr ""
+
+msgid "Change the snapping distance."
+msgstr ""
+
+msgid "Toggle the graph minimap."
+msgstr ""
+
+msgid "Automatically arrange selected nodes."
+msgstr ""
+
+msgid "graph node %s (%s)"
+msgstr ""
+
+msgid "slot %d of %d"
+msgstr ""
+
+msgid "input port, type: %s"
+msgstr ""
+
+msgid "input port, type: %d"
+msgstr ""
+
+msgid "no connections"
+msgstr ""
+
+msgid "output port, type: %s"
+msgstr ""
+
+msgid "output port, type: %d"
+msgstr ""
+
+msgid "currently selecting target port"
+msgstr ""
+
+msgid "has %d slots"
+msgstr ""
+
+msgid "Edit Input Port Connection"
+msgstr ""
+
+msgid "Edit Output Port Connection"
+msgstr ""
+
+msgid "Follow Input Port Connection"
+msgstr ""
+
+msgid "Follow Output Port Connection"
+msgstr ""
+
+msgid ", in slot %d of graph node %s (%s)"
+msgstr ""
+
+msgid "Same as Layout Direction"
+msgstr ""
+
+msgid "Auto-Detect Direction"
+msgstr ""
+
+msgid "Left-to-Right"
+msgstr ""
+
+msgid "Right-to-Left"
+msgstr ""
+
+msgid "Left-to-Right Mark (LRM)"
+msgstr ""
+
+msgid "Right-to-Left Mark (RLM)"
+msgstr ""
+
+msgid "Start of Left-to-Right Embedding (LRE)"
+msgstr ""
+
+msgid "Start of Right-to-Left Embedding (RLE)"
+msgstr ""
+
+msgid "Start of Left-to-Right Override (LRO)"
+msgstr ""
+
+msgid "Start of Right-to-Left Override (RLO)"
+msgstr ""
+
+msgid "Pop Direction Formatting (PDF)"
+msgstr ""
+
+msgid "Arabic Letter Mark (ALM)"
+msgstr ""
+
+msgid "Left-to-Right Isolate (LRI)"
+msgstr ""
+
+msgid "Right-to-Left Isolate (RLI)"
+msgstr ""
+
+msgid "First Strong Isolate (FSI)"
+msgstr ""
+
+msgid "Pop Direction Isolate (PDI)"
+msgstr ""
+
+msgid "Zero-Width Joiner (ZWJ)"
+msgstr ""
+
+msgid "Zero-Width Non-Joiner (ZWNJ)"
+msgstr ""
+
+msgid "Word Joiner (WJ)"
+msgstr ""
+
+msgid "Soft Hyphen (SHY)"
+msgstr ""
+
+msgid "Emoji & Symbols"
+msgstr ""
+
+msgid "Cut"
+msgstr ""
+
+msgid "Copy"
+msgstr ""
+
+msgid "Paste"
+msgstr ""
+
+msgid "Select All"
+msgstr ""
+
+msgid "Undo"
+msgstr ""
+
+msgid "Redo"
+msgstr ""
+
+msgid "Text Writing Direction"
+msgstr ""
+
+msgid "Display Control Characters"
+msgstr ""
+
+msgid "Insert Control Character"
+msgstr ""
+
+msgid "Search"
+msgstr ""
+
+msgid "SpinJam2026"
+msgstr ""
