@@ -180,12 +180,17 @@ msgid ""
 "[outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#adc4ff]Spinamo[/"
 "color][/wave][/outline_size] does it again, folks!"
 msgstr ""
+"[outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#adc4ff]Spinamo[/"
+"color][/wave][/outline_size] lo hace de nuevo damas y caballeros!"
 
 #: dialogs/Level2/Level2Win.dialogue
 msgid ""
 "It seems our new friend is gaining popularity among our beloved viewers, and "
 "both his creator and us are very excited to hear that."
 msgstr ""
+"Me informan que nuestro nuevo amigo esta ganando popularidad entre nuestros "
+"queridos televidentes, y tanto nosotros como su creador estamos muy "
+"emocionados de saberlo."
 
 #: dialogs/Level2/Level2Win.dialogue
 msgid ""
@@ -194,24 +199,34 @@ msgid ""
 "[color=#adc4ff]Spinamo's[/color][/wave][/outline_size] first major challenge "
 "arises."
 msgstr ""
+"Pero, con cualquier tipo de fama, siempre habrá gente envidiosa, y es aquí "
+"donde [outline_size=10][wave amp=50.0 freq=5.0 connected=0]"
+"[color=#adc4ff]Spinamo[/color][/wave][/outline_size] se enfrentara a su "
+"primer grande reto."
 
 #: dialogs/Level2/Level2Win.dialogue
 msgid ""
 "There's a new robot in town, folks, and its creator says its technology is "
 "vastly superior to Spinamo's weak little heart."
 msgstr ""
+"Hay un nuevo robot en la ciudad señores, y su creador dice que su tecnología "
+"es vastamente superior al pequeño corazón de Spinamo."
 
 #: dialogs/Level2/Level2Win.dialogue
 msgid ""
 "Although, from what we can tell, it seems to be a heartless version of our "
 "beloved guy."
 msgstr ""
+"Aunque, por lo que me han informado, solo parece ser una imitación sin "
+"corazón."
 
 #: dialogs/Level2/Level2Win.dialogue
 msgid ""
 "This robot is challenging our friend to a race that will decide who is truly "
 "the superior robot. It's all or nothing people."
 msgstr ""
+"Este robot esta retando a nuestro amigo a una carrera que decidirá quien es "
+"realmente el robot superior. Es todo o nada damas y caballeros."
 
 #: dialogs/Level2/Level2Win.dialogue
 msgid ""
@@ -219,24 +234,34 @@ msgid ""
 "[color=#adc4ff]Spinamo[/color][/wave][/outline_size] claim victory and prove "
 "his opponents wrong? Let's find out!"
 msgstr ""
+"Podrá [outline_size=10][wave amp=50.0 freq=5.0 connected=0]"
+"[color=#adc4ff]Spinamo[/color][/wave][/outline_size] reclamar la victoria y "
+"probar equivocados a sus oponentes? Descubrámoslo!"
 
 #: dialogs/Level3/Level3Win.dialogue
 msgid ""
 "A decisive victory for [outline_size=10][wave amp=50.0 freq=5.0 connected=0]"
 "[color=#adc4ff]Spinamo[/color][/wave][/outline_size], ladies and gentlemen!"
 msgstr ""
+"Una victoria decisiva para [outline_size=10][wave amp=50.0 freq=5.0 "
+"connected=0][color=#adc4ff]Spinamo[/color][/wave][/outline_size], damas y "
+"caballeros!"
 
 #: dialogs/Level3/Level3Win.dialogue
 msgid ""
 "His popularity, heart, and size just keep growing and growing, and we "
 "couldn't be happier to keep reporting on it."
 msgstr ""
+"Su popularidad, corazón y tamaño solo siguen creciendo y creciendo, y no "
+"pudiéramos estar mas felices de seguirlo reportando."
 
 #: dialogs/Level3/Level3Win.dialogue
 msgid ""
 "But anyway, as we all knew, aside from Spinamo's arrival, a beautiful meteor "
 "shower was forecast for tonight."
 msgstr ""
+"Pero bueno, como todos sabíamos, aparte de la llegada de Spinamo, se había "
+"pronosticado una hermosa lluvia de meteoritos esta noche."
 
 #: dialogs/Level3/Level3Win.dialogue
 msgid ""
@@ -244,6 +269,8 @@ msgid ""
 "out into the yard and lit bonfires so they could spend the whole night "
 "stargazing."
 msgstr ""
+"En preparación para este gran evento, muchos niños sacaron telescopios a su "
+"patio y prendieron fogatas para poder pasar toda la noche viendo el cielo."
 
 #: dialogs/Level3/Level3Win.dialogue
 msgid ""
@@ -251,6 +278,10 @@ msgid ""
 "home, forgetting to put out their campfires, which led to many complaints "
 "from neighbors who couldn't sleep because of the light."
 msgstr ""
+"Pero, los niños siendo niños, después de ver las estrellas, decidieron "
+"regresar a sus casas olvidando apagar todas sus fogatas, y esto llevo a "
+"muchas quejas por parte de los vecinos, quienes no podían dormir por tanta "
+"luz."
 
 #: dialogs/Level3/Level3Win.dialogue
 msgid ""
@@ -262,24 +293,33 @@ msgid ""
 "[outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#e52d40]shot[/"
 "color][/wave][/outline_size]!"
 msgstr ""
+"Y quien mejor para resolver este problema que el nuevo héroe de la ciudad, "
+"[outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#adc4ff]Spinamo[/"
+"color][/wave][/outline_size], equipado con [outline_size=10][wave amp=50.0 "
+"freq=5.0 connected=0][color=#e52d40]una nueva herramienta[/color][/wave][/"
+"outline_size] que puede apagar fácilmente esas molestas fogatas con un solo "
+"[outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#e52d40]disparo!"
+"[/color][/wave][/outline_size]"
 
 #: dialogs/Level3/Level3Win.dialogue
 msgid "Get comfortable and let's watch our friend get to work!"
-msgstr ""
+msgstr "Pónganse cómodos en casa, y veamos a nuestro amigo trabajar!"
 
 #: dialogs/Level3/Level3Lose.dialogue dialogs/Level5/Level5Lose.dialogue
 #: dialogs/Level6/Level6Lose.dialogue dialogs/Level8/Level8Lose.dialogue
 msgid ""
 "[[Ooops, wrong tape folks!|Sorry people, wrong clip!|Sorry again guys!]]"
 msgstr ""
+"[[Ooops, cinta equivocada!|Disculpen gente, video equivocado!|Disculpen de "
+"nuevo amigos!]]"
 
 #: dialogs/Level3/Level3Lose.dialogue
 msgid "That's just footage of the pre-race warmup."
-msgstr ""
+msgstr "Eso solo era un video del calentamiento antes de la carrera."
 
 #: dialogs/Level3/Level3Lose.dialogue
 msgid "All right, let the race begin!"
-msgstr ""
+msgstr "Pero sin mas, que empiece la carrera!"
 
 #: dialogs/Level4/Level4Win.dialogue
 msgid ""
@@ -288,12 +328,19 @@ msgid ""
 "affection by helping them rest easier, knowing that there's someone looking "
 "out for them."
 msgstr ""
+"Ese es [outline_size=10][wave amp=50.0 freq=5.0 connected=0]"
+"[color=#adc4ff]Spinamo[/color][/wave][/outline_size], ganandose la afección "
+"de la gente ayudando a que descansen bien, sabiendo que hay alguien ahí "
+"afuera que vela por ellos."
 
 #: dialogs/Level4/Level4Win.dialogue
 msgid ""
 "But today is a brand-new, sunny day in the city everyone, and an impending "
 "heat wave has given all the kids in town a ravenous appetite for ice cream!"
 msgstr ""
+"Pero el día de hoy es un nuevo y soleado día en la ciudad damas y "
+"caballeros, y una ola de calor le ha dado a todos los niños un intenso "
+"apetito por helado!"
 
 #: dialogs/Level4/Level4Win.dialogue
 msgid ""
@@ -301,6 +348,9 @@ msgid ""
 "the ice cream at risk, threatening a very sticky and melted future—if it "
 "weren't for our hero..."
 msgstr ""
+"Me informan que un montón de camiones de helado han sido desplegados en la "
+"ciudad, pero el calor esta poniendo al helado en riesgo, amenazando con un "
+"derretido y pegajoso futuro—si no fuera por nuestro héroe…"
 
 #: dialogs/Level4/Level4Win.dialogue
 msgid ""
@@ -311,6 +361,12 @@ msgid ""
 "connected=0][color=#ffffff]aim his icy projectiles[/color][/wave][/"
 "outline_size] at the trucks to keep them cold."
 msgstr ""
+"[outline_size=10][wave amp=50.0 freq=5.0 connected=0][color=#adc4ff]Spinamo!"
+"[/color][/wave][/outline_size] Equipado con una [outline_size=10][wave "
+"amp=50.0 freq=5.0 connected=0][color=#ffffff]nueva habilidad[/color][/wave][/"
+"outline_size] que le permite [outline_size=10][wave amp=50.0 freq=5.0 "
+"connected=0][color=#ffffff]apuntar proyectiles helados[/color][/wave][/"
+"outline_size] a los camiones para mantenerlos fríos."
 
 #: dialogs/Level4/Level4Win.dialogue
 msgid ""
@@ -318,12 +374,17 @@ msgid ""
 "much time pass so that the next truck doesn't have a chance to cool down, or "
 "this could be a huge disappointment for the city's children."
 msgstr ""
+"Pero tendrá que moverse rápido de lado a lado, asegurándose de no dejar "
+"pasar mucho tiempo y que el siguiente camión no pueda calentarse, si no, "
+"esto podría ser una gran decepción para todos los niños de la ciudad."
 
 #: dialogs/Level4/Level4Win.dialogue
 msgid ""
 "Let's go, [outline_size=10][wave amp=50.0 freq=5.0 connected=0]"
 "[color=#adc4ff]Spinamo![/color][/wave][/outline_size] We believe in you!"
 msgstr ""
+"Vamos [outline_size=10][wave amp=50.0 freq=5.0 connected=0]"
+"[color=#adc4ff]Spinamo![/color][/wave][/outline_size] Creemos en ti!"
 
 #: dialogs/Level5/Level5Win.dialogue
 msgid ""
