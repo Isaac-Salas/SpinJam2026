@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://c3icbfgbn80x3"]
+
+[ext_resource type="Script" uid="uid://dcsm8i22opudw" path="res://scripts/level_template.gd" id="1_mbufj"]
+[ext_resource type="Script" uid="uid://txmnn77tnbtr" path="res://scripts/RotatorTest.gd" id="2_r56yr"]
+[ext_resource type="Texture2D" uid="uid://ba8j06gnpyq0t" path="res://assets/CONTROL/Valvula fondo.png" id="3_m4uc7"]
+[ext_resource type="Texture2D" uid="uid://b0o5rp57c234t" path="res://assets/CONTROL/Valvula centro.png" id="4_kgijf"]
+[ext_resource type="Texture2D" uid="uid://gdgsa7ql1hlj" path="res://icon.svg" id="5_i2fg4"]
+[ext_resource type="FontFile" uid="uid://cirgieqkqdak6" path="res://assets/fonts/Funky Catch.otf" id="6_vr5ut"]
+[ext_resource type="Script" uid="uid://d2mutw6sqcgsu" path="res://scripts/rotation_counter_ui.gd" id="7_fcjp4"]
+[ext_resource type="Texture2D" uid="uid://wmheui8thwhn" path="res://assets/light/light.png" id="8_2xvb5"]
+[ext_resource type="Script" uid="uid://bghbu8j1xosrd" path="res://scenes/levels/menus/reparenter.gd" id="9_org0h"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4rl8p"]
+radius = 120.0
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_sn54h"]
+blend_mode = 1
+
+[node name="Level_template" type="Node2D" unique_id=244848219]
+script = ExtResource("1_mbufj")
+level_music_name = "MAIN_FULL"
+player_move = false
+
+[node name="Rotador" type="Node2D" parent="." unique_id=923548063]
+position = Vector2(640, 360)
+scale = Vector2(2.2, 2.2)
+script = ExtResource("2_r56yr")
+rotation_speed = 8
+
+[node name="Wheel" type="Sprite2D" parent="Rotador" unique_id=1934497207]
+scale = Vector2(1.32, 1.32)
+texture = ExtResource("3_m4uc7")
+
+[node name="Sprite2D" type="Sprite2D" parent="Rotador/Wheel" unique_id=971697608]
+z_as_relative = false
+position = Vector2(1.5151514, 0)
+texture = ExtResource("4_kgijf")
+
+[node name="Area2D" type="Area2D" parent="Rotador" unique_id=918669859]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rotador/Area2D" unique_id=766713085]
+shape = SubResource("CircleShape2D_4rl8p")
+
+[node name="Indicator" type="Sprite2D" parent="Rotador/Area2D" unique_id=2012518087]
+visible = false
+position = Vector2(113.000015, 1.0000001)
+scale = Vector2(0.43, 0.43)
+texture = ExtResource("5_i2fg4")
+
+[node name="RotationCounter" type="Label" parent="Rotador" unique_id=974923558 node_paths=PackedStringArray("wheel")]
+z_index = 1
+z_as_relative = false
+offset_left = -32.0
+offset_top = -27.0
+offset_right = 37.0
+offset_bottom = 23.0
+size_flags_horizontal = 4
+offset_transform_enabled = true
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("6_vr5ut")
+theme_override_font_sizes/font_size = 40
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("7_fcjp4")
+wheel = NodePath("..")
+
+[node name="Light" type="TextureRect" parent="Rotador/RotationCounter" unique_id=600421037]
+modulate = Color(0, 0.8, 0.54666674, 0.78431374)
+material = SubResource("CanvasItemMaterial_sn54h")
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -15.0
+offset_top = -15.0
+offset_right = 15.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_2xvb5")
+expand_mode = 1
+
+[node name="Reparenter" type="Node" parent="." unique_id=2020476553]
+script = ExtResource("9_org0h")

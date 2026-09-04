@@ -38,3 +38,6 @@ func reload_scene():
 func clean_scene():
 	for child in sub_viewport.get_children():
 		child.queue_free()
+
+func toggle_visible(value : bool):
+	self.visible = value
