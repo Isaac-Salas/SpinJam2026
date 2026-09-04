@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://qdb0me12puy5"]
 
 [ext_resource type="PackedScene" uid="uid://b7gui86a3ksvj" path="res://scenes/levels/Level_template.tscn" id="1_7obgn"]
-[ext_resource type="Resource" uid="uid://b6mjg1iis1hio" path="res://dialogs/Level6/Level6Win.dialogue" id="2_gpjci"]
-[ext_resource type="Resource" uid="uid://dhwq2b3m45ckj" path="res://dialogs/Level6/Level6Lose.dialogue" id="3_mxr2w"]
+[ext_resource type="Resource" uid="uid://d3qql1nufmrkn" path="res://dialogs/Level6/Level6Win.dialogue" id="2_gpjci"]
+[ext_resource type="Resource" uid="uid://cgysqr0qplv6s" path="res://dialogs/Level6/Level6Lose.dialogue" id="3_mxr2w"]
 [ext_resource type="Script" uid="uid://b1ifuyqh4x2qv" path="res://scenes/camera_2d.gd" id="4_17kxd"]
 [ext_resource type="PackedScene" uid="uid://stjljdb8fl46" path="res://scenes/player.tscn" id="5_4pfb2"]
 [ext_resource type="PackedScene" uid="uid://bg1cb8cifda4h" path="res://scenes/levels/background.tscn" id="6_f84us"]
@@ -680,20 +680,20 @@ follow_x = true
 
 [node name="Extinguishable" parent="FireBoss" index="3" unique_id=1329922751 instance=ExtResource("11_efxx5")]
 visible = false
-position = Vector2(-13.333333, -406.66666)
-scale = Vector2(1.6666666, 1.6666666)
+position = Vector2(-13.333333, -443.3333)
+scale = Vector2(2.5, 2.5)
 active = false
 
-[node name="Extinguishable2" parent="FireBoss" index="4" unique_id=1225890639 instance=ExtResource("11_efxx5")]
+[node name="Extinguishable2" parent="FireBoss" index="4" unique_id=677391533 instance=ExtResource("11_efxx5")]
 visible = false
-position = Vector2(-13.333333, -406.66666)
-scale = Vector2(1.6666666, 1.6666666)
+position = Vector2(-13.333333, -443.3333)
+scale = Vector2(2.5, 2.5)
 active = false
 
-[node name="Extinguishable3" parent="FireBoss" index="5" unique_id=617198733 instance=ExtResource("11_efxx5")]
+[node name="Extinguishable3" parent="FireBoss" index="5" unique_id=1899173977 instance=ExtResource("11_efxx5")]
 visible = false
-position = Vector2(-13.333333, -406.66666)
-scale = Vector2(1.6666666, 1.6666666)
+position = Vector2(-13.333333, -443.3333)
+scale = Vector2(2.5, 2.5)
 active = false
 
 [editable path="BackgroundLayer"]
