@@ -392,12 +392,17 @@ msgid ""
 "[color=#adc4ff]Spinamo![/color][/wave][/outline_size] The new sensation "
 "among all the kids in town."
 msgstr ""
+"Ese es nuestro [outline_size=10][wave amp=50.0 freq=5.0 connected=0]"
+"[color=#adc4ff]Spinamo![/color][/wave][/outline_size] La nueva sensación "
+"entre todos los niños de la ciudad."
 
 #: dialogs/Level5/Level5Win.dialogue
 msgid ""
 "But listen everyone, we've just received word that there's a new evil robot "
 "threatening to burn down the kids' favorite park!"
 msgstr ""
+"Un momento gente, nos acaban de informar que hay un nuevo robot malvado "
+"amenazando con quemar el parque favorito de los niños!"
 
 #: dialogs/Level5/Level5Win.dialogue
 msgid ""
