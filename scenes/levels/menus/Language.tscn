@@ -30,7 +30,9 @@ load_path = "res://.godot/imported/light.png-40d4be10c8eb939cfe945997a999dea5.ct
 
 [node name="Level_template" type="Node2D" unique_id=244848219]
 script = ExtResource("1_mbufj")
-level_music_name = "MAIN_FULL"
+play_music_on_ready = true
+level_music_name = "MENU"
+level_volume = 10.0
 player_move = false
 
 [node name="Rotador" type="Node2D" parent="." unique_id=923548063]
@@ -136,7 +138,7 @@ grow_vertical = 2
 texture = SubResource("CompressedTexture2D_f8cdg")
 expand_mode = 2
 
-[node name="Move" type="TextureButton" parent="." unique_id=1294509116]
+[node name="OK" type="TextureButton" parent="." unique_id=1294509116]
 custom_minimum_size = Vector2(0, 70)
 offset_left = 538.0
 offset_top = 191.0
@@ -150,10 +152,12 @@ texture_disabled = ExtResource("12_acs7d")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="RotatorLanguageSelect" type="Node" parent="." unique_id=727435835 node_paths=PackedStringArray("rotator", "screen")]
+[node name="RotatorLanguageSelect" type="Node" parent="." unique_id=727435835 node_paths=PackedStringArray("rotator", "screen", "ok_button", "reparenter")]
 script = ExtResource("13_yj3rh")
 rotator = NodePath("../Rotador")
 screen = NodePath("../Pantalla")
+ok_button = NodePath("../OK")
+reparenter = NodePath("../Reparenter")
 languages = Dictionary[String, String]({
 "en": "English",
 "es": "Español"
