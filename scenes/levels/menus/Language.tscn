@@ -9,10 +9,12 @@
 [ext_resource type="Script" uid="uid://d2mutw6sqcgsu" path="res://scripts/rotation_counter_ui.gd" id="7_fcjp4"]
 [ext_resource type="Texture2D" uid="uid://wmheui8thwhn" path="res://assets/light/light.png" id="8_2xvb5"]
 [ext_resource type="Script" uid="uid://bghbu8j1xosrd" path="res://scenes/levels/menus/reparenter.gd" id="9_org0h"]
+[ext_resource type="Script" uid="uid://cdwnjy5futri2" path="res://scripts/StandAloneScreen.gd" id="10_acs7d"]
 [ext_resource type="Texture2D" uid="uid://ca2fhr7h6i2qu" path="res://assets/CONTROL/Pantalla.png" id="10_uhuch"]
 [ext_resource type="Texture2D" uid="uid://xmyd70wolmmy" path="res://assets/CONTROL/Avanzar.png" id="11_yj3rh"]
 [ext_resource type="Texture2D" uid="uid://dbwcj80w6xh7j" path="res://assets/CONTROL/AvanzarDis.png" id="12_acs7d"]
 [ext_resource type="Texture2D" uid="uid://diulau5fs7xs5" path="res://assets/CONTROL/AvanzarPressed.png" id="13_kqhfu"]
+[ext_resource type="Script" uid="uid://2ybgbhh66a6s" path="res://scripts/rotator_language_select.gd" id="13_yj3rh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4rl8p"]
 radius = 120.0
@@ -94,10 +96,7 @@ grow_vertical = 2
 texture = ExtResource("8_2xvb5")
 expand_mode = 1
 
-[node name="Reparenter" type="Node" parent="." unique_id=2020476553]
-script = ExtResource("9_org0h")
-
-[node name="Pantalla" type="TextureRect" parent="." unique_id=641830438]
+[node name="Pantalla" type="TextureRect" parent="." unique_id=641830438 node_paths=PackedStringArray("screen_text")]
 offset_left = 419.00006
 offset_top = 20.0
 offset_right = 681.00006
@@ -105,6 +104,8 @@ offset_bottom = 127.0
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("10_uhuch")
 stretch_mode = 5
+script = ExtResource("10_acs7d")
+screen_text = NodePath("ScreenText")
 
 [node name="ScreenText" type="RichTextLabel" parent="Pantalla" unique_id=1432736997]
 layout_mode = 1
@@ -148,3 +149,15 @@ texture_hover = ExtResource("13_kqhfu")
 texture_disabled = ExtResource("12_acs7d")
 ignore_texture_size = true
 stretch_mode = 5
+
+[node name="RotatorLanguageSelect" type="Node" parent="." unique_id=727435835 node_paths=PackedStringArray("rotator", "screen")]
+script = ExtResource("13_yj3rh")
+rotator = NodePath("../Rotador")
+screen = NodePath("../Pantalla")
+languages = Dictionary[String, String]({
+"en": "English",
+"es": "Español"
+})
+
+[node name="Reparenter" type="Node" parent="." unique_id=2020476553]
+script = ExtResource("9_org0h")
