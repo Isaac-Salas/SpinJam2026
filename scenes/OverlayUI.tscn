@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://npbhcxjy5rny"]
 
 [ext_resource type="Script" uid="uid://byrkyaaw75jrc" path="res://scripts/Overlay_UI.gd" id="1_avh0g"]
-[ext_resource type="PackedScene" uid="uid://c3icbfgbn80x3" path="res://scenes/levels/menus/Language.tscn" id="2_2u3cx"]
 [ext_resource type="PackedScene" uid="uid://fnddrui64dmy" path="res://scenes/levels/MainMenu.tscn" id="2_3c6ce"]
 [ext_resource type="Script" uid="uid://6pcknq62tnaw" path="res://scripts/wheel_view.gd" id="2_mm828"]
 [ext_resource type="Script" uid="uid://txmnn77tnbtr" path="res://scripts/RotatorTest.gd" id="3_t0vks"]
@@ -335,7 +334,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("1_avh0g")
-scene_array = Array[PackedScene]([ExtResource("2_2u3cx"), ExtResource("2_3c6ce"), ExtResource("3_th6i0"), ExtResource("4_uxxwa"), ExtResource("5_aqtce"), ExtResource("6_isvv0"), ExtResource("7_rjrju"), ExtResource("8_ta0q5"), ExtResource("9_65v41"), ExtResource("12_2u3cx"), ExtResource("11_57l74"), ExtResource("10_kvc2d")])
+scene_array = Array[PackedScene]([ExtResource("2_3c6ce"), ExtResource("3_th6i0"), ExtResource("4_uxxwa"), ExtResource("5_aqtce"), ExtResource("6_isvv0"), ExtResource("7_rjrju"), ExtResource("8_ta0q5"), ExtResource("9_65v41"), ExtResource("12_2u3cx"), ExtResource("11_57l74"), ExtResource("10_kvc2d")])
 
 [node name="Gameview" type="SubViewportContainer" parent="." unique_id=1858111535]
 custom_minimum_size = Vector2(960, 0)
