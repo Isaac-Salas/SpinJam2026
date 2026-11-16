@@ -1,6 +1,6 @@
 extends Node
 var current_level : int = 0
-var use_system : bool = false
+var use_system : bool = true
 
 func _init() -> void:
 	if use_system:

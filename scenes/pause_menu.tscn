@@ -1,68 +1,78 @@
 [gd_scene format=3 uid="uid://cfgus38conwdt"]
 
 [ext_resource type="Script" uid="uid://bw1xohao6ctln" path="res://scripts/pause_menu.gd" id="1_n87rw"]
+[ext_resource type="Texture2D" uid="uid://cm1up5u8ukjfs" path="res://assets/LOGO/Logo.png" id="2_myx47"]
+[ext_resource type="FontFile" uid="uid://cirgieqkqdak6" path="res://assets/fonts/Funky Catch.otf" id="3_kukqi"]
+[ext_resource type="Texture2D" uid="uid://be57cipqo1rgw" path="res://assets/CONTROL/Encender.png" id="4_5d2l8"]
+[ext_resource type="Texture2D" uid="uid://c8n7vj1ektx5x" path="res://assets/CONTROL/EncenderPress.png" id="5_7l7mv"]
 
 [node name="PauseMenu" type="Control" unique_id=952304498]
 process_mode = 3
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 script = ExtResource("1_n87rw")
 
-[node name="Fondo" type="ColorRect" parent="." unique_id=871708449]
+[node name="Fondo" type="TextureRect" parent="." unique_id=1372883936]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0.39215687)
+texture = ExtResource("2_myx47")
 
-[node name="Resume" type="Button" parent="." unique_id=700853580]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=249424075]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -4.0
-offset_top = -4.0
-offset_right = 4.0
-offset_bottom = 4.0
+offset_left = -248.0
+offset_top = -110.5
+offset_right = 248.0
+offset_bottom = 110.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="Resume" type="Button" parent="VBoxContainer" unique_id=700853580]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+theme_override_constants/outline_size = 33
+theme_override_fonts/font = ExtResource("3_kukqi")
+theme_override_font_sizes/font_size = 56
 text = "Continue Game"
+flat = true
 
-[node name="Quit" type="Button" parent="." unique_id=1663833251]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -41.0
-offset_top = 35.0
-offset_right = 38.0
-offset_bottom = 66.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=1663833251]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+theme_override_constants/outline_size = 33
+theme_override_fonts/font = ExtResource("3_kukqi")
+theme_override_font_sizes/font_size = 56
 text = "Quit Game"
+flat = true
 
-[node name="Reset" type="Button" parent="." unique_id=815955001]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -40.0
-offset_top = 102.0
-offset_right = 39.0
-offset_bottom = 133.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Reset" type="Button" parent="VBoxContainer" unique_id=815955001]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+theme_override_constants/outline_size = 33
+theme_override_fonts/font = ExtResource("3_kukqi")
+theme_override_font_sizes/font_size = 56
 text = "Reset Progress"
+flat = true
+
+[node name="PauseButton" type="TextureButton" parent="." unique_id=1177081681]
+modulate = Color(1, 1, 1, 0.50980395)
+layout_mode = 0
+offset_right = 59.0
+offset_bottom = 60.0
+texture_normal = ExtResource("4_5d2l8")
+texture_pressed = ExtResource("5_7l7mv")
