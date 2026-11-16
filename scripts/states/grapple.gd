@@ -35,9 +35,9 @@ func Update(_delta: float):
 	arm.global_rotation = lerp_angle(arm.global_rotation,target_angle,_delta*5)
 
 func shoot_grapple():
+	arm.shoot(current_target.global_position)
 	reset_energy_count()
 	_tween_shoot()
-	arm.shoot(current_target.global_position)
 	print("grapple here!")
 
 func toggle_arm_and_hide_og(value : bool):

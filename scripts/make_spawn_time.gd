@@ -49,5 +49,7 @@ func _on_object_spawned(object : Node2D):
 		object.killed_by_killer.connect(_on_object_killed_by_killer)
 
 func _on_object_killed_by_killer():
-	level.lose()
 	self.queue_free()
+	level.lose()
+	print("Teamuch Paum")
+	
