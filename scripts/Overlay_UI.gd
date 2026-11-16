@@ -23,6 +23,7 @@ func go_to_scene(scene_num : int):
 	sub_viewport.add_child(new_scene_instance)
 	current_scene_number = scene_num
 	current_scene = new_scene_instance
+	update_and_save()
 
 func go_to_next_scene():
 	clean_scene()
@@ -31,6 +32,7 @@ func go_to_next_scene():
 	sub_viewport.add_child(new_scene_instance)
 	current_scene_number = new_scene_number
 	current_scene = new_scene_instance
+	update_and_save()
 
 func reload_scene():
 	go_to_scene(current_scene_number)
@@ -41,3 +43,9 @@ func clean_scene():
 
 func toggle_visible(value : bool):
 	self.visible = value
+
+func update_and_save():
+	if SaveSystem.use_system:
+		SaveSystem.update_current_level(OverlayUI.current_scene_number)
+		SaveSystem.save_level()
+		print("Try updating level with ", OverlayUI.current_scene_number)

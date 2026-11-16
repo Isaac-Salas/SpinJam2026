@@ -37,7 +37,6 @@ func _ready() -> void:
 		await SoundManager.ready
 		start_music()
 
-
 func start_level():
 	OverlayUI.wheel_view.rotator.toggle_disable(false)
 	unlocks()

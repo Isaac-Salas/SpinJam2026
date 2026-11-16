@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://cfgus38conwdt"]
+
+[ext_resource type="Script" uid="uid://bw1xohao6ctln" path="res://scripts/pause_menu.gd" id="1_n87rw"]
+
+[node name="PauseMenu" type="Control" unique_id=952304498]
+process_mode = 3
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n87rw")
+
+[node name="Fondo" type="ColorRect" parent="." unique_id=871708449]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.39215687)
+
+[node name="Resume" type="Button" parent="." unique_id=700853580]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Continue Game"
+
+[node name="Quit" type="Button" parent="." unique_id=1663833251]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -41.0
+offset_top = 35.0
+offset_right = 38.0
+offset_bottom = 66.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Quit Game"
+
+[node name="Reset" type="Button" parent="." unique_id=815955001]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = 102.0
+offset_right = 39.0
+offset_bottom = 133.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Reset Progress"
