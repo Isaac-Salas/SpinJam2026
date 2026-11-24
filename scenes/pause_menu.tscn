@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bw1xohao6ctln" path="res://scripts/pause_menu.gd" id="1_n87rw"]
 [ext_resource type="Texture2D" uid="uid://cm1up5u8ukjfs" path="res://assets/LOGO/Logo.png" id="2_myx47"]
 [ext_resource type="FontFile" uid="uid://cirgieqkqdak6" path="res://assets/fonts/Funky Catch.otf" id="3_kukqi"]
-[ext_resource type="Texture2D" uid="uid://be57cipqo1rgw" path="res://assets/CONTROL/Encender.png" id="4_5d2l8"]
+[ext_resource type="Texture2D" uid="uid://jcddbjpichb8" path="res://assets/CONTROL/Pausar.png" id="4_7l7mv"]
 [ext_resource type="Texture2D" uid="uid://c8n7vj1ektx5x" path="res://assets/CONTROL/EncenderPress.png" id="5_7l7mv"]
 
 [node name="PauseMenu" type="Control" unique_id=952304498]
@@ -14,7 +14,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 1
+mouse_filter = 2
 script = ExtResource("1_n87rw")
 
 [node name="Fondo" type="TextureRect" parent="." unique_id=1372883936]
@@ -25,26 +25,26 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("2_myx47")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=249424075]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 13
 anchor_left = 0.5
-anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.5
+anchor_bottom = 1.0
 offset_left = -248.0
-offset_top = -110.5
 offset_right = 248.0
-offset_bottom = 110.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 30
+alignment = 1
 
 [node name="Resume" type="Button" parent="VBoxContainer" unique_id=700853580]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
+offset_transform_enabled = true
 theme_override_constants/outline_size = 33
 theme_override_fonts/font = ExtResource("3_kukqi")
 theme_override_font_sizes/font_size = 56
@@ -54,18 +54,35 @@ flat = true
 [node name="Quit" type="Button" parent="VBoxContainer" unique_id=1663833251]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
+offset_transform_enabled = true
 theme_override_constants/outline_size = 33
 theme_override_fonts/font = ExtResource("3_kukqi")
 theme_override_font_sizes/font_size = 56
 text = "Quit Game"
 flat = true
 
-[node name="Reset" type="Button" parent="VBoxContainer" unique_id=815955001]
+[node name="Reload" type="Button" parent="VBoxContainer" unique_id=345442519]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
+offset_transform_enabled = true
 theme_override_constants/outline_size = 33
 theme_override_fonts/font = ExtResource("3_kukqi")
 theme_override_font_sizes/font_size = 56
+text = "Restart Level"
+flat = true
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=644440743]
+layout_mode = 2
+size_flags_vertical = 1
+
+[node name="Reset" type="Button" parent="VBoxContainer" unique_id=815955001]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+offset_transform_enabled = true
+theme_override_colors/font_color = Color(0.8980392, 0.1764706, 0.2509804, 1)
+theme_override_constants/outline_size = 16
+theme_override_fonts/font = ExtResource("3_kukqi")
+theme_override_font_sizes/font_size = 30
 text = "Reset Progress"
 flat = true
 
@@ -74,5 +91,5 @@ modulate = Color(1, 1, 1, 0.50980395)
 layout_mode = 0
 offset_right = 59.0
 offset_bottom = 60.0
-texture_normal = ExtResource("4_5d2l8")
+texture_normal = ExtResource("4_7l7mv")
 texture_pressed = ExtResource("5_7l7mv")
